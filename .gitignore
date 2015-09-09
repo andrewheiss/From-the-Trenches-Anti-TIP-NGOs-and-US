@@ -1,0 +1,18 @@
+# Ignore sandbox and raw data folders
+sandbox/*
+data_raw/*
+
+# Manuscript output
+manuscript/*.html
+manuscript/*.docx
+
+# Automation stuff
+.shastore
+
+# R stuff
+.Rproj.user
+.Rhistory
+.RData
+
+# Miscellaneous
+*.~lock.*

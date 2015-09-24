@@ -6,6 +6,15 @@ data_raw/*
 manuscript/*.html
 manuscript/*.docx
 
+# Scrivener
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/binder.autosave
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/binder.backup
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/search.indexes
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/user.lock
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/Docs/docs.checksum
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/QuickLook/
+manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Settings/ui.plist
+
 # Automation stuff
 .shastore
 

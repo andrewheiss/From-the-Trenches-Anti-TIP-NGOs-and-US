@@ -1,0 +1,3209 @@
+"countryname","iso","year","ccode","tier"
+"Afghanistan","AFG",1999,700,NA
+"Afghanistan","AFG",2000,700,NA
+"Afghanistan","AFG",2001,700,NA
+"Afghanistan","AFG",2002,700,"Tier 3"
+"Afghanistan","AFG",2003,700,NA
+"Afghanistan","AFG",2004,700,"Tier 2    "
+"Afghanistan","AFG",2005,700,"Tier 2    "
+"Afghanistan","AFG",2006,700,"Tier 2    "
+"Afghanistan","AFG",2007,700,"Tier 2    "
+"Afghanistan","AFG",2008,700,"Tier 2    "
+"Afghanistan","AFG",2009,700,"Tier 2    "
+"Afghanistan","AFG",2010,700,"Watchlist    "
+"Afghanistan","AFG",2011,700,"Watchlist    "
+"Afghanistan","AFG",2012,700,"Watchlist    "
+"Afghanistan","AFG",2013,700,"Watchlist    "
+"Afghanistan","AFG",2014,700,"Tier 2    "
+"Afghanistan","AFG",2015,700,"Tier 2    "
+"Albania","ALB",1999,339,NA
+"Albania","ALB",2000,339,NA
+"Albania","ALB",2001,339,"Tier 3"
+"Albania","ALB",2002,339,"Tier 2    "
+"Albania","ALB",2003,339,"Tier 2    "
+"Albania","ALB",2004,339,"Tier 2    "
+"Albania","ALB",2005,339,"Tier 2    "
+"Albania","ALB",2006,339,"Tier 2    "
+"Albania","ALB",2007,339,"Tier 2    "
+"Albania","ALB",2008,339,"Watchlist    "
+"Albania","ALB",2009,339,"Tier 2    "
+"Albania","ALB",2010,339,"Tier 2    "
+"Albania","ALB",2011,339,"Tier 2    "
+"Albania","ALB",2012,339,"Tier 2    "
+"Albania","ALB",2013,339,"Watchlist    "
+"Albania","ALB",2014,339,"Tier 2    "
+"Albania","ALB",2015,339,"Tier 2    "
+"Algeria","DZA",1999,615,NA
+"Algeria","DZA",2000,615,NA
+"Algeria","DZA",2001,615,NA
+"Algeria","DZA",2002,615,NA
+"Algeria","DZA",2003,615,NA
+"Algeria","DZA",2004,615,NA
+"Algeria","DZA",2005,615,"Tier 2    "
+"Algeria","DZA",2006,615,"Watchlist    "
+"Algeria","DZA",2007,615,"Tier 3"
+"Algeria","DZA",2008,615,"Tier 3"
+"Algeria","DZA",2009,615,"Watchlist    "
+"Algeria","DZA",2010,615,"Watchlist    "
+"Algeria","DZA",2011,615,"Tier 3"
+"Algeria","DZA",2012,615,"Tier 3"
+"Algeria","DZA",2013,615,"Tier 3"
+"Algeria","DZA",2014,615,"Tier 3"
+"Algeria","DZA",2015,615,"Tier 3"
+"Angola","AGO",1999,540,NA
+"Angola","AGO",2000,540,NA
+"Angola","AGO",2001,540,"Tier 2    "
+"Angola","AGO",2002,540,"Tier 2    "
+"Angola","AGO",2003,540,"Tier 2    "
+"Angola","AGO",2004,540,"Tier 2    "
+"Angola","AGO",2005,540,"Tier 2    "
+"Angola","AGO",2006,540,"Tier 2    "
+"Angola","AGO",2007,540,"Tier 2    "
+"Angola","AGO",2008,540,"Tier 2    "
+"Angola","AGO",2009,540,"Watchlist    "
+"Angola","AGO",2010,540,"Tier 2    "
+"Angola","AGO",2011,540,"Watchlist    "
+"Angola","AGO",2012,540,"Watchlist    "
+"Angola","AGO",2013,540,"Watchlist    "
+"Angola","AGO",2014,540,"Watchlist    "
+"Angola","AGO",2015,540,"Tier 2    "
+"Antigua and Barbuda","ATG",2015,58,"Watchlist    "
+"Antigua and Barbuda","ATG",1999,58,NA
+"Antigua and Barbuda","ATG",2000,58,NA
+"Antigua and Barbuda","ATG",2001,58,NA
+"Antigua and Barbuda","ATG",2002,58,NA
+"Antigua and Barbuda","ATG",2003,58,NA
+"Antigua and Barbuda","ATG",2004,58,NA
+"Antigua and Barbuda","ATG",2005,58,NA
+"Antigua and Barbuda","ATG",2006,58,NA
+"Antigua and Barbuda","ATG",2007,58,NA
+"Antigua and Barbuda","ATG",2008,58,NA
+"Antigua and Barbuda","ATG",2009,58,"Tier 2    "
+"Antigua and Barbuda","ATG",2010,58,"Tier 2    "
+"Antigua and Barbuda","ATG",2011,58,"Tier 2    "
+"Antigua and Barbuda","ATG",2012,58,"Tier 2    "
+"Antigua and Barbuda","ATG",2013,58,"Tier 2    "
+"Antigua and Barbuda","ATG",2014,58,"Watchlist    "
+"Argentina","ARG",1999,160,NA
+"Argentina","ARG",2000,160,NA
+"Argentina","ARG",2001,160,NA
+"Argentina","ARG",2002,160,NA
+"Argentina","ARG",2003,160,NA
+"Argentina","ARG",2004,160,"Tier 2    "
+"Argentina","ARG",2005,160,"Tier 2    "
+"Argentina","ARG",2006,160,"Watchlist    "
+"Argentina","ARG",2007,160,"Watchlist    "
+"Argentina","ARG",2008,160,"Watchlist    "
+"Argentina","ARG",2009,160,"Watchlist    "
+"Argentina","ARG",2010,160,"Tier 2    "
+"Argentina","ARG",2011,160,"Tier 2    "
+"Argentina","ARG",2012,160,"Tier 2    "
+"Argentina","ARG",2013,160,"Tier 2    "
+"Argentina","ARG",2014,160,"Tier 2    "
+"Argentina","ARG",2015,160,"Tier 2    "
+"Armenia","ARM",1999,371,NA
+"Armenia","ARM",2000,371,NA
+"Armenia","ARM",2001,371,NA
+"Armenia","ARM",2002,371,"Tier 3"
+"Armenia","ARM",2003,371,"Tier 2    "
+"Armenia","ARM",2004,371,"Tier 2    "
+"Armenia","ARM",2005,371,"Watchlist    "
+"Armenia","ARM",2006,371,"Watchlist    "
+"Armenia","ARM",2007,371,"Watchlist    "
+"Armenia","ARM",2008,371,"Watchlist    "
+"Armenia","ARM",2009,371,"Tier 2    "
+"Armenia","ARM",2010,371,"Tier 2    "
+"Armenia","ARM",2011,371,"Tier 2    "
+"Armenia","ARM",2012,371,"Tier 2    "
+"Armenia","ARM",2013,371,"Tier 1    "
+"Armenia","ARM",2014,371,"Tier 1    "
+"Armenia","ARM",2015,371,"Tier 1    "
+"Aruba","ABW",2015,NA,"Tier 2    "
+"Australia","AUS",1999,900,NA
+"Australia","AUS",2000,900,NA
+"Australia","AUS",2001,900,NA
+"Australia","AUS",2002,900,NA
+"Australia","AUS",2003,900,NA
+"Australia","AUS",2004,900,"Tier 1    "
+"Australia","AUS",2005,900,"Tier 1    "
+"Australia","AUS",2006,900,"Tier 1    "
+"Australia","AUS",2007,900,"Tier 1    "
+"Australia","AUS",2008,900,"Tier 1    "
+"Australia","AUS",2009,900,"Tier 1    "
+"Australia","AUS",2010,900,"Tier 1    "
+"Australia","AUS",2011,900,"Tier 1    "
+"Australia","AUS",2012,900,"Tier 1    "
+"Australia","AUS",2013,900,"Tier 1    "
+"Australia","AUS",2014,900,"Tier 1    "
+"Australia","AUS",2015,900,"Tier 1    "
+"Austria","AUT",1999,305,NA
+"Austria","AUT",2000,305,NA
+"Austria","AUT",2001,305,"Tier 1    "
+"Austria","AUT",2002,305,"Tier 1    "
+"Austria","AUT",2003,305,"Tier 1    "
+"Austria","AUT",2004,305,"Tier 1    "
+"Austria","AUT",2005,305,"Tier 1    "
+"Austria","AUT",2006,305,"Tier 1    "
+"Austria","AUT",2007,305,"Tier 1    "
+"Austria","AUT",2008,305,"Tier 1    "
+"Austria","AUT",2009,305,"Tier 1    "
+"Austria","AUT",2010,305,"Tier 1    "
+"Austria","AUT",2011,305,"Tier 1    "
+"Austria","AUT",2012,305,"Tier 1    "
+"Austria","AUT",2013,305,"Tier 1    "
+"Austria","AUT",2014,305,"Tier 1    "
+"Austria","AUT",2015,305,"Tier 1    "
+"Azerbaijan","AZE",1999,373,NA
+"Azerbaijan","AZE",2000,373,NA
+"Azerbaijan","AZE",2001,373,NA
+"Azerbaijan","AZE",2002,373,NA
+"Azerbaijan","AZE",2003,373,NA
+"Azerbaijan","AZE",2004,373,"Watchlist    "
+"Azerbaijan","AZE",2005,373,"Watchlist    "
+"Azerbaijan","AZE",2006,373,"Tier 2    "
+"Azerbaijan","AZE",2007,373,"Tier 2    "
+"Azerbaijan","AZE",2008,373,"Watchlist    "
+"Azerbaijan","AZE",2009,373,"Watchlist    "
+"Azerbaijan","AZE",2010,373,"Watchlist    "
+"Azerbaijan","AZE",2011,373,"Watchlist    "
+"Azerbaijan","AZE",2012,373,"Watchlist    "
+"Azerbaijan","AZE",2013,373,"Tier 2    "
+"Azerbaijan","AZE",2014,373,"Tier 2    "
+"Azerbaijan","AZE",2015,373,"Tier 2    "
+"Bahamas","BHS",1999,31,NA
+"Bahamas","BHS",2000,31,NA
+"Bahamas","BHS",2001,31,NA
+"Bahamas","BHS",2002,31,NA
+"Bahamas","BHS",2003,31,NA
+"Bahamas","BHS",2004,31,NA
+"Bahamas","BHS",2005,31,NA
+"Bahamas","BHS",2006,31,NA
+"Bahamas","BHS",2007,31,NA
+"Bahamas","BHS",2008,31,NA
+"Bahamas","BHS",2009,31,"Tier 2    "
+"Bahamas","BHS",2010,31,"Tier 2    "
+"Bahamas","BHS",2011,31,"Watchlist    "
+"Bahamas","BHS",2012,31,"Watchlist    "
+"Bahamas","BHS",2013,31,"Tier 2    "
+"Bahamas","BHS",2014,31,"Tier 2    "
+"Bahrain","BHR",1999,692,NA
+"Bahrain","BHR",2000,692,NA
+"Bahrain","BHR",2001,692,"Tier 3"
+"Bahrain","BHR",2002,692,"Tier 3"
+"Bahrain","BHR",2003,692,"Tier 2    "
+"Bahrain","BHR",2004,692,"Tier 2    "
+"Bahrain","BHR",2005,692,"Watchlist    "
+"Bahrain","BHR",2006,692,"Watchlist    "
+"Bahrain","BHR",2007,692,"Tier 3"
+"Bahrain","BHR",2008,692,"Watchlist    "
+"Bahrain","BHR",2009,692,"Watchlist    "
+"Bahrain","BHR",2010,692,"Tier 2    "
+"Bahrain","BHR",2011,692,"Tier 2    "
+"Bahrain","BHR",2012,692,"Watchlist    "
+"Bahrain","BHR",2013,692,"Watchlist    "
+"Bahrain","BHR",2014,692,"Watchlist    "
+"Bahrain","BHR",2015,692,"Tier 2    "
+"Bangladesh","BGD",1999,771,NA
+"Bangladesh","BGD",2000,771,NA
+"Bangladesh","BGD",2001,771,"Tier 2    "
+"Bangladesh","BGD",2002,771,"Tier 2    "
+"Bangladesh","BGD",2003,771,"Tier 2    "
+"Bangladesh","BGD",2004,771,"Tier 3"
+"Bangladesh","BGD",2005,771,"Tier 2    "
+"Bangladesh","BGD",2006,771,"Tier 2    "
+"Bangladesh","BGD",2007,771,"Tier 2    "
+"Bangladesh","BGD",2008,771,"Tier 2    "
+"Bangladesh","BGD",2009,771,"Watchlist    "
+"Bangladesh","BGD",2010,771,"Watchlist    "
+"Bangladesh","BGD",2011,771,"Watchlist    "
+"Bangladesh","BGD",2012,771,"Tier 2    "
+"Bangladesh","BGD",2013,771,"Tier 2    "
+"Bangladesh","BGD",2014,771,"Tier 2    "
+"Bangladesh","BGD",2015,771,"Tier 2    "
+"Barbados","BRB",1999,53,NA
+"Barbados","BRB",2000,53,NA
+"Barbados","BRB",2001,53,NA
+"Barbados","BRB",2002,53,NA
+"Barbados","BRB",2003,53,NA
+"Barbados","BRB",2004,53,NA
+"Barbados","BRB",2005,53,NA
+"Barbados","BRB",2006,53,NA
+"Barbados","BRB",2007,53,NA
+"Barbados","BRB",2008,53,NA
+"Barbados","BRB",2009,53,"Tier 2    "
+"Barbados","BRB",2010,53,"Tier 2    "
+"Barbados","BRB",2011,53,"Watchlist    "
+"Barbados","BRB",2012,53,"Watchlist    "
+"Barbados","BRB",2013,53,"Watchlist    "
+"Barbados","BRB",2014,53,"Tier 2    "
+"Barbados","BRB",2015,53,"Tier 2    "
+"Belarus","BLR",1999,370,NA
+"Belarus","BLR",2000,370,NA
+"Belarus","BLR",2001,370,"Tier 3"
+"Belarus","BLR",2002,370,"Tier 3"
+"Belarus","BLR",2003,370,"Tier 2    "
+"Belarus","BLR",2004,370,"Tier 2    "
+"Belarus","BLR",2005,370,"Tier 2    "
+"Belarus","BLR",2006,370,"Tier 2    "
+"Belarus","BLR",2007,370,"Watchlist    "
+"Belarus","BLR",2008,370,"Tier 2    "
+"Belarus","BLR",2009,370,"Tier 2    "
+"Belarus","BLR",2010,370,"Tier 2    "
+"Belarus","BLR",2011,370,"Watchlist    "
+"Belarus","BLR",2012,370,"Watchlist    "
+"Belarus","BLR",2013,370,"Watchlist    "
+"Belarus","BLR",2014,370,"Watchlist    "
+"Belarus","BLR",2015,370,"Tier 3"
+"Belgium","BEL",1999,211,NA
+"Belgium","BEL",2000,211,NA
+"Belgium","BEL",2001,211,"Tier 1    "
+"Belgium","BEL",2002,211,"Tier 1    "
+"Belgium","BEL",2003,211,"Tier 1    "
+"Belgium","BEL",2004,211,"Tier 1    "
+"Belgium","BEL",2005,211,"Tier 1    "
+"Belgium","BEL",2006,211,"Tier 1    "
+"Belgium","BEL",2007,211,"Tier 1    "
+"Belgium","BEL",2008,211,"Tier 1    "
+"Belgium","BEL",2009,211,"Tier 1    "
+"Belgium","BEL",2010,211,"Tier 1    "
+"Belgium","BEL",2011,211,"Tier 1    "
+"Belgium","BEL",2012,211,"Tier 1    "
+"Belgium","BEL",2013,211,"Tier 1    "
+"Belgium","BEL",2014,211,"Tier 1    "
+"Belgium","BEL",2015,211,"Tier 1    "
+"Belize","BLZ",1999,80,NA
+"Belize","BLZ",2000,80,NA
+"Belize","BLZ",2001,80,NA
+"Belize","BLZ",2002,80,NA
+"Belize","BLZ",2003,80,"Tier 3"
+"Belize","BLZ",2004,80,"Watchlist    "
+"Belize","BLZ",2005,80,"Watchlist    "
+"Belize","BLZ",2006,80,"Tier 3"
+"Belize","BLZ",2007,80,"Tier 2    "
+"Belize","BLZ",2008,80,"Tier 2    "
+"Belize","BLZ",2009,80,"Watchlist    "
+"Belize","BLZ",2010,80,"Watchlist    "
+"Belize","BLZ",2011,80,"Tier 2    "
+"Belize","BLZ",2012,80,"Tier 2    "
+"Belize","BLZ",2013,80,"Tier 2    "
+"Belize","BLZ",2014,80,"Watchlist    "
+"Belize","BLZ",2015,80,"Tier 3"
+"Benin","BEN",1999,434,NA
+"Benin","BEN",2000,434,NA
+"Benin","BEN",2001,434,"Tier 2    "
+"Benin","BEN",2002,434,"Tier 2    "
+"Benin","BEN",2003,434,"Tier 1    "
+"Benin","BEN",2004,434,"Tier 2    "
+"Benin","BEN",2005,434,"Watchlist    "
+"Benin","BEN",2006,434,"Tier 2    "
+"Benin","BEN",2007,434,"Tier 2    "
+"Benin","BEN",2008,434,"Tier 2    "
+"Benin","BEN",2009,434,"Tier 2    "
+"Benin","BEN",2010,434,"Tier 2    "
+"Benin","BEN",2011,434,"Tier 2    "
+"Benin","BEN",2012,434,"Tier 2    "
+"Benin","BEN",2013,434,"Tier 2    "
+"Benin","BEN",2014,434,"Tier 2    "
+"Benin","BEN",2015,434,"Tier 2    "
+"Bhutan","BTN",1999,760,NA
+"Bhutan","BTN",2000,760,NA
+"Bhutan","BTN",2001,760,NA
+"Bhutan","BTN",2002,760,NA
+"Bhutan","BTN",2003,760,NA
+"Bhutan","BTN",2004,760,NA
+"Bhutan","BTN",2005,760,NA
+"Bhutan","BTN",2006,760,NA
+"Bhutan","BTN",2007,760,NA
+"Bhutan","BTN",2008,760,NA
+"Bhutan","BTN",2009,760,NA
+"Bhutan","BTN",2010,760,NA
+"Bhutan","BTN",2011,760,NA
+"Bhutan","BTN",2012,760,"Tier 2    "
+"Bhutan","BTN",2013,760,"Tier 2    "
+"Bhutan","BTN",2014,760,"Tier 2    "
+"Bhutan","BTN",2015,760,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",1999,145,NA
+"Bolivia, Plurinational State of","BOL",2000,145,NA
+"Bolivia, Plurinational State of","BOL",2001,145,NA
+"Bolivia, Plurinational State of","BOL",2002,145,NA
+"Bolivia, Plurinational State of","BOL",2003,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2004,145,"Watchlist    "
+"Bolivia, Plurinational State of","BOL",2005,145,"Tier 3"
+"Bolivia, Plurinational State of","BOL",2006,145,"Watchlist    "
+"Bolivia, Plurinational State of","BOL",2007,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2008,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2009,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2010,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2011,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2012,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2013,145,"Tier 2    "
+"Bolivia, Plurinational State of","BOL",2014,145,"Watchlist    "
+"Bolivia, Plurinational State of","BOL",2015,145,"Watchlist    "
+"Bosnia and Herzegovina","BIH",2015,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",1999,346,NA
+"Bosnia and Herzegovina","BIH",2000,346,NA
+"Bosnia and Herzegovina","BIH",2001,346,"Tier 3"
+"Bosnia and Herzegovina","BIH",2002,346,"Tier 3"
+"Bosnia and Herzegovina","BIH",2003,346,"Tier 3"
+"Bosnia and Herzegovina","BIH",2004,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2005,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2006,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2007,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2008,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2009,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2010,346,"Tier 1    "
+"Bosnia and Herzegovina","BIH",2011,346,"Tier 1    "
+"Bosnia and Herzegovina","BIH",2012,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2013,346,"Tier 2    "
+"Bosnia and Herzegovina","BIH",2014,346,"Watchlist    "
+"Botswana","BWA",1999,571,NA
+"Botswana","BWA",2000,571,NA
+"Botswana","BWA",2001,571,NA
+"Botswana","BWA",2002,571,NA
+"Botswana","BWA",2003,571,NA
+"Botswana","BWA",2004,571,NA
+"Botswana","BWA",2005,571,NA
+"Botswana","BWA",2006,571,NA
+"Botswana","BWA",2007,571,NA
+"Botswana","BWA",2008,571,NA
+"Botswana","BWA",2009,571,"Tier 2    "
+"Botswana","BWA",2010,571,"Tier 2    "
+"Botswana","BWA",2011,571,"Tier 2    "
+"Botswana","BWA",2012,571,"Tier 2    "
+"Botswana","BWA",2013,571,"Tier 2    "
+"Botswana","BWA",2014,571,"Watchlist    "
+"Botswana","BWA",2015,571,"Watchlist    "
+"Brazil","BRA",1999,140,NA
+"Brazil","BRA",2000,140,NA
+"Brazil","BRA",2001,140,"Tier 2    "
+"Brazil","BRA",2002,140,"Tier 2    "
+"Brazil","BRA",2003,140,"Tier 2    "
+"Brazil","BRA",2004,140,"Tier 2    "
+"Brazil","BRA",2005,140,"Tier 2    "
+"Brazil","BRA",2006,140,"Watchlist    "
+"Brazil","BRA",2007,140,"Tier 2    "
+"Brazil","BRA",2008,140,"Tier 2    "
+"Brazil","BRA",2009,140,"Tier 2    "
+"Brazil","BRA",2010,140,"Tier 2    "
+"Brazil","BRA",2011,140,"Tier 2    "
+"Brazil","BRA",2012,140,"Tier 2    "
+"Brazil","BRA",2013,140,"Tier 2    "
+"Brazil","BRA",2014,140,"Tier 2    "
+"Brazil","BRA",2015,140,"Tier 2    "
+"Brunei Darussalam","BRN",2000,835,NA
+"Brunei Darussalam","BRN",2001,835,NA
+"Brunei Darussalam","BRN",2002,835,NA
+"Brunei Darussalam","BRN",2003,835,NA
+"Brunei Darussalam","BRN",2004,835,NA
+"Brunei Darussalam","BRN",2005,835,NA
+"Brunei Darussalam","BRN",2006,835,NA
+"Brunei Darussalam","BRN",2007,835,NA
+"Brunei Darussalam","BRN",2008,835,NA
+"Brunei Darussalam","BRN",2009,835,"Tier 2    "
+"Brunei Darussalam","BRN",2010,835,"Watchlist    "
+"Brunei Darussalam","BRN",2011,835,"Watchlist    "
+"Brunei Darussalam","BRN",2012,835,"Tier 2    "
+"Brunei Darussalam","BRN",2013,835,"Tier 2    "
+"Brunei Darussalam","BRN",2014,835,"Tier 2    "
+"Brunei Darussalam","BRN",2015,835,"Tier 2    "
+"Bulgaria","BGR",1999,355,NA
+"Bulgaria","BGR",2000,355,NA
+"Bulgaria","BGR",2001,355,"Tier 2    "
+"Bulgaria","BGR",2002,355,"Tier 2    "
+"Bulgaria","BGR",2003,355,"Tier 2    "
+"Bulgaria","BGR",2004,355,"Tier 2    "
+"Bulgaria","BGR",2005,355,"Tier 2    "
+"Bulgaria","BGR",2006,355,"Tier 2    "
+"Bulgaria","BGR",2007,355,"Tier 2    "
+"Bulgaria","BGR",2008,355,"Tier 2    "
+"Bulgaria","BGR",2009,355,"Tier 2    "
+"Bulgaria","BGR",2010,355,"Tier 2    "
+"Bulgaria","BGR",2011,355,"Tier 2    "
+"Bulgaria","BGR",2012,355,"Tier 2    "
+"Bulgaria","BGR",2013,355,"Tier 2    "
+"Bulgaria","BGR",2014,355,"Tier 2    "
+"Bulgaria","BGR",2015,355,"Watchlist    "
+"Burkina Faso","BFA",2015,439,"Watchlist    "
+"Burkina Faso","BFA",1999,439,NA
+"Burkina Faso","BFA",2000,439,NA
+"Burkina Faso","BFA",2001,439,"Tier 2    "
+"Burkina Faso","BFA",2002,439,"Tier 2    "
+"Burkina Faso","BFA",2003,439,"Tier 2    "
+"Burkina Faso","BFA",2004,439,"Tier 2    "
+"Burkina Faso","BFA",2005,439,"Tier 2    "
+"Burkina Faso","BFA",2006,439,"Tier 2    "
+"Burkina Faso","BFA",2007,439,"Tier 2    "
+"Burkina Faso","BFA",2008,439,"Tier 2    "
+"Burkina Faso","BFA",2009,439,"Tier 2    "
+"Burkina Faso","BFA",2010,439,"Tier 2    "
+"Burkina Faso","BFA",2011,439,"Tier 2    "
+"Burkina Faso","BFA",2012,439,"Tier 2    "
+"Burkina Faso","BFA",2013,439,"Tier 2    "
+"Burkina Faso","BFA",2014,439,"Tier 2    "
+"Myanmar","MMR",1999,775,NA
+"Myanmar","MMR",2000,775,NA
+"Myanmar","MMR",2001,775,"Tier 3"
+"Myanmar","MMR",2002,775,"Tier 3"
+"Myanmar","MMR",2003,775,"Tier 3"
+"Myanmar","MMR",2004,775,"Tier 3"
+"Myanmar","MMR",2005,775,"Tier 3"
+"Myanmar","MMR",2006,775,"Tier 3"
+"Myanmar","MMR",2007,775,"Tier 3"
+"Myanmar","MMR",2008,775,"Tier 3"
+"Myanmar","MMR",2009,775,"Tier 3"
+"Myanmar","MMR",2010,775,"Tier 3"
+"Myanmar","MMR",2011,775,"Tier 3"
+"Myanmar","MMR",2012,775,"Watchlist    "
+"Myanmar","MMR",2013,775,"Watchlist    "
+"Myanmar","MMR",2014,775,"Watchlist    "
+"Myanmar","MMR",2015,775,"Watchlist    "
+"Burundi","BDI",1999,516,NA
+"Burundi","BDI",2000,516,NA
+"Burundi","BDI",2001,516,NA
+"Burundi","BDI",2002,516,NA
+"Burundi","BDI",2003,516,"Tier 2    "
+"Burundi","BDI",2004,516,"Tier 2    "
+"Burundi","BDI",2005,516,"Tier 2    "
+"Burundi","BDI",2006,516,"Tier 2    "
+"Burundi","BDI",2007,516,"Watchlist    "
+"Burundi","BDI",2008,516,"Watchlist    "
+"Burundi","BDI",2009,516,"Watchlist    "
+"Burundi","BDI",2010,516,"Tier 2    "
+"Burundi","BDI",2011,516,"Watchlist    "
+"Burundi","BDI",2012,516,"Watchlist    "
+"Burundi","BDI",2013,516,"Watchlist    "
+"Burundi","BDI",2014,516,"Watchlist    "
+"Burundi","BDI",2015,516,"Tier 3"
+"Cabo Verde","CPV",2015,402,"Tier 2    "
+"Cambodia","KHM",1999,811,NA
+"Cambodia","KHM",2000,811,NA
+"Cambodia","KHM",2001,811,"Tier 2    "
+"Cambodia","KHM",2002,811,"Tier 3"
+"Cambodia","KHM",2003,811,"Tier 2    "
+"Cambodia","KHM",2004,811,"Tier 2    "
+"Cambodia","KHM",2005,811,"Tier 3"
+"Cambodia","KHM",2006,811,"Watchlist    "
+"Cambodia","KHM",2007,811,"Watchlist    "
+"Cambodia","KHM",2008,811,"Tier 2    "
+"Cambodia","KHM",2009,811,"Watchlist    "
+"Cambodia","KHM",2010,811,"Tier 2    "
+"Cambodia","KHM",2011,811,"Tier 2    "
+"Cambodia","KHM",2012,811,"Tier 2    "
+"Cambodia","KHM",2013,811,"Watchlist    "
+"Cambodia","KHM",2014,811,"Watchlist    "
+"Cambodia","KHM",2015,811,"Watchlist    "
+"Cameroon","CMR",1999,471,NA
+"Cameroon","CMR",2000,471,NA
+"Cameroon","CMR",2001,471,"Tier 2    "
+"Cameroon","CMR",2002,471,"Tier 2    "
+"Cameroon","CMR",2003,471,"Tier 2    "
+"Cameroon","CMR",2004,471,"Tier 2    "
+"Cameroon","CMR",2005,471,"Watchlist    "
+"Cameroon","CMR",2006,471,"Tier 2    "
+"Cameroon","CMR",2007,471,"Tier 2    "
+"Cameroon","CMR",2008,471,"Watchlist    "
+"Cameroon","CMR",2009,471,"Watchlist    "
+"Cameroon","CMR",2010,471,"Watchlist    "
+"Cameroon","CMR",2011,471,"Watchlist    "
+"Cameroon","CMR",2012,471,"Tier 2    "
+"Cameroon","CMR",2013,471,"Tier 2    "
+"Cameroon","CMR",2014,471,"Tier 2    "
+"Cameroon","CMR",2015,471,"Tier 2    "
+"Canada","CAN",1999,20,NA
+"Canada","CAN",2000,20,NA
+"Canada","CAN",2001,20,"Tier 1    "
+"Canada","CAN",2002,20,"Tier 1    "
+"Canada","CAN",2003,20,"Tier 2    "
+"Canada","CAN",2004,20,"Tier 1    "
+"Canada","CAN",2005,20,"Tier 1    "
+"Canada","CAN",2006,20,"Tier 1    "
+"Canada","CAN",2007,20,"Tier 1    "
+"Canada","CAN",2008,20,"Tier 1    "
+"Canada","CAN",2009,20,"Tier 1    "
+"Canada","CAN",2010,20,"Tier 1    "
+"Canada","CAN",2011,20,"Tier 1    "
+"Canada","CAN",2012,20,"Tier 1    "
+"Canada","CAN",2013,20,"Tier 1    "
+"Canada","CAN",2014,20,"Tier 1    "
+"Canada","CAN",2015,20,"Tier 1    "
+"Cabo Verde","CPV",1999,402,NA
+"Cabo Verde","CPV",2000,402,NA
+"Cabo Verde","CPV",2001,402,NA
+"Cabo Verde","CPV",2002,402,NA
+"Cabo Verde","CPV",2003,402,NA
+"Cabo Verde","CPV",2004,402,NA
+"Cabo Verde","CPV",2005,402,NA
+"Cabo Verde","CPV",2006,402,NA
+"Cabo Verde","CPV",2007,402,NA
+"Cabo Verde","CPV",2008,402,NA
+"Cabo Verde","CPV",2009,402,NA
+"Cabo Verde","CPV",2010,402,NA
+"Cabo Verde","CPV",2011,402,NA
+"Cabo Verde","CPV",2012,402,"Tier 2    "
+"Cabo Verde","CPV",2013,402,"Tier 2    "
+"Cabo Verde","CPV",2014,402,"Tier 2    "
+"Central African Republic","CAF",1999,482,NA
+"Central African Republic","CAF",2000,482,NA
+"Central African Republic","CAF",2001,482,NA
+"Central African Republic","CAF",2002,482,NA
+"Central African Republic","CAF",2003,482,NA
+"Central African Republic","CAF",2004,482,NA
+"Central African Republic","CAF",2005,482,NA
+"Central African Republic","CAF",2006,482,"Watchlist    "
+"Central African Republic","CAF",2007,482,"Watchlist    "
+"Central African Republic","CAF",2008,482,"Watchlist    "
+"Central African Republic","CAF",2009,482,"Watchlist    "
+"Central African Republic","CAF",2010,482,"Watchlist    "
+"Central African Republic","CAF",2011,482,"Tier 3"
+"Central African Republic","CAF",2012,482,"Tier 3"
+"Central African Republic","CAF",2013,482,"Tier 3"
+"Central African Republic","CAF",2014,482,"Tier 3"
+"Central African Republic","CAF",2015,482,"Tier 3"
+"Chad","TCD",1999,483,NA
+"Chad","TCD",2000,483,NA
+"Chad","TCD",2001,483,NA
+"Chad","TCD",2002,483,NA
+"Chad","TCD",2003,483,NA
+"Chad","TCD",2004,483,NA
+"Chad","TCD",2005,483,"Tier 2    "
+"Chad","TCD",2006,483,"Tier 2    "
+"Chad","TCD",2007,483,"Watchlist    "
+"Chad","TCD",2008,483,"Watchlist    "
+"Chad","TCD",2009,483,"Tier 3"
+"Chad","TCD",2010,483,"Watchlist    "
+"Chad","TCD",2011,483,"Watchlist    "
+"Chad","TCD",2012,483,"Watchlist    "
+"Chad","TCD",2013,483,"Watchlist    "
+"Chad","TCD",2014,483,"Tier 2    "
+"Chad","TCD",2015,483,"Tier 2    "
+"Chile","CHL",1999,155,NA
+"Chile","CHL",2000,155,NA
+"Chile","CHL",2001,155,NA
+"Chile","CHL",2002,155,NA
+"Chile","CHL",2003,155,NA
+"Chile","CHL",2004,155,"Tier 2    "
+"Chile","CHL",2005,155,"Tier 2    "
+"Chile","CHL",2006,155,"Tier 2    "
+"Chile","CHL",2007,155,"Tier 2    "
+"Chile","CHL",2008,155,"Tier 2    "
+"Chile","CHL",2009,155,"Tier 2    "
+"Chile","CHL",2010,155,"Tier 2    "
+"Chile","CHL",2011,155,"Tier 2    "
+"Chile","CHL",2012,155,"Tier 2    "
+"Chile","CHL",2013,155,"Tier 2    "
+"Chile","CHL",2014,155,"Tier 1    "
+"Chile","CHL",2015,155,"Tier 1    "
+"China","CHN",1999,710,NA
+"China","CHN",2000,710,NA
+"China","CHN",2001,710,"Tier 2    "
+"China","CHN",2002,710,"Tier 2    "
+"China","CHN",2003,710,"Tier 2    "
+"China","CHN",2004,710,"Tier 2    "
+"China","CHN",2005,710,"Watchlist    "
+"China","CHN",2006,710,"Watchlist    "
+"China","CHN",2007,710,"Watchlist    "
+"China","CHN",2008,710,"Watchlist    "
+"China","CHN",2009,710,"Watchlist    "
+"China","CHN",2010,710,"Watchlist    "
+"China","CHN",2011,710,"Watchlist    "
+"China","CHN",2012,710,"Watchlist    "
+"China","CHN",2013,710,"Tier 3"
+"China","CHN",2014,710,"Watchlist    "
+"China","CHN",2015,710,"Watchlist    "
+"Colombia","COL",1999,100,NA
+"Colombia","COL",2000,100,NA
+"Colombia","COL",2001,100,"Tier 1    "
+"Colombia","COL",2002,100,"Tier 1    "
+"Colombia","COL",2003,100,"Tier 1    "
+"Colombia","COL",2004,100,"Tier 1    "
+"Colombia","COL",2005,100,"Tier 1    "
+"Colombia","COL",2006,100,"Tier 1    "
+"Colombia","COL",2007,100,"Tier 1    "
+"Colombia","COL",2008,100,"Tier 1    "
+"Colombia","COL",2009,100,"Tier 1    "
+"Colombia","COL",2010,100,"Tier 1    "
+"Colombia","COL",2011,100,"Tier 1    "
+"Colombia","COL",2012,100,"Tier 1    "
+"Colombia","COL",2013,100,"Tier 1    "
+"Colombia","COL",2014,100,"Tier 2    "
+"Colombia","COL",2015,100,"Tier 2    "
+"Comoros","COM",1999,581,NA
+"Comoros","COM",2000,581,NA
+"Comoros","COM",2001,581,NA
+"Comoros","COM",2002,581,NA
+"Comoros","COM",2003,581,NA
+"Comoros","COM",2004,581,NA
+"Comoros","COM",2005,581,NA
+"Comoros","COM",2006,581,NA
+"Comoros","COM",2007,581,NA
+"Comoros","COM",2008,581,NA
+"Comoros","COM",2009,581,NA
+"Comoros","COM",2010,581,NA
+"Comoros","COM",2011,581,"Watchlist    "
+"Comoros","COM",2012,581,"Watchlist    "
+"Comoros","COM",2013,581,"Watchlist    "
+"Comoros","COM",2014,581,"Watchlist    "
+"Comoros","COM",2015,581,"Tier 3"
+"Congo","COG",1999,484,NA
+"Congo","COG",2000,484,NA
+"Congo","COG",2001,484,NA
+"Congo","COG",2002,484,NA
+"Congo","COG",2003,484,NA
+"Congo","COG",2004,484,NA
+"Congo","COG",2005,484,NA
+"Congo","COG",2006,484,NA
+"Congo","COG",2007,484,NA
+"Congo","COG",2008,484,"Watchlist    "
+"Congo","COG",2009,484,"Watchlist    "
+"Congo","COG",2010,484,"Watchlist    "
+"Congo","COG",2011,484,"Watchlist    "
+"Congo","COG",2012,484,"Watchlist    "
+"Congo","COG",2013,484,"Tier 2    "
+"Congo","COG",2014,484,"Tier 2    "
+"Congo, the Democratic Republic of the","COD",1999,490,NA
+"Congo, the Democratic Republic of the","COD",2000,490,NA
+"Congo, the Democratic Republic of the","COD",2001,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2002,490,NA
+"Congo, the Democratic Republic of the","COD",2003,490,"Tier 2    "
+"Congo, the Democratic Republic of the","COD",2004,490,"Watchlist    "
+"Congo, the Democratic Republic of the","COD",2005,490,"Tier 2    "
+"Congo, the Democratic Republic of the","COD",2006,490,"Tier 2    "
+"Congo, the Democratic Republic of the","COD",2007,490,"Tier 2    "
+"Congo, the Democratic Republic of the","COD",2008,490,"Watchlist    "
+"Congo, the Democratic Republic of the","COD",2009,490,"Watchlist    "
+"Congo, the Democratic Republic of the","COD",2010,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2011,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2012,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2013,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2014,490,"Tier 3"
+"Congo, the Democratic Republic of the","COD",2015,490,"Watchlist    "
+"Congo","COG",2015,484,"Watchlist    "
+"Costa Rica","CRI",2015,94,"Watchlist    "
+"Costa Rica","CRI",1999,94,NA
+"Costa Rica","CRI",2000,94,NA
+"Costa Rica","CRI",2001,94,"Tier 2    "
+"Costa Rica","CRI",2002,94,"Tier 2    "
+"Costa Rica","CRI",2003,94,"Tier 2    "
+"Costa Rica","CRI",2004,94,"Tier 2    "
+"Costa Rica","CRI",2005,94,"Tier 2    "
+"Costa Rica","CRI",2006,94,"Tier 2    "
+"Costa Rica","CRI",2007,94,"Tier 2    "
+"Costa Rica","CRI",2008,94,"Watchlist    "
+"Costa Rica","CRI",2009,94,"Tier 2    "
+"Costa Rica","CRI",2010,94,"Tier 2    "
+"Costa Rica","CRI",2011,94,"Watchlist    "
+"Costa Rica","CRI",2012,94,"Tier 2    "
+"Costa Rica","CRI",2013,94,"Tier 2    "
+"Costa Rica","CRI",2014,94,"Tier 2    "
+"Cote d'Ivoire","CIV",1999,437,NA
+"Cote d'Ivoire","CIV",2000,437,NA
+"Cote d'Ivoire","CIV",2001,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2002,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2003,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2004,437,"Watchlist    "
+"Cote d'Ivoire","CIV",2005,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2006,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2007,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2008,437,"Watchlist    "
+"Cote d'Ivoire","CIV",2009,437,"Watchlist    "
+"Cote d'Ivoire","CIV",2010,437,"Watchlist    "
+"Cote d'Ivoire","CIV",2011,437,NA
+"Cote d'Ivoire","CIV",2012,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2013,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2014,437,"Tier 2    "
+"Cote d'Ivoire","CIV",2015,437,"Tier 2    "
+"Croatia","HRV",1999,344,NA
+"Croatia","HRV",2000,344,NA
+"Croatia","HRV",2001,344,NA
+"Croatia","HRV",2002,344,NA
+"Croatia","HRV",2003,344,"Tier 2    "
+"Croatia","HRV",2004,344,"Watchlist    "
+"Croatia","HRV",2005,344,"Tier 2    "
+"Croatia","HRV",2006,344,"Tier 2    "
+"Croatia","HRV",2007,344,"Tier 2    "
+"Croatia","HRV",2008,344,"Tier 1    "
+"Croatia","HRV",2009,344,"Tier 1    "
+"Croatia","HRV",2010,344,"Tier 1    "
+"Croatia","HRV",2011,344,"Tier 1    "
+"Croatia","HRV",2012,344,"Tier 1    "
+"Croatia","HRV",2013,344,"Tier 2    "
+"Croatia","HRV",2014,344,"Tier 2    "
+"Croatia","HRV",2015,344,"Tier 2    "
+"Cuba","CUB",1999,40,NA
+"Cuba","CUB",2000,40,NA
+"Cuba","CUB",2001,40,NA
+"Cuba","CUB",2002,40,NA
+"Cuba","CUB",2003,40,NA
+"Cuba","CUB",2004,40,"Tier 3"
+"Cuba","CUB",2005,40,"Tier 3"
+"Cuba","CUB",2006,40,"Tier 3"
+"Cuba","CUB",2007,40,"Tier 3"
+"Cuba","CUB",2008,40,"Tier 3"
+"Cuba","CUB",2009,40,"Tier 3"
+"Cuba","CUB",2010,40,"Tier 3"
+"Cuba","CUB",2011,40,"Tier 3"
+"Cuba","CUB",2012,40,"Tier 3"
+"Cuba","CUB",2013,40,"Tier 3"
+"Cuba","CUB",2014,40,"Tier 3"
+"Cuba","CUB",2015,40,"Watchlist    "
+"Curacao","CUW",2015,NA,"Tier 2    "
+"Cyprus","CYP",1999,352,NA
+"Cyprus","CYP",2000,352,NA
+"Cyprus","CYP",2001,352,NA
+"Cyprus","CYP",2002,352,NA
+"Cyprus","CYP",2003,352,NA
+"Cyprus","CYP",2004,352,"Watchlist    "
+"Cyprus","CYP",2005,352,"Tier 2    "
+"Cyprus","CYP",2006,352,"Watchlist    "
+"Cyprus","CYP",2007,352,"Watchlist    "
+"Cyprus","CYP",2008,352,"Watchlist    "
+"Cyprus","CYP",2009,352,"Tier 2    "
+"Cyprus","CYP",2010,352,"Tier 2    "
+"Cyprus","CYP",2011,352,"Watchlist    "
+"Cyprus","CYP",2012,352,"Watchlist    "
+"Cyprus","CYP",2013,352,"Tier 2    "
+"Cyprus","CYP",2014,352,"Watchlist    "
+"Cyprus","CYP",2015,352,"Tier 2    "
+"Czech Republic","CZE",2015,316,"Tier 1    "
+"Czech Republic","CZE",1999,316,NA
+"Czech Republic","CZE",2000,316,NA
+"Czech Republic","CZE",2001,316,"Tier 2    "
+"Czech Republic","CZE",2002,316,"Tier 1    "
+"Czech Republic","CZE",2003,316,"Tier 1    "
+"Czech Republic","CZE",2004,316,"Tier 1    "
+"Czech Republic","CZE",2005,316,"Tier 1    "
+"Czech Republic","CZE",2006,316,"Tier 2    "
+"Czech Republic","CZE",2007,316,"Tier 1    "
+"Czech Republic","CZE",2008,316,"Tier 1    "
+"Czech Republic","CZE",2009,316,"Tier 1    "
+"Czech Republic","CZE",2010,316,"Tier 1    "
+"Czech Republic","CZE",2011,316,"Tier 2    "
+"Czech Republic","CZE",2012,316,"Tier 1    "
+"Czech Republic","CZE",2013,316,"Tier 1    "
+"Czech Republic","CZE",2014,316,"Tier 1    "
+"Denmark","DNK",1999,390,NA
+"Denmark","DNK",2000,390,NA
+"Denmark","DNK",2001,390,NA
+"Denmark","DNK",2002,390,NA
+"Denmark","DNK",2003,390,"Tier 1    "
+"Denmark","DNK",2004,390,"Tier 1    "
+"Denmark","DNK",2005,390,"Tier 1    "
+"Denmark","DNK",2006,390,"Tier 1    "
+"Denmark","DNK",2007,390,"Tier 1    "
+"Denmark","DNK",2008,390,"Tier 1    "
+"Denmark","DNK",2009,390,"Tier 1    "
+"Denmark","DNK",2010,390,"Tier 1    "
+"Denmark","DNK",2011,390,"Tier 1    "
+"Denmark","DNK",2012,390,"Tier 1    "
+"Denmark","DNK",2013,390,"Tier 1    "
+"Denmark","DNK",2014,390,"Tier 1    "
+"Denmark","DNK",2015,390,"Tier 1    "
+"Djibouti","DJI",1999,522,NA
+"Djibouti","DJI",2000,522,NA
+"Djibouti","DJI",2001,522,NA
+"Djibouti","DJI",2002,522,NA
+"Djibouti","DJI",2003,522,NA
+"Djibouti","DJI",2004,522,NA
+"Djibouti","DJI",2005,522,NA
+"Djibouti","DJI",2006,522,"Watchlist    "
+"Djibouti","DJI",2007,522,"Watchlist    "
+"Djibouti","DJI",2008,522,"Tier 2    "
+"Djibouti","DJI",2009,522,"Watchlist    "
+"Djibouti","DJI",2010,522,"Tier 2    "
+"Djibouti","DJI",2011,522,"Tier 2    "
+"Djibouti","DJI",2012,522,"Watchlist    "
+"Djibouti","DJI",2013,522,"Watchlist    "
+"Djibouti","DJI",2014,522,"Watchlist    "
+"Djibouti","DJI",2015,522,"Watchlist    "
+"Dominica","DMA",1999,54,NA
+"Dominica","DMA",2000,54,NA
+"Dominica","DMA",2001,54,NA
+"Dominica","DMA",2002,54,NA
+"Dominica","DMA",2003,54,NA
+"Dominica","DMA",2004,54,NA
+"Dominica","DMA",2005,54,NA
+"Dominica","DMA",2006,54,NA
+"Dominica","DMA",2007,54,NA
+"Dominica","DMA",2008,54,NA
+"Dominica","DMA",2009,54,NA
+"Dominica","DMA",2010,54,NA
+"Dominica","DMA",2011,54,NA
+"Dominica","DMA",2012,54,NA
+"Dominica","DMA",2013,54,NA
+"Dominica","DMA",2014,54,NA
+"Dominican Republic","DOM",1999,42,NA
+"Dominican Republic","DOM",2000,42,NA
+"Dominican Republic","DOM",2001,42,"Tier 2    "
+"Dominican Republic","DOM",2002,42,"Tier 2    "
+"Dominican Republic","DOM",2003,42,"Tier 3"
+"Dominican Republic","DOM",2004,42,"Watchlist    "
+"Dominican Republic","DOM",2005,42,"Watchlist    "
+"Dominican Republic","DOM",2006,42,"Tier 2    "
+"Dominican Republic","DOM",2007,42,"Watchlist    "
+"Dominican Republic","DOM",2008,42,"Watchlist    "
+"Dominican Republic","DOM",2009,42,"Watchlist    "
+"Dominican Republic","DOM",2010,42,"Tier 3"
+"Dominican Republic","DOM",2011,42,"Watchlist    "
+"Dominican Republic","DOM",2012,42,"Tier 2    "
+"Dominican Republic","DOM",2013,42,"Tier 2    "
+"Dominican Republic","DOM",2014,42,"Tier 2    "
+"Dominican Republic","DOM",2015,42,"Tier 2    "
+"Ecuador","ECU",1999,130,NA
+"Ecuador","ECU",2000,130,NA
+"Ecuador","ECU",2001,130,NA
+"Ecuador","ECU",2002,130,NA
+"Ecuador","ECU",2003,130,NA
+"Ecuador","ECU",2004,130,"Tier 3"
+"Ecuador","ECU",2005,130,"Tier 3"
+"Ecuador","ECU",2006,130,"Tier 2    "
+"Ecuador","ECU",2007,130,"Tier 2    "
+"Ecuador","ECU",2008,130,"Tier 2    "
+"Ecuador","ECU",2009,130,"Tier 2    "
+"Ecuador","ECU",2010,130,"Tier 2    "
+"Ecuador","ECU",2011,130,"Watchlist    "
+"Ecuador","ECU",2012,130,"Watchlist    "
+"Ecuador","ECU",2013,130,"Tier 2    "
+"Ecuador","ECU",2014,130,"Tier 2    "
+"Ecuador","ECU",2015,130,"Tier 2    "
+"Egypt","EGY",1999,651,NA
+"Egypt","EGY",2000,651,NA
+"Egypt","EGY",2001,651,NA
+"Egypt","EGY",2002,651,NA
+"Egypt","EGY",2003,651,NA
+"Egypt","EGY",2004,651,"Tier 2    "
+"Egypt","EGY",2005,651,"Tier 2    "
+"Egypt","EGY",2006,651,"Watchlist    "
+"Egypt","EGY",2007,651,"Watchlist    "
+"Egypt","EGY",2008,651,"Watchlist    "
+"Egypt","EGY",2009,651,"Watchlist    "
+"Egypt","EGY",2010,651,"Tier 2    "
+"Egypt","EGY",2011,651,"Tier 2    "
+"Egypt","EGY",2012,651,"Tier 2    "
+"Egypt","EGY",2013,651,"Tier 2    "
+"Egypt","EGY",2014,651,"Tier 2    "
+"Egypt","EGY",2015,651,"Watchlist    "
+"El Salvador","SLV",2015,92,"Tier 2    "
+"El Salvador","SLV",1999,92,NA
+"El Salvador","SLV",2000,92,NA
+"El Salvador","SLV",2001,92,"Tier 2    "
+"El Salvador","SLV",2002,92,"Tier 2    "
+"El Salvador","SLV",2003,92,"Tier 2    "
+"El Salvador","SLV",2004,92,"Tier 2    "
+"El Salvador","SLV",2005,92,"Tier 2    "
+"El Salvador","SLV",2006,92,"Tier 2    "
+"El Salvador","SLV",2007,92,"Tier 2    "
+"El Salvador","SLV",2008,92,"Tier 2    "
+"El Salvador","SLV",2009,92,"Tier 2    "
+"El Salvador","SLV",2010,92,"Tier 2    "
+"El Salvador","SLV",2011,92,"Tier 2    "
+"El Salvador","SLV",2012,92,"Tier 2    "
+"El Salvador","SLV",2013,92,"Tier 2    "
+"El Salvador","SLV",2014,92,"Tier 2    "
+"Equatorial Guinea","GNQ",1999,411,NA
+"Equatorial Guinea","GNQ",2000,411,NA
+"Equatorial Guinea","GNQ",2001,411,NA
+"Equatorial Guinea","GNQ",2002,411,"Tier 2    "
+"Equatorial Guinea","GNQ",2003,411,"Tier 2    "
+"Equatorial Guinea","GNQ",2004,411,"Tier 3"
+"Equatorial Guinea","GNQ",2005,411,"Tier 2    "
+"Equatorial Guinea","GNQ",2006,411,"Watchlist    "
+"Equatorial Guinea","GNQ",2007,411,"Tier 3"
+"Equatorial Guinea","GNQ",2008,411,"Watchlist    "
+"Equatorial Guinea","GNQ",2009,411,"Watchlist    "
+"Equatorial Guinea","GNQ",2010,411,"Watchlist    "
+"Equatorial Guinea","GNQ",2011,411,"Tier 3"
+"Equatorial Guinea","GNQ",2012,411,"Tier 3"
+"Equatorial Guinea","GNQ",2013,411,"Tier 3"
+"Equatorial Guinea","GNQ",2014,411,"Tier 3"
+"Equatorial Guinea","GNQ",2015,411,"Tier 3"
+"Eritrea","ERI",1999,531,NA
+"Eritrea","ERI",2000,531,NA
+"Eritrea","ERI",2001,531,NA
+"Eritrea","ERI",2002,531,NA
+"Eritrea","ERI",2003,531,NA
+"Eritrea","ERI",2004,531,NA
+"Eritrea","ERI",2005,531,NA
+"Eritrea","ERI",2006,531,NA
+"Eritrea","ERI",2007,531,NA
+"Eritrea","ERI",2008,531,NA
+"Eritrea","ERI",2009,531,"Tier 3"
+"Eritrea","ERI",2010,531,"Tier 3"
+"Eritrea","ERI",2011,531,"Tier 3"
+"Eritrea","ERI",2012,531,"Tier 3"
+"Eritrea","ERI",2013,531,"Tier 3"
+"Eritrea","ERI",2014,531,"Tier 3"
+"Eritrea","ERI",2015,531,"Tier 3"
+"Estonia","EST",1999,366,NA
+"Estonia","EST",2000,366,NA
+"Estonia","EST",2001,366,NA
+"Estonia","EST",2002,366,"Tier 2    "
+"Estonia","EST",2003,366,"Tier 2    "
+"Estonia","EST",2004,366,"Watchlist    "
+"Estonia","EST",2005,366,"Tier 2    "
+"Estonia","EST",2006,366,"Tier 2    "
+"Estonia","EST",2007,366,"Tier 2    "
+"Estonia","EST",2008,366,"Tier 2    "
+"Estonia","EST",2009,366,"Tier 2    "
+"Estonia","EST",2010,366,"Tier 2    "
+"Estonia","EST",2011,366,"Watchlist    "
+"Estonia","EST",2012,366,"Tier 2    "
+"Estonia","EST",2013,366,"Tier 2    "
+"Estonia","EST",2014,366,"Tier 2    "
+"Estonia","EST",2015,366,"Tier 2    "
+"Ethiopia","ETH",1999,530,NA
+"Ethiopia","ETH",2000,530,NA
+"Ethiopia","ETH",2001,530,"Tier 2    "
+"Ethiopia","ETH",2002,530,"Tier 2    "
+"Ethiopia","ETH",2003,530,"Tier 2    "
+"Ethiopia","ETH",2004,530,"Watchlist    "
+"Ethiopia","ETH",2005,530,"Tier 2    "
+"Ethiopia","ETH",2006,530,"Tier 2    "
+"Ethiopia","ETH",2007,530,"Tier 2    "
+"Ethiopia","ETH",2008,530,"Tier 2    "
+"Ethiopia","ETH",2009,530,"Tier 2    "
+"Ethiopia","ETH",2010,530,"Tier 2    "
+"Ethiopia","ETH",2011,530,"Tier 2    "
+"Ethiopia","ETH",2012,530,"Tier 2    "
+"Ethiopia","ETH",2013,530,"Tier 2    "
+"Ethiopia","ETH",2014,530,"Tier 2    "
+"Ethiopia","ETH",2015,530,"Tier 2    "
+"Fiji","FJI",1999,950,NA
+"Fiji","FJI",2000,950,NA
+"Fiji","FJI",2001,950,NA
+"Fiji","FJI",2002,950,NA
+"Fiji","FJI",2003,950,NA
+"Fiji","FJI",2004,950,NA
+"Fiji","FJI",2005,950,NA
+"Fiji","FJI",2006,950,NA
+"Fiji","FJI",2007,950,"Watchlist    "
+"Fiji","FJI",2008,950,"Tier 3"
+"Fiji","FJI",2009,950,"Tier 3"
+"Fiji","FJI",2010,950,"Watchlist    "
+"Fiji","FJI",2011,950,"Tier 2    "
+"Fiji","FJI",2012,950,"Tier 2    "
+"Fiji","FJI",2013,950,"Tier 2    "
+"Fiji","FJI",2014,950,"Tier 2    "
+"Fiji","FJI",2015,950,"Tier 2    "
+"Finland","FIN",1999,375,NA
+"Finland","FIN",2000,375,NA
+"Finland","FIN",2001,375,NA
+"Finland","FIN",2002,375,NA
+"Finland","FIN",2003,375,"Tier 2    "
+"Finland","FIN",2004,375,"Tier 2    "
+"Finland","FIN",2005,375,"Tier 2    "
+"Finland","FIN",2006,375,"Tier 1    "
+"Finland","FIN",2007,375,"Tier 1    "
+"Finland","FIN",2008,375,"Tier 1    "
+"Finland","FIN",2009,375,"Tier 1    "
+"Finland","FIN",2010,375,"Tier 1    "
+"Finland","FIN",2011,375,"Tier 1    "
+"Finland","FIN",2012,375,"Tier 1    "
+"Finland","FIN",2013,375,"Tier 1    "
+"Finland","FIN",2014,375,"Tier 1    "
+"Finland","FIN",2015,375,"Tier 1    "
+"France","FRA",1999,220,NA
+"France","FRA",2000,220,NA
+"France","FRA",2001,220,"Tier 2    "
+"France","FRA",2002,220,"Tier 1    "
+"France","FRA",2003,220,"Tier 1    "
+"France","FRA",2004,220,"Tier 1    "
+"France","FRA",2005,220,"Tier 1    "
+"France","FRA",2006,220,"Tier 1    "
+"France","FRA",2007,220,"Tier 1    "
+"France","FRA",2008,220,"Tier 1    "
+"France","FRA",2009,220,"Tier 1    "
+"France","FRA",2010,220,"Tier 1    "
+"France","FRA",2011,220,"Tier 1    "
+"France","FRA",2012,220,"Tier 1    "
+"France","FRA",2013,220,"Tier 1    "
+"France","FRA",2014,220,"Tier 1    "
+"France","FRA",2015,220,"Tier 1    "
+"Gabon","GAB",1999,481,NA
+"Gabon","GAB",2000,481,NA
+"Gabon","GAB",2001,481,"Tier 3"
+"Gabon","GAB",2002,481,"Tier 2    "
+"Gabon","GAB",2003,481,"Tier 2    "
+"Gabon","GAB",2004,481,"Watchlist    "
+"Gabon","GAB",2005,481,"Tier 2    "
+"Gabon","GAB",2006,481,"Tier 2    "
+"Gabon","GAB",2007,481,"Tier 2    "
+"Gabon","GAB",2008,481,"Watchlist    "
+"Gabon","GAB",2009,481,"Watchlist    "
+"Gabon","GAB",2010,481,"Watchlist    "
+"Gabon","GAB",2011,481,"Tier 2    "
+"Gabon","GAB",2012,481,"Tier 2    "
+"Gabon","GAB",2013,481,"Tier 2    "
+"Gabon","GAB",2014,481,"Tier 2    "
+"Gabon","GAB",2015,481,"Watchlist    "
+"Gambia","GMB",1999,420,NA
+"Gambia","GMB",2000,420,NA
+"Gambia","GMB",2001,420,NA
+"Gambia","GMB",2002,420,NA
+"Gambia","GMB",2003,420,"Tier 2    "
+"Gambia","GMB",2004,420,"Tier 2    "
+"Gambia","GMB",2005,420,"Watchlist    "
+"Gambia","GMB",2006,420,"Tier 2    "
+"Gambia","GMB",2007,420,"Watchlist    "
+"Gambia","GMB",2008,420,"Watchlist    "
+"Gambia","GMB",2009,420,"Tier 2    "
+"Gambia","GMB",2010,420,"Tier 2    "
+"Gambia","GMB",2011,420,"Watchlist    "
+"Gambia","GMB",2012,420,"Watchlist    "
+"Gambia","GMB",2013,420,"Watchlist    "
+"Gambia","GMB",2014,420,"Tier 3"
+"Georgia","GEO",1999,372,NA
+"Georgia","GEO",2000,372,NA
+"Georgia","GEO",2001,372,"Tier 2    "
+"Georgia","GEO",2002,372,"Tier 2    "
+"Georgia","GEO",2003,372,"Tier 3"
+"Georgia","GEO",2004,372,"Watchlist    "
+"Georgia","GEO",2005,372,"Tier 2    "
+"Georgia","GEO",2006,372,"Tier 2    "
+"Georgia","GEO",2007,372,"Tier 1    "
+"Georgia","GEO",2008,372,"Tier 1    "
+"Georgia","GEO",2009,372,"Tier 1    "
+"Georgia","GEO",2010,372,"Tier 1    "
+"Georgia","GEO",2011,372,"Tier 1    "
+"Georgia","GEO",2012,372,"Tier 1    "
+"Georgia","GEO",2013,372,"Tier 2    "
+"Georgia","GEO",2014,372,"Tier 2    "
+"Georgia","GEO",2015,372,"Tier 2    "
+"Germany","DEU",1999,255,NA
+"Germany","DEU",2000,255,NA
+"Germany","DEU",2001,255,"Tier 1    "
+"Germany","DEU",2002,255,"Tier 1    "
+"Germany","DEU",2003,255,"Tier 1    "
+"Germany","DEU",2004,255,"Tier 1    "
+"Germany","DEU",2005,255,"Tier 1    "
+"Germany","DEU",2006,255,"Tier 1    "
+"Germany","DEU",2007,255,"Tier 1    "
+"Germany","DEU",2008,255,"Tier 1    "
+"Germany","DEU",2009,255,"Tier 1    "
+"Germany","DEU",2010,255,"Tier 1    "
+"Germany","DEU",2011,255,"Tier 1    "
+"Germany","DEU",2012,255,"Tier 1    "
+"Germany","DEU",2013,255,"Tier 1    "
+"Germany","DEU",2014,255,"Tier 1    "
+"Germany","DEU",2015,255,"Tier 1    "
+"Ghana","GHA",1999,452,NA
+"Ghana","GHA",2000,452,NA
+"Ghana","GHA",2001,452,"Tier 2    "
+"Ghana","GHA",2002,452,"Tier 2    "
+"Ghana","GHA",2003,452,"Tier 1    "
+"Ghana","GHA",2004,452,"Tier 1    "
+"Ghana","GHA",2005,452,"Tier 2    "
+"Ghana","GHA",2006,452,"Tier 2    "
+"Ghana","GHA",2007,452,"Tier 2    "
+"Ghana","GHA",2008,452,"Tier 2    "
+"Ghana","GHA",2009,452,"Watchlist    "
+"Ghana","GHA",2010,452,"Tier 2    "
+"Ghana","GHA",2011,452,"Tier 2    "
+"Ghana","GHA",2012,452,"Tier 2    "
+"Ghana","GHA",2013,452,"Tier 2    "
+"Ghana","GHA",2014,452,"Tier 2    "
+"Ghana","GHA",2015,452,"Watchlist    "
+"Greece","GRC",1999,350,NA
+"Greece","GRC",2000,350,NA
+"Greece","GRC",2001,350,"Tier 3"
+"Greece","GRC",2002,350,"Tier 3"
+"Greece","GRC",2003,350,"Tier 3"
+"Greece","GRC",2004,350,"Watchlist    "
+"Greece","GRC",2005,350,"Watchlist    "
+"Greece","GRC",2006,350,"Tier 2    "
+"Greece","GRC",2007,350,"Tier 2    "
+"Greece","GRC",2008,350,"Tier 2    "
+"Greece","GRC",2009,350,"Tier 2    "
+"Greece","GRC",2010,350,"Tier 2    "
+"Greece","GRC",2011,350,"Tier 2    "
+"Greece","GRC",2012,350,"Tier 2    "
+"Greece","GRC",2013,350,"Tier 2    "
+"Greece","GRC",2014,350,"Tier 2    "
+"Greece","GRC",2015,350,"Tier 2    "
+"Grenada","GRD",1999,55,NA
+"Grenada","GRD",2000,55,NA
+"Grenada","GRD",2001,55,NA
+"Grenada","GRD",2002,55,NA
+"Grenada","GRD",2003,55,NA
+"Grenada","GRD",2004,55,NA
+"Grenada","GRD",2005,55,NA
+"Grenada","GRD",2006,55,NA
+"Grenada","GRD",2007,55,NA
+"Grenada","GRD",2008,55,NA
+"Grenada","GRD",2009,55,NA
+"Grenada","GRD",2010,55,NA
+"Grenada","GRD",2011,55,NA
+"Grenada","GRD",2012,55,NA
+"Grenada","GRD",2013,55,NA
+"Grenada","GRD",2014,55,NA
+"Guatemala","GTM",1999,90,NA
+"Guatemala","GTM",2000,90,NA
+"Guatemala","GTM",2001,90,"Tier 2    "
+"Guatemala","GTM",2002,90,"Tier 2    "
+"Guatemala","GTM",2003,90,"Tier 2    "
+"Guatemala","GTM",2004,90,"Watchlist    "
+"Guatemala","GTM",2005,90,"Tier 2    "
+"Guatemala","GTM",2006,90,"Tier 2    "
+"Guatemala","GTM",2007,90,"Watchlist    "
+"Guatemala","GTM",2008,90,"Watchlist    "
+"Guatemala","GTM",2009,90,"Watchlist    "
+"Guatemala","GTM",2010,90,"Watchlist    "
+"Guatemala","GTM",2011,90,"Tier 2    "
+"Guatemala","GTM",2012,90,"Tier 2    "
+"Guatemala","GTM",2013,90,"Tier 2    "
+"Guatemala","GTM",2014,90,"Tier 2    "
+"Guatemala","GTM",2015,90,"Tier 2    "
+"Guinea","GIN",1999,438,NA
+"Guinea","GIN",2000,438,NA
+"Guinea","GIN",2001,438,NA
+"Guinea","GIN",2002,438,NA
+"Guinea","GIN",2003,438,NA
+"Guinea","GIN",2004,438,"Tier 2    "
+"Guinea","GIN",2005,438,"Watchlist    "
+"Guinea","GIN",2006,438,"Tier 2    "
+"Guinea","GIN",2007,438,"Tier 2    "
+"Guinea","GIN",2008,438,"Watchlist    "
+"Guinea","GIN",2009,438,"Watchlist    "
+"Guinea","GIN",2010,438,"Watchlist    "
+"Guinea","GIN",2011,438,"Watchlist    "
+"Guinea","GIN",2012,438,"Tier 2    "
+"Guinea","GIN",2013,438,"Watchlist    "
+"Guinea","GIN",2014,438,"Watchlist    "
+"Guinea","GIN",2015,438,"Watchlist    "
+"Guinea-Bissau","GNB",1999,404,NA
+"Guinea-Bissau","GNB",2000,404,NA
+"Guinea-Bissau","GNB",2001,404,NA
+"Guinea-Bissau","GNB",2002,404,NA
+"Guinea-Bissau","GNB",2003,404,NA
+"Guinea-Bissau","GNB",2004,404,NA
+"Guinea-Bissau","GNB",2005,404,NA
+"Guinea-Bissau","GNB",2006,404,"Tier 2    "
+"Guinea-Bissau","GNB",2007,404,"Tier 2    "
+"Guinea-Bissau","GNB",2008,404,"Watchlist    "
+"Guinea-Bissau","GNB",2009,404,"Watchlist    "
+"Guinea-Bissau","GNB",2010,404,"Watchlist    "
+"Guinea-Bissau","GNB",2011,404,"Tier 3"
+"Guinea-Bissau","GNB",2012,404,"Watchlist    "
+"Guinea-Bissau","GNB",2013,404,"Tier 3"
+"Guinea-Bissau","GNB",2014,404,"Tier 3"
+"Guinea-Bissau","GNB",2015,404,"Tier 3"
+"Guyana","GUY",1999,110,NA
+"Guyana","GUY",2000,110,NA
+"Guyana","GUY",2001,110,NA
+"Guyana","GUY",2002,110,NA
+"Guyana","GUY",2003,110,NA
+"Guyana","GUY",2004,110,"Tier 3"
+"Guyana","GUY",2005,110,"Tier 2    "
+"Guyana","GUY",2006,110,"Tier 2    "
+"Guyana","GUY",2007,110,"Watchlist    "
+"Guyana","GUY",2008,110,"Watchlist    "
+"Guyana","GUY",2009,110,"Watchlist    "
+"Guyana","GUY",2010,110,"Watchlist    "
+"Guyana","GUY",2011,110,"Tier 2    "
+"Guyana","GUY",2012,110,"Tier 2    "
+"Guyana","GUY",2013,110,"Watchlist    "
+"Guyana","GUY",2014,110,"Watchlist    "
+"Guyana","GUY",2015,110,"Watchlist    "
+"Haiti","HTI",1999,41,NA
+"Haiti","HTI",2000,41,NA
+"Haiti","HTI",2001,41,"Tier 2    "
+"Haiti","HTI",2002,41,"Tier 2    "
+"Haiti","HTI",2003,41,"Tier 3"
+"Haiti","HTI",2004,41,NA
+"Haiti","HTI",2005,41,"Watchlist    "
+"Haiti","HTI",2006,41,NA
+"Haiti","HTI",2007,41,NA
+"Haiti","HTI",2008,41,NA
+"Haiti","HTI",2009,41,NA
+"Haiti","HTI",2010,41,NA
+"Haiti","HTI",2011,41,NA
+"Haiti","HTI",2012,41,"Watchlist    "
+"Haiti","HTI",2013,41,"Watchlist    "
+"Haiti","HTI",2014,41,"Watchlist    "
+"Haiti","HTI",2015,41,"Watchlist    "
+"Honduras","HND",1999,91,NA
+"Honduras","HND",2000,91,NA
+"Honduras","HND",2001,91,"Tier 2    "
+"Honduras","HND",2002,91,"Tier 2    "
+"Honduras","HND",2003,91,"Tier 2    "
+"Honduras","HND",2004,91,"Watchlist    "
+"Honduras","HND",2005,91,"Tier 2    "
+"Honduras","HND",2006,91,"Tier 2    "
+"Honduras","HND",2007,91,"Watchlist    "
+"Honduras","HND",2008,91,"Tier 2    "
+"Honduras","HND",2009,91,"Tier 2    "
+"Honduras","HND",2010,91,"Tier 2    "
+"Honduras","HND",2011,91,"Tier 2    "
+"Honduras","HND",2012,91,"Tier 2    "
+"Honduras","HND",2013,91,"Watchlist    "
+"Honduras","HND",2014,91,"Tier 2    "
+"Honduras","HND",2015,91,"Tier 2    "
+"Hong Kong","HKG",1999,1000,NA
+"Hong Kong","HKG",2000,1000,NA
+"Hong Kong","HKG",2001,1000,"Tier 1    "
+"Hong Kong","HKG",2002,1000,"Tier 1    "
+"Hong Kong","HKG",2003,1000,"Tier 1    "
+"Hong Kong","HKG",2004,1000,"Tier 1    "
+"Hong Kong","HKG",2005,1000,"Tier 1    "
+"Hong Kong","HKG",2006,1000,"Tier 1    "
+"Hong Kong","HKG",2007,1000,"Tier 1    "
+"Hong Kong","HKG",2008,1000,"Tier 1    "
+"Hong Kong","HKG",2009,1000,"Tier 2    "
+"Hong Kong","HKG",2010,1000,"Tier 2    "
+"Hong Kong","HKG",2011,1000,"Tier 2    "
+"Hong Kong","HKG",2012,1000,"Tier 2    "
+"Hong Kong","HKG",2013,1000,"Tier 2    "
+"Hong Kong","HKG",2014,1000,"Tier 2    "
+"Hong Kong","HKG",2015,NA,"Tier 2    "
+"Hungary","HUN",1999,310,NA
+"Hungary","HUN",2000,310,NA
+"Hungary","HUN",2001,310,"Tier 2    "
+"Hungary","HUN",2002,310,"Tier 2    "
+"Hungary","HUN",2003,310,"Tier 2    "
+"Hungary","HUN",2004,310,"Tier 2    "
+"Hungary","HUN",2005,310,"Tier 2    "
+"Hungary","HUN",2006,310,"Tier 2    "
+"Hungary","HUN",2007,310,"Tier 1    "
+"Hungary","HUN",2008,310,"Tier 1    "
+"Hungary","HUN",2009,310,"Tier 2    "
+"Hungary","HUN",2010,310,"Tier 2    "
+"Hungary","HUN",2011,310,"Tier 2    "
+"Hungary","HUN",2012,310,"Tier 2    "
+"Hungary","HUN",2013,310,"Tier 2    "
+"Hungary","HUN",2014,310,"Tier 2    "
+"Hungary","HUN",2015,310,"Tier 2    "
+"Iceland","ISL",1999,395,NA
+"Iceland","ISL",2000,395,NA
+"Iceland","ISL",2001,395,NA
+"Iceland","ISL",2002,395,NA
+"Iceland","ISL",2003,395,NA
+"Iceland","ISL",2004,395,NA
+"Iceland","ISL",2005,395,NA
+"Iceland","ISL",2006,395,NA
+"Iceland","ISL",2007,395,NA
+"Iceland","ISL",2008,395,NA
+"Iceland","ISL",2009,395,"Tier 2    "
+"Iceland","ISL",2010,395,"Tier 2    "
+"Iceland","ISL",2011,395,"Tier 2    "
+"Iceland","ISL",2012,395,"Tier 1    "
+"Iceland","ISL",2013,395,"Tier 1    "
+"Iceland","ISL",2014,395,"Tier 1    "
+"Iceland","ISL",2015,395,"Tier 1    "
+"India","IND",1999,750,NA
+"India","IND",2000,750,NA
+"India","IND",2001,750,"Tier 2    "
+"India","IND",2002,750,"Tier 2    "
+"India","IND",2003,750,"Tier 2    "
+"India","IND",2004,750,"Watchlist    "
+"India","IND",2005,750,"Watchlist    "
+"India","IND",2006,750,"Watchlist    "
+"India","IND",2007,750,"Watchlist    "
+"India","IND",2008,750,"Watchlist    "
+"India","IND",2009,750,"Watchlist    "
+"India","IND",2010,750,"Watchlist    "
+"India","IND",2011,750,"Tier 2    "
+"India","IND",2012,750,"Tier 2    "
+"India","IND",2013,750,"Tier 2    "
+"India","IND",2014,750,"Tier 2    "
+"India","IND",2015,750,"Tier 2    "
+"Indonesia","IDN",1999,850,NA
+"Indonesia","IDN",2000,850,NA
+"Indonesia","IDN",2001,850,"Tier 3"
+"Indonesia","IDN",2002,850,"Tier 3"
+"Indonesia","IDN",2003,850,"Tier 2    "
+"Indonesia","IDN",2004,850,"Tier 2    "
+"Indonesia","IDN",2005,850,"Tier 2    "
+"Indonesia","IDN",2006,850,"Watchlist    "
+"Indonesia","IDN",2007,850,"Tier 2    "
+"Indonesia","IDN",2008,850,"Tier 2    "
+"Indonesia","IDN",2009,850,"Tier 2    "
+"Indonesia","IDN",2010,850,"Tier 2    "
+"Indonesia","IDN",2011,850,"Tier 2    "
+"Indonesia","IDN",2012,850,"Tier 2    "
+"Indonesia","IDN",2013,850,"Tier 2    "
+"Indonesia","IDN",2014,850,"Tier 2    "
+"Indonesia","IDN",2015,850,"Tier 2    "
+"Iran, Islamic Republic of","IRN",1999,630,NA
+"Iran, Islamic Republic of","IRN",2000,630,NA
+"Iran, Islamic Republic of","IRN",2001,630,NA
+"Iran, Islamic Republic of","IRN",2002,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2003,630,NA
+"Iran, Islamic Republic of","IRN",2004,630,"Tier 2    "
+"Iran, Islamic Republic of","IRN",2005,630,"Tier 2    "
+"Iran, Islamic Republic of","IRN",2006,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2007,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2008,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2009,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2010,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2011,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2012,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2013,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2014,630,"Tier 3"
+"Iran, Islamic Republic of","IRN",2015,630,"Tier 3"
+"Iraq","IRQ",1999,645,NA
+"Iraq","IRQ",2000,645,NA
+"Iraq","IRQ",2001,645,NA
+"Iraq","IRQ",2002,645,NA
+"Iraq","IRQ",2003,645,NA
+"Iraq","IRQ",2004,645,NA
+"Iraq","IRQ",2005,645,NA
+"Iraq","IRQ",2006,645,NA
+"Iraq","IRQ",2007,645,NA
+"Iraq","IRQ",2008,645,NA
+"Iraq","IRQ",2009,645,"Watchlist    "
+"Iraq","IRQ",2010,645,"Watchlist    "
+"Iraq","IRQ",2011,645,"Watchlist    "
+"Iraq","IRQ",2012,645,"Watchlist    "
+"Iraq","IRQ",2013,645,"Tier 2    "
+"Iraq","IRQ",2014,645,"Tier 2    "
+"Iraq","IRQ",2015,645,"Tier 2    "
+"Ireland","IRL",1999,205,NA
+"Ireland","IRL",2000,205,NA
+"Ireland","IRL",2001,205,NA
+"Ireland","IRL",2002,205,NA
+"Ireland","IRL",2003,205,NA
+"Ireland","IRL",2004,205,NA
+"Ireland","IRL",2005,205,NA
+"Ireland","IRL",2006,205,"Tier 1    "
+"Ireland","IRL",2007,205,NA
+"Ireland","IRL",2008,205,"Tier 2    "
+"Ireland","IRL",2009,205,"Tier 2    "
+"Ireland","IRL",2010,205,"Tier 1    "
+"Ireland","IRL",2011,205,"Tier 1    "
+"Ireland","IRL",2012,205,"Tier 1    "
+"Ireland","IRL",2013,205,"Tier 1    "
+"Ireland","IRL",2014,205,"Tier 1    "
+"Ireland","IRL",2015,205,"Tier 1    "
+"Israel","ISR",1999,666,NA
+"Israel","ISR",2000,666,NA
+"Israel","ISR",2001,666,"Tier 3"
+"Israel","ISR",2002,666,"Tier 2    "
+"Israel","ISR",2003,666,"Tier 2    "
+"Israel","ISR",2004,666,"Tier 2    "
+"Israel","ISR",2005,666,"Tier 2    "
+"Israel","ISR",2006,666,"Watchlist    "
+"Israel","ISR",2007,666,"Tier 2    "
+"Israel","ISR",2008,666,"Tier 2    "
+"Israel","ISR",2009,666,"Tier 2    "
+"Israel","ISR",2010,666,"Tier 2    "
+"Israel","ISR",2011,666,"Tier 2    "
+"Israel","ISR",2012,666,"Tier 1    "
+"Israel","ISR",2013,666,"Tier 1    "
+"Israel","ISR",2014,666,"Tier 1    "
+"Israel","ISR",2015,666,"Tier 1    "
+"Italy","ITA",1999,325,NA
+"Italy","ITA",2000,325,NA
+"Italy","ITA",2001,325,"Tier 1    "
+"Italy","ITA",2002,325,"Tier 1    "
+"Italy","ITA",2003,325,"Tier 1    "
+"Italy","ITA",2004,325,"Tier 1    "
+"Italy","ITA",2005,325,"Tier 1    "
+"Italy","ITA",2006,325,"Tier 1    "
+"Italy","ITA",2007,325,"Tier 1    "
+"Italy","ITA",2008,325,"Tier 1    "
+"Italy","ITA",2009,325,"Tier 1    "
+"Italy","ITA",2010,325,"Tier 1    "
+"Italy","ITA",2011,325,"Tier 1    "
+"Italy","ITA",2012,325,"Tier 1    "
+"Italy","ITA",2013,325,"Tier 1    "
+"Italy","ITA",2014,325,"Tier 1    "
+"Italy","ITA",2015,325,"Tier 1    "
+"Jamaica","JAM",1999,51,NA
+"Jamaica","JAM",2000,51,NA
+"Jamaica","JAM",2001,51,NA
+"Jamaica","JAM",2002,51,NA
+"Jamaica","JAM",2003,51,"Tier 2    "
+"Jamaica","JAM",2004,51,"Watchlist    "
+"Jamaica","JAM",2005,51,"Tier 3"
+"Jamaica","JAM",2006,51,"Watchlist    "
+"Jamaica","JAM",2007,51,"Tier 2    "
+"Jamaica","JAM",2008,51,"Tier 2    "
+"Jamaica","JAM",2009,51,"Tier 2    "
+"Jamaica","JAM",2010,51,"Tier 2    "
+"Jamaica","JAM",2011,51,"Tier 2    "
+"Jamaica","JAM",2012,51,"Watchlist    "
+"Jamaica","JAM",2013,51,"Tier 2    "
+"Jamaica","JAM",2014,51,"Watchlist    "
+"Jamaica","JAM",2015,51,"Watchlist    "
+"Japan","JPN",1999,740,NA
+"Japan","JPN",2000,740,NA
+"Japan","JPN",2001,740,"Tier 2    "
+"Japan","JPN",2002,740,"Tier 2    "
+"Japan","JPN",2003,740,"Tier 2    "
+"Japan","JPN",2004,740,"Watchlist    "
+"Japan","JPN",2005,740,"Tier 2    "
+"Japan","JPN",2006,740,"Tier 2    "
+"Japan","JPN",2007,740,"Tier 2    "
+"Japan","JPN",2008,740,"Tier 2    "
+"Japan","JPN",2009,740,"Tier 2    "
+"Japan","JPN",2010,740,"Tier 2    "
+"Japan","JPN",2011,740,"Tier 2    "
+"Japan","JPN",2012,740,"Tier 2    "
+"Japan","JPN",2013,740,"Tier 2    "
+"Japan","JPN",2014,740,"Tier 2    "
+"Japan","JPN",2015,740,"Tier 2    "
+"Jordan","JOR",1999,663,NA
+"Jordan","JOR",2000,663,NA
+"Jordan","JOR",2001,663,NA
+"Jordan","JOR",2002,663,NA
+"Jordan","JOR",2003,663,NA
+"Jordan","JOR",2004,663,NA
+"Jordan","JOR",2005,663,NA
+"Jordan","JOR",2006,663,"Tier 2    "
+"Jordan","JOR",2007,663,"Tier 2    "
+"Jordan","JOR",2008,663,"Watchlist    "
+"Jordan","JOR",2009,663,"Tier 2    "
+"Jordan","JOR",2010,663,"Tier 2    "
+"Jordan","JOR",2011,663,"Tier 2    "
+"Jordan","JOR",2012,663,"Tier 2    "
+"Jordan","JOR",2013,663,"Tier 2    "
+"Jordan","JOR",2014,663,"Tier 2    "
+"Jordan","JOR",2015,663,"Tier 2    "
+"Kazakhstan","KAZ",1999,705,NA
+"Kazakhstan","KAZ",2000,705,NA
+"Kazakhstan","KAZ",2001,705,"Tier 3"
+"Kazakhstan","KAZ",2002,705,"Tier 2    "
+"Kazakhstan","KAZ",2003,705,"Tier 3"
+"Kazakhstan","KAZ",2004,705,"Watchlist    "
+"Kazakhstan","KAZ",2005,705,"Tier 2    "
+"Kazakhstan","KAZ",2006,705,"Tier 2    "
+"Kazakhstan","KAZ",2007,705,"Watchlist    "
+"Kazakhstan","KAZ",2008,705,"Tier 2    "
+"Kazakhstan","KAZ",2009,705,"Tier 2    "
+"Kazakhstan","KAZ",2010,705,"Watchlist    "
+"Kazakhstan","KAZ",2011,705,"Tier 2    "
+"Kazakhstan","KAZ",2012,705,"Tier 2    "
+"Kazakhstan","KAZ",2013,705,"Tier 2    "
+"Kazakhstan","KAZ",2014,705,"Tier 2    "
+"Kazakhstan","KAZ",2015,705,"Tier 2    "
+"Kenya","KEN",1999,501,NA
+"Kenya","KEN",2000,501,NA
+"Kenya","KEN",2001,501,NA
+"Kenya","KEN",2002,501,NA
+"Kenya","KEN",2003,501,"Tier 2    "
+"Kenya","KEN",2004,501,"Watchlist    "
+"Kenya","KEN",2005,501,"Tier 2    "
+"Kenya","KEN",2006,501,"Watchlist    "
+"Kenya","KEN",2007,501,"Watchlist    "
+"Kenya","KEN",2008,501,"Tier 2    "
+"Kenya","KEN",2009,501,"Tier 2    "
+"Kenya","KEN",2010,501,"Tier 2    "
+"Kenya","KEN",2011,501,"Tier 2    "
+"Kenya","KEN",2012,501,"Watchlist    "
+"Kenya","KEN",2013,501,"Watchlist    "
+"Kenya","KEN",2014,501,"Watchlist    "
+"Kenya","KEN",2015,501,"Tier 2    "
+"Kiribati","KIR",1999,946,NA
+"Kiribati","KIR",2000,946,NA
+"Kiribati","KIR",2001,946,NA
+"Kiribati","KIR",2002,946,NA
+"Kiribati","KIR",2003,946,NA
+"Kiribati","KIR",2004,946,NA
+"Kiribati","KIR",2005,946,NA
+"Kiribati","KIR",2006,946,NA
+"Kiribati","KIR",2007,946,NA
+"Kiribati","KIR",2008,946,NA
+"Kiribati","KIR",2009,946,NA
+"Kiribati","KIR",2010,946,"Watchlist    "
+"Kiribati","KIR",2011,946,"Watchlist    "
+"Kiribati","KIR",2012,946,"Tier 2    "
+"Kiribati","KIR",2013,946,"Tier 2    "
+"Kiribati","KIR",2014,946,"Tier 2    "
+"Kiribati","KIR",2015,946,"Tier 2    "
+"Korea, Democratic People's Republic of","PRK",2015,731,"Tier 3"
+"Korea, Republic of","KOR",2015,732,"Tier 1    "
+"Kosovo","KOS",1999,1001,NA
+"Kosovo","KOS",2000,1001,NA
+"Kosovo","KOS",2001,1001,NA
+"Kosovo","KOS",2002,1001,NA
+"Kosovo","KOS",2003,1001,NA
+"Kosovo","KOS",2004,1001,NA
+"Kosovo","KOS",2005,1001,NA
+"Kosovo","KOS",2006,1001,NA
+"Kosovo","KOS",2007,1001,NA
+"Kosovo","KOS",2008,1001,NA
+"Kosovo","KOS",2009,1001,"Tier 2    "
+"Kosovo","KOS",2010,1001,"Tier 2    "
+"Kosovo","KOS",2011,1001,"Tier 2    "
+"Kosovo","KOS",2012,1001,"Tier 2    "
+"Kosovo","KOS",2013,1001,"Tier 2    "
+"Kosovo","KOS",2014,1001,"Tier 2    "
+"Kosovo","KOS",2015,347,"Tier 2    "
+"Kuwait","KWT",1999,690,NA
+"Kuwait","KWT",2000,690,NA
+"Kuwait","KWT",2001,690,NA
+"Kuwait","KWT",2002,690,NA
+"Kuwait","KWT",2003,690,"Tier 2    "
+"Kuwait","KWT",2004,690,"Tier 2    "
+"Kuwait","KWT",2005,690,"Tier 3"
+"Kuwait","KWT",2006,690,"Watchlist    "
+"Kuwait","KWT",2007,690,"Tier 3"
+"Kuwait","KWT",2008,690,"Tier 3"
+"Kuwait","KWT",2009,690,"Tier 3"
+"Kuwait","KWT",2010,690,"Tier 3"
+"Kuwait","KWT",2011,690,"Tier 3"
+"Kuwait","KWT",2012,690,"Tier 3"
+"Kuwait","KWT",2013,690,"Tier 3"
+"Kuwait","KWT",2014,690,"Tier 3"
+"Kuwait","KWT",2015,690,"Tier 3"
+"Kyrgyzstan","KGZ",1999,703,NA
+"Kyrgyzstan","KGZ",2000,703,NA
+"Kyrgyzstan","KGZ",2001,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2002,703,"Tier 3"
+"Kyrgyzstan","KGZ",2003,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2004,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2005,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2006,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2007,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2008,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2009,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2010,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2011,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2012,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2013,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2014,703,"Tier 2    "
+"Kyrgyzstan","KGZ",2015,703,"Tier 2    "
+"Lao People's Democratic Republic","LAO",1999,812,NA
+"Lao People's Democratic Republic","LAO",2000,812,NA
+"Lao People's Democratic Republic","LAO",2001,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2002,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2003,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2004,812,"Watchlist    "
+"Lao People's Democratic Republic","LAO",2005,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2006,812,"Tier 3"
+"Lao People's Democratic Republic","LAO",2007,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2008,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2009,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2010,812,"Watchlist    "
+"Lao People's Democratic Republic","LAO",2011,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2012,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2013,812,"Tier 2    "
+"Lao People's Democratic Republic","LAO",2014,812,"Watchlist    "
+"Lao People's Democratic Republic","LAO",2015,812,"Watchlist    "
+"Latvia","LVA",1999,367,NA
+"Latvia","LVA",2000,367,NA
+"Latvia","LVA",2001,367,NA
+"Latvia","LVA",2002,367,"Tier 2    "
+"Latvia","LVA",2003,367,"Tier 2    "
+"Latvia","LVA",2004,367,"Tier 2    "
+"Latvia","LVA",2005,367,"Tier 2    "
+"Latvia","LVA",2006,367,"Tier 2    "
+"Latvia","LVA",2007,367,"Tier 2    "
+"Latvia","LVA",2008,367,"Tier 2    "
+"Latvia","LVA",2009,367,"Watchlist    "
+"Latvia","LVA",2010,367,"Tier 2    "
+"Latvia","LVA",2011,367,"Tier 2    "
+"Latvia","LVA",2012,367,"Tier 2    "
+"Latvia","LVA",2013,367,"Tier 2    "
+"Latvia","LVA",2014,367,"Tier 2    "
+"Latvia","LVA",2015,367,"Tier 2    "
+"Lebanon","LBN",1999,660,NA
+"Lebanon","LBN",2000,660,NA
+"Lebanon","LBN",2001,660,"Tier 3"
+"Lebanon","LBN",2002,660,"Tier 3"
+"Lebanon","LBN",2003,660,"Tier 2    "
+"Lebanon","LBN",2004,660,"Tier 2    "
+"Lebanon","LBN",2005,660,"Tier 2    "
+"Lebanon","LBN",2006,660,"Tier 2    "
+"Lebanon","LBN",2007,660,"Tier 2    "
+"Lebanon","LBN",2008,660,"Tier 2    "
+"Lebanon","LBN",2009,660,"Watchlist    "
+"Lebanon","LBN",2010,660,"Watchlist    "
+"Lebanon","LBN",2011,660,"Tier 3"
+"Lebanon","LBN",2012,660,"Watchlist    "
+"Lebanon","LBN",2013,660,"Watchlist    "
+"Lebanon","LBN",2014,660,"Watchlist    "
+"Lebanon","LBN",2015,660,"Watchlist    "
+"Lesotho","LSO",1999,570,NA
+"Lesotho","LSO",2000,570,NA
+"Lesotho","LSO",2001,570,NA
+"Lesotho","LSO",2002,570,NA
+"Lesotho","LSO",2003,570,NA
+"Lesotho","LSO",2004,570,NA
+"Lesotho","LSO",2005,570,NA
+"Lesotho","LSO",2006,570,NA
+"Lesotho","LSO",2007,570,NA
+"Lesotho","LSO",2008,570,NA
+"Lesotho","LSO",2009,570,"Watchlist    "
+"Lesotho","LSO",2010,570,"Watchlist    "
+"Lesotho","LSO",2011,570,"Tier 2    "
+"Lesotho","LSO",2012,570,"Tier 2    "
+"Lesotho","LSO",2013,570,"Watchlist    "
+"Lesotho","LSO",2014,570,"Watchlist    "
+"Lesotho","LSO",2015,570,"Watchlist    "
+"Liberia","LBR",1999,450,NA
+"Liberia","LBR",2000,450,NA
+"Liberia","LBR",2001,450,NA
+"Liberia","LBR",2002,450,NA
+"Liberia","LBR",2003,450,"Tier 3"
+"Liberia","LBR",2004,450,NA
+"Liberia","LBR",2005,450,NA
+"Liberia","LBR",2006,450,NA
+"Liberia","LBR",2007,450,"Tier 2    "
+"Liberia","LBR",2008,450,"Tier 2    "
+"Liberia","LBR",2009,450,"Tier 2    "
+"Liberia","LBR",2010,450,"Tier 2    "
+"Liberia","LBR",2011,450,"Watchlist    "
+"Liberia","LBR",2012,450,"Watchlist    "
+"Liberia","LBR",2013,450,"Watchlist    "
+"Liberia","LBR",2014,450,"Tier 2    "
+"Liberia","LBR",2015,450,"Tier 2    "
+"Libya","LBY",1999,620,NA
+"Libya","LBY",2000,620,NA
+"Libya","LBY",2001,620,NA
+"Libya","LBY",2002,620,NA
+"Libya","LBY",2003,620,NA
+"Libya","LBY",2004,620,NA
+"Libya","LBY",2005,620,"Tier 2    "
+"Libya","LBY",2006,620,"Watchlist    "
+"Libya","LBY",2007,620,"Watchlist    "
+"Libya","LBY",2008,620,"Watchlist    "
+"Libya","LBY",2009,620,"Watchlist    "
+"Libya","LBY",2010,620,"Watchlist    "
+"Libya","LBY",2011,620,"Tier 3"
+"Libya","LBY",2012,620,"Tier 3"
+"Libya","LBY",2013,620,"Tier 3"
+"Libya","LBY",2014,620,"Tier 3"
+"Libya","LBY",2015,620,"Tier 3"
+"Lithuania","LTU",1999,368,NA
+"Lithuania","LTU",2000,368,NA
+"Lithuania","LTU",2001,368,"Tier 2    "
+"Lithuania","LTU",2002,368,"Tier 1    "
+"Lithuania","LTU",2003,368,"Tier 1    "
+"Lithuania","LTU",2004,368,"Tier 1    "
+"Lithuania","LTU",2005,368,"Tier 1    "
+"Lithuania","LTU",2006,368,"Tier 1    "
+"Lithuania","LTU",2007,368,"Tier 1    "
+"Lithuania","LTU",2008,368,"Tier 1    "
+"Lithuania","LTU",2009,368,"Tier 1    "
+"Lithuania","LTU",2010,368,"Tier 1    "
+"Lithuania","LTU",2011,368,"Tier 1    "
+"Lithuania","LTU",2012,368,"Tier 1    "
+"Lithuania","LTU",2013,368,"Tier 2    "
+"Lithuania","LTU",2014,368,"Tier 2    "
+"Lithuania","LTU",2015,368,"Tier 2    "
+"Luxembourg","LUX",1999,212,NA
+"Luxembourg","LUX",2000,212,NA
+"Luxembourg","LUX",2001,212,NA
+"Luxembourg","LUX",2002,212,NA
+"Luxembourg","LUX",2003,212,NA
+"Luxembourg","LUX",2004,212,NA
+"Luxembourg","LUX",2005,212,"Tier 1    "
+"Luxembourg","LUX",2006,212,"Tier 1    "
+"Luxembourg","LUX",2007,212,"Tier 1    "
+"Luxembourg","LUX",2008,212,"Tier 1    "
+"Luxembourg","LUX",2009,212,"Tier 1    "
+"Luxembourg","LUX",2010,212,"Tier 1    "
+"Luxembourg","LUX",2011,212,"Tier 2    "
+"Luxembourg","LUX",2012,212,"Tier 1    "
+"Luxembourg","LUX",2013,212,"Tier 1    "
+"Luxembourg","LUX",2014,212,"Tier 1    "
+"Luxembourg","LUX",2015,212,"Tier 1    "
+"Macao","MAC",2000,1002,NA
+"Macao","MAC",2001,1002,NA
+"Macao","MAC",2002,1002,NA
+"Macao","MAC",2003,1002,NA
+"Macao","MAC",2004,1002,NA
+"Macao","MAC",2005,1002,NA
+"Macao","MAC",2006,1002,"Watchlist    "
+"Macao","MAC",2007,1002,"Watchlist    "
+"Macao","MAC",2008,1002,"Tier 2    "
+"Macao","MAC",2009,1002,"Tier 2    "
+"Macao","MAC",2010,1002,"Tier 2    "
+"Macao","MAC",2011,1002,"Tier 2    "
+"Macao","MAC",2012,1002,"Watchlist    "
+"Macao","MAC",2013,1002,"Tier 2    "
+"Macao","MAC",2014,1002,"Tier 2    "
+"Macao","MAC",2015,NA,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",1999,343,NA
+"Macedonia, the former Yugoslav Republic of","MKD",2000,343,NA
+"Macedonia, the former Yugoslav Republic of","MKD",2001,343,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",2002,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2003,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2004,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2005,343,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",2006,343,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",2007,343,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",2008,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2009,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2010,343,"Tier 2    "
+"Macedonia, the former Yugoslav Republic of","MKD",2011,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2012,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2013,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2014,343,"Tier 1    "
+"Macedonia, the former Yugoslav Republic of","MKD",2015,343,"Tier 1    "
+"Madagascar","MDG",1999,580,NA
+"Madagascar","MDG",2000,580,NA
+"Madagascar","MDG",2001,580,NA
+"Madagascar","MDG",2002,580,NA
+"Madagascar","MDG",2003,580,NA
+"Madagascar","MDG",2004,580,"Watchlist    "
+"Madagascar","MDG",2005,580,"Tier 2    "
+"Madagascar","MDG",2006,580,"Tier 2    "
+"Madagascar","MDG",2007,580,"Tier 2    "
+"Madagascar","MDG",2008,580,"Tier 1    "
+"Madagascar","MDG",2009,580,"Tier 2    "
+"Madagascar","MDG",2010,580,"Watchlist    "
+"Madagascar","MDG",2011,580,"Tier 3"
+"Madagascar","MDG",2012,580,"Tier 3"
+"Madagascar","MDG",2013,580,"Watchlist    "
+"Madagascar","MDG",2014,580,"Watchlist    "
+"Madagascar","MDG",2015,580,"Tier 2    "
+"Malawi","MWI",1999,553,NA
+"Malawi","MWI",2000,553,NA
+"Malawi","MWI",2001,553,NA
+"Malawi","MWI",2002,553,NA
+"Malawi","MWI",2003,553,"Tier 2    "
+"Malawi","MWI",2004,553,"Watchlist    "
+"Malawi","MWI",2005,553,"Tier 2    "
+"Malawi","MWI",2006,553,"Tier 1    "
+"Malawi","MWI",2007,553,"Tier 1    "
+"Malawi","MWI",2008,553,"Tier 2    "
+"Malawi","MWI",2009,553,"Tier 2    "
+"Malawi","MWI",2010,553,"Tier 2    "
+"Malawi","MWI",2011,553,"Tier 2    "
+"Malawi","MWI",2012,553,"Watchlist    "
+"Malawi","MWI",2013,553,"Tier 2    "
+"Malawi","MWI",2014,553,"Tier 2    "
+"Malawi","MWI",2015,553,"Tier 2    "
+"Malaysia","MYS",1999,820,NA
+"Malaysia","MYS",2000,820,NA
+"Malaysia","MYS",2001,820,"Tier 3"
+"Malaysia","MYS",2002,820,"Tier 2    "
+"Malaysia","MYS",2003,820,"Tier 2    "
+"Malaysia","MYS",2004,820,"Tier 2    "
+"Malaysia","MYS",2005,820,"Tier 2    "
+"Malaysia","MYS",2006,820,"Watchlist    "
+"Malaysia","MYS",2007,820,"Tier 3"
+"Malaysia","MYS",2008,820,"Watchlist    "
+"Malaysia","MYS",2009,820,"Tier 3"
+"Malaysia","MYS",2010,820,"Watchlist    "
+"Malaysia","MYS",2011,820,"Watchlist    "
+"Malaysia","MYS",2012,820,"Watchlist    "
+"Malaysia","MYS",2013,820,"Watchlist    "
+"Malaysia","MYS",2014,820,"Tier 3"
+"Malaysia","MYS",2015,820,"Watchlist    "
+"Maldives","MDV",1999,781,NA
+"Maldives","MDV",2000,781,NA
+"Maldives","MDV",2001,781,NA
+"Maldives","MDV",2002,781,NA
+"Maldives","MDV",2003,781,NA
+"Maldives","MDV",2004,781,NA
+"Maldives","MDV",2005,781,NA
+"Maldives","MDV",2006,781,NA
+"Maldives","MDV",2007,781,NA
+"Maldives","MDV",2008,781,NA
+"Maldives","MDV",2009,781,"Tier 2    "
+"Maldives","MDV",2010,781,"Watchlist    "
+"Maldives","MDV",2011,781,"Watchlist    "
+"Maldives","MDV",2012,781,"Watchlist    "
+"Maldives","MDV",2013,781,"Watchlist    "
+"Maldives","MDV",2014,781,"Tier 2    "
+"Maldives","MDV",2015,781,"Watchlist    "
+"Mali","MLI",1999,432,NA
+"Mali","MLI",2000,432,NA
+"Mali","MLI",2001,432,"Tier 2    "
+"Mali","MLI",2002,432,"Tier 2    "
+"Mali","MLI",2003,432,"Tier 2    "
+"Mali","MLI",2004,432,"Tier 2    "
+"Mali","MLI",2005,432,"Tier 2    "
+"Mali","MLI",2006,432,"Tier 2    "
+"Mali","MLI",2007,432,"Tier 2    "
+"Mali","MLI",2008,432,"Tier 2    "
+"Mali","MLI",2009,432,"Watchlist    "
+"Mali","MLI",2010,432,"Watchlist    "
+"Mali","MLI",2011,432,"Watchlist    "
+"Mali","MLI",2012,432,"Tier 2    "
+"Mali","MLI",2013,432,"Watchlist    "
+"Mali","MLI",2014,432,"Watchlist    "
+"Mali","MLI",2015,432,"Watchlist    "
+"Malta","MLT",1999,338,NA
+"Malta","MLT",2000,338,NA
+"Malta","MLT",2001,338,NA
+"Malta","MLT",2002,338,NA
+"Malta","MLT",2003,338,NA
+"Malta","MLT",2004,338,NA
+"Malta","MLT",2005,338,NA
+"Malta","MLT",2006,338,"Tier 2    "
+"Malta","MLT",2007,338,"Tier 2    "
+"Malta","MLT",2008,338,"Tier 2    "
+"Malta","MLT",2009,338,"Tier 2    "
+"Malta","MLT",2010,338,"Watchlist    "
+"Malta","MLT",2011,338,"Watchlist    "
+"Malta","MLT",2012,338,"Tier 2    "
+"Malta","MLT",2013,338,"Tier 2    "
+"Malta","MLT",2014,338,"Tier 2    "
+"Malta","MLT",2015,338,"Tier 2    "
+"Marshall Islands","MHL",2015,983,"Tier 3"
+"Marshall Islands","MHL",1999,983,NA
+"Marshall Islands","MHL",2000,983,NA
+"Marshall Islands","MHL",2001,983,NA
+"Marshall Islands","MHL",2002,983,NA
+"Marshall Islands","MHL",2003,983,NA
+"Marshall Islands","MHL",2004,983,NA
+"Marshall Islands","MHL",2005,983,NA
+"Marshall Islands","MHL",2006,983,NA
+"Marshall Islands","MHL",2007,983,NA
+"Marshall Islands","MHL",2008,983,NA
+"Marshall Islands","MHL",2009,983,NA
+"Marshall Islands","MHL",2010,983,NA
+"Marshall Islands","MHL",2011,983,"Tier 2    "
+"Marshall Islands","MHL",2012,983,"Tier 2    "
+"Marshall Islands","MHL",2013,983,"Watchlist    "
+"Marshall Islands","MHL",2014,983,"Watchlist    "
+"Mauritania","MRT",1999,435,NA
+"Mauritania","MRT",2000,435,NA
+"Mauritania","MRT",2001,435,NA
+"Mauritania","MRT",2002,435,NA
+"Mauritania","MRT",2003,435,NA
+"Mauritania","MRT",2004,435,"Watchlist    "
+"Mauritania","MRT",2005,435,"Tier 2    "
+"Mauritania","MRT",2006,435,"Watchlist    "
+"Mauritania","MRT",2007,435,"Watchlist    "
+"Mauritania","MRT",2008,435,"Tier 2    "
+"Mauritania","MRT",2009,435,"Tier 3"
+"Mauritania","MRT",2010,435,"Tier 3"
+"Mauritania","MRT",2011,435,"Tier 3"
+"Mauritania","MRT",2012,435,"Watchlist    "
+"Mauritania","MRT",2013,435,"Tier 3"
+"Mauritania","MRT",2014,435,"Tier 3"
+"Mauritania","MRT",2015,435,"Tier 3"
+"Mauritius","MUS",1999,590,NA
+"Mauritius","MUS",2000,590,NA
+"Mauritius","MUS",2001,590,NA
+"Mauritius","MUS",2002,590,NA
+"Mauritius","MUS",2003,590,"Tier 1    "
+"Mauritius","MUS",2004,590,"Tier 2    "
+"Mauritius","MUS",2005,590,"Watchlist    "
+"Mauritius","MUS",2006,590,"Tier 2    "
+"Mauritius","MUS",2007,590,"Tier 2    "
+"Mauritius","MUS",2008,590,"Tier 2    "
+"Mauritius","MUS",2009,590,"Tier 1    "
+"Mauritius","MUS",2010,590,"Tier 1    "
+"Mauritius","MUS",2011,590,"Tier 1    "
+"Mauritius","MUS",2012,590,"Tier 1    "
+"Mauritius","MUS",2013,590,"Tier 2    "
+"Mauritius","MUS",2014,590,"Tier 2    "
+"Mauritius","MUS",2015,590,"Watchlist    "
+"Mexico","MEX",1999,70,NA
+"Mexico","MEX",2000,70,NA
+"Mexico","MEX",2001,70,"Tier 2    "
+"Mexico","MEX",2002,70,"Tier 2    "
+"Mexico","MEX",2003,70,"Tier 2    "
+"Mexico","MEX",2004,70,"Watchlist    "
+"Mexico","MEX",2005,70,"Watchlist    "
+"Mexico","MEX",2006,70,"Watchlist    "
+"Mexico","MEX",2007,70,"Watchlist    "
+"Mexico","MEX",2008,70,"Tier 2    "
+"Mexico","MEX",2009,70,"Tier 2    "
+"Mexico","MEX",2010,70,"Tier 2    "
+"Mexico","MEX",2011,70,"Tier 2    "
+"Mexico","MEX",2012,70,"Tier 2    "
+"Mexico","MEX",2013,70,"Tier 2    "
+"Mexico","MEX",2014,70,"Tier 2    "
+"Mexico","MEX",2015,70,"Tier 2    "
+"Micronesia, Federated States of","FSM",1999,987,NA
+"Micronesia, Federated States of","FSM",2000,987,NA
+"Micronesia, Federated States of","FSM",2001,987,NA
+"Micronesia, Federated States of","FSM",2002,987,NA
+"Micronesia, Federated States of","FSM",2003,987,NA
+"Micronesia, Federated States of","FSM",2004,987,NA
+"Micronesia, Federated States of","FSM",2005,987,NA
+"Micronesia, Federated States of","FSM",2006,987,NA
+"Micronesia, Federated States of","FSM",2007,987,NA
+"Micronesia, Federated States of","FSM",2008,987,NA
+"Micronesia, Federated States of","FSM",2009,987,"Watchlist    "
+"Micronesia, Federated States of","FSM",2010,987,"Watchlist    "
+"Micronesia, Federated States of","FSM",2011,987,"Tier 3"
+"Micronesia, Federated States of","FSM",2012,987,"Watchlist    "
+"Micronesia, Federated States of","FSM",2013,987,"Watchlist    "
+"Micronesia, Federated States of","FSM",2014,987,"Tier 2    "
+"Micronesia, Federated States of","FSM",2015,987,"Tier 2    "
+"Moldova, Republic of","MDA",1999,359,NA
+"Moldova, Republic of","MDA",2000,359,NA
+"Moldova, Republic of","MDA",2001,359,"Tier 2    "
+"Moldova, Republic of","MDA",2002,359,"Tier 2    "
+"Moldova, Republic of","MDA",2003,359,"Tier 2    "
+"Moldova, Republic of","MDA",2004,359,"Tier 2    "
+"Moldova, Republic of","MDA",2005,359,"Tier 2    "
+"Moldova, Republic of","MDA",2006,359,"Tier 2    "
+"Moldova, Republic of","MDA",2007,359,"Watchlist    "
+"Moldova, Republic of","MDA",2008,359,"Tier 3"
+"Moldova, Republic of","MDA",2009,359,"Watchlist    "
+"Moldova, Republic of","MDA",2010,359,"Watchlist    "
+"Moldova, Republic of","MDA",2011,359,"Tier 2    "
+"Moldova, Republic of","MDA",2012,359,"Tier 2    "
+"Moldova, Republic of","MDA",2013,359,"Tier 2    "
+"Moldova, Republic of","MDA",2014,359,"Tier 2    "
+"Moldova, Republic of","MDA",2015,359,"Tier 2    "
+"Mongolia","MNG",1999,712,NA
+"Mongolia","MNG",2000,712,NA
+"Mongolia","MNG",2001,712,NA
+"Mongolia","MNG",2002,712,NA
+"Mongolia","MNG",2003,712,NA
+"Mongolia","MNG",2004,712,NA
+"Mongolia","MNG",2005,712,"Tier 2    "
+"Mongolia","MNG",2006,712,"Tier 2    "
+"Mongolia","MNG",2007,712,"Tier 2    "
+"Mongolia","MNG",2008,712,"Tier 2    "
+"Mongolia","MNG",2009,712,"Tier 2    "
+"Mongolia","MNG",2010,712,"Tier 2    "
+"Mongolia","MNG",2011,712,"Tier 2    "
+"Mongolia","MNG",2012,712,"Tier 2    "
+"Mongolia","MNG",2013,712,"Tier 2    "
+"Mongolia","MNG",2014,712,"Tier 2    "
+"Mongolia","MNG",2015,712,"Tier 2    "
+"Montenegro","MNE",1999,341,NA
+"Montenegro","MNE",2000,341,NA
+"Montenegro","MNE",2001,341,NA
+"Montenegro","MNE",2002,341,NA
+"Montenegro","MNE",2003,341,"Tier 2    "
+"Montenegro","MNE",2004,341,"Watchlist    "
+"Montenegro","MNE",2005,341,"Tier 2    "
+"Montenegro","MNE",2006,341,"Tier 2    "
+"Montenegro","MNE",2007,341,"Tier 2    "
+"Montenegro","MNE",2008,341,"Watchlist    "
+"Montenegro","MNE",2009,341,"Watchlist    "
+"Montenegro","MNE",2010,341,"Tier 2    "
+"Montenegro","MNE",2011,341,"Tier 2    "
+"Montenegro","MNE",2012,341,"Tier 2    "
+"Montenegro","MNE",2013,341,"Tier 2    "
+"Montenegro","MNE",2014,341,"Tier 2    "
+"Montenegro","MNE",2015,341,"Tier 2    "
+"Morocco","MAR",1999,600,NA
+"Morocco","MAR",2000,600,NA
+"Morocco","MAR",2001,600,"Tier 2    "
+"Morocco","MAR",2002,600,"Tier 2    "
+"Morocco","MAR",2003,600,"Tier 1    "
+"Morocco","MAR",2004,600,"Tier 1    "
+"Morocco","MAR",2005,600,"Tier 1    "
+"Morocco","MAR",2006,600,"Tier 1    "
+"Morocco","MAR",2007,600,"Tier 1    "
+"Morocco","MAR",2008,600,"Tier 2    "
+"Morocco","MAR",2009,600,"Tier 2    "
+"Morocco","MAR",2010,600,"Tier 2    "
+"Morocco","MAR",2011,600,"Tier 2    "
+"Morocco","MAR",2012,600,"Tier 2    "
+"Morocco","MAR",2013,600,"Watchlist    "
+"Morocco","MAR",2014,600,"Watchlist    "
+"Morocco","MAR",2015,600,"Tier 2    "
+"Mozambique","MOZ",1999,541,NA
+"Mozambique","MOZ",2000,541,NA
+"Mozambique","MOZ",2001,541,NA
+"Mozambique","MOZ",2002,541,NA
+"Mozambique","MOZ",2003,541,"Tier 2    "
+"Mozambique","MOZ",2004,541,"Tier 2    "
+"Mozambique","MOZ",2005,541,"Tier 2    "
+"Mozambique","MOZ",2006,541,"Tier 2    "
+"Mozambique","MOZ",2007,541,"Watchlist    "
+"Mozambique","MOZ",2008,541,"Watchlist    "
+"Mozambique","MOZ",2009,541,"Tier 2    "
+"Mozambique","MOZ",2010,541,"Watchlist    "
+"Mozambique","MOZ",2011,541,"Tier 2    "
+"Mozambique","MOZ",2012,541,"Tier 2    "
+"Mozambique","MOZ",2013,541,"Tier 2    "
+"Mozambique","MOZ",2014,541,"Tier 2    "
+"Mozambique","MOZ",2015,541,"Tier 2    "
+"Namibia","NAM",1999,565,NA
+"Namibia","NAM",2000,565,NA
+"Namibia","NAM",2001,565,NA
+"Namibia","NAM",2002,565,NA
+"Namibia","NAM",2003,565,NA
+"Namibia","NAM",2004,565,NA
+"Namibia","NAM",2005,565,NA
+"Namibia","NAM",2006,565,NA
+"Namibia","NAM",2007,565,NA
+"Namibia","NAM",2008,565,NA
+"Namibia","NAM",2009,565,"Tier 2    "
+"Namibia","NAM",2010,565,"Tier 2    "
+"Namibia","NAM",2011,565,"Tier 2    "
+"Namibia","NAM",2012,565,"Watchlist    "
+"Namibia","NAM",2013,565,"Watchlist    "
+"Namibia","NAM",2014,565,"Watchlist    "
+"Namibia","NAM",2015,565,"Watchlist    "
+"Nepal","NPL",1999,790,NA
+"Nepal","NPL",2000,790,NA
+"Nepal","NPL",2001,790,"Tier 2    "
+"Nepal","NPL",2002,790,"Tier 2    "
+"Nepal","NPL",2003,790,"Tier 2    "
+"Nepal","NPL",2004,790,"Tier 2    "
+"Nepal","NPL",2005,790,"Tier 1    "
+"Nepal","NPL",2006,790,"Tier 2    "
+"Nepal","NPL",2007,790,"Tier 2    "
+"Nepal","NPL",2008,790,"Tier 2    "
+"Nepal","NPL",2009,790,"Tier 2    "
+"Nepal","NPL",2010,790,"Tier 2    "
+"Nepal","NPL",2011,790,"Tier 2    "
+"Nepal","NPL",2012,790,"Tier 2    "
+"Nepal","NPL",2013,790,"Tier 2    "
+"Nepal","NPL",2014,790,"Tier 2    "
+"Nepal","NPL",2015,790,"Tier 2    "
+"Netherlands","NLD",1999,210,NA
+"Netherlands","NLD",2000,210,NA
+"Netherlands","NLD",2001,210,"Tier 1    "
+"Netherlands","NLD",2002,210,"Tier 1    "
+"Netherlands","NLD",2003,210,"Tier 1    "
+"Netherlands","NLD",2004,210,"Tier 1    "
+"Netherlands","NLD",2005,210,"Tier 1    "
+"Netherlands","NLD",2006,210,"Tier 1    "
+"Netherlands","NLD",2007,210,"Tier 1    "
+"Netherlands","NLD",2008,210,"Tier 1    "
+"Netherlands","NLD",2009,210,"Tier 1    "
+"Netherlands","NLD",2010,210,"Tier 1    "
+"Netherlands","NLD",2011,210,"Tier 1    "
+"Netherlands","NLD",2012,210,"Tier 1    "
+"Netherlands","NLD",2013,210,"Tier 1    "
+"Netherlands","NLD",2014,210,"Tier 1    "
+"Netherlands","NLD",2015,210,"Tier 1    "
+"New Zealand","NZL",2015,920,"Tier 1    "
+"New Zealand","NZL",1999,920,NA
+"New Zealand","NZL",2000,920,NA
+"New Zealand","NZL",2001,920,NA
+"New Zealand","NZL",2002,920,NA
+"New Zealand","NZL",2003,920,NA
+"New Zealand","NZL",2004,920,"Tier 1    "
+"New Zealand","NZL",2005,920,"Tier 1    "
+"New Zealand","NZL",2006,920,"Tier 1    "
+"New Zealand","NZL",2007,920,"Tier 1    "
+"New Zealand","NZL",2008,920,"Tier 1    "
+"New Zealand","NZL",2009,920,"Tier 1    "
+"New Zealand","NZL",2010,920,"Tier 1    "
+"New Zealand","NZL",2011,920,"Tier 1    "
+"New Zealand","NZL",2012,920,"Tier 1    "
+"New Zealand","NZL",2013,920,"Tier 1    "
+"New Zealand","NZL",2014,920,"Tier 1    "
+"Nicaragua","NIC",1999,93,NA
+"Nicaragua","NIC",2000,93,NA
+"Nicaragua","NIC",2001,93,NA
+"Nicaragua","NIC",2002,93,NA
+"Nicaragua","NIC",2003,93,"Tier 2    "
+"Nicaragua","NIC",2004,93,"Tier 2    "
+"Nicaragua","NIC",2005,93,"Watchlist    "
+"Nicaragua","NIC",2006,93,"Tier 2    "
+"Nicaragua","NIC",2007,93,"Tier 2    "
+"Nicaragua","NIC",2008,93,"Tier 2    "
+"Nicaragua","NIC",2009,93,"Watchlist    "
+"Nicaragua","NIC",2010,93,"Watchlist    "
+"Nicaragua","NIC",2011,93,"Tier 2    "
+"Nicaragua","NIC",2012,93,"Tier 1    "
+"Nicaragua","NIC",2013,93,"Tier 1    "
+"Nicaragua","NIC",2014,93,"Tier 1    "
+"Nicaragua","NIC",2015,93,"Tier 2    "
+"Niger","NER",1999,436,NA
+"Niger","NER",2000,436,NA
+"Niger","NER",2001,436,NA
+"Niger","NER",2002,436,NA
+"Niger","NER",2003,436,"Tier 2    "
+"Niger","NER",2004,436,"Tier 2    "
+"Niger","NER",2005,436,"Watchlist    "
+"Niger","NER",2006,436,"Tier 2    "
+"Niger","NER",2007,436,"Tier 2    "
+"Niger","NER",2008,436,"Watchlist    "
+"Niger","NER",2009,436,"Tier 3"
+"Niger","NER",2010,436,"Watchlist    "
+"Niger","NER",2011,436,"Watchlist    "
+"Niger","NER",2012,436,"Watchlist    "
+"Niger","NER",2013,436,"Tier 2    "
+"Niger","NER",2014,436,"Tier 2    "
+"Niger","NER",2015,436,"Tier 2    "
+"Nigeria","NGA",1999,475,NA
+"Nigeria","NGA",2000,475,NA
+"Nigeria","NGA",2001,475,"Tier 2    "
+"Nigeria","NGA",2002,475,"Tier 2    "
+"Nigeria","NGA",2003,475,"Tier 2    "
+"Nigeria","NGA",2004,475,"Watchlist    "
+"Nigeria","NGA",2005,475,"Tier 2    "
+"Nigeria","NGA",2006,475,"Tier 2    "
+"Nigeria","NGA",2007,475,"Tier 2    "
+"Nigeria","NGA",2008,475,"Tier 2    "
+"Nigeria","NGA",2009,475,"Tier 1    "
+"Nigeria","NGA",2010,475,"Tier 1    "
+"Nigeria","NGA",2011,475,"Tier 1    "
+"Nigeria","NGA",2012,475,"Tier 2    "
+"Nigeria","NGA",2013,475,"Tier 2    "
+"Nigeria","NGA",2014,475,"Tier 2    "
+"Nigeria","NGA",2015,475,"Tier 2    "
+"Korea, Democratic People's Republic of","PRK",1999,731,NA
+"Korea, Democratic People's Republic of","PRK",2000,731,NA
+"Korea, Democratic People's Republic of","PRK",2001,731,NA
+"Korea, Democratic People's Republic of","PRK",2002,731,NA
+"Korea, Democratic People's Republic of","PRK",2003,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2004,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2005,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2006,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2007,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2008,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2009,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2010,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2011,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2012,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2013,731,"Tier 3"
+"Korea, Democratic People's Republic of","PRK",2014,731,"Tier 3"
+"Norway","NOR",1999,385,NA
+"Norway","NOR",2000,385,NA
+"Norway","NOR",2001,385,NA
+"Norway","NOR",2002,385,NA
+"Norway","NOR",2003,385,"Tier 1    "
+"Norway","NOR",2004,385,"Tier 1    "
+"Norway","NOR",2005,385,"Tier 1    "
+"Norway","NOR",2006,385,"Tier 1    "
+"Norway","NOR",2007,385,"Tier 1    "
+"Norway","NOR",2008,385,"Tier 1    "
+"Norway","NOR",2009,385,"Tier 1    "
+"Norway","NOR",2010,385,"Tier 1    "
+"Norway","NOR",2011,385,"Tier 1    "
+"Norway","NOR",2012,385,"Tier 1    "
+"Norway","NOR",2013,385,"Tier 1    "
+"Norway","NOR",2014,385,"Tier 1    "
+"Norway","NOR",2015,385,"Tier 1    "
+"Oman","OMN",1999,698,NA
+"Oman","OMN",2000,698,NA
+"Oman","OMN",2001,698,NA
+"Oman","OMN",2002,698,NA
+"Oman","OMN",2003,698,NA
+"Oman","OMN",2004,698,NA
+"Oman","OMN",2005,698,"Tier 2    "
+"Oman","OMN",2006,698,"Watchlist    "
+"Oman","OMN",2007,698,"Tier 3"
+"Oman","OMN",2008,698,"Tier 3"
+"Oman","OMN",2009,698,"Tier 2    "
+"Oman","OMN",2010,698,"Tier 2    "
+"Oman","OMN",2011,698,"Tier 2    "
+"Oman","OMN",2012,698,"Tier 2    "
+"Oman","OMN",2013,698,"Tier 2    "
+"Oman","OMN",2014,698,"Tier 2    "
+"Oman","OMN",2015,698,"Tier 2    "
+"Pakistan","PAK",1999,770,NA
+"Pakistan","PAK",2000,770,NA
+"Pakistan","PAK",2001,770,"Tier 3"
+"Pakistan","PAK",2002,770,"Tier 2    "
+"Pakistan","PAK",2003,770,"Tier 2    "
+"Pakistan","PAK",2004,770,"Watchlist    "
+"Pakistan","PAK",2005,770,"Tier 2    "
+"Pakistan","PAK",2006,770,"Tier 2    "
+"Pakistan","PAK",2007,770,"Tier 2    "
+"Pakistan","PAK",2008,770,"Tier 2    "
+"Pakistan","PAK",2009,770,"Watchlist    "
+"Pakistan","PAK",2010,770,"Tier 2    "
+"Pakistan","PAK",2011,770,"Tier 2    "
+"Pakistan","PAK",2012,770,"Tier 2    "
+"Pakistan","PAK",2013,770,"Tier 2    "
+"Pakistan","PAK",2014,770,"Watchlist    "
+"Pakistan","PAK",2015,770,"Watchlist    "
+"Palau","PLW",1999,986,NA
+"Palau","PLW",2000,986,NA
+"Palau","PLW",2001,986,NA
+"Palau","PLW",2002,986,NA
+"Palau","PLW",2003,986,NA
+"Palau","PLW",2004,986,NA
+"Palau","PLW",2005,986,NA
+"Palau","PLW",2006,986,NA
+"Palau","PLW",2007,986,NA
+"Palau","PLW",2008,986,NA
+"Palau","PLW",2009,986,"Tier 2    "
+"Palau","PLW",2010,986,"Tier 2    "
+"Palau","PLW",2011,986,"Tier 2    "
+"Palau","PLW",2012,986,"Tier 2    "
+"Palau","PLW",2013,986,"Tier 2    "
+"Palau","PLW",2014,986,"Tier 2    "
+"Palau","PLW",2015,986,"Tier 2    "
+"Panama","PAN",1999,95,NA
+"Panama","PAN",2000,95,NA
+"Panama","PAN",2001,95,NA
+"Panama","PAN",2002,95,NA
+"Panama","PAN",2003,95,NA
+"Panama","PAN",2004,95,"Tier 2    "
+"Panama","PAN",2005,95,"Tier 2    "
+"Panama","PAN",2006,95,"Tier 2    "
+"Panama","PAN",2007,95,"Tier 2    "
+"Panama","PAN",2008,95,"Watchlist    "
+"Panama","PAN",2009,95,"Tier 2    "
+"Panama","PAN",2010,95,"Watchlist    "
+"Panama","PAN",2011,95,"Watchlist    "
+"Panama","PAN",2012,95,"Tier 2    "
+"Panama","PAN",2013,95,"Tier 2    "
+"Panama","PAN",2014,95,"Watchlist    "
+"Panama","PAN",2015,95,"Tier 2    "
+"Papua New Guinea","PNG",2015,910,"Watchlist    "
+"Papua New Guinea","PNG",1999,910,NA
+"Papua New Guinea","PNG",2000,910,NA
+"Papua New Guinea","PNG",2001,910,NA
+"Papua New Guinea","PNG",2002,910,NA
+"Papua New Guinea","PNG",2003,910,NA
+"Papua New Guinea","PNG",2004,910,NA
+"Papua New Guinea","PNG",2005,910,NA
+"Papua New Guinea","PNG",2006,910,NA
+"Papua New Guinea","PNG",2007,910,"Watchlist    "
+"Papua New Guinea","PNG",2008,910,"Tier 3"
+"Papua New Guinea","PNG",2009,910,"Tier 3"
+"Papua New Guinea","PNG",2010,910,"Tier 3"
+"Papua New Guinea","PNG",2011,910,"Tier 3"
+"Papua New Guinea","PNG",2012,910,"Tier 3"
+"Papua New Guinea","PNG",2013,910,"Tier 3"
+"Papua New Guinea","PNG",2014,910,"Tier 3"
+"Paraguay","PRY",1999,150,NA
+"Paraguay","PRY",2000,150,NA
+"Paraguay","PRY",2001,150,NA
+"Paraguay","PRY",2002,150,NA
+"Paraguay","PRY",2003,150,NA
+"Paraguay","PRY",2004,150,"Watchlist    "
+"Paraguay","PRY",2005,150,"Tier 2    "
+"Paraguay","PRY",2006,150,"Tier 2    "
+"Paraguay","PRY",2007,150,"Tier 2    "
+"Paraguay","PRY",2008,150,"Tier 2    "
+"Paraguay","PRY",2009,150,"Tier 2    "
+"Paraguay","PRY",2010,150,"Tier 2    "
+"Paraguay","PRY",2011,150,"Tier 2    "
+"Paraguay","PRY",2012,150,"Tier 2    "
+"Paraguay","PRY",2013,150,"Tier 2    "
+"Paraguay","PRY",2014,150,"Tier 2    "
+"Paraguay","PRY",2015,150,"Tier 2    "
+"Peru","PER",1999,135,NA
+"Peru","PER",2000,135,NA
+"Peru","PER",2001,135,NA
+"Peru","PER",2002,135,NA
+"Peru","PER",2003,135,NA
+"Peru","PER",2004,135,"Watchlist    "
+"Peru","PER",2005,135,"Tier 2    "
+"Peru","PER",2006,135,"Watchlist    "
+"Peru","PER",2007,135,"Tier 2    "
+"Peru","PER",2008,135,"Tier 2    "
+"Peru","PER",2009,135,"Tier 2    "
+"Peru","PER",2010,135,"Tier 2    "
+"Peru","PER",2011,135,"Tier 2    "
+"Peru","PER",2012,135,"Tier 2    "
+"Peru","PER",2013,135,"Tier 2    "
+"Peru","PER",2014,135,"Tier 2    "
+"Peru","PER",2015,135,"Tier 2    "
+"Philippines","PHL",1999,840,NA
+"Philippines","PHL",2000,840,NA
+"Philippines","PHL",2001,840,"Tier 2    "
+"Philippines","PHL",2002,840,"Tier 2    "
+"Philippines","PHL",2003,840,"Tier 2    "
+"Philippines","PHL",2004,840,"Watchlist    "
+"Philippines","PHL",2005,840,"Watchlist    "
+"Philippines","PHL",2006,840,"Tier 2    "
+"Philippines","PHL",2007,840,"Tier 2    "
+"Philippines","PHL",2008,840,"Tier 2    "
+"Philippines","PHL",2009,840,"Watchlist    "
+"Philippines","PHL",2010,840,"Watchlist    "
+"Philippines","PHL",2011,840,"Tier 2    "
+"Philippines","PHL",2012,840,"Tier 2    "
+"Philippines","PHL",2013,840,"Tier 2    "
+"Philippines","PHL",2014,840,"Tier 2    "
+"Philippines","PHL",2015,840,"Tier 2    "
+"Poland","POL",1999,290,NA
+"Poland","POL",2000,290,NA
+"Poland","POL",2001,290,"Tier 2    "
+"Poland","POL",2002,290,"Tier 1    "
+"Poland","POL",2003,290,"Tier 1    "
+"Poland","POL",2004,290,"Tier 1    "
+"Poland","POL",2005,290,"Tier 1    "
+"Poland","POL",2006,290,"Tier 1    "
+"Poland","POL",2007,290,"Tier 1    "
+"Poland","POL",2008,290,"Tier 1    "
+"Poland","POL",2009,290,"Tier 1    "
+"Poland","POL",2010,290,"Tier 1    "
+"Poland","POL",2011,290,"Tier 1    "
+"Poland","POL",2012,290,"Tier 1    "
+"Poland","POL",2013,290,"Tier 1    "
+"Poland","POL",2014,290,"Tier 1    "
+"Poland","POL",2015,290,"Tier 1    "
+"Portugal","PRT",1999,235,NA
+"Portugal","PRT",2000,235,NA
+"Portugal","PRT",2001,235,NA
+"Portugal","PRT",2002,235,"Tier 1    "
+"Portugal","PRT",2003,235,"Tier 1    "
+"Portugal","PRT",2004,235,"Tier 1    "
+"Portugal","PRT",2005,235,"Tier 1    "
+"Portugal","PRT",2006,235,"Tier 2    "
+"Portugal","PRT",2007,235,"Tier 2    "
+"Portugal","PRT",2008,235,"Tier 2    "
+"Portugal","PRT",2009,235,"Tier 2    "
+"Portugal","PRT",2010,235,"Tier 2    "
+"Portugal","PRT",2011,235,"Tier 1    "
+"Portugal","PRT",2012,235,"Tier 2    "
+"Portugal","PRT",2013,235,"Tier 2    "
+"Portugal","PRT",2014,235,"Tier 2    "
+"Portugal","PRT",2015,235,"Tier 1    "
+"Qatar","QAT",1999,694,NA
+"Qatar","QAT",2000,694,NA
+"Qatar","QAT",2001,694,"Tier 3"
+"Qatar","QAT",2002,694,"Tier 3"
+"Qatar","QAT",2003,694,"Tier 2    "
+"Qatar","QAT",2004,694,"Watchlist    "
+"Qatar","QAT",2005,694,"Tier 3"
+"Qatar","QAT",2006,694,"Watchlist    "
+"Qatar","QAT",2007,694,"Tier 3"
+"Qatar","QAT",2008,694,"Tier 3"
+"Qatar","QAT",2009,694,"Watchlist    "
+"Qatar","QAT",2010,694,"Watchlist    "
+"Qatar","QAT",2011,694,"Watchlist    "
+"Qatar","QAT",2012,694,"Tier 2    "
+"Qatar","QAT",2013,694,"Tier 2    "
+"Qatar","QAT",2014,694,"Watchlist    "
+"Qatar","QAT",2015,694,"Watchlist    "
+"Romania","ROU",1999,360,NA
+"Romania","ROU",2000,360,NA
+"Romania","ROU",2001,360,"Tier 3"
+"Romania","ROU",2002,360,"Tier 2    "
+"Romania","ROU",2003,360,"Tier 2    "
+"Romania","ROU",2004,360,"Tier 2    "
+"Romania","ROU",2005,360,"Tier 2    "
+"Romania","ROU",2006,360,"Tier 2    "
+"Romania","ROU",2007,360,"Tier 2    "
+"Romania","ROU",2008,360,"Tier 2    "
+"Romania","ROU",2009,360,"Tier 2    "
+"Romania","ROU",2010,360,"Tier 2    "
+"Romania","ROU",2011,360,"Tier 2    "
+"Romania","ROU",2012,360,"Tier 2    "
+"Romania","ROU",2013,360,"Tier 2    "
+"Romania","ROU",2014,360,"Tier 2    "
+"Romania","ROU",2015,360,"Tier 2    "
+"Russian Federation","RUS",1999,365,NA
+"Russian Federation","RUS",2000,365,NA
+"Russian Federation","RUS",2001,365,"Tier 3"
+"Russian Federation","RUS",2002,365,"Tier 3"
+"Russian Federation","RUS",2003,365,"Tier 2    "
+"Russian Federation","RUS",2004,365,"Watchlist    "
+"Russian Federation","RUS",2005,365,"Watchlist    "
+"Russian Federation","RUS",2006,365,"Watchlist    "
+"Russian Federation","RUS",2007,365,"Watchlist    "
+"Russian Federation","RUS",2008,365,"Watchlist    "
+"Russian Federation","RUS",2009,365,"Watchlist    "
+"Russian Federation","RUS",2010,365,"Watchlist    "
+"Russian Federation","RUS",2011,365,"Watchlist    "
+"Russian Federation","RUS",2012,365,"Watchlist    "
+"Russian Federation","RUS",2013,365,"Tier 3"
+"Russian Federation","RUS",2014,365,"Tier 3"
+"Russian Federation","RUS",2015,365,"Tier 3"
+"Rwanda","RWA",1999,517,NA
+"Rwanda","RWA",2000,517,NA
+"Rwanda","RWA",2001,517,NA
+"Rwanda","RWA",2002,517,NA
+"Rwanda","RWA",2003,517,"Tier 2    "
+"Rwanda","RWA",2004,517,"Tier 2    "
+"Rwanda","RWA",2005,517,"Watchlist    "
+"Rwanda","RWA",2006,517,"Tier 2    "
+"Rwanda","RWA",2007,517,"Tier 2    "
+"Rwanda","RWA",2008,517,"Tier 2    "
+"Rwanda","RWA",2009,517,"Tier 2    "
+"Rwanda","RWA",2010,517,"Tier 2    "
+"Rwanda","RWA",2011,517,"Tier 2    "
+"Rwanda","RWA",2012,517,"Tier 2    "
+"Rwanda","RWA",2013,517,"Watchlist    "
+"Rwanda","RWA",2014,517,"Watchlist    "
+"Rwanda","RWA",2015,517,"Tier 2    "
+"Samoa","WSM",1999,990,NA
+"Samoa","WSM",2000,990,NA
+"Samoa","WSM",2001,990,NA
+"Samoa","WSM",2002,990,NA
+"Samoa","WSM",2003,990,NA
+"Samoa","WSM",2004,990,NA
+"Samoa","WSM",2005,990,NA
+"Samoa","WSM",2006,990,NA
+"Samoa","WSM",2007,990,NA
+"Samoa","WSM",2008,990,NA
+"Samoa","WSM",2009,990,NA
+"Samoa","WSM",2010,990,NA
+"Samoa","WSM",2011,990,NA
+"Samoa","WSM",2012,990,NA
+"Samoa","WSM",2013,990,NA
+"Samoa","WSM",2014,990,NA
+"Sao Tome and Principe","STP",1999,403,NA
+"Sao Tome and Principe","STP",2000,403,NA
+"Sao Tome and Principe","STP",2001,403,NA
+"Sao Tome and Principe","STP",2002,403,NA
+"Sao Tome and Principe","STP",2003,403,NA
+"Sao Tome and Principe","STP",2004,403,NA
+"Sao Tome and Principe","STP",2005,403,NA
+"Sao Tome and Principe","STP",2006,403,NA
+"Sao Tome and Principe","STP",2007,403,NA
+"Sao Tome and Principe","STP",2008,403,NA
+"Sao Tome and Principe","STP",2009,403,NA
+"Sao Tome and Principe","STP",2010,403,NA
+"Sao Tome and Principe","STP",2011,403,NA
+"Sao Tome and Principe","STP",2012,403,NA
+"Sao Tome and Principe","STP",2013,403,NA
+"Sao Tome and Principe","STP",2014,403,NA
+"Saudi Arabia","SAU",2015,670,"Watchlist    "
+"Saudi Arabia","SAU",1999,670,NA
+"Saudi Arabia","SAU",2000,670,NA
+"Saudi Arabia","SAU",2001,670,"Tier 3"
+"Saudi Arabia","SAU",2002,670,"Tier 3"
+"Saudi Arabia","SAU",2003,670,"Tier 2    "
+"Saudi Arabia","SAU",2004,670,"Tier 2    "
+"Saudi Arabia","SAU",2005,670,"Tier 3"
+"Saudi Arabia","SAU",2006,670,"Tier 3"
+"Saudi Arabia","SAU",2007,670,"Tier 3"
+"Saudi Arabia","SAU",2008,670,"Tier 3"
+"Saudi Arabia","SAU",2009,670,"Tier 3"
+"Saudi Arabia","SAU",2010,670,"Tier 3"
+"Saudi Arabia","SAU",2011,670,"Tier 3"
+"Saudi Arabia","SAU",2012,670,"Tier 3"
+"Saudi Arabia","SAU",2013,670,"Tier 3"
+"Saudi Arabia","SAU",2014,670,"Tier 3"
+"Senegal","SEN",1999,433,NA
+"Senegal","SEN",2000,433,NA
+"Senegal","SEN",2001,433,NA
+"Senegal","SEN",2002,433,"Tier 2    "
+"Senegal","SEN",2003,433,"Tier 2    "
+"Senegal","SEN",2004,433,"Watchlist    "
+"Senegal","SEN",2005,433,"Tier 2    "
+"Senegal","SEN",2006,433,"Tier 2    "
+"Senegal","SEN",2007,433,"Tier 2    "
+"Senegal","SEN",2008,433,"Tier 2    "
+"Senegal","SEN",2009,433,"Watchlist    "
+"Senegal","SEN",2010,433,"Watchlist    "
+"Senegal","SEN",2011,433,"Tier 2    "
+"Senegal","SEN",2012,433,"Watchlist    "
+"Senegal","SEN",2013,433,"Tier 2    "
+"Senegal","SEN",2014,433,"Tier 2    "
+"Senegal","SEN",2015,433,"Tier 2    "
+"Serbia","SRB",1999,1003,NA
+"Serbia","SRB",2000,1003,NA
+"Serbia","SRB",2001,1003,NA
+"Serbia","SRB",2002,1003,NA
+"Serbia","SRB",2003,1003,"Tier 2    "
+"Serbia","SRB",2004,1003,"Watchlist    "
+"Serbia","SRB",2005,1003,"Tier 2    "
+"Serbia","SRB",2006,1003,"Tier 2    "
+"Serbia","SRB",2007,1003,"Tier 2    "
+"Serbia","SRB",2008,1003,"Tier 2    "
+"Serbia","SRB",2009,1003,"Tier 2    "
+"Serbia","SRB",2010,1003,"Tier 2    "
+"Serbia","SRB",2011,1003,"Tier 2    "
+"Serbia","SRB",2012,1003,"Tier 2    "
+"Serbia","SRB",2013,1003,"Tier 2    "
+"Serbia","SRB",2014,1003,"Tier 2    "
+"Serbia","SRB",2015,NA,"Tier 2    "
+"Seychelles","SYC",1999,591,NA
+"Seychelles","SYC",2000,591,NA
+"Seychelles","SYC",2001,591,NA
+"Seychelles","SYC",2002,591,NA
+"Seychelles","SYC",2003,591,NA
+"Seychelles","SYC",2004,591,NA
+"Seychelles","SYC",2005,591,NA
+"Seychelles","SYC",2006,591,NA
+"Seychelles","SYC",2007,591,NA
+"Seychelles","SYC",2008,591,NA
+"Seychelles","SYC",2009,591,NA
+"Seychelles","SYC",2010,591,NA
+"Seychelles","SYC",2011,591,"Tier 2    "
+"Seychelles","SYC",2012,591,"Watchlist    "
+"Seychelles","SYC",2013,591,"Watchlist    "
+"Seychelles","SYC",2014,591,"Tier 2    "
+"Seychelles","SYC",2015,591,"Tier 2    "
+"Sierra Leone","SLE",2015,451,"Tier 2    "
+"Sierra Leone","SLE",1999,451,NA
+"Sierra Leone","SLE",2000,451,NA
+"Sierra Leone","SLE",2001,451,"Tier 2    "
+"Sierra Leone","SLE",2002,451,"Tier 2    "
+"Sierra Leone","SLE",2003,451,"Tier 2    "
+"Sierra Leone","SLE",2004,451,"Tier 3"
+"Sierra Leone","SLE",2005,451,"Watchlist    "
+"Sierra Leone","SLE",2006,451,"Tier 2    "
+"Sierra Leone","SLE",2007,451,"Tier 2    "
+"Sierra Leone","SLE",2008,451,"Tier 2    "
+"Sierra Leone","SLE",2009,451,"Tier 2    "
+"Sierra Leone","SLE",2010,451,"Tier 2    "
+"Sierra Leone","SLE",2011,451,"Tier 2    "
+"Sierra Leone","SLE",2012,451,"Watchlist    "
+"Sierra Leone","SLE",2013,451,"Tier 2    "
+"Sierra Leone","SLE",2014,451,"Tier 2    "
+"Singapore","SGP",1999,830,NA
+"Singapore","SGP",2000,830,NA
+"Singapore","SGP",2001,830,"Tier 2    "
+"Singapore","SGP",2002,830,"Tier 2    "
+"Singapore","SGP",2003,830,NA
+"Singapore","SGP",2004,830,"Tier 2    "
+"Singapore","SGP",2005,830,"Tier 2    "
+"Singapore","SGP",2006,830,"Tier 1    "
+"Singapore","SGP",2007,830,"Tier 2    "
+"Singapore","SGP",2008,830,"Tier 2    "
+"Singapore","SGP",2009,830,"Tier 2    "
+"Singapore","SGP",2010,830,"Watchlist    "
+"Singapore","SGP",2011,830,"Tier 2    "
+"Singapore","SGP",2012,830,"Tier 2    "
+"Singapore","SGP",2013,830,"Tier 2    "
+"Singapore","SGP",2014,830,"Tier 2    "
+"Singapore","SGP",2015,830,"Tier 2    "
+"Slovakia","SVK",1999,317,NA
+"Slovakia","SVK",2000,317,NA
+"Slovakia","SVK",2001,317,NA
+"Slovakia","SVK",2002,317,NA
+"Slovakia","SVK",2003,317,"Tier 2    "
+"Slovakia","SVK",2004,317,"Tier 2    "
+"Slovakia","SVK",2005,317,"Watchlist    "
+"Slovakia","SVK",2006,317,"Tier 2    "
+"Slovakia","SVK",2007,317,"Tier 2    "
+"Slovakia","SVK",2008,317,"Tier 2    "
+"Slovakia","SVK",2009,317,"Tier 2    "
+"Slovakia","SVK",2010,317,"Tier 2    "
+"Slovakia","SVK",2011,317,"Tier 1    "
+"Slovakia","SVK",2012,317,"Tier 1    "
+"Slovakia","SVK",2013,317,"Tier 1    "
+"Slovakia","SVK",2014,317,"Tier 1    "
+"Slovakia","SVK",2015,317,"Tier 1    "
+"Slovenia","SVN",1999,349,NA
+"Slovenia","SVN",2000,349,NA
+"Slovenia","SVN",2001,349,"Tier 2    "
+"Slovenia","SVN",2002,349,"Tier 2    "
+"Slovenia","SVN",2003,349,"Tier 2    "
+"Slovenia","SVN",2004,349,"Tier 2    "
+"Slovenia","SVN",2005,349,"Tier 2    "
+"Slovenia","SVN",2006,349,"Tier 2    "
+"Slovenia","SVN",2007,349,"Tier 1    "
+"Slovenia","SVN",2008,349,"Tier 1    "
+"Slovenia","SVN",2009,349,"Tier 1    "
+"Slovenia","SVN",2010,349,"Tier 1    "
+"Slovenia","SVN",2011,349,"Tier 1    "
+"Slovenia","SVN",2012,349,"Tier 1    "
+"Slovenia","SVN",2013,349,"Tier 1    "
+"Slovenia","SVN",2014,349,"Tier 1    "
+"Slovenia","SVN",2015,349,"Tier 2    "
+"Solomon Islands","SLB",1999,940,NA
+"Solomon Islands","SLB",2000,940,NA
+"Solomon Islands","SLB",2001,940,NA
+"Solomon Islands","SLB",2002,940,NA
+"Solomon Islands","SLB",2003,940,NA
+"Solomon Islands","SLB",2004,940,NA
+"Solomon Islands","SLB",2005,940,NA
+"Solomon Islands","SLB",2006,940,NA
+"Solomon Islands","SLB",2007,940,NA
+"Solomon Islands","SLB",2008,940,NA
+"Solomon Islands","SLB",2009,940,NA
+"Solomon Islands","SLB",2010,940,NA
+"Solomon Islands","SLB",2011,940,"Watchlist    "
+"Solomon Islands","SLB",2012,940,"Tier 2    "
+"Solomon Islands","SLB",2013,940,"Watchlist    "
+"Solomon Islands","SLB",2014,940,"Watchlist    "
+"Solomon Islands","SLB",2015,940,"Watchlist    "
+"Somalia","SOM",1999,520,NA
+"Somalia","SOM",2000,520,NA
+"Somalia","SOM",2001,520,NA
+"Somalia","SOM",2002,520,NA
+"Somalia","SOM",2003,520,NA
+"Somalia","SOM",2004,520,NA
+"Somalia","SOM",2005,520,NA
+"Somalia","SOM",2006,520,NA
+"Somalia","SOM",2007,520,NA
+"Somalia","SOM",2008,520,NA
+"Somalia","SOM",2009,520,NA
+"Somalia","SOM",2010,520,NA
+"Somalia","SOM",2011,520,NA
+"Somalia","SOM",2012,520,NA
+"Somalia","SOM",2013,520,NA
+"Somalia","SOM",2014,520,NA
+"Somalia","SOM",2015,520,NA
+"South Africa","ZAF",2015,560,"Tier 2    "
+"Korea, Republic of","KOR",1999,732,NA
+"Korea, Republic of","KOR",2000,732,NA
+"Korea, Republic of","KOR",2001,732,NA
+"Korea, Republic of","KOR",2002,732,NA
+"Korea, Republic of","KOR",2003,732,NA
+"Korea, Republic of","KOR",2004,732,NA
+"Korea, Republic of","KOR",2005,732,NA
+"Korea, Republic of","KOR",2006,732,NA
+"Korea, Republic of","KOR",2007,732,NA
+"Korea, Republic of","KOR",2008,732,NA
+"Korea, Republic of","KOR",2009,732,NA
+"Korea, Republic of","KOR",2010,732,"Tier 1    "
+"Korea, Republic of","KOR",2011,732,"Tier 1    "
+"Korea, Republic of","KOR",2012,732,"Tier 1    "
+"Korea, Republic of","KOR",2013,732,"Tier 1    "
+"Korea, Republic of","KOR",2014,732,"Tier 1    "
+"South Sudan","SSD",2015,626,"Tier 3"
+"South Africa","ZAF",1999,560,NA
+"South Africa","ZAF",2000,560,NA
+"South Africa","ZAF",2001,560,"Tier 2    "
+"South Africa","ZAF",2002,560,"Tier 2    "
+"South Africa","ZAF",2003,560,"Tier 2    "
+"South Africa","ZAF",2004,560,"Tier 2    "
+"South Africa","ZAF",2005,560,"Watchlist    "
+"South Africa","ZAF",2006,560,"Watchlist    "
+"South Africa","ZAF",2007,560,"Watchlist    "
+"South Africa","ZAF",2008,560,"Watchlist    "
+"South Africa","ZAF",2009,560,"Tier 2    "
+"South Africa","ZAF",2010,560,"Tier 2    "
+"South Africa","ZAF",2011,560,"Tier 2    "
+"South Africa","ZAF",2012,560,"Tier 2    "
+"South Africa","ZAF",2013,560,"Tier 2    "
+"South Africa","ZAF",2014,560,"Tier 2    "
+"Spain","ESP",1999,230,NA
+"Spain","ESP",2000,230,NA
+"Spain","ESP",2001,230,"Tier 1    "
+"Spain","ESP",2002,230,"Tier 1    "
+"Spain","ESP",2003,230,"Tier 1    "
+"Spain","ESP",2004,230,"Tier 1    "
+"Spain","ESP",2005,230,"Tier 1    "
+"Spain","ESP",2006,230,"Tier 1    "
+"Spain","ESP",2007,230,"Tier 1    "
+"Spain","ESP",2008,230,"Tier 1    "
+"Spain","ESP",2009,230,"Tier 1    "
+"Spain","ESP",2010,230,"Tier 1    "
+"Spain","ESP",2011,230,"Tier 1    "
+"Spain","ESP",2012,230,"Tier 1    "
+"Spain","ESP",2013,230,"Tier 1    "
+"Spain","ESP",2014,230,"Tier 1    "
+"Spain","ESP",2015,230,"Tier 1    "
+"Sri Lanka","LKA",2015,780,"Watchlist    "
+"Sri Lanka","LKA",1999,780,NA
+"Sri Lanka","LKA",2000,780,NA
+"Sri Lanka","LKA",2001,780,"Tier 2    "
+"Sri Lanka","LKA",2002,780,"Tier 2    "
+"Sri Lanka","LKA",2003,780,"Tier 2    "
+"Sri Lanka","LKA",2004,780,"Tier 2    "
+"Sri Lanka","LKA",2005,780,"Tier 2    "
+"Sri Lanka","LKA",2006,780,"Tier 2    "
+"Sri Lanka","LKA",2007,780,"Watchlist    "
+"Sri Lanka","LKA",2008,780,"Watchlist    "
+"Sri Lanka","LKA",2009,780,"Watchlist    "
+"Sri Lanka","LKA",2010,780,"Watchlist    "
+"Sri Lanka","LKA",2011,780,"Tier 2    "
+"Sri Lanka","LKA",2012,780,"Tier 2    "
+"Sri Lanka","LKA",2013,780,"Watchlist    "
+"Sri Lanka","LKA",2014,780,"Watchlist    "
+"Saint Lucia","LCA",2015,56,"Tier 2    "
+"Sint Maarten (Dutch part)","SXM",2015,NA,"Tier 2    "
+"Saint Vincent and the Grenadines","VCT",2015,57,"Watchlist    "
+"Saint Kitts and Nevis","KNA",1999,60,NA
+"Saint Kitts and Nevis","KNA",2000,60,NA
+"Saint Kitts and Nevis","KNA",2001,60,NA
+"Saint Kitts and Nevis","KNA",2002,60,NA
+"Saint Kitts and Nevis","KNA",2003,60,NA
+"Saint Kitts and Nevis","KNA",2004,60,NA
+"Saint Kitts and Nevis","KNA",2005,60,NA
+"Saint Kitts and Nevis","KNA",2006,60,NA
+"Saint Kitts and Nevis","KNA",2007,60,NA
+"Saint Kitts and Nevis","KNA",2008,60,NA
+"Saint Kitts and Nevis","KNA",2009,60,NA
+"Saint Kitts and Nevis","KNA",2010,60,NA
+"Saint Kitts and Nevis","KNA",2011,60,NA
+"Saint Kitts and Nevis","KNA",2012,60,NA
+"Saint Kitts and Nevis","KNA",2013,60,NA
+"Saint Kitts and Nevis","KNA",2014,60,NA
+"Saint Lucia","LCA",1999,56,NA
+"Saint Lucia","LCA",2000,56,NA
+"Saint Lucia","LCA",2001,56,NA
+"Saint Lucia","LCA",2002,56,NA
+"Saint Lucia","LCA",2003,56,NA
+"Saint Lucia","LCA",2004,56,NA
+"Saint Lucia","LCA",2005,56,NA
+"Saint Lucia","LCA",2006,56,NA
+"Saint Lucia","LCA",2007,56,NA
+"Saint Lucia","LCA",2008,56,NA
+"Saint Lucia","LCA",2009,56,NA
+"Saint Lucia","LCA",2010,56,NA
+"Saint Lucia","LCA",2011,56,"Tier 2    "
+"Saint Lucia","LCA",2012,56,"Tier 2    "
+"Saint Lucia","LCA",2013,56,"Watchlist    "
+"Saint Lucia","LCA",2014,56,"Tier 2    "
+"Saint Vincent and the Grenadines","VCT",1999,57,NA
+"Saint Vincent and the Grenadines","VCT",2000,57,NA
+"Saint Vincent and the Grenadines","VCT",2001,57,NA
+"Saint Vincent and the Grenadines","VCT",2002,57,NA
+"Saint Vincent and the Grenadines","VCT",2003,57,NA
+"Saint Vincent and the Grenadines","VCT",2004,57,NA
+"Saint Vincent and the Grenadines","VCT",2005,57,NA
+"Saint Vincent and the Grenadines","VCT",2006,57,NA
+"Saint Vincent and the Grenadines","VCT",2007,57,NA
+"Saint Vincent and the Grenadines","VCT",2008,57,NA
+"Saint Vincent and the Grenadines","VCT",2009,57,"Watchlist    "
+"Saint Vincent and the Grenadines","VCT",2010,57,"Watchlist    "
+"Saint Vincent and the Grenadines","VCT",2011,57,"Watchlist    "
+"Saint Vincent and the Grenadines","VCT",2012,57,"Tier 2    "
+"Saint Vincent and the Grenadines","VCT",2013,57,"Tier 2    "
+"Saint Vincent and the Grenadines","VCT",2014,57,"Watchlist    "
+"Sudan","SDN",1999,625,NA
+"Sudan","SDN",2000,625,NA
+"Sudan","SDN",2001,625,"Tier 3"
+"Sudan","SDN",2002,625,"Tier 3"
+"Sudan","SDN",2003,625,"Tier 3"
+"Sudan","SDN",2004,625,"Tier 3"
+"Sudan","SDN",2005,625,"Tier 3"
+"Sudan","SDN",2006,625,"Tier 3"
+"Sudan","SDN",2007,625,"Tier 3"
+"Sudan","SDN",2008,625,"Tier 3"
+"Sudan","SDN",2009,625,"Tier 3"
+"Sudan","SDN",2010,625,"Tier 3"
+"Sudan","SDN",2011,625,"Tier 3"
+"Sudan","SDN",2012,625,"Tier 3"
+"Sudan","SDN",2013,625,"Tier 3"
+"Sudan","SDN",2014,625,"Watchlist    "
+"Sudan","SDN",2015,625,"Watchlist    "
+"Suriname","SUR",1999,115,NA
+"Suriname","SUR",2000,115,NA
+"Suriname","SUR",2001,115,NA
+"Suriname","SUR",2002,115,NA
+"Suriname","SUR",2003,115,"Tier 3"
+"Suriname","SUR",2004,115,"Watchlist    "
+"Suriname","SUR",2005,115,"Watchlist    "
+"Suriname","SUR",2006,115,"Tier 2    "
+"Suriname","SUR",2007,115,"Tier 2    "
+"Suriname","SUR",2008,115,"Tier 2    "
+"Suriname","SUR",2009,115,"Tier 2    "
+"Suriname","SUR",2010,115,"Tier 2    "
+"Suriname","SUR",2011,115,"Tier 2    "
+"Suriname","SUR",2012,115,"Watchlist    "
+"Suriname","SUR",2013,115,"Watchlist    "
+"Suriname","SUR",2014,115,"Watchlist    "
+"Suriname","SUR",2015,115,"Watchlist    "
+"Swaziland","SWZ",1999,572,NA
+"Swaziland","SWZ",2000,572,NA
+"Swaziland","SWZ",2001,572,NA
+"Swaziland","SWZ",2002,572,NA
+"Swaziland","SWZ",2003,572,NA
+"Swaziland","SWZ",2004,572,NA
+"Swaziland","SWZ",2005,572,NA
+"Swaziland","SWZ",2006,572,NA
+"Swaziland","SWZ",2007,572,NA
+"Swaziland","SWZ",2008,572,NA
+"Swaziland","SWZ",2009,572,"Tier 3"
+"Swaziland","SWZ",2010,572,"Watchlist    "
+"Swaziland","SWZ",2011,572,"Tier 2    "
+"Swaziland","SWZ",2012,572,"Tier 2    "
+"Swaziland","SWZ",2013,572,"Tier 2    "
+"Swaziland","SWZ",2014,572,"Tier 2    "
+"Swaziland","SWZ",2015,572,"Tier 2    "
+"Sweden","SWE",1999,380,NA
+"Sweden","SWE",2000,380,NA
+"Sweden","SWE",2001,380,"Tier 2    "
+"Sweden","SWE",2002,380,NA
+"Sweden","SWE",2003,380,"Tier 1    "
+"Sweden","SWE",2004,380,"Tier 1    "
+"Sweden","SWE",2005,380,"Tier 1    "
+"Sweden","SWE",2006,380,"Tier 1    "
+"Sweden","SWE",2007,380,"Tier 1    "
+"Sweden","SWE",2008,380,"Tier 1    "
+"Sweden","SWE",2009,380,"Tier 1    "
+"Sweden","SWE",2010,380,"Tier 1    "
+"Sweden","SWE",2011,380,"Tier 1    "
+"Sweden","SWE",2012,380,"Tier 1    "
+"Sweden","SWE",2013,380,"Tier 1    "
+"Sweden","SWE",2014,380,"Tier 1    "
+"Sweden","SWE",2015,380,"Tier 1    "
+"Switzerland","CHE",1999,225,NA
+"Switzerland","CHE",2000,225,NA
+"Switzerland","CHE",2001,225,"Tier 1    "
+"Switzerland","CHE",2002,225,"Tier 1    "
+"Switzerland","CHE",2003,225,"Tier 1    "
+"Switzerland","CHE",2004,225,"Tier 2    "
+"Switzerland","CHE",2005,225,"Tier 2    "
+"Switzerland","CHE",2006,225,"Tier 1    "
+"Switzerland","CHE",2007,225,"Tier 1    "
+"Switzerland","CHE",2008,225,"Tier 1    "
+"Switzerland","CHE",2009,225,"Tier 1    "
+"Switzerland","CHE",2010,225,"Tier 2    "
+"Switzerland","CHE",2011,225,"Tier 2    "
+"Switzerland","CHE",2012,225,"Tier 2    "
+"Switzerland","CHE",2013,225,"Tier 2    "
+"Switzerland","CHE",2014,225,"Tier 1    "
+"Switzerland","CHE",2015,225,"Tier 1    "
+"Syrian Arab Republic","SYR",1999,652,NA
+"Syrian Arab Republic","SYR",2000,652,NA
+"Syrian Arab Republic","SYR",2001,652,NA
+"Syrian Arab Republic","SYR",2002,652,NA
+"Syrian Arab Republic","SYR",2003,652,NA
+"Syrian Arab Republic","SYR",2004,652,NA
+"Syrian Arab Republic","SYR",2005,652,"Tier 2    "
+"Syrian Arab Republic","SYR",2006,652,"Tier 3"
+"Syrian Arab Republic","SYR",2007,652,"Tier 3"
+"Syrian Arab Republic","SYR",2008,652,"Tier 3"
+"Syrian Arab Republic","SYR",2009,652,"Tier 3"
+"Syrian Arab Republic","SYR",2010,652,"Watchlist    "
+"Syrian Arab Republic","SYR",2011,652,"Watchlist    "
+"Syrian Arab Republic","SYR",2012,652,"Tier 3"
+"Syrian Arab Republic","SYR",2013,652,"Tier 3"
+"Syrian Arab Republic","SYR",2014,652,"Tier 3"
+"Syrian Arab Republic","SYR",2015,652,"Tier 3"
+"Taiwan, Province of China","TWN",2000,713,NA
+"Taiwan, Province of China","TWN",2001,713,NA
+"Taiwan, Province of China","TWN",2002,713,NA
+"Taiwan, Province of China","TWN",2003,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2004,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2005,713,"Tier 2    "
+"Taiwan, Province of China","TWN",2006,713,"Watchlist    "
+"Taiwan, Province of China","TWN",2007,713,"Tier 2    "
+"Taiwan, Province of China","TWN",2008,713,"Tier 2    "
+"Taiwan, Province of China","TWN",2009,713,"Tier 2    "
+"Taiwan, Province of China","TWN",2010,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2011,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2012,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2013,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2014,713,"Tier 1    "
+"Taiwan, Province of China","TWN",2015,713,"Tier 1    "
+"Tajikistan","TJK",1999,702,NA
+"Tajikistan","TJK",2000,702,NA
+"Tajikistan","TJK",2001,702,NA
+"Tajikistan","TJK",2002,702,"Tier 3"
+"Tajikistan","TJK",2003,702,"Tier 2    "
+"Tajikistan","TJK",2004,702,"Watchlist    "
+"Tajikistan","TJK",2005,702,"Tier 2    "
+"Tajikistan","TJK",2006,702,"Tier 2    "
+"Tajikistan","TJK",2007,702,"Tier 2    "
+"Tajikistan","TJK",2008,702,"Watchlist    "
+"Tajikistan","TJK",2009,702,"Watchlist    "
+"Tajikistan","TJK",2010,702,"Watchlist    "
+"Tajikistan","TJK",2011,702,"Tier 2    "
+"Tajikistan","TJK",2012,702,"Tier 2    "
+"Tajikistan","TJK",2013,702,"Tier 2    "
+"Tajikistan","TJK",2014,702,"Tier 2    "
+"Tajikistan","TJK",2015,702,"Tier 2    "
+"Tanzania, United Republic of","TZA",1999,510,NA
+"Tanzania, United Republic of","TZA",2000,510,NA
+"Tanzania, United Republic of","TZA",2001,510,NA
+"Tanzania, United Republic of","TZA",2002,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2003,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2004,510,"Watchlist    "
+"Tanzania, United Republic of","TZA",2005,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2006,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2007,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2008,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2009,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2010,510,"Watchlist    "
+"Tanzania, United Republic of","TZA",2011,510,"Watchlist    "
+"Tanzania, United Republic of","TZA",2012,510,"Tier 2    "
+"Tanzania, United Republic of","TZA",2013,510,"Watchlist    "
+"Tanzania, United Republic of","TZA",2014,510,"Watchlist    "
+"Tanzania, United Republic of","TZA",2015,510,"Watchlist    "
+"Thailand","THA",1999,800,NA
+"Thailand","THA",2000,800,NA
+"Thailand","THA",2001,800,"Tier 2    "
+"Thailand","THA",2002,800,"Tier 2    "
+"Thailand","THA",2003,800,"Tier 2    "
+"Thailand","THA",2004,800,"Watchlist    "
+"Thailand","THA",2005,800,"Tier 2    "
+"Thailand","THA",2006,800,"Tier 2    "
+"Thailand","THA",2007,800,"Tier 2    "
+"Thailand","THA",2008,800,"Tier 2    "
+"Thailand","THA",2009,800,"Tier 2    "
+"Thailand","THA",2010,800,"Watchlist    "
+"Thailand","THA",2011,800,"Watchlist    "
+"Thailand","THA",2012,800,"Watchlist    "
+"Thailand","THA",2013,800,"Watchlist    "
+"Thailand","THA",2014,800,"Tier 3"
+"Thailand","THA",2015,800,"Tier 3"
+"Bahamas","BHS",2015,31,"Tier 1    "
+"Gambia","GMB",2015,420,"Tier 3"
+"Timor-Leste","TLS",1999,860,NA
+"Timor-Leste","TLS",2000,860,NA
+"Timor-Leste","TLS",2001,860,NA
+"Timor-Leste","TLS",2002,860,NA
+"Timor-Leste","TLS",2003,860,NA
+"Timor-Leste","TLS",2004,860,NA
+"Timor-Leste","TLS",2005,860,NA
+"Timor-Leste","TLS",2006,860,NA
+"Timor-Leste","TLS",2007,860,NA
+"Timor-Leste","TLS",2008,860,NA
+"Timor-Leste","TLS",2009,860,NA
+"Timor-Leste","TLS",2010,860,NA
+"Timor-Leste","TLS",2011,860,NA
+"Timor-Leste","TLS",2012,860,"Tier 2    "
+"Timor-Leste","TLS",2013,860,"Tier 2    "
+"Timor-Leste","TLS",2014,860,"Watchlist    "
+"Timor-Leste","TLS",2015,860,"Watchlist    "
+"Togo","TGO",1999,461,NA
+"Togo","TGO",2000,461,NA
+"Togo","TGO",2001,461,"Tier 2    "
+"Togo","TGO",2002,461,"Tier 2    "
+"Togo","TGO",2003,461,"Tier 2    "
+"Togo","TGO",2004,461,"Tier 2    "
+"Togo","TGO",2005,461,"Tier 3"
+"Togo","TGO",2006,461,"Watchlist    "
+"Togo","TGO",2007,461,"Tier 2    "
+"Togo","TGO",2008,461,"Tier 2    "
+"Togo","TGO",2009,461,"Tier 2    "
+"Togo","TGO",2010,461,"Tier 2    "
+"Togo","TGO",2011,461,"Tier 2    "
+"Togo","TGO",2012,461,"Tier 2    "
+"Togo","TGO",2013,461,"Tier 2    "
+"Togo","TGO",2014,461,"Tier 2    "
+"Togo","TGO",2015,461,"Tier 2    "
+"Tonga","TON",1999,955,NA
+"Tonga","TON",2000,955,NA
+"Tonga","TON",2001,955,NA
+"Tonga","TON",2002,955,NA
+"Tonga","TON",2003,955,NA
+"Tonga","TON",2004,955,NA
+"Tonga","TON",2005,955,NA
+"Tonga","TON",2006,955,NA
+"Tonga","TON",2007,955,NA
+"Tonga","TON",2008,955,NA
+"Tonga","TON",2009,955,NA
+"Tonga","TON",2010,955,NA
+"Tonga","TON",2011,955,"Tier 2    "
+"Tonga","TON",2012,955,"Tier 2    "
+"Tonga","TON",2013,955,"Tier 2    "
+"Tonga","TON",2014,955,"Tier 2    "
+"Tonga","TON",2015,955,"Tier 2    "
+"Trinidad and Tobago","TTO",1999,52,NA
+"Trinidad and Tobago","TTO",2000,52,NA
+"Trinidad and Tobago","TTO",2001,52,NA
+"Trinidad and Tobago","TTO",2002,52,NA
+"Trinidad and Tobago","TTO",2003,52,NA
+"Trinidad and Tobago","TTO",2004,52,NA
+"Trinidad and Tobago","TTO",2005,52,NA
+"Trinidad and Tobago","TTO",2006,52,NA
+"Trinidad and Tobago","TTO",2007,52,NA
+"Trinidad and Tobago","TTO",2008,52,NA
+"Trinidad and Tobago","TTO",2009,52,"Tier 2    "
+"Trinidad and Tobago","TTO",2010,52,"Watchlist    "
+"Trinidad and Tobago","TTO",2011,52,"Tier 2    "
+"Trinidad and Tobago","TTO",2012,52,"Tier 2    "
+"Trinidad and Tobago","TTO",2013,52,"Watchlist    "
+"Trinidad and Tobago","TTO",2014,52,"Tier 2    "
+"Trinidad and Tobago","TTO",2015,52,"Watchlist    "
+"Tunisia","TUN",1999,616,NA
+"Tunisia","TUN",2000,616,NA
+"Tunisia","TUN",2001,616,NA
+"Tunisia","TUN",2002,616,NA
+"Tunisia","TUN",2003,616,NA
+"Tunisia","TUN",2004,616,NA
+"Tunisia","TUN",2005,616,NA
+"Tunisia","TUN",2006,616,"Tier 2    "
+"Tunisia","TUN",2007,616,NA
+"Tunisia","TUN",2008,616,NA
+"Tunisia","TUN",2009,616,"Watchlist    "
+"Tunisia","TUN",2010,616,"Watchlist    "
+"Tunisia","TUN",2011,616,"Watchlist    "
+"Tunisia","TUN",2012,616,"Tier 2    "
+"Tunisia","TUN",2013,616,"Watchlist    "
+"Tunisia","TUN",2014,616,"Watchlist    "
+"Tunisia","TUN",2015,616,"Watchlist    "
+"Turkey","TUR",1999,640,NA
+"Turkey","TUR",2000,640,NA
+"Turkey","TUR",2001,640,"Tier 3"
+"Turkey","TUR",2002,640,"Tier 3"
+"Turkey","TUR",2003,640,"Tier 3"
+"Turkey","TUR",2004,640,"Watchlist    "
+"Turkey","TUR",2005,640,"Tier 2    "
+"Turkey","TUR",2006,640,"Tier 2    "
+"Turkey","TUR",2007,640,"Tier 2    "
+"Turkey","TUR",2008,640,"Tier 2    "
+"Turkey","TUR",2009,640,"Tier 2    "
+"Turkey","TUR",2010,640,"Tier 2    "
+"Turkey","TUR",2011,640,"Tier 2    "
+"Turkey","TUR",2012,640,"Tier 2    "
+"Turkey","TUR",2013,640,"Tier 2    "
+"Turkey","TUR",2014,640,"Tier 2    "
+"Turkey","TUR",2015,640,"Tier 2    "
+"Turkmenistan","TKM",1999,701,NA
+"Turkmenistan","TKM",2000,701,NA
+"Turkmenistan","TKM",2001,701,NA
+"Turkmenistan","TKM",2002,701,NA
+"Turkmenistan","TKM",2003,701,NA
+"Turkmenistan","TKM",2004,701,NA
+"Turkmenistan","TKM",2005,701,NA
+"Turkmenistan","TKM",2006,701,NA
+"Turkmenistan","TKM",2007,701,NA
+"Turkmenistan","TKM",2008,701,NA
+"Turkmenistan","TKM",2009,701,"Watchlist    "
+"Turkmenistan","TKM",2010,701,"Watchlist    "
+"Turkmenistan","TKM",2011,701,"Tier 3"
+"Turkmenistan","TKM",2012,701,"Watchlist    "
+"Turkmenistan","TKM",2013,701,"Watchlist    "
+"Turkmenistan","TKM",2014,701,"Watchlist    "
+"Turkmenistan","TKM",2015,701,"Watchlist    "
+"United Kingdom","GBR",1999,200,NA
+"United Kingdom","GBR",2000,200,NA
+"United Kingdom","GBR",2001,200,"Tier 1    "
+"United Kingdom","GBR",2002,200,"Tier 1    "
+"United Kingdom","GBR",2003,200,"Tier 1    "
+"United Kingdom","GBR",2004,200,"Tier 1    "
+"United Kingdom","GBR",2005,200,"Tier 1    "
+"United Kingdom","GBR",2006,200,"Tier 1    "
+"United Kingdom","GBR",2007,200,"Tier 1    "
+"United Kingdom","GBR",2008,200,"Tier 1    "
+"United Kingdom","GBR",2009,200,"Tier 1    "
+"United Kingdom","GBR",2010,200,"Tier 1    "
+"United Kingdom","GBR",2011,200,"Tier 1    "
+"United Kingdom","GBR",2012,200,"Tier 1    "
+"United Kingdom","GBR",2013,200,"Tier 1    "
+"United Kingdom","GBR",2014,200,"Tier 1    "
+"Uganda","UGA",1999,500,NA
+"Uganda","UGA",2000,500,NA
+"Uganda","UGA",2001,500,"Tier 2    "
+"Uganda","UGA",2002,500,"Tier 2    "
+"Uganda","UGA",2003,500,"Tier 2    "
+"Uganda","UGA",2004,500,"Tier 2    "
+"Uganda","UGA",2005,500,"Tier 2    "
+"Uganda","UGA",2006,500,"Tier 2    "
+"Uganda","UGA",2007,500,"Tier 2    "
+"Uganda","UGA",2008,500,"Tier 2    "
+"Uganda","UGA",2009,500,"Tier 2    "
+"Uganda","UGA",2010,500,"Tier 2    "
+"Uganda","UGA",2011,500,"Tier 2    "
+"Uganda","UGA",2012,500,"Tier 2    "
+"Uganda","UGA",2013,500,"Tier 2    "
+"Uganda","UGA",2014,500,"Tier 2    "
+"Uganda","UGA",2015,500,"Tier 2    "
+"Ukraine","UKR",1999,369,NA
+"Ukraine","UKR",2000,369,NA
+"Ukraine","UKR",2001,369,"Tier 2    "
+"Ukraine","UKR",2002,369,"Tier 2    "
+"Ukraine","UKR",2003,369,"Tier 2    "
+"Ukraine","UKR",2004,369,"Tier 2    "
+"Ukraine","UKR",2005,369,"Watchlist    "
+"Ukraine","UKR",2006,369,"Tier 2    "
+"Ukraine","UKR",2007,369,"Watchlist    "
+"Ukraine","UKR",2008,369,"Tier 2    "
+"Ukraine","UKR",2009,369,"Watchlist    "
+"Ukraine","UKR",2010,369,"Tier 2    "
+"Ukraine","UKR",2011,369,"Tier 2    "
+"Ukraine","UKR",2012,369,"Tier 2    "
+"Ukraine","UKR",2013,369,"Watchlist    "
+"Ukraine","UKR",2014,369,"Watchlist    "
+"Ukraine","UKR",2015,369,"Watchlist    "
+"United Arab Emirates","ARE",1999,696,NA
+"United Arab Emirates","ARE",2000,696,NA
+"United Arab Emirates","ARE",2001,696,"Tier 3"
+"United Arab Emirates","ARE",2002,696,"Tier 3"
+"United Arab Emirates","ARE",2003,696,"Tier 1    "
+"United Arab Emirates","ARE",2004,696,"Tier 2    "
+"United Arab Emirates","ARE",2005,696,"Tier 3"
+"United Arab Emirates","ARE",2006,696,"Watchlist    "
+"United Arab Emirates","ARE",2007,696,"Watchlist    "
+"United Arab Emirates","ARE",2008,696,"Tier 2    "
+"United Arab Emirates","ARE",2009,696,"Watchlist    "
+"United Arab Emirates","ARE",2010,696,"Tier 2    "
+"United Arab Emirates","ARE",2011,696,"Tier 2    "
+"United Arab Emirates","ARE",2012,696,"Tier 2    "
+"United Arab Emirates","ARE",2013,696,"Tier 2    "
+"United Arab Emirates","ARE",2014,696,"Tier 2    "
+"United Arab Emirates","ARE",2015,696,"Tier 2    "
+"United Kingdom","GBR",2015,200,"Tier 1    "
+"Uruguay","URY",1999,165,NA
+"Uruguay","URY",2000,165,NA
+"Uruguay","URY",2001,165,NA
+"Uruguay","URY",2002,165,NA
+"Uruguay","URY",2003,165,NA
+"Uruguay","URY",2004,165,NA
+"Uruguay","URY",2005,165,"Tier 2    "
+"Uruguay","URY",2006,165,"Tier 2    "
+"Uruguay","URY",2007,165,"Tier 2    "
+"Uruguay","URY",2008,165,"Tier 2    "
+"Uruguay","URY",2009,165,"Tier 2    "
+"Uruguay","URY",2010,165,"Tier 2    "
+"Uruguay","URY",2011,165,"Tier 2    "
+"Uruguay","URY",2012,165,"Tier 2    "
+"Uruguay","URY",2013,165,"Watchlist    "
+"Uruguay","URY",2014,165,"Watchlist    "
+"Uruguay","URY",2015,165,"Tier 2    "
+"Uzbekistan","UZB",1999,704,NA
+"Uzbekistan","UZB",2000,704,NA
+"Uzbekistan","UZB",2001,704,NA
+"Uzbekistan","UZB",2002,704,NA
+"Uzbekistan","UZB",2003,704,"Tier 3"
+"Uzbekistan","UZB",2004,704,"Tier 2    "
+"Uzbekistan","UZB",2005,704,"Watchlist    "
+"Uzbekistan","UZB",2006,704,"Tier 3"
+"Uzbekistan","UZB",2007,704,"Tier 3"
+"Uzbekistan","UZB",2008,704,"Watchlist    "
+"Uzbekistan","UZB",2009,704,"Watchlist    "
+"Uzbekistan","UZB",2010,704,"Watchlist    "
+"Uzbekistan","UZB",2011,704,"Watchlist    "
+"Uzbekistan","UZB",2012,704,"Watchlist    "
+"Uzbekistan","UZB",2013,704,"Tier 3"
+"Uzbekistan","UZB",2014,704,"Tier 3"
+"Uzbekistan","UZB",2015,704,"Watchlist    "
+"Vanuatu","VUT",1999,935,NA
+"Vanuatu","VUT",2000,935,NA
+"Vanuatu","VUT",2001,935,NA
+"Vanuatu","VUT",2002,935,NA
+"Vanuatu","VUT",2003,935,NA
+"Vanuatu","VUT",2004,935,NA
+"Vanuatu","VUT",2005,935,NA
+"Vanuatu","VUT",2006,935,NA
+"Vanuatu","VUT",2007,935,NA
+"Vanuatu","VUT",2008,935,NA
+"Vanuatu","VUT",2009,935,NA
+"Vanuatu","VUT",2010,935,NA
+"Vanuatu","VUT",2011,935,NA
+"Vanuatu","VUT",2012,935,NA
+"Vanuatu","VUT",2013,935,NA
+"Vanuatu","VUT",2014,935,NA
+"Venezuela, Bolivarian Republic of","VEN",1999,101,NA
+"Venezuela, Bolivarian Republic of","VEN",2000,101,NA
+"Venezuela, Bolivarian Republic of","VEN",2001,101,NA
+"Venezuela, Bolivarian Republic of","VEN",2002,101,NA
+"Venezuela, Bolivarian Republic of","VEN",2003,101,"Tier 2    "
+"Venezuela, Bolivarian Republic of","VEN",2004,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2005,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2006,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2007,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2008,101,"Watchlist    "
+"Venezuela, Bolivarian Republic of","VEN",2009,101,"Watchlist    "
+"Venezuela, Bolivarian Republic of","VEN",2010,101,"Watchlist    "
+"Venezuela, Bolivarian Republic of","VEN",2011,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2012,101,"Watchlist    "
+"Venezuela, Bolivarian Republic of","VEN",2013,101,"Watchlist    "
+"Venezuela, Bolivarian Republic of","VEN",2014,101,"Tier 3"
+"Venezuela, Bolivarian Republic of","VEN",2015,101,"Tier 3"
+"Viet Nam","VNM",1999,816,NA
+"Viet Nam","VNM",2000,816,NA
+"Viet Nam","VNM",2001,816,"Tier 2    "
+"Viet Nam","VNM",2002,816,"Tier 2    "
+"Viet Nam","VNM",2003,816,"Tier 2    "
+"Viet Nam","VNM",2004,816,"Watchlist    "
+"Viet Nam","VNM",2005,816,"Tier 2    "
+"Viet Nam","VNM",2006,816,"Tier 2    "
+"Viet Nam","VNM",2007,816,"Tier 2    "
+"Viet Nam","VNM",2008,816,"Tier 2    "
+"Viet Nam","VNM",2009,816,"Tier 2    "
+"Viet Nam","VNM",2010,816,"Watchlist    "
+"Viet Nam","VNM",2011,816,"Watchlist    "
+"Viet Nam","VNM",2012,816,"Tier 2    "
+"Viet Nam","VNM",2013,816,"Tier 2    "
+"Viet Nam","VNM",2014,816,"Tier 2    "
+"Viet Nam","VNM",2015,816,"Tier 2    "
+"Yemen","YEM",2015,679,"Tier 3"
+"Yemen","YEM",1999,679,NA
+"Yemen","YEM",2000,679,NA
+"Yemen","YEM",2001,679,NA
+"Yemen","YEM",2002,679,NA
+"Yemen","YEM",2003,679,NA
+"Yemen","YEM",2004,679,NA
+"Yemen","YEM",2005,679,"Tier 2    "
+"Yemen","YEM",2006,679,"Tier 2    "
+"Yemen","YEM",2007,679,"Tier 2    "
+"Yemen","YEM",2008,679,"Tier 2    "
+"Yemen","YEM",2009,679,"Watchlist    "
+"Yemen","YEM",2010,679,"Watchlist    "
+"Yemen","YEM",2011,679,"Tier 3"
+"Yemen","YEM",2012,679,"Tier 3"
+"Yemen","YEM",2013,679,"Tier 3"
+"Yemen","YEM",2014,679,"Tier 3"
+"Zambia","ZMB",1999,551,NA
+"Zambia","ZMB",2000,551,NA
+"Zambia","ZMB",2001,551,NA
+"Zambia","ZMB",2002,551,NA
+"Zambia","ZMB",2003,551,"Tier 2    "
+"Zambia","ZMB",2004,551,"Watchlist    "
+"Zambia","ZMB",2005,551,"Tier 2    "
+"Zambia","ZMB",2006,551,"Tier 2    "
+"Zambia","ZMB",2007,551,"Tier 2    "
+"Zambia","ZMB",2008,551,"Watchlist    "
+"Zambia","ZMB",2009,551,"Tier 2    "
+"Zambia","ZMB",2010,551,"Watchlist    "
+"Zambia","ZMB",2011,551,"Tier 2    "
+"Zambia","ZMB",2012,551,"Tier 2    "
+"Zambia","ZMB",2013,551,"Tier 2    "
+"Zambia","ZMB",2014,551,"Tier 2    "
+"Zambia","ZMB",2015,551,"Tier 2    "
+"Zimbabwe","ZWE",1999,552,NA
+"Zimbabwe","ZWE",2000,552,NA
+"Zimbabwe","ZWE",2001,552,NA
+"Zimbabwe","ZWE",2002,552,NA
+"Zimbabwe","ZWE",2003,552,"Tier 2    "
+"Zimbabwe","ZWE",2004,552,"Watchlist    "
+"Zimbabwe","ZWE",2005,552,"Watchlist    "
+"Zimbabwe","ZWE",2006,552,"Tier 3"
+"Zimbabwe","ZWE",2007,552,"Tier 2    "
+"Zimbabwe","ZWE",2008,552,"Watchlist    "
+"Zimbabwe","ZWE",2009,552,"Tier 3"
+"Zimbabwe","ZWE",2010,552,"Tier 3"
+"Zimbabwe","ZWE",2011,552,"Tier 3"
+"Zimbabwe","ZWE",2012,552,"Tier 3"
+"Zimbabwe","ZWE",2013,552,"Tier 3"
+"Zimbabwe","ZWE",2014,552,"Tier 3"
+"Zimbabwe","ZWE",2015,552,"Tier 3"

@@ -178,14 +178,14 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	</data>
 	<key>SCRCompileFDXSummaryFontKey</key>
 	<data>
-	BAtzdHJlYW10eXBlZIHoA4QBQISEhAZOU0ZvbnQehIQITlNPYmplY3QAhYQBaVCEBVs4
-	MGNdBgAAAEgAAAD//i4ASABlAGwAdgBlAHQAaQBjAGEATgBlAHUAZQBEAGUAcwBrAEkA
-	bgB0AGUAcgBmAGEAYwBlAC0AUgBlAGcAdQBsAGEAcgCEAWYMhAFjAJgBmACYAIY=
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAZOU0ZvbnQehIQITlNPYmplY3QAhYQBaTCEBVs0
+	OGNdBgAAACYAAAD//i4AQQBwAHAAbABlAFMAeQBzAHQAZQBtAFUASQBGAG8AbgB0AAAA
+	hAFmDIQBYwCYAZgAmACG
 	</data>
 	<key>SCRCompileFDXUseDefaultScriptElementsKey</key>
 	<false/>
 	<key>SCRCompileFilterCollectionIDKey</key>
-	<string>FE17CB9B-6BF3-438D-803F-DBAFA7122902</string>
+	<string>86098AB7-8E83-43AE-901B-2F09EB8A0BEC</string>
 	<key>SCRCompileFilterContentsKey</key>
 	<false/>
 	<key>SCRCompileFilterExcludeKey</key>
@@ -567,7 +567,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileRemoveAllHyperlinksKey</key>
 	<false/>
 	<key>SCRCompileRemoveCommentsKey</key>
-	<false/>
+	<true/>
 	<key>SCRCompileRemoveFootnotesKey</key>
 	<false/>
 	<key>SCRCompileRemoveHighlightingKey</key>
@@ -607,7 +607,7 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileStatisticsExcludeFrontMatterKey</key>
 	<true/>
 	<key>SCRCompileStatisticsFilterCollectionIDKey</key>
-	<string>FE17CB9B-6BF3-438D-803F-DBAFA7122902</string>
+	<string>86098AB7-8E83-43AE-901B-2F09EB8A0BEC</string>
 	<key>SCRCompileStatisticsFilterDocumentsKey</key>
 	<false/>
 	<key>SCRCompileStatisticsFilterExcludeKey</key>

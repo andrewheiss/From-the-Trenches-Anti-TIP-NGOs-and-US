@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>automaticallyCheckForChanges</key>
-	<true/>
+	<false/>
 	<key>draftFileFormat</key>
 	<integer>0</integer>
 	<key>draftPlainTextExtension</key>
 	<string>md</string>
-	<key>folderPath</key>
-	<string>/Users/andrew/Research/••Projects/Human trafficking/Anti-TIP NGOs and the US/manuscript/manuscript_md</string>
 	<key>importDestinationID</key>
 	<integer>1</integer>
 	<key>importShowsContainersOnly</key>

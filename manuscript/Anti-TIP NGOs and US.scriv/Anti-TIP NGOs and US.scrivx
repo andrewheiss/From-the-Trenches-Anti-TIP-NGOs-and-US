@@ -1,75 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ScrivenerProject Version="1.0" Creator="SCRMAC-2.6-25480" Modified="2015-09-23 23:57:21 -0400">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-11-29 23:40:25 -0500" ModID="802ADC42-C56C-474F-BC4B-80E4807DE889">
     <Binder>
-        <BinderItem ID="0" Type="DraftFolder" Created="2015-09-23 23:04:11 -0400" Modified="2015-09-23 23:04:11 -0400">
+        <BinderItem ID="0" UUID="3071AABA-3A75-4D2D-A41C-D36D468CB0A5" Type="DraftFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Draft</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>3</SelectedSubdocumentIDs>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem ID="4" Type="Text" Created="2015-09-23 23:09:26 -0400" Modified="2015-09-23 23:09:47 -0400">
+                <BinderItem ID="3" UUID="50BCF350-DF7C-4410-8C6C-F3E71F584215" Type="Text" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:17:20 -0400">
                     <Title>Metadata</Title>
                     <MetaData>
+                        <LabelID>2</LabelID>
+                        <StatusID>4</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>338,0</TextSelection>
+                        <TextSelection>0,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="3" Type="Text" Created="2015-09-23 23:04:11 -0400" Modified="2015-09-23 23:38:32 -0400">
+                <BinderItem ID="4" UUID="B6DE200B-A2CD-4014-A8A9-C6FC522A78AF" Type="Text" Created="2015-10-27 12:12:13 -0400" Modified="2015-10-28 15:26:27 -0400">
                     <Title>Introduction</Title>
                     <MetaData>
+                        <StatusID>1</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>2094,0</TextSelection>
+                        <TextSelection>3895,0</TextSelection>
+                        <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="5" Type="Text" Created="2015-09-23 23:10:05 -0400" Modified="2015-09-23 23:11:04 -0400">
+                <BinderItem ID="5" UUID="1690C3C4-F302-4BFA-B1AB-70FD044DD568" Type="Text" Created="2015-10-27 12:12:19 -0400" Modified="2015-10-27 12:16:24 -0400">
                     <Title>The United States and anti-TIP advocacy</Title>
                     <MetaData>
+                        <StatusID>0</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>553,0</TextSelection>
+                        <TextSelection>568,0</TextSelection>
+                        <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="6" Type="Text" Created="2015-09-23 23:10:43 -0400" Modified="2015-09-23 23:11:04 -0400">
+                <BinderItem ID="6" UUID="C01DD2AC-3220-4597-8B1B-C0AF5D553C4E" Type="Text" Created="2015-10-27 12:12:32 -0400" Modified="2015-10-28 15:30:23 -0400">
                     <Title>Data and methods</Title>
                     <MetaData>
+                        <StatusID>1</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>128,0</TextSelection>
+                        <TextSelection>4135,0</TextSelection>
+                        <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="7" Type="Text" Created="2015-09-23 23:11:13 -0400" Modified="2015-09-23 23:21:17 -0400">
+                <BinderItem ID="7" UUID="3DB0A2CC-76D4-453B-BB93-30C0E839770D" Type="Text" Created="2015-10-27 12:12:36 -0400" Modified="2015-11-25 11:22:47 -0500">
                     <Title>Findings</Title>
                     <MetaData>
+                        <StatusID>1</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>396,0</TextSelection>
+                        <TextSelection>20858,0</TextSelection>
+                        <Target Type="Words" Notify="No">3500</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="8" Type="Text" Created="2015-09-23 23:12:56 -0400" Modified="2015-09-23 23:13:04 -0400">
-                    <Title>Policy implications and conclusion</Title>
+                <BinderItem ID="8" UUID="88089D80-466E-4394-AFB8-B3067AEA6113" Type="Text" Created="2015-10-27 12:12:40 -0400" Modified="2015-10-27 12:16:29 -0400">
+                    <Title>Policy implications</Title>
                     <MetaData>
+                        <StatusID>0</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>36,0</TextSelection>
+                        <TextSelection>21,0</TextSelection>
+                        <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="11" Type="Text" Created="2015-09-23 23:21:22 -0400" Modified="2015-09-23 23:24:31 -0400">
+                <BinderItem ID="9" UUID="686303AE-4DC9-4342-B308-343C03D6FA26" Type="Text" Created="2015-10-27 12:12:45 -0400" Modified="2015-10-27 12:17:20 -0400">
                     <Title>References</Title>
                     <MetaData>
+                        <LabelID>2</LabelID>
+                        <StatusID>4</StatusID>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
@@ -79,47 +96,83 @@
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem ID="9" Type="Folder" Created="2015-09-23 23:13:22 -0400" Modified="2015-09-23 23:13:31 -0400">
+        <BinderItem ID="10" UUID="2154AB70-7EB4-422A-9CCF-F3B55D98F8AF" Type="Folder" Created="2015-10-27 12:32:56 -0400" Modified="2015-10-27 12:32:58 -0400">
             <Title>Poop</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
                 <NotesTextSelection>0,0</NotesTextSelection>
-                <IconFileName>Sonya-Swarm-Poop.tif</IconFileName>
+                <IconFileName>pile-of-poo.tif</IconFileName>
             </MetaData>
             <TextSettings>
                 <TextSelection>0,0</TextSelection>
             </TextSettings>
             <Children>
-                <BinderItem ID="10" Type="Text" Created="2015-09-23 23:15:44 -0400" Modified="2015-09-23 23:16:11 -0400">
+                <BinderItem ID="11" UUID="77140469-FBBC-492A-BDAC-EA4F238EE12C" Type="Text" Created="2015-10-27 12:33:09 -0400" Modified="2015-10-27 12:33:27 -0400">
                     <Title>Scratch</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>118,0</TextSelection>
+                        <TextSelection>287,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
-        <BinderItem ID="1" Type="ResearchFolder" Created="2015-09-23 23:04:11 -0400" Modified="2015-09-23 23:04:11 -0400">
+        <BinderItem ID="1" UUID="55BF60A0-D4DD-4A85-878C-C9C0C4C35149" Type="ResearchFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Research</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
+            <Children>
+                <BinderItem ID="12" UUID="20679BB7-E5A4-4CDF-8C15-568C21F7BBE8" Type="PDF" Created="2015-03-30 16:08:25 -0400" Modified="2015-03-30 16:08:25 -0400">
+                    <Title>Summary report, 2015-03-30</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>pdf</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <MediaSettings>
+                        <CurrentPDFPage>0</CurrentPDFPage>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="13" UUID="D8815AD8-804D-41BB-B90E-A50EFC5CEC0D" Type="PDF" Created="2015-05-19 10:08:50 -0400" Modified="2015-05-19 10:08:50 -0400">
+                    <Title>human_trafficking_NGO_survey_summary</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>pdf</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <MediaSettings>
+                        <CurrentPDFPage>0</CurrentPDFPage>
+                    </MediaSettings>
+                </BinderItem>
+            </Children>
         </BinderItem>
-        <BinderItem ID="2" Type="TrashFolder" Created="2015-09-23 23:04:11 -0400" Modified="2015-09-23 23:04:11 -0400">
+        <BinderItem ID="2" UUID="7D681AE8-78C0-4E8B-BFC1-DD9EABC49CCC" Type="TrashFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Trash</Title>
             <MetaData>
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
+            <Children>
+                <BinderItem ID="14" UUID="0BF3F405-A2A6-451B-B3B0-41B798344E47" Type="Text" Created="2015-10-29 00:10:57 -0400" Modified="2015-10-29 00:10:57 -0400">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
         </BinderItem>
     </Binder>
     <Collections>
-        <Collection Type="Binder" ID="0200290A-F6DC-420E-9E5A-48DE25038E9D" Color="0.784753 0.815752 0.848702">
+        <Collection Type="Binder" ID="7559B6CE-F52C-415C-8D10-10EA164B4C5A" Color="0.962266 0.962266 0.962266">
             <Title>Binder</Title>
         </Collection>
-        <Collection Type="RecentSearch" ID="FE17CB9B-6BF3-438D-803F-DBAFA7122902" Color="0.922 0.91 0.98">
+        <Collection Type="RecentSearch" ID="86098AB7-8E83-43AE-901B-2F09EB8A0BEC" Color="0.922 0.91 0.98">
             <Title>Search Results</Title>
         </Collection>
     </Collections>
@@ -128,6 +181,7 @@
         <DefaultLabelID>-1</DefaultLabelID>
         <Labels>
             <Label ID="-1">No Label</Label>
+            <Label ID="2" Color="0.80977 0.80977 0.80977">Metadata</Label>
             <Label ID="0" Color="0.9 0.92 0.95">Concept</Label>
             <Label ID="1" Color="0.985 0.875 0.85">Chapter</Label>
         </Labels>
@@ -144,10 +198,17 @@
             <Status ID="4">Done</Status>
         </StatusItems>
     </StatusSettings>
+    <ProjectProperties>
+        <ProjectTitle></ProjectTitle>
+        <AbbreviatedTitle></AbbreviatedTitle>
+        <FullName></FullName>
+        <LastName></LastName>
+        <FirstName></FirstName>
+    </ProjectProperties>
     <ProjectTargets Notify="No">
-        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2015-09-26 23:04:10 -0400" IgnoreDeadline="No">6000</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="Yes" WritingDays="2-7" CanWriteOnDeadlineDate="Yes">1500</SessionTarget>
-        <PreviousSession Words="556" Characters="3857" Date="2015-09-23 23:04:10 -0400"></PreviousSession>
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2015-10-27 12:11:21 -0400" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2015-11-29 23:40:24 -0500"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

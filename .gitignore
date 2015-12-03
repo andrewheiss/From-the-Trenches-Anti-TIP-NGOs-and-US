@@ -1,12 +1,15 @@
 # Ignore sandbox and raw data folders
 sandbox/*
 data_raw/*
+data/id_lookup*
 
 # Manuscript output
 manuscript/*.html
 manuscript/*.docx
+manuscript/*.pdf
 
 # Scrivener
+manuscript/**/*.pdf
 manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/binder.autosave
 manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/binder.backup
 manuscript/Anti-TIP\ NGOs\ and\ US.scriv/Files/search.indexes

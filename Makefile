@@ -22,6 +22,8 @@
 #   document's images, etc. as dependencies, which means it might be easier
 #   to just clean and delete everything every time you rebuild.
 
+# Add directories to path for RStudio's build tools
+export PATH := /Users/andrew/.cabal/bin:/Users/andrew/bin:$(PATH)
 
 # ----------------------
 # Modifiable variables

@@ -2,6 +2,7 @@
 sandbox/*
 data_raw/*
 data/id_lookup*
+*WILL_BE_OVERWRITTEN*
 
 # Manuscript output
 manuscript/*.html

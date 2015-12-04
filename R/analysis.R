@@ -22,8 +22,11 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE)
 library(readr)
 library(dplyr)
 library(tidyr)
+library(stringr)
 library(ggplot2)
 library(scales)
+library(Cairo)
+library(grid)
 library(vcd)
 library(countrycode)
 
@@ -114,6 +117,100 @@ responses.full <- responses.all %>%
                                         "Don't know"),
                         ordered=TRUE),
          Q3.25_collapsed = ifelse(Q3.25 == "Negative", NA, Q3.25))
+
+# Useful functions
+theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
+  ret <- theme_bw(base_size, base_family) + 
+    theme(panel.background = element_rect(fill="#ffffff", colour=NA),
+          axis.title.x=element_text(vjust=-0.2), axis.title.y=element_text(vjust=1.5),
+          title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
+          panel.border = element_blank(), axis.line=element_blank(),
+          panel.grid.minor=element_blank(),
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(size=0.25, colour="grey90"),
+          axis.ticks=element_blank(),
+          legend.position="bottom", 
+          axis.title=element_text(size=rel(0.8), family="Source Sans Pro Semibold"),
+          strip.text=element_text(size=rel(0.9), family="Source Sans Pro Semibold"),
+          strip.background=element_rect(fill="#ffffff", colour=NA),
+          panel.margin=unit(1, "lines"), legend.key.size=unit(.7, "line"),
+          legend.key=element_blank())
+  
+  ret
+}
+
+# -----------------------------------------------
+#' # NGO opinions of US activity and importance
+# -----------------------------------------------
+# Select just the columns that have cowcodes embedded in them
+active.embassies.raw <- responses.countries %>%
+  select(contains("_c", ignore.case=FALSE)) %>%
+  mutate_each(funs(as.numeric(levels(.))[.]))  # Convert values to numeric
+
+# Select only the rows where they responded (i.e. not all columns are NA)
+num.responses <- active.embassies.raw %>%
+  rowwise() %>% do(all.missing = all(!is.na(.))) %>%
+  ungroup() %>% mutate(all.missing = unlist(all.missing)) %>%
+  summarise(total = sum(all.missing))
+
+# Tidy cowcode columns and summarize most commonly mentioned countries
+active.embassies <- active.embassies.raw %>%
+  gather(country.raw, num) %>%
+  group_by(country.raw) %>% summarise(num = sum(num, na.rm=TRUE)) %>%
+  mutate(country.raw = str_replace(country.raw, "Q.*c", ""),
+         country = countrycode(country.raw, "cown", "country.name"),
+         country = ifelse(country.raw == "2070", "European Union", country)) %>%
+  ungroup() %>% mutate(prop = num / num.responses$total) %>%
+  arrange(num) %>% select(-country.raw) %>%
+  filter(num > 10) %>%
+  mutate(country = factor(country, levels=country, ordered=TRUE)) %>%
+  arrange(desc(num))
+
+#' Which embassies or foreign governments NGOs were reported as active partners
+#' in the fight against human trafficking?
+active.embassies
+num.responses$total
+
+fig.embassies <- ggplot(active.embassies, aes(x=country, y=num)) + 
+  labs(x=NULL, y="Number of times country was mentioned as a partner in anti-TIP work") + 
+  geom_bar(stat="identity") + 
+  scale_y_continuous(breaks=seq(0, max(active.embassies$num), by=25)) + 
+  coord_flip() + theme_clean()
+fig.embassies
+
+
+# Most active embassies
+# Save Q3.7 to a CSV for hand coding
+most.active <- responses.countries %>%
+  select(Q3.7) %>%
+  filter(!is.na(Q3.7))
+write_csv(most.active, path=file.path(PROJHOME, "data", 
+                                      "most_active_WILL_BE_OVERWRITTEN.csv"))
+
+# Read in hand-coded CSV
+if (file.exists(file.path(PROJHOME, "data", "most_active.csv"))) {
+  most.active <- read_csv(file.path(PROJHOME, "data", "most_active.csv"))
+} else {
+  stop("data/most_active.csv is missing")
+}
+
+# Split comma-separated countries, unnest them into multiple rows, and 
+# summarize most active countries
+most.active.clean <- most.active %>%
+  transform(clean = strsplit(clean, ",")) %>%
+  unnest(clean) %>%
+  mutate(clean = str_trim(clean)) %>%
+  group_by(clean) %>%
+  summarise(total = n()) %>%
+  mutate(prop = total / nrow(most.active)) %>%
+  arrange(desc(total))
+
+#' Which countries or embassies have been the *most* active?
+most.active.clean %>% head(10)
+nrow(most.active)
+
+#' Over the last 10–15 years, has the United States or its embassy been active in the fight against human trafficking in X?
+responses.countries$Q3.8 %>% table %>% print %>% prop.table
 
 
 # ----------------------------------------------------------------

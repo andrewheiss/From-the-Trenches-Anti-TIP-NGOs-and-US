@@ -70,6 +70,12 @@ responses.all <- responses.orgs %>%
 #'     Slowed down = -1; Don't know = NA
 importance <- data_frame(Q3.19 = levels(responses.countries$Q3.19),
                          importance = c(2, 1, 0, NA))
+importance.levels <- data_frame(start=c(0, 1, 2),
+                                end=c(1, 2, 3),
+                                level=c("Not important", "Somewhat important", 
+                                        "Most important"),
+                                level.ordered=factor(level, levels=level, ordered=TRUE))
+
 positivity <- data_frame(Q3.25 = levels(responses.countries$Q3.25),
                          positivity = c(-1, 1, 0, NA))
 improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
@@ -118,6 +124,21 @@ responses.full <- responses.all %>%
                                         "Don't know"),
                         ordered=TRUE),
          Q3.25_collapsed = ifelse(Q3.25 == "Negative", NA, Q3.25))
+
+country.indexes <- responses.full %>%
+  filter(!is.na(work.country)) %>%
+  group_by(work.country) %>%
+  # Needs mutate + mutate_each + select + unique because you can't mix 
+  # summarise + summarise_each. See http://stackoverflow.com/a/31815540/120898
+  mutate(num.responses = n()) %>%
+  mutate_each(funs(score = mean(., na.rm=TRUE), stdev = sd(., na.rm=TRUE), 
+                   n = sum(!is.na(.))),
+              c(positivity, importance, improvement)) %>%
+  select(work.country, num.responses, matches("positivity_|importance_|improvement_")) %>%
+  unique %>%
+  ungroup() %>%
+  arrange(desc(num.responses))
+
 
 # Useful functions
 theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
@@ -169,9 +190,9 @@ separate.answers.summary <- function(df, cols, labels, total=FALSE) {
   return(list(df=df, denominator=denominator))
 }
 
-# -----------------------------------------------
-#' # NGO opinions of US activity and importance
-# -----------------------------------------------
+# --------------------------------
+#' # NGO opinions of US activity
+# --------------------------------
 # Select just the columns that have cowcodes embedded in them
 active.embassies.raw <- responses.countries %>%
   select(contains("_c", ignore.case=FALSE)) %>%
@@ -311,6 +332,57 @@ ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.p
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.png"),
        width=6.5, height=5, units="in")
 
+
+# ----------------------------------
+#' # NGO opinions of US importance
+# ----------------------------------
+#' General importance
+plot.data <- responses.full %>%
+  group_by(Q3.19) %>%
+  summarize(num = n()) %>%
+  na.omit() %>%
+  mutate(prop = num / sum(num),
+         prop.nice = sprintf("%.1f%%", prop * 100),
+         Q3.19 = factor(Q3.19, levels=rev(levels(Q3.19)), ordered=TRUE))
+plot.data
+
+fig.us_importance <- ggplot(plot.data, aes(x=Q3.19, y=prop)) + 
+  geom_bar(stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$num, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.us_importance
+ggsave(fig.us_importance, filename=file.path(PROJHOME, "figures", "fig_us_importance.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.us_importance, filename=file.path(PROJHOME, "figures", "fig_us_importance.png"),
+       width=6.5, height=5, units="in")
+
+#' Average importance by country
+importance.plot <- country.indexes %>%
+  filter(num.responses >= 10) %>%
+  arrange(importance_score) %>%
+  mutate(country_label = factor(country_label, levels=unique(country_label), 
+                                labels=paste0(work.country, " (", num.responses, ")"),
+                                ordered=TRUE)) 
+
+avg.importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
+  geom_rect(data=importance.levels, aes(x=NULL, y=NULL, ymin=start, ymax=end, 
+                                        xmin=0, xmax=Inf, fill=level.ordered), alpha=0.5) + 
+  geom_pointrange(aes(ymax=importance_score + importance_stdev,
+                      ymin=importance_score - importance_stdev)) + 
+  labs(x="Country (number of responses)", 
+       y="Importance of the US in anti-TIP efforts (mean)") + 
+  scale_fill_manual(values=c("grey90", "grey60", "grey30"), name=NULL) + 
+  coord_flip() + 
+  theme_clean() + theme(legend.position="bottom")
+avg.importance
+ggsave(avg.importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"), 
+       width=6.5, height=5, units="in")
+
+
+#' ## Explaining variation in opinion of US importance
+#' ## TODO: Explaining variation in opinion of US positivity? (no because censoring)
 
 # ----------------------------------------------------------------
 #' # Variations in opinion of US based on tier rating statistics

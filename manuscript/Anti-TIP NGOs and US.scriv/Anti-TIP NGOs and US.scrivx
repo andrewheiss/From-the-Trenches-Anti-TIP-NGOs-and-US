@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-07 12:07:46 -0500" ModID="03EFA159-17A5-4E5A-BBBD-A7A6DE6C179F">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-07 12:15:42 -0500" ModID="F0D9208B-8668-4003-99DC-7880D2CE19C4">
     <Binder>
         <BinderItem ID="0" UUID="3071AABA-3A75-4D2D-A41C-D36D468CB0A5" Type="DraftFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Draft</Title>
@@ -58,7 +58,7 @@
                         <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="7" UUID="3DB0A2CC-76D4-453B-BB93-30C0E839770D" Type="Text" Created="2015-10-27 12:12:36 -0400" Modified="2015-12-07 12:07:46 -0500">
+                <BinderItem ID="7" UUID="3DB0A2CC-76D4-453B-BB93-30C0E839770D" Type="Text" Created="2015-10-27 12:12:36 -0400" Modified="2015-12-07 12:15:42 -0500">
                     <Title>Findings</Title>
                     <MetaData>
                         <StatusID>1</StatusID>
@@ -66,7 +66,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>14630,0</TextSelection>
+                        <TextSelection>13442,0</TextSelection>
                         <Target Type="Words" Notify="No">3500</Target>
                     </TextSettings>
                 </BinderItem>
@@ -133,7 +133,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <MediaSettings>
-                        <CurrentPDFPage>0</CurrentPDFPage>
+                        <CurrentPDFPage>106</CurrentPDFPage>
                     </MediaSettings>
                 </BinderItem>
                 <BinderItem ID="13" UUID="D8815AD8-804D-41BB-B90E-A50EFC5CEC0D" Type="PDF" Created="2015-05-19 10:08:50 -0400" Modified="2015-05-19 10:08:50 -0400">
@@ -196,7 +196,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2015-10-27 12:11:21 -0400" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="-7" Characters="-33" Date="2015-12-07 10:26:37 -0500"></PreviousSession>
+        <PreviousSession Words="-6" Characters="-47" Date="2015-12-07 10:26:37 -0500"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

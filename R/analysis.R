@@ -140,6 +140,35 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
   ret
 }
 
+# Return a data frame of counts and proportions for multiple responses
+separate.answers.summary <- function(df, cols, labels, total=FALSE) {
+  cols.to.select <- which(colnames(df) %in% cols)
+  
+  denominator <- df %>%
+    select(cols.to.select) %>%
+    mutate(num.answered = rowSums(., na.rm=TRUE)) %>%
+    filter(num.answered > 0) %>%
+    nrow()
+  
+  df <- df %>%
+    select(survey.id, cols.to.select) %>%
+    gather(question, value, -survey.id) %>%
+    mutate(question = factor(question, labels=labels, ordered=TRUE)) %>%
+    group_by(question) %>%
+    summarize(response = sum(value, na.rm=TRUE), 
+              pct = round(response / denominator * 100, 2),
+              plot.pct = response / denominator)
+  
+  colnames(df) <- c("Answer", "Responses", "%", "plot.pct")
+  
+  if (total) {
+    df <- df %>% select(1:3)
+    df <- rbind(as.matrix(df), c("Total responses", denominator, "—"))
+  }
+  
+  return(list(df=df, denominator=denominator))
+}
+
 # -----------------------------------------------
 #' # NGO opinions of US activity and importance
 # -----------------------------------------------
@@ -252,6 +281,35 @@ ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf
        width=5, height=2, units="in", device=cairo_pdf, scale=2.5)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png"),
        width=5, height=2, units="in", scale=2.5)
+
+
+#' Actual US activities
+cols <- c("Q3.9_1", "Q3.9_2", "Q3.9_3", "Q3.9_4", "Q3.9_5",
+          "Q3.9_6", "Q3.9_7", "Q3.9_8", "Q3.9_9", "Q3.9_10")
+labels <- c("Asking for legislation", "Convening conferences or workshops",
+            "Raising awareness", "Providing resources or funding",
+            "Increasing government attention", "Training government officials",
+            "Contributing to a government action plan", "Other", "Don't know",
+            "The US has not been involved in trafficking issues")
+
+activities <- separate.answers.summary(responses.countries, cols, labels)
+activities$denominator  # Number of responses
+activities$df
+
+plot.data <- activities$df %>% 
+  mutate(Answer=factor(Answer, levels=rev(labels), ordered=TRUE))
+
+fig.activities <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.activities
+ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.png"),
+       width=6.5, height=5, units="in")
 
 
 # ----------------------------------------------------------------

@@ -4,6 +4,10 @@
 <dict>
 	<key>automaticallyCheckForChanges</key>
 	<false/>
+	<key>deletedDocIDs</key>
+	<array>
+		<integer>14</integer>
+	</array>
 	<key>draftFileFormat</key>
 	<integer>0</integer>
 	<key>draftPlainTextExtension</key>

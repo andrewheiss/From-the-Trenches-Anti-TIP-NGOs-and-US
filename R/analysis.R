@@ -24,6 +24,7 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(ggplot2)
+library(gridExtra)
 library(scales)
 library(Cairo)
 library(grid)
@@ -160,24 +161,21 @@ active.embassies <- active.embassies.raw %>%
   mutate(country.raw = str_replace(country.raw, "Q.*c", ""),
          country = countrycode(country.raw, "cown", "country.name"),
          country = ifelse(country.raw == "2070", "European Union", country)) %>%
-  ungroup() %>% mutate(prop = num / num.responses$total) %>%
+  ungroup() %>% mutate(prop = num / num.responses$total,
+                       prop.nice = sprintf("%.1f%%", prop * 100))
+
+#' Which embassies or foreign governments NGOs were reported as active partners
+#' in the fight against human trafficking?
+active.embassies.top <- active.embassies %>%
   arrange(num) %>% select(-country.raw) %>%
   filter(num > 10) %>%
   mutate(country = factor(country, levels=country, ordered=TRUE)) %>%
   arrange(desc(num))
 
-#' Which embassies or foreign governments NGOs were reported as active partners
-#' in the fight against human trafficking?
-active.embassies
-num.responses$total
-
-fig.embassies <- ggplot(active.embassies, aes(x=country, y=num)) + 
-  labs(x=NULL, y="Number of times country was mentioned as a partner in anti-TIP work") + 
-  geom_bar(stat="identity") + 
-  scale_y_continuous(breaks=seq(0, max(active.embassies$num), by=25)) + 
-  coord_flip() + theme_clean()
-fig.embassies
-
+active.embassies %>% arrange(desc(num)) %>% 
+  select(-country.raw) %>% filter(num > 10)
+nrow(active.embassies)  # Number of countries mentioned
+num.responses$total  # Total responses
 
 # Most active embassies
 # Save Q3.7 to a CSV for hand coding
@@ -202,15 +200,58 @@ most.active.clean <- most.active %>%
   mutate(clean = str_trim(clean)) %>%
   group_by(clean) %>%
   summarise(total = n()) %>%
-  mutate(prop = total / nrow(most.active)) %>%
-  arrange(desc(total))
+  mutate(prop = total / nrow(most.active),
+         prop.nice = sprintf("%.1f%%", prop * 100))
 
 #' Which countries or embassies have been the *most* active?
-most.active.clean %>% head(10)
-nrow(most.active)
+most.active.clean %>% arrange(desc(total))
+nrow(most.active.clean) - 1  # Subtract one because of "None"s
 
 #' Over the last 10–15 years, has the United States or its embassy been active in the fight against human trafficking in X?
 responses.countries$Q3.8 %>% table %>% print %>% prop.table
+
+#' Side-by-side graph of active countries + most active countries
+plot.data <- active.embassies.top %>%
+  bind_rows(data_frame(num=0, country=c("All", "None"), 
+                       prop=0, prop.nice="")) %>%
+  arrange(num) %>%
+  mutate(country = factor(country, levels=country, ordered=TRUE))
+
+plot.data.active <- most.active.clean %>%
+  filter(clean %in% plot.data$country) %>%
+  mutate(country = factor(clean, levels=levels(plot.data$country), ordered=TRUE))
+
+fig.active <- ggplot(plot.data, aes(x=country, y=num)) + 
+  geom_bar(stat="identity") + 
+  geom_text(aes(label = prop.nice), size=3.5, hjust=1.3, 
+            family="Source Sans Pro Light") + 
+  labs(x=NULL, y="Number of times country was mentioned as a partner in anti-TIP work") + 
+  scale_y_continuous(breaks=seq(0, max(active.embassies$num), by=25), 
+                     trans="reverse", expand = c(.1, .1)) + 
+  coord_flip() + 
+  theme_clean() + 
+  theme(axis.text.y = element_blank(), 
+        axis.line.y = element_blank(),
+        plot.margin = unit(c(1,0.5,1,1), "lines"))
+
+fig.most.active <- ggplot(plot.data.active, aes(x=country, y=total)) + 
+  geom_bar(stat="identity") + 
+  geom_text(aes(label = prop.nice), size=3.5, hjust=-0.3, 
+            family="Source Sans Pro Light") + 
+  labs(x=NULL, y="Number of times country was mentioned as the most active partner in anti-TIP work") + 
+  scale_y_continuous(expand = c(.15, .15)) + 
+  coord_flip() + 
+  theme_clean() + 
+  theme(axis.text.y = element_text(hjust=0.5), 
+        axis.line.y = element_blank(),
+        plot.margin = unit(c(1,1,1,0), "lines"))
+  
+fig.embassies <- arrangeGrob(fig.active, fig.most.active, nrow=1)
+grid.draw(fig.embassies)
+ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf"),
+       width=5, height=2, units="in", device=cairo_pdf, scale=2.5)
+ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png"),
+       width=5, height=2, units="in", scale=2.5)
 
 
 # ----------------------------------------------------------------

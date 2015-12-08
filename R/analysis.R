@@ -192,6 +192,14 @@ separate.answers.summary <- function(df, cols, labels, total=FALSE) {
   return(list(df=df, denominator=denominator))
 }
 
+# Create a character vector of significance stars
+add.stars <- function(x) {
+  as.character(symnum(x, corr = FALSE,
+                      cutpoints = c(0,  .001,.01,.05, .1, 1),
+                      symbols = c("***","**","*","."," ")))
+}
+
+
 # --------------------------------
 #' # NGO opinions of US activity
 # --------------------------------
@@ -364,11 +372,11 @@ ggsave(fig.us_importance, filename=file.path(PROJHOME, "figures", "fig_us_import
 importance.plot <- country.indexes %>%
   filter(num.responses >= 10) %>%
   arrange(importance_score) %>%
-  mutate(country_label = factor(country_label, levels=unique(country_label), 
+  mutate(country_label = factor(work.country, levels=unique(work.country), 
                                 labels=paste0(work.country, " (", num.responses, ")"),
                                 ordered=TRUE)) 
 
-avg.importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
+fig.avg_importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
   geom_rect(data=importance.levels, aes(x=NULL, y=NULL, ymin=start, ymax=end, 
                                         xmin=0, xmax=Inf, fill=level.ordered), alpha=0.5) + 
   geom_pointrange(aes(ymax=importance_score + importance_stdev,
@@ -378,28 +386,140 @@ avg.importance <- ggplot(importance.plot, aes(x=country_label, y=importance_scor
   scale_fill_manual(values=c("grey90", "grey60", "grey30"), name=NULL) + 
   coord_flip() + 
   theme_clean() + theme(legend.position="bottom")
-avg.importance
-ggsave(avg.importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"), 
+fig.avg_importance
+ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
        width=6.5, height=5, units="in")
 
 
 #' ## Explaining variation in opinion of US importance
+#' Does opinion of the US vary by:
+# * Tier rating (average) or improvement in Cho score?
+# * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
+# * Whether an NGO has interacted with the US
+# * Whether a country is rich or poor (or some other quality)
+# * Whether an NGO focuses on certain types of work?
+# * In which countries does the US seem to have had more collaboration with NGOs?
 #' ## TODO: Explaining variation in opinion of US positivity? (no because censoring)
 
-# ----------------------------------------------------------------
-#' # Variations in opinion of US based on tier rating statistics
-# ----------------------------------------------------------------
+df.importance <- responses.full %>% 
+  select(Q3.19, change_policy, avg_tier, change_tip, change_policy, importance) %>% 
+  filter(!is.na(Q3.19)) %>%
+  mutate(importance_factor = factor(Q3.19, ordered=FALSE))
+
 #' Average tier doesn't show much because it doesn't show any changes in
 #' time---just how bad the country is in general
-ggplot(responses.full, aes(x=Q3.25, y=avg_tier)) +
-  geom_violin() + 
-  geom_point(alpha=0.5, position="jitter") +
-  labs(x="Opinion of US", y="Average TIP tier rating") + 
-  coord_flip()
+
+# http://www.r-bloggers.com/analysis-of-variance-anova-for-multiple-comparisons/
+importance.means <- df.importance %>%
+  group_by(Q3.19) %>%
+  summarize(avg_points = mean(avg_tier, na.rm=TRUE),
+            var_points = var(avg_tier, na.rm=TRUE)) %>%
+  print
+
+#' Plot group means and distributions
+fig.importance <- ggplot(df.importance, aes(x=Q3.19, y=avg_tier)) +
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05, show.legend=FALSE) +
+  geom_point(data=importance.means, aes(x=Q3.19, y=avg_points), size=5, show.legend=FALSE) + 
+  labs(x="Opinion of US importance", y="Average TIP tier rating") + 
+  coord_flip() + theme_clean()
+fig.importance
+
+#' Those means appear slightly different from each other. Is that really the
+#' case? Check with ANOVA, which assumes homogenous variance across groups.
+#' Throw every possible test at it—if null is rejected (p < 0.05 or whatever)
+#' then variance is likely heterogenous:
+bartlett.test(avg_tier ~ importance_factor, data=df.importance)
+car::leveneTest(avg_tier ~ importance_factor, data=df.importance)
+fligner.test(avg_tier ~ importance_factor, data=df.importance)  # Uses median
+kruskal.test(avg_tier ~ importance_factor, data=df.importance)  # Nonparametric
+
+#' All of those p-values are tiny, so it's clear that variance is not the same
+#' across groups. However, there's a [rule of
+#' thumb](http://stats.stackexchange.com/q/56971/3025) ([super detailed
+#' example](http://stats.stackexchange.com/a/91881/3025)) that ANOVA is robust
+#' to heterogeneity of variance as long as the largest variance is less than 
+#' four times the smallest variance.
+#' 
+#' Given that rule of thumb, the variance here isn't that much of an issue 
+df.importance %>% group_by(importance_factor) %>%
+  summarise(variance = var(avg_tier, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' It would be cool to use Bayesian ANOVA to account for non-homogenous
+#' variances (see [John Kruschke's
+#' evangelizing](http://doingbayesiandataanalysis.blogspot.mx/2011/04/anova-with-non-homogeneous-variances.html)),
+#' since it handles violations of ANOVA assumptions nicely. However, in his
+#' example, the ratio of min/max variance is huge, so it *does* lead to big
+#' differences in results:
+#
+# read_csv("http://www.indiana.edu/~kruschke/DoingBayesianDataAnalysis/Programs/NonhomogVarData.csv") %>%
+#   group_by(Group) %>%
+#   summarise(variance = var(Y)) %>%
+#   do(data_frame(ratio = max(.$variance) / min(.$variance)))
+#   # ratio = 64
+#
+#' With the variance issue handled, run the ANOVA
+(importance.aov <- aov(avg_tier ~ importance_factor, data=df.importance))
+
+#' There is some significant difference between groups. Look at pairwise
+#' comparisons between all the groups to (kind of) decompose that finding
+(importance.pairs <- TukeyHSD(importance.aov, "importance_factor"))
+
+#' Plot the differences
+importance.pairs.plot <- data.frame(importance.pairs$importance_factor) %>%
+  mutate(pair = row.names(.),
+         pair = factor(pair, levels=pair, ordered=TRUE),
+         stars = add.stars(p.adj))
+
+fig.importance.pairs <- ggplot(importance.pairs.plot, 
+                               aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
+  geom_hline(yintercept=0) + 
+  geom_text(aes(label=stars), nudge_x=0.25) +
+  geom_pointrange() + 
+  theme_clean() + coord_flip()
+fig.importance.pairs
+
+#' Another way of checking group means in non-homogenous data is to use ordinal
+#' logistic regression. Here's an ordered logit and corresponding predicted
+#' probabilities.
+model.importance <- ordinal::clm(Q3.19 ~ avg_tier, data=df.importance, 
+                                 link="logit", Hess=TRUE)
+summary(model.importance)
+
+# Predicted probabilities
+newdata <- data_frame(avg_tier = seq(0, 3, 0.1))
+pred.importance <- predict(model.importance, newdata, interval=TRUE)
+
+# Create plot data
+pred.plot.lower <- cbind(newdata, pred.importance$lwr) %>%
+  gather(importance, lwr, -c(1:ncol(newdata)))
+pred.plot.upper <- cbind(newdata, pred.importance$upr) %>%
+  gather(importance, upr, -c(1:ncol(newdata)))
+
+pred.plot.data <- cbind(newdata, pred.importance$fit) %>%
+  gather(importance, importance_prob, -c(1:ncol(newdata))) %>%
+  left_join(pred.plot.lower, by=c("avg_tier", "importance")) %>%
+  left_join(pred.plot.upper, by=c("avg_tier", "importance"))
+
+importance.colors <- c("grey20", "grey40", "grey60", "grey80")
+ggplot(pred.plot.data, aes(x=avg_tier, y=importance_prob)) +  
+  geom_ribbon(aes(ymax=upr, ymin=lwr, fill=importance), 
+              alpha=0.2) + 
+  geom_line(aes(colour=importance), size=2) + 
+  scale_y_continuous(labels=percent) + 
+  labs(x="Average tier rating in country", 
+       y="Predicted probability of assigning importance") + 
+  # scale_fill_manual(values=importance.colors, name=NULL) + 
+  # scale_colour_manual(values=importance.colors, name=NULL) +
+  theme_clean()
+
 
 #' Change in TIP score is a little more interesting---countries that move the
 #' most over time only see positive NGO opinions
-ggplot(responses.full, aes(x=Q3.25, y=change_tip, fill=Q3.25)) + 
+ggplot(df.importance, aes(x=Q3.19, y=change_tip, fill=Q3.19)) + 
   geom_violin() + 
   geom_point(alpha=0.3, position=position_jitterdodge()) + 
   labs(x="Opinion of US", y="Change in TIP tier rating") + 
@@ -409,7 +529,7 @@ ggplot(responses.full, aes(x=Q3.25, y=change_tip, fill=Q3.25)) +
 #' same thing. NGOs that work in countries that have seen the most actual 
 #' improvement in TIP policies almost unanimously have a positive opinion of
 #' the US.
-ggplot(responses.full, aes(x=Q3.25, y=change_policy, fill=Q3.25)) +
+ggplot(df.importance, aes(x=Q3.19, y=change_policy, fill=Q3.19)) +
   geom_violin() + 
   geom_point(alpha=0.3, position=position_jitterdodge()) + 
   labs(x="Opinion of US", y="Change in TIP policy index") + 
@@ -417,8 +537,7 @@ ggplot(responses.full, aes(x=Q3.25, y=change_policy, fill=Q3.25)) +
 
 #' NGO opinions of the *importance* of the US's work are unrelated to actual
 #' changes, though.
-plot.data <- responses.full %>% select(Q3.19, change_policy) %>% filter(!is.na(Q3.19))
-ggplot(plot.data, aes(x=Q3.19, y=change_policy, fill=Q3.19)) +
+ggplot(df.importance, aes(x=Q3.19, y=change_policy, fill=Q3.19)) +
   geom_violin() + 
   geom_point(alpha=0.3, position=position_jitterdodge()) + 
   labs(x="US importance", y="Change in TIP policy index") + 
@@ -526,7 +645,6 @@ sum(table(responses.full$Q3.19))
 responses.full$Q3.19 %>%
   table %>% print %>% prop.table
 
-
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
@@ -535,25 +653,6 @@ responses.full$Q3.19 %>%
 
 # Find country averages of government improvement, etc. - then show that X number of countries show improvement, etc. 
 # Report by organization and by country - how many countries has the US had a positive influence + how many NGOs say the US has had a positive influence
-country.indexes <- responses.countries %>%
-  left_join(positivity, by = "Q3.25") %>%
-  left_join(importance, by = "Q3.19") %>%
-  left_join(improvement, by = "Q3.26") %>%
-  group_by(work.country) %>%
-  # Needs mutate + mutate_each + select + unique because you can't mix 
-  # summarise + summarise_each. See http://stackoverflow.com/a/31815540/120898
-  mutate(num.responses = n()) %>%
-  mutate_each(funs(score = mean(., na.rm=TRUE), stdev = sd(., na.rm=TRUE), 
-                   n = sum(!is.na(.))),
-              c(positivity, importance, improvement)) %>%
-  select(work.country, num.responses, 
-         matches("positivity_|importance_|improvement_")) %>%
-  unique %>%
-  ungroup() %>%
-  filter(num.responses >= 10) %>%
-  arrange(desc(num.responses)) %>%
-  mutate(country_label = paste0(work.country, " (", num.responses, ")")) %>%
-  mutate(work.country = factor(work.country, levels=work.country, ordered=TRUE))
 
 
 full <- left_join(country.indexes, tip.change,
@@ -579,31 +678,6 @@ ggplot(country.indexes, aes(x=work.country, y=positivity_score)) +
   geom_bar(stat="identity") + 
   coord_flip()
 
-
-importance.plot <- country.indexes %>%
-  arrange(importance_score) %>%
-  mutate(country_label = factor(country_label, levels=unique(country_label), 
-                                ordered=TRUE))
-
-importance.levels <- data_frame(start=c(0, 1, 2),
-                                end=c(1, 2, 3),
-                                level=c("Not important", "Somewhat important", 
-                                        "Most important"),
-                                level.ordered=factor(level, levels=level, ordered=TRUE))
-
-avg.importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
-  geom_rect(data=importance.levels, aes(x=NULL, y=NULL, ymin=start, ymax=end, 
-                                        xmin=0, xmax=Inf, fill=level), alpha=0.5) + 
-  geom_pointrange(data=, aes(ymax=importance_score + importance_stdev,
-                             ymin=importance_score - importance_stdev)) + 
-  labs(x="Country (number of responses)", 
-       y="Importance of the US in anti-TIP efforts (mean)") + 
-  scale_fill_manual(values=c("#0074D9", "#85144B", "#2ECC40"), name=NULL) + 
-  coord_flip() + 
-  theme_bw() + theme(legend.position="bottom")
-avg.importance
-ggsave(avg.importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"), 
-       width=6.5, height=5, units="in")
 
 responses.countries %>% 
   xtabs(~ Q3.25 + Q3.19, .)

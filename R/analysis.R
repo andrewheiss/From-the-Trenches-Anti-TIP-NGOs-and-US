@@ -406,9 +406,10 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 
 df.importance <- responses.full %>% 
   select(Q3.19, change_policy, avg_tier, change_tip, change_policy, 
-         importance, received.funding, us.involvement) %>% 
+         importance, received.funding, us.involvement, total.funding) %>% 
   filter(!is.na(Q3.19)) %>%
-  mutate(importance_factor = factor(Q3.19, ordered=FALSE))
+  mutate(importance_factor = factor(Q3.19, ordered=FALSE),
+         log.total.funding = log1p(total.funding))
 
 #' ### Average tier rating 
 #' 
@@ -582,6 +583,44 @@ mosaic(funding.table,
        gp_varnames=gpar(fontsize=10, fontface=2))
 
 #' ### US funding (country total)
+#' Opinions of importance are strongly associated with US TIP funding given to
+#' a country. Organizations are more likely to think the US is an important
+#' actor if they work in countries receiving more anti-TIP funding.
+ggplot(df.importance, aes(x=Q3.19, y=log.total.funding)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Total TIP funding to country (logged)") + 
+  scale_y_continuous(labels=trans_format("exp", dollar_format())) +
+  coord_flip() + theme_clean()
+
+#' Variance is not equal in all groups:
+kruskal.test(log.total.funding ~ importance_factor, data=df.importance)
+
+#' Ratio is 2.8ish, which is below 4, so heterogenous variance is okayish:
+df.importance %>% group_by(importance_factor) %>%
+  summarise(variance = var(log.total.funding, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows significant differences:
+funding.anova <- aov(log.total.funding ~ importance_factor, data=df.importance) 
+summary(funding.anova)
+(funding.pairs <- TukeyHSD(funding.anova))
+
+#' See those differences
+funding.pairs.plot <- data.frame(funding.pairs$importance_factor) %>%
+  mutate(pair = row.names(.),
+         pair = factor(pair, levels=pair, ordered=TRUE),
+         stars = add.stars(p.adj))
+
+fig.funding.pairs <- ggplot(funding.pairs.plot, 
+                            aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
+  geom_hline(yintercept=0) + 
+  geom_text(aes(label=stars), nudge_x=0.25) +
+  geom_pointrange() + 
+  theme_clean() + coord_flip()
+fig.funding.pairs
+
 #' ### Country rich/poor/democratic
 #' ### Type of TIP work
 

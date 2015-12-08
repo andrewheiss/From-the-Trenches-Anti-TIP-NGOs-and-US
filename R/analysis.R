@@ -393,7 +393,7 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
        width=6.5, height=5, units="in")
 
 
-#' ## Explaining variation in opinion of US importance
+#' ## Are opinions of the US's importance associated with…?
 #' Does opinion of the US vary by:
 #' 
 #' * Tier rating (average) or improvement in Cho score?
@@ -405,7 +405,8 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 #' * TODO: Explaining variation in opinion of US positivity? (no because censoring)
 
 df.importance <- responses.full %>% 
-  select(Q3.19, change_policy, avg_tier, change_tip, change_policy, importance) %>% 
+  select(Q3.19, change_policy, avg_tier, change_tip, change_policy, 
+         importance, received.funding, us.involvement) %>% 
   filter(!is.na(Q3.19)) %>%
   mutate(importance_factor = factor(Q3.19, ordered=FALSE))
 
@@ -465,7 +466,8 @@ df.importance %>% group_by(importance_factor) %>%
 #   # ratio = 64
 #
 #' With the variance issue handled, run the ANOVA:
-(importance.aov <- aov(avg_tier ~ importance_factor, data=df.importance))
+importance.aov <- aov(avg_tier ~ importance_factor, data=df.importance)
+summary(importance.aov)
 
 #' There is some significant difference between groups. Look at pairwise
 #' comparisons between all the groups to (kind of) decompose that finding:
@@ -519,64 +521,99 @@ ggplot(pred.plot.data, aes(x=avg_tier, y=importance_prob)) +
   # scale_colour_manual(values=importance.colors, name=NULL) +
   theme_clean()
 
-
-#' Change in TIP score is a little more interesting---countries that move the
-#' most over time only see positive NGO opinions
-ggplot(df.importance, aes(x=Q3.19, y=change_tip, fill=Q3.19)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
+#' ### Change in TIP scores
+#' Opinions of importance are not related to changes in TIP score. The average
+#' change in TIP rating is the same for each possible answer of importance.
+ggplot(df.importance, aes(x=Q3.19, y=change_tip)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
   labs(x="Opinion of US", y="Change in TIP tier rating") + 
-  coord_flip()
+  coord_flip() + theme_clean()
 
-#' Using the Cho score shows a little more variation, but essentially tells the
-#' same thing. NGOs that work in countries that have seen the most actual 
-#' improvement in TIP policies almost unanimously have a positive opinion of
-#' the US.
-ggplot(df.importance, aes(x=Q3.19, y=change_policy, fill=Q3.19)) +
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
+#' Variance is equal in all groups:
+kruskal.test(change_tip ~ importance_factor, data=df.importance)
+
+#' ANOVA shows no differences:
+change.anova <- aov(change_tip ~ importance_factor, data=df.importance) 
+summary(change.anova)
+TukeyHSD(change.anova)
+
+#' ### Change in Cho scores
+#' Opinions of importance vary slightly by changes in Cho policy scores.
+#' Respondents who indicated that the US was more important tended to work in
+#' countries with greater changes in TIP policy.
+ggplot(df.importance, aes(x=Q3.19, y=change_policy)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
   labs(x="Opinion of US", y="Change in TIP policy index") + 
-  coord_flip()
+  coord_flip() + theme_clean()
 
-#' NGO opinions of the *importance* of the US's work are unrelated to actual
-#' changes, though.
-ggplot(df.importance, aes(x=Q3.19, y=change_policy, fill=Q3.19)) +
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="US importance", y="Change in TIP policy index") + 
-  coord_flip()
+#' Variance is equal in all groups:
+kruskal.test(change_policy ~ importance_factor, data=df.importance)
 
+#' ANOVA *almost* shows some differences (biggest difference between "not
+#' important" and "most important" at p = 0.057):
+cho.change.anova <- aov(change_policy ~ importance_factor, data=df.importance) 
+summary(cho.change.anova)  # (⌐○Ϟ○)  ♥  \(•◡•)/
+TukeyHSD(cho.change.anova)
 
-# -----------------------------------------------------------------
-#' # Variations in opinion of US based on involvement with the US
-# -----------------------------------------------------------------
-#' General NGO interaction with the US has no bearing on NGO opinions of the US
-us.table <- responses.full %>%
-  xtabs(~ Q3.25_collapsed + us.involvement, .) %>% print
-chisq.test(us.table)
-set.seed(1234)
-coindep_test(us.table, n=5000)
-mosaic(us.table, 
-       labeling_args=list(set_varnames=c(us.involvement="US involvement", 
-                                         Q3.25_collapsed="Opinion of US"),
-                          gp_labels=(gpar(fontsize=8))), 
-       gp_varnames=gpar(fontsize=10, fontface=2))
+#' ### US funding (org received)
+#' Organizations that have been received funding from the US are more likely to
+#' consider the US to play an important role in the countries they work in.
+funding.table <- df.importance %>%
+  xtabs(~ Q3.19 + received.funding, .) %>% print
 
-#' More specifically, the receipt of funding has no bearing on NGO opinions of the US
-funding.table <- responses.full %>%
-  xtabs(~ Q3.25_collapsed + received.funding, .) %>% print
-chisq.test(funding.table)
-set.seed(1234)
-coindep_test(funding.table, n=5000)
-mosaic(funding.table, 
+#' There's an overall significant difference (though two of the cells are
+#' really small here)
+(funding.chi <- chisq.test(funding.table))
+
+# Cramer's V for standardized measure of association
+assocstats(funding.table)
+
+# Components of chi-squared
+(components <- funding.chi$residuals^2)
+round(1-pchisq(components, funding.chi$parameter), 3)
+
+# Visualize differences
+mosaic(funding.table,
        labeling_args=list(set_varnames=c(received.funding="Received US funding", 
-                                         Q3.25_collapsed="Opinion of US"),
+                                         Q3.19="Opinion of US"),
                           gp_labels=(gpar(fontsize=8))), 
        gp_varnames=gpar(fontsize=10, fontface=2))
 
-#' NGOs in countries that receive substantial US funding have an opinion of the 
-#' US, but there's no difference between positive and mixed opinions. This is
-#' true accounting for both average and total funding.
+#' ### US funding (country total)
+#' ### Country rich/poor/democratic
+#' ### Type of TIP work
+
+#' ### Interaction with the US
+#' Organizations that have been involved with the US are more likely to
+#' consider the US to play an important role in the countries they work in.
+involvement.table <- df.importance %>%
+  xtabs(~ Q3.19 + us.involvement, .) %>% print
+
+#' There's an overall significant difference
+(involvement.chi <- chisq.test(involvement.table))
+
+# Cramer's V for standardized measure of association
+assocstats(involvement.table)
+
+# Components of chi-squared
+(components <- involvement.chi$residuals^2)
+1-pchisq(components, involvement.chi$parameter)
+
+# Visualize differences
+mosaic(involvement.table,
+       labeling_args=list(set_varnames=c(us.involvement="US involvement", 
+                                         Q3.19="Opinion of US"),
+                          gp_labels=(gpar(fontsize=8))), 
+       gp_varnames=gpar(fontsize=10, fontface=2))
+
+
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 #' Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out
 ggplot(responses.full, aes(x=Q3.25_collapsed, y=total.funding, fill=Q3.25_collapsed)) + 
@@ -647,12 +684,6 @@ sum(table(responses.full$Q3.19))
 
 responses.full$Q3.19 %>%
   table %>% print %>% prop.table
-
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
 
 # Find country averages of government improvement, etc. - then show that X number of countries show improvement, etc. 
 # Report by organization and by country - how many countries has the US had a positive influence + how many NGOs say the US has had a positive influence

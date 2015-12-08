@@ -13,7 +13,9 @@
 #+ include=FALSE
 # Set up knitr
 library(knitr)
-knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE,
+                      tidy.opts=list(width.cutoff=120),  # For code
+                      options(width=120))  # For results
 
 # ---------------
 #' # Munge data

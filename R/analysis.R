@@ -346,7 +346,7 @@ ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.p
 # ----------------------------------
 #' # NGO opinions of US importance
 # ----------------------------------
-#' General importance
+#' ## General importance
 plot.data <- responses.full %>%
   group_by(Q3.19) %>%
   summarize(num = n()) %>%
@@ -395,21 +395,24 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 
 #' ## Explaining variation in opinion of US importance
 #' Does opinion of the US vary by:
-# * Tier rating (average) or improvement in Cho score?
-# * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
-# * Whether an NGO has interacted with the US
-# * Whether a country is rich or poor (or some other quality)
-# * Whether an NGO focuses on certain types of work?
-# * In which countries does the US seem to have had more collaboration with NGOs?
-#' ## TODO: Explaining variation in opinion of US positivity? (no because censoring)
+#' 
+#' * Tier rating (average) or improvement in Cho score?
+#' * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
+#' * Whether an NGO has interacted with the US
+#' * Whether a country is rich or poor (or some other quality)
+#' * Whether an NGO focuses on certain types of work?
+#' * TODO: In which countries does the US seem to have had more collaboration with NGOs?
+#' * TODO: Explaining variation in opinion of US positivity? (no because censoring)
 
 df.importance <- responses.full %>% 
   select(Q3.19, change_policy, avg_tier, change_tip, change_policy, importance) %>% 
   filter(!is.na(Q3.19)) %>%
   mutate(importance_factor = factor(Q3.19, ordered=FALSE))
 
+#' ### Average tier rating 
+#' 
 #' Average tier doesn't show much because it doesn't show any changes in
-#' time---just how bad the country is in general
+#' time—just how bad the country is in general?
 
 # http://www.r-bloggers.com/analysis-of-variance-anova-for-multiple-comparisons/
 importance.means <- df.importance %>%
@@ -461,14 +464,14 @@ df.importance %>% group_by(importance_factor) %>%
 #   do(data_frame(ratio = max(.$variance) / min(.$variance)))
 #   # ratio = 64
 #
-#' With the variance issue handled, run the ANOVA
+#' With the variance issue handled, run the ANOVA:
 (importance.aov <- aov(avg_tier ~ importance_factor, data=df.importance))
 
 #' There is some significant difference between groups. Look at pairwise
-#' comparisons between all the groups to (kind of) decompose that finding
+#' comparisons between all the groups to (kind of) decompose that finding:
 (importance.pairs <- TukeyHSD(importance.aov, "importance_factor"))
 
-#' Plot the differences
+#' Plot the differences:
 importance.pairs.plot <- data.frame(importance.pairs$importance_factor) %>%
   mutate(pair = row.names(.),
          pair = factor(pair, levels=pair, ordered=TRUE),
@@ -484,7 +487,7 @@ fig.importance.pairs
 
 #' Another way of checking group means in non-homogenous data is to use ordinal
 #' logistic regression. Here's an ordered logit and corresponding predicted
-#' probabilities.
+#' probabilities:
 model.importance <- ordinal::clm(Q3.19 ~ avg_tier, data=df.importance, 
                                  link="logit", Hess=TRUE)
 summary(model.importance)

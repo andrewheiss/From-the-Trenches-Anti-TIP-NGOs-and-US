@@ -394,16 +394,6 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 
 
 #' ## Are opinions of the US's importance associated with…?
-#' Does opinion of the US vary by:
-#' 
-#' * Tier rating (average) or improvement in Cho score?
-#' * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
-#' * Whether an NGO has interacted with the US
-#' * Whether a country is rich or poor (or some other quality)
-#' * Whether an NGO focuses on certain types of work?
-#' * TODO: In which countries does the US seem to have had more collaboration with NGOs?
-#' * TODO: Explaining variation in opinion of US positivity? (no because censoring)
-
 df.importance <- responses.full %>% 
   select(Q3.19, change_policy, avg_tier, change_tip, change_policy, 
          importance, received.funding, us.involvement, total.funding) %>% 
@@ -621,8 +611,8 @@ fig.funding.pairs <- ggplot(funding.pairs.plot,
   theme_clean() + coord_flip()
 fig.funding.pairs
 
-#' ### Country rich/poor/democratic
-#' ### Type of TIP work
+#' ### TODO: Country rich/poor/democratic
+#' ### TODO: Type of TIP work
 
 #' ### Interaction with the US
 #' Organizations that have been involved with the US are more likely to
@@ -653,7 +643,17 @@ mosaic(involvement.table,
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
-
+#' ---
+#' 
+#' Does opinion of the US vary by:
+#' 
+#' * Tier rating (average) or improvement in Cho score?
+#' * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
+#' * Whether an NGO has interacted with the US
+#' * Whether a country is rich or poor (or some other quality)
+#' * Whether an NGO focuses on certain types of work?
+#' * TODO: In which countries does the US seem to have had more collaboration with NGOs?
+#' * TODO: Explaining variation in opinion of US positivity? (no because censoring)
 #' Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out
 ggplot(responses.full, aes(x=Q3.25_collapsed, y=total.funding, fill=Q3.25_collapsed)) + 
   geom_violin() + 

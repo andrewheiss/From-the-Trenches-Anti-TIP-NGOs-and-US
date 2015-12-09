@@ -601,7 +601,7 @@ cho.change.anova <- aov(change_policy ~ importance_factor, data=df.importance)
 summary(cho.change.anova)  # (⌐○Ϟ○)  ♥  \(•◡•)/
 TukeyHSD(cho.change.anova)
 
-#' ### US funding (org received)
+#' ### US funding received by the responding organization
 #' Organizations that have been received funding from the US are more likely to
 #' consider the US to play an important role in the countries they work in.
 funding.table <- df.importance %>%
@@ -625,7 +625,7 @@ mosaic(funding.table,
                           gp_labels=(gpar(fontsize=8))), 
        gp_varnames=gpar(fontsize=10, fontface=2))
 
-#' ### US funding (country total)
+#' ### US funding received by the country the organization works in
 #' Opinions of importance are strongly associated with US TIP funding given to
 #' a country. Organizations are more likely to think the US is an important
 #' actor if they work in countries receiving more anti-TIP funding.

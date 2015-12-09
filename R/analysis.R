@@ -40,7 +40,7 @@ load(file.path(PROJHOME, "data_raw", "responses_orgs.RData"))
 load(file.path(PROJHOME, "data_raw", "responses_countries.RData"))
 responses.orgs.labs <- read_csv(file.path(PROJHOME, "data_raw", "response_orgs_labels.csv"))
 responses.countries.labs <- read_csv(file.path(PROJHOME, "data_raw", "response_countries_labels.csv"))
- 
+
 Hmisc::label(responses.orgs, self=FALSE) <- responses.orgs.labs$varlabel
 Hmisc::label(responses.countries, self=FALSE) <- responses.countries.labs$varlabel
 
@@ -85,6 +85,8 @@ improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
                           improvement = c(1, 0, -1, NA))
 
 # Cho data
+# TODO: Someday get this directly from the internet, like Freedom House data
+# http://www.economics-human-trafficking.org/data-and-reports.html
 tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
   group_by(countryname) %>%
   summarise(avg_tier = mean(tier, na.rm=TRUE),
@@ -92,7 +94,7 @@ tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
                              first(na.omit(tier), default=NA)),
             change_policy = last(na.omit(p), default=NA) - 
               first(na.omit(p), default=NA)) %>%
-  mutate(cow = countrycode(countryname, "country.name", "cown"))
+  mutate(countryname = countrycode(countryname, "country.name", "country.name"))
 
 # Democracy (Freedom House)
 fh.url <- "https://freedomhouse.org/sites/default/files/Individual%20Country%20Ratings%20and%20Status%2C%201973-2015%20%28FINAL%29.xls"
@@ -157,6 +159,12 @@ funding.ngos <- funding.raw %>%
             avg.funding.ngos = mean(amount, na.rm=TRUE)) 
 
 responses.full <- responses.all %>%
+  filter(work.only.us != "Yes") %>%
+  mutate(work.country.clean = countrycode(work.country, 
+                                          "country.name", "country.name"),
+         work.country.clean = ifelse(is.na(work.country), 
+                                     "Global", work.country.clean),
+         work.country = work.country.clean) %>%
   left_join(tip.change, by=c("work.country" = "countryname")) %>%
   left_join(funding.all, by=c("work.country" = "countryname")) %>%
   left_join(funding.ngos, by=c("work.country" = "countryname")) %>%

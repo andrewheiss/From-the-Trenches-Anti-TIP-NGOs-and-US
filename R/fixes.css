@@ -13,3 +13,20 @@ table {
 pre {
     font-size: 75%;
 }
+
+.back-to-top {
+    width: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #2780e3;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+}
+
+a.back-to-top:hover {
+    color: #FFDC00;
+    text-decoration: none;
+}

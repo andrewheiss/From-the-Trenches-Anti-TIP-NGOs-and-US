@@ -664,7 +664,46 @@ fig.funding.pairs <- ggplot(funding.pairs.plot,
   theme_clean() + coord_flip()
 fig.funding.pairs
 
-#' ### TODO: Country rich/poor/democratic
+#' ### Democracy (Freedom House political rights + civil liberties)
+#' US importance appears to be associated with the level of democracy in a
+#' country. NGOs working in countries with worse democracy (higher numbers of
+#' the total freedom scale) are more likely to see the US as the most important
+#' anti-TIP actor in that country. Or, rather, on average total freedom is 
+#' worse in countries where NGOs indicate the US as the most important actor.
+ggplot(df.importance, aes(x=Q3.19, y=total.freedom)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Total freedom)") + 
+  coord_flip() + theme_clean()
+
+#' Variance is not equal in all groups:
+kruskal.test(total.freedom ~ importance_factor, data=df.importance)
+
+#' Ratio between min and max variance is low, so we're okay:
+df.importance %>% group_by(importance_factor) %>%
+  summarise(variance = var(total.freedom, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows significant differences:
+democracy.anova <- aov(total.freedom ~ importance_factor, data=df.importance) 
+summary(democracy.anova)
+(democracy.pairs <- TukeyHSD(democracy.anova))
+
+#' View the differences:
+democracy.pairs.plot <- data.frame(democracy.pairs$importance_factor) %>%
+  mutate(pair = row.names(.),
+         pair = factor(pair, levels=pair, ordered=TRUE),
+         stars = add.stars(p.adj))
+
+fig.democracy.pairs <- ggplot(democracy.pairs.plot, 
+                            aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
+  geom_hline(yintercept=0) + 
+  geom_text(aes(label=stars), nudge_x=0.25) +
+  geom_pointrange() + 
+  theme_clean() + coord_flip()
+fig.democracy.pairs
+
 #' ### TODO: Type of TIP work
 
 #' ### Interaction with the US

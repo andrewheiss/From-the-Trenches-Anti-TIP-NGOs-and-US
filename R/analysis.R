@@ -759,6 +759,214 @@ mosaic(involvement.table,
        gp_varnames=gpar(fontsize=10, fontface=2))
 
 
+#' ## Are opinions of the US's positivity associated with…?
+#' **Important caveat**: Respondents were only asked about their opinions of
+#' the US's work (Q3.25) if they indicated that the US was a somewhat important
+#' actor or the most important actor (Q3.19)
+df.positivity<- responses.full %>% 
+  select(Q3.25=Q3.25_collapsed, work.country, change_policy, avg_tier, 
+         change_tip, change_policy, importance, received.funding, us.involvement, 
+         total.funding, total.freedom, time.spent=Q2.1) %>% 
+  filter(!is.na(Q3.25)) %>%
+  mutate(positivity_factor = factor(Q3.25, ordered=FALSE),
+         log.total.funding = log1p(total.funding),
+         time.spent = as.numeric(time.spent))
+
+#' ### Average tier rating 
+#' 
+ggplot(df.positivity, aes(x=Q3.25, y=avg_tier)) +
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05, show.legend=FALSE) +
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Average TIP tier rating") + 
+  coord_flip() + theme_clean()
+
+#' Check variance; it's significant, so there's heterogeneity
+kruskal.test(avg_tier ~ positivity_factor, data=df.positivity)
+
+#' But the ratio is okay
+df.positivity %>% group_by(positivity_factor) %>%
+  summarise(variance = var(avg_tier, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA is significant, but right on the threshold, mostly driven by
+#' difference between positive and mixed.
+tier.anova.pos <- aov(avg_tier ~ positivity_factor, data=df.positivity)
+summary(tier.anova.pos)
+(tier.pairs.pos <- TukeyHSD(tier.anova.pos))
+
+#' ### Change in TIP scores
+#' 
+ggplot(df.positivity, aes(x=Q3.25, y=change_tip)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Change in TIP tier rating") + 
+  coord_flip() + theme_clean()
+
+#' Variance is not equal, but the ratio is small
+kruskal.test(change_tip ~ positivity_factor, data=df.positivity)
+df.positivity %>% group_by(positivity_factor) %>%
+  summarise(variance = var(change_tip, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows overall significant difference. The difference between positive
+#' and mixed is very significant
+change.anova.pos <- aov(change_tip ~ positivity_factor, data=df.positivity) 
+summary(change.anova.pos)
+(change.pairs.pos <- TukeyHSD(change.anova.pos))
+
+change.pairs.plot <- data.frame(change.pairs.pos$positivity_factor) %>%
+  mutate(pair = row.names(.),
+         pair = factor(pair, levels=pair, ordered=TRUE),
+         stars = add.stars(p.adj))
+
+fig.change.pairs.pos <- ggplot(change.pairs.plot, 
+                               aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
+  geom_hline(yintercept=0) + 
+  geom_text(aes(label=stars), nudge_x=0.25) +
+  geom_pointrange() + 
+  theme_clean() + coord_flip()
+fig.change.pairs.pos
+
+#' ### Change in Cho scores
+#' 
+ggplot(df.positivity, aes(x=Q3.25, y=change_policy)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Change in TIP policy index") + 
+  coord_flip() + theme_clean()
+
+#' Variance is not equal; ratio is okay
+kruskal.test(change_policy ~ positivity_factor, data=df.positivity)
+df.positivity %>% group_by(positivity_factor) %>%
+  summarise(variance = var(change_policy, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows significant differences, mostly because of the difference
+#' between positive and mixed.
+cho.change.anova.pos <- aov(change_policy ~ positivity_factor,
+                            data=df.positivity) 
+summary(cho.change.anova.pos)
+(cho.change.pairs.pos <- TukeyHSD(cho.change.anova.pos))
+
+cho.change.pairs.plot <- data.frame(cho.change.pairs.pos$positivity_factor) %>%
+  mutate(pair = row.names(.),
+         pair = factor(pair, levels=pair, ordered=TRUE),
+         stars = add.stars(p.adj))
+
+fig.cho.change.pairs.pos <- ggplot(cho.change.pairs.plot, 
+                                   aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
+  geom_hline(yintercept=0) + 
+  geom_text(aes(label=stars), nudge_x=0.25) +
+  geom_pointrange() + 
+  theme_clean() + coord_flip()
+fig.cho.change.pairs.pos
+
+#' ### US funding received by the responding organization
+#' 
+funding.table.pos <- df.positivity %>%
+  xtabs(~ Q3.25 + received.funding, .) %>% print
+
+#' 
+(funding.chi.pos <- chisq.test(funding.table.pos))
+
+# Cramer's V for standardized measure of association
+assocstats(funding.table.pos)
+
+# Components of chi-squared
+(components <- funding.chi.pos$residuals^2)
+round(1-pchisq(components, funding.chi.pos$parameter), 3)
+
+# Visualize differences
+mosaic(funding.table.pos,
+       labeling_args=list(set_varnames=c(received.funding="Received US funding", 
+                                         Q3.25="Opinion of US"),
+                          gp_labels=(gpar(fontsize=8))), 
+       gp_varnames=gpar(fontsize=10, fontface=2))
+
+#' ### US funding received by the country the organization works in
+#' 
+ggplot(df.positivity, aes(x=Q3.25, y=log.total.funding)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Total TIP funding to country (logged)") + 
+  scale_y_continuous(labels=trans_format("exp", dollar_format())) +
+  coord_flip() + theme_clean()
+
+#' Variance is not equal in all groups; ratio is 3.2ish, so it's okayish
+kruskal.test(log.total.funding ~ positivity_factor, data=df.positivity)
+df.positivity %>% group_by(positivity_factor) %>%
+  summarise(variance = var(log.total.funding, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows significant differences, mostly between mixed and don't know
+#' (not between positive and mixed)
+funding.anova.pos <- aov(log.total.funding ~ positivity_factor, data=df.positivity) 
+summary(funding.anova.pos)
+(funding.pairs.pos <- TukeyHSD(funding.anova.pos))
+
+#' ### Democracy (Freedom House political rights + civil liberties)
+#' 
+ggplot(df.positivity, aes(x=Q3.25, y=total.freedom)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", 
+       y="Total freedom (political rights + civil liberties; higher is worse)") + 
+  coord_flip() + theme_clean()
+
+#' Variance is equal in all groups
+kruskal.test(total.freedom ~ positivity_factor, data=df.positivity)
+
+#' No significant differences
+democracy.anova.pos <- aov(total.freedom ~ positivity_factor, data=df.positivity) 
+summary(democracy.anova.pos)
+(democracy.pairs.pos <- TukeyHSD(democracy.anova.pos))
+
+#' ### TODO: Type of TIP work
+
+#' ### Time spent on trafficking
+#' The time NGOs spend on trafficking issues does not appear to be associated
+#' with their opinion of US importance.
+ggplot(df.positivity, aes(x=Q3.25, y=time.spent)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Time spent on trafficking issues") + 
+  coord_flip() + theme_clean()
+
+#' Variance is equal in all groups:
+kruskal.test(time.spent ~ positivity_factor, data=df.positivity)
+
+#' No significant differences between anything
+time.anova.pos <- aov(time.spent ~ positivity_factor, data=df.positivity) 
+summary(time.anova.pos)
+(time.pairs.pos <- TukeyHSD(time.anova.pos))
+
+#' ### Interaction with the US
+#' 
+involvement.table.pos <- df.positivity %>%
+  xtabs(~ Q3.25 + us.involvement, .) %>% print
+
+#' There's no significant difference
+(involvement.chi.pos <- chisq.test(involvement.table.pos))
+
+# Tiny Cramer's V
+assocstats(involvement.table.pos)
+
+# Components of chi-squared
+(components <- involvement.chi.pos$residuals^2)
+1-pchisq(components, involvement.chi.pos$parameter)
+
+# Visualize differences
+mosaic(involvement.table.pos,
+       labeling_args=list(set_varnames=c(us.involvement="US involvement", 
+                                         Q3.25="Opinion of US"),
+                          gp_labels=(gpar(fontsize=8))), 
+       gp_varnames=gpar(fontsize=10, fontface=2))
+
+
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------

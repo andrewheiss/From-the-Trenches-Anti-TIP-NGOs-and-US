@@ -24,6 +24,7 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE,
 library(readr)
 library(dplyr)
 library(tidyr)
+library(readxl)
 library(stringr)
 library(ggplot2)
 library(gridExtra)
@@ -93,6 +94,50 @@ tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
               first(na.omit(p), default=NA)) %>%
   mutate(cow = countrycode(countryname, "country.name", "cown"))
 
+# Democracy (Freedom House)
+fh.url <- "https://freedomhouse.org/sites/default/files/Individual%20Country%20Ratings%20and%20Status%2C%201973-2015%20%28FINAL%29.xls"
+fh.tmp <- paste0(tempdir(), basename(fh.url))
+download.file(fh.url, fh.tmp)
+
+fh.raw <- read_excel(fh.tmp, skip=6)
+# Calculate the number of years covered in the data (each year has three columns)
+num.years <- (ncol(fh.raw) - 1)/3
+
+# Create combinations of all the variables and years
+var.years <- expand.grid(var = c('PR', 'CL', 'Status'), 
+                         year = 1972:(1972 + num.years - 1))
+
+colnames(fh.raw) <- c('country', paste(var.years$var, var.years$year, sep="_"))
+
+# Split columns and convert to long
+fh <- fh.raw %>%
+  gather(var.year, value, -country) %>%
+  separate(var.year, into=c("indicator", "year"), sep="_") %>%
+  filter(!is.na(country)) %>%
+  spread(indicator, value) %>%
+  mutate(year = as.numeric(year),
+         CL = suppressWarnings(as.integer(CL)),
+         PR = suppressWarnings(as.integer(PR)),
+         Status = factor(Status, levels=c("NF", "PF", "F"), 
+                         labels=c("Not free", "Partially free", "Free"),
+                         ordered=TRUE),
+         total.freedom = CL + PR,
+         country.clean = countrycode(country, "country.name", "country.name")) %>%
+  filter(!is.na(CL) & !is.na(PR)) %>%
+  # All the cases we're interested in are after 2000, so we can remove these
+  # problematic double countries
+  filter(!(country %in% c("Germany, E.", "Germany, W.", "USSR", "Vietnam, N.", 
+                          "Vietnam, S.", "Yemen, N.", "Yemen, S."))) %>%
+  # Again, because we only care about post-2000 Serbia, merge with Yugoslavia
+  mutate(country.clean = ifelse(country.clean == "Yugoslavia", 
+                                "Serbia", country.clean)) %>%
+  select(-country, country=country.clean)
+
+fh.summary <- fh %>%
+  filter(year >= 2000) %>%
+  group_by(country) %>%
+  summarize(total.freedom = mean(total.freedom, na.rm=TRUE))
+
 # Funding
 funding.raw <- read_csv(file.path(PROJHOME, "data_raw", "funding_clean.csv")) %>%
   mutate(cowcode = ifelse(country == "Serbia", 555, cowcode),
@@ -115,6 +160,7 @@ responses.full <- responses.all %>%
   left_join(tip.change, by=c("work.country" = "countryname")) %>%
   left_join(funding.all, by=c("work.country" = "countryname")) %>%
   left_join(funding.ngos, by=c("work.country" = "countryname")) %>%
+  left_join(fh.summary, by=c("work.country" = "country")) %>%
   left_join(positivity, by = "Q3.25") %>%
   left_join(importance, by = "Q3.19") %>%
   left_join(improvement, by = "Q3.26") %>%
@@ -395,8 +441,9 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 
 #' ## Are opinions of the US's importance associated with…?
 df.importance <- responses.full %>% 
-  select(Q3.19, change_policy, avg_tier, change_tip, change_policy, 
-         importance, received.funding, us.involvement, total.funding) %>% 
+  select(Q3.19, work.country, change_policy, avg_tier, change_tip, change_policy, 
+         importance, received.funding, us.involvement, total.funding, 
+         total.freedom) %>% 
   filter(!is.na(Q3.19)) %>%
   mutate(importance_factor = factor(Q3.19, ordered=FALSE),
          log.total.funding = log1p(total.funding))

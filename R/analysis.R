@@ -596,8 +596,7 @@ ggplot(df.importance, aes(x=Q3.19, y=change_policy)) +
 #' Variance is equal in all groups:
 kruskal.test(change_policy ~ importance_factor, data=df.importance)
 
-#' ANOVA *almost* shows some differences (biggest difference between "not
-#' important" and "most important" at p = 0.057):
+#' ANOVA shows no differences
 cho.change.anova <- aov(change_policy ~ importance_factor, data=df.importance) 
 summary(cho.change.anova)  # (⌐○Ϟ○)  ♥  \(•◡•)/
 TukeyHSD(cho.change.anova)
@@ -641,7 +640,7 @@ ggplot(df.importance, aes(x=Q3.19, y=log.total.funding)) +
 #' Variance is not equal in all groups:
 kruskal.test(log.total.funding ~ importance_factor, data=df.importance)
 
-#' Ratio is 2.8ish, which is below 4, so heterogenous variance is okayish:
+#' Ratio is 3ish, which is below 4, so heterogenous variance is okayish:
 df.importance %>% group_by(importance_factor) %>%
   summarise(variance = var(log.total.funding, na.rm=TRUE)) %>%
   do(data_frame(ratio = max(.$variance) / min(.$variance)))

@@ -8,6 +8,8 @@
 #'     toc: yes
 #'     highlight: pygments
 #'     theme: cosmo
+#'     includes:
+#'       after_body: jump.html
 #' ---
 
 #+ include=FALSE

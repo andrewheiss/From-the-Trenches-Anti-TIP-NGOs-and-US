@@ -451,10 +451,11 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 df.importance <- responses.full %>% 
   select(Q3.19, work.country, change_policy, avg_tier, change_tip, change_policy, 
          importance, received.funding, us.involvement, total.funding, 
-         total.freedom) %>% 
+         total.freedom, time.spent=Q2.1) %>% 
   filter(!is.na(Q3.19)) %>%
   mutate(importance_factor = factor(Q3.19, ordered=FALSE),
-         log.total.funding = log1p(total.funding))
+         log.total.funding = log1p(total.funding),
+         time.spent = as.numeric(time.spent))
 
 #' ### Average tier rating 
 #' 
@@ -674,7 +675,8 @@ ggplot(df.importance, aes(x=Q3.19, y=total.freedom)) +
   geom_violin(fill="grey90") + 
   geom_point(alpha=0.05) + 
   geom_point(stat="summary", fun.y="mean", size=5) + 
-  labs(x="Opinion of US", y="Total freedom)") + 
+  labs(x="Opinion of US", 
+       y="Total freedom (political rights + civil liberties; higher is worse)") + 
   coord_flip() + theme_clean()
 
 #' Variance is not equal in all groups:
@@ -705,6 +707,31 @@ fig.democracy.pairs <- ggplot(democracy.pairs.plot,
 fig.democracy.pairs
 
 #' ### TODO: Type of TIP work
+
+#' ### Time spent on trafficking
+#' The time NGOs spend on trafficking issues does not appear to be associated
+#' with their opinion of US importance.
+ggplot(df.importance, aes(x=Q3.19, y=time.spent)) + 
+  geom_violin(fill="grey90") + 
+  geom_point(alpha=0.05) + 
+  geom_point(stat="summary", fun.y="mean", size=5) + 
+  labs(x="Opinion of US", y="Time spent on trafficking issues") + 
+  coord_flip() + theme_clean()
+
+#' Variance is not equal in all groups:
+kruskal.test(time.spent ~ importance_factor, data=df.importance)
+
+#' Ratio between min and max variance is low, so we're okay:
+df.importance %>% group_by(importance_factor) %>%
+  summarise(variance = var(time.spent, na.rm=TRUE)) %>%
+  do(data_frame(ratio = max(.$variance) / min(.$variance)))
+
+#' ANOVA shows some small overall signifcant differences, but when decomposed,
+#' that effect is coming only from the tiny "Don't know-Somewhat important actor"
+#' difference.
+time.anova <- aov(time.spent ~ importance_factor, data=df.importance) 
+summary(time.anova)
+(time.pairs <- TukeyHSD(time.anova))
 
 #' ### Interaction with the US
 #' Organizations that have been involved with the US are more likely to

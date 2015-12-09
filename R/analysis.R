@@ -405,8 +405,6 @@ df.importance <- responses.full %>%
 #' 
 #' Average tier doesn't show much because it doesn't show any changes in
 #' time—just how bad the country is in general?
-
-# http://www.r-bloggers.com/analysis-of-variance-anova-for-multiple-comparisons/
 importance.means <- df.importance %>%
   group_by(Q3.19) %>%
   summarize(avg_points = mean(avg_tier, na.rm=TRUE),
@@ -426,6 +424,7 @@ fig.importance
 #' case? Check with ANOVA, which assumes homogenous variance across groups.
 #' Throw every possible test at it—if null is rejected (p < 0.05 or whatever)
 #' then variance is likely heterogenous:
+#' ([helpful reference](http://www.r-bloggers.com/analysis-of-variance-anova-for-multiple-comparisons/))
 bartlett.test(avg_tier ~ importance_factor, data=df.importance)
 car::leveneTest(avg_tier ~ importance_factor, data=df.importance)
 fligner.test(avg_tier ~ importance_factor, data=df.importance)  # Uses median

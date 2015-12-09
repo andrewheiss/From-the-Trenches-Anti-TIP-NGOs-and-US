@@ -969,201 +969,129 @@ mosaic(involvement.table.pos,
 
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-# -----------------------------------------------------------------------------
-#' ---
-#' 
+#' # TODOs and other questions
+#'
 #' Does opinion of the US vary by:
-#' 
-#' * Tier rating (average) or improvement in Cho score?
-#' * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
-#' * Whether an NGO has interacted with the US
-#' * Whether a country is rich or poor (or some other quality)
 #' * Whether an NGO focuses on certain types of work?
-#' * TODO: In which countries does the US seem to have had more collaboration with NGOs?
-#' * TODO: Explaining variation in opinion of US positivity? (no because censoring)
-#' Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out
-ggplot(responses.full, aes(x=Q3.25_collapsed, y=total.funding, fill=Q3.25_collapsed)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="Opinion of US", y="Total TIP funding to country") + 
-  scale_y_continuous(labels=dollar)
-
-ggplot(responses.full, aes(x=Q3.25, y=avg.funding, fill=Q3.25)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="Opinion of US", y="Average TIP funding to country") + 
-  scale_y_continuous(labels=dollar)
-
-#' The same is true if looking just at US funding designated for just NGOs and NPOs
-ggplot(responses.full, aes(x=Q3.25_collapsed, y=total.funding.ngos, fill=Q3.25_collapsed)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="Opinion of US", y="Total NGO-only TIP funding to country") + 
-  scale_y_continuous(labels=dollar)
-
-ggplot(responses.full, aes(x=Q3.25_collapsed, y=avg.funding.ngos, fill=Q3.25_collapsed)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="Opinion of US", y="Average NGO-only TIP funding to country") + 
-  scale_y_continuous(labels=dollar)
-
-plot.data <- responses.full %>% select(Q3.19, total.funding) %>% filter(!is.na(Q3.19))
-ggplot(plot.data, aes(x=Q3.19, y=total.funding, fill=Q3.19)) + 
-  geom_violin() + 
-  geom_point(alpha=0.3, position=position_jitterdodge()) + 
-  labs(x="US importance", y="Total TIP funding to country") + 
-  scale_y_continuous(labels=dollar) +
-  coord_flip()
+#'
+#' In which countries does the US seem to have had more collaboration with NGOs?
+#' 
+#' CHECK: Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out?
 
 
-# Type of work
-# TODO: work.country is not the most reliable identifier---there be NAs
-# Q2.2_X
-asdf <- responses.full %>% 
-  select(survey.id, matches("Q2.2_\\d$")) %>%
-  gather(type_of_work, value, -survey.id) %>%
-  mutate(type_of_work = factor(type_of_work, levels=paste0("Q2.2_", seq(1:4)), 
-                               labels=c("Organs", "Sex", "Labor", "Other"), 
-                               ordered=TRUE))
-asdf %>%
-  group_by(type_of_work) %>%
-  summarise(bloop = n(),
-            derp = sum(value, na.rm=TRUE),
-            asdf = derp / n())
+# # Type of work
+# # TODO: work.country is not the most reliable identifier---there be NAs
+# # Q2.2_X
+# asdf <- responses.full %>% 
+#   select(survey.id, matches("Q2.2_\\d$")) %>%
+#   gather(type_of_work, value, -survey.id) %>%
+#   mutate(type_of_work = factor(type_of_work, levels=paste0("Q2.2_", seq(1:4)), 
+#                                labels=c("Organs", "Sex", "Labor", "Other"), 
+#                                ordered=TRUE))
+# asdf %>%
+#   group_by(type_of_work) %>%
+#   summarise(bloop = n(),
+#             derp = sum(value, na.rm=TRUE),
+#             asdf = derp / n())
+# # Should be 30, 408, 294, 116 with 479 total?
 
-# Should be 30, 408, 294, 116 with 479 total
+# #' Does NGO experience on the ground match improvements reported by the State Department?
 
-# Q2.3_
-# Q2.4_X
+# #' * Find country averages of government improvement, etc. - then show that X
+# #'   number of countries show improvement, etc. 
+# #' * Report by organization and by country - how many countries has the US had 
+# #'   a positive influence + how many NGOs say the US has had a positive 
+# #'   influence
+# full <- left_join(country.indexes, tip.change,
+#                   by=c("work.country" = "countryname")) %>%
+#   filter(num.responses >= 10) %>%
+#   mutate(country_label = ifelse(num.responses >= 10, work.country, ""))
 
+# ggplot(full, aes(x=improvement_score, y=change_policy, label=work.country)) + 
+#   geom_point() + geom_text(vjust=1.5) +
+#   geom_hline(yintercept=0) + 
+#   scale_x_continuous(limits=c(0, 1)) + 
+#   scale_y_continuous(limits=c(-2, 6))
 
-# Opinion of the US vs. importance
-# Can't do this because 3.25 is censored by 3.19
-responses.full %>% 
-  xtabs(~ Q3.25 + Q3.19, .)
+# ggplot(country.indexes, aes(x=work.country, y=improvement_score)) + 
+#   geom_bar(stat="identity") + 
+#   coord_flip()
 
-table(responses.full$Q3.25)
-table(responses.full$Q3.19)
+# #' Compare improvement scores with actual changes in TIP score to get a sense
+# #' of if NGO experiences reflect changes in rankings
 
-sum(table(responses.full$Q3.25))
-sum(table(responses.full$Q3.19))
-
-responses.full$Q3.19 %>%
-  table %>% print %>% prop.table
-
-# Find country averages of government improvement, etc. - then show that X number of countries show improvement, etc. 
-# Report by organization and by country - how many countries has the US had a positive influence + how many NGOs say the US has had a positive influence
-
-
-full <- left_join(country.indexes, tip.change,
-                  by=c("work.country" = "countryname")) %>%
-  filter(num.responses >= 10) %>%
-  mutate(country_label = ifelse(num.responses >= 10, work.country, ""))
-
-
-ggplot(full, aes(x=improvement_score, y=change_policy, label=work.country)) + 
-  geom_point() + geom_text(vjust=1.5) +
-  geom_hline(yintercept=0) + 
-  scale_x_continuous(limits=c(0, 1)) + 
-  scale_y_continuous(limits=c(-2, 6))
+# ggplot(country.indexes, aes(x=work.country, y=positivity_score)) + 
+#   geom_bar(stat="identity") + 
+#   coord_flip()
 
 
-ggplot(country.indexes, aes(x=work.country, y=improvement_score)) + 
-  geom_bar(stat="identity") + 
-  coord_flip()
+# # Importance opinions
+# importance.opinions <- responses.all %>%
+#   filter(Q3.19 == "Not an important actor") %>%
+#   select(survey.id, clean.id, Q3.19, contains("TEXT"), Q4.1)
 
-# Compare improvement scores with actual changes in TIP score to get a sense of if NGO experiences reflect changes in rankings
-
-ggplot(country.indexes, aes(x=work.country, y=positivity_score)) + 
-  geom_bar(stat="identity") + 
-  coord_flip()
+# responses.all$Q3.19 %>%
+#   table %>% print %>% prop.table
 
 
-responses.countries %>% 
-  xtabs(~ Q3.25 + Q3.19, .)
+# responses.countries %>% 
+#   xtabs(~ Q3.25 + Q3.26, .)
+
+# ggplot(responses.orgs, aes(x = Q1.5.factor)) + geom_bar() + 
+#   labs(x = Hmisc::label(responses.orgs$Q1.5))
 
 
-# Importance opinions
-importance.opinions <- responses.all %>%
-  filter(Q3.19 == "Not an important actor") %>%
-  select(survey.id, clean.id, Q3.19, contains("TEXT"), Q4.1)
+# # Importance of US
+# asdf <- responses.all %>% 
+#   select(clean.id, Q1.2, Q3.8, Q3.6, Q3.7)
 
-responses.all$Q3.19 %>%
-  table %>% print %>% prop.table
+# inconsistent.no <- c(1020, 1152, 1226, 1267, 1323, 1405, 1515)
+# inconsistent.dont.know <- c(1051, 1512)
 
+# qwer <- asdf %>%
+#   mutate(us.active = ifelse(clean.id %in% c(inconsistent.no, inconsistent.dont.know),
+#                             "Yes", as.character(Q3.8)))
 
-responses.countries %>% 
-  xtabs(~ Q3.25 + Q3.26, .)
+# qwer$us.active %>% table %>% print %>% prop.table
 
-ggplot(responses.orgs, aes(x = Q1.5.factor)) + geom_bar() + 
-  labs(x = Hmisc::label(responses.orgs$Q1.5))
-
-
-# Importance of US
-asdf <- responses.all %>% 
-  select(clean.id, Q1.2, Q3.8, Q3.6, Q3.7)
-
-inconsistent.no <- c(1020, 1152, 1226, 1267, 1323, 1405, 1515)
-inconsistent.dont.know <- c(1051, 1512)
-
-qwer <- asdf %>%
-  mutate(us.active = ifelse(clean.id %in% c(inconsistent.no, inconsistent.dont.know),
-                            "Yes", as.character(Q3.8)))
-
-qwer$us.active %>% table %>% print %>% prop.table
-
-sdfg <- qwer %>% group_by(clean.id) %>% 
-  summarize(said.no = ifelse(any(us.active == "No", na.rm=TRUE), TRUE, FALSE))
-sdfg$said.no %>% table %>% print %>% prop.table
+# sdfg <- qwer %>% group_by(clean.id) %>% 
+#   summarize(said.no = ifelse(any(us.active == "No", na.rm=TRUE), TRUE, FALSE))
+# sdfg$said.no %>% table %>% print %>% prop.table
 
 
 
 
-# US importance and positivity
+# # US importance and positivity
 
 
 
-# Importance of report 
-responses.orgs$Q2.5 %>% table %>% print %>% prop.table
-responses.countries$Q3.23 %>% table %>% print %>% prop.table
+# # Importance of report 
+# responses.orgs$Q2.5 %>% table %>% print %>% prop.table
+# responses.countries$Q3.23 %>% table %>% print %>% prop.table
 
-heard.of.tip <- responses.countries %>% 
-  left_join(responses.orgs, by="survey.id") %>%
-  filter(Q2.5 == "Yes") %>%
-  group_by(survey.id) %>%
-  mutate(know.score = ifelse(Q3.22 == "Don't know", FALSE, TRUE)) %>%
-  select(know.score) %>% unique
+# heard.of.tip <- responses.countries %>% 
+#   left_join(responses.orgs, by="survey.id") %>%
+#   filter(Q2.5 == "Yes") %>%
+#   group_by(survey.id) %>%
+#   mutate(know.score = ifelse(Q3.22 == "Don't know", FALSE, TRUE)) %>%
+#   select(know.score) %>% unique
 
-heard.of.tip$know.score %>% table %>% print %>% prop.table
-
-
-# Opinions of report
-opinions <- responses.all %>% 
-  select(clean.id, Q1.2, home.country, work.country, Q3.21_1, Q3.21_4_TEXT, Q3.24.Text)
-
-not.used.tip.ids <- c(1094, 1099, 1106, 1114, 1157, 1221, 1244, 1269, 
-                      1314, 1330, 1354, 1357, 1393, 1425)
-not.used.tip <- responses.all %>%
-  mutate(no.response = ifelse(is.na(Q3.21_1) & is.na(Q3.21_2) & 
-                                is.na(Q3.21_3) & is.na(Q3.21_4), TRUE, FALSE),
-         explicit.no = ifelse(clean.id %in% not.used.tip.ids, TRUE, FALSE)) %>%
-  select(clean.id, Q1.2, Q3.21_1, Q3.21_2, Q3.21_3, Q3.21_4, no.response, explicit.no) %>%
-  group_by(clean.id) %>%
-  summarize(no.response = ifelse(sum(no.response) > 0, TRUE, FALSE),
-            explicit.no = ifelse(sum(explicit.no) > 0, TRUE, FALSE))
-
-not.used.tip$explicit.no %>% table
+# heard.of.tip$know.score %>% table %>% print %>% prop.table
 
 
+# # Opinions of report
+# opinions <- responses.all %>% 
+#   select(clean.id, Q1.2, home.country, work.country, Q3.21_1, Q3.21_4_TEXT, Q3.24.Text)
 
+# not.used.tip.ids <- c(1094, 1099, 1106, 1114, 1157, 1221, 1244, 1269, 
+#                       1314, 1330, 1354, 1357, 1393, 1425)
+# not.used.tip <- responses.all %>%
+#   mutate(no.response = ifelse(is.na(Q3.21_1) & is.na(Q3.21_2) & 
+#                                 is.na(Q3.21_3) & is.na(Q3.21_4), TRUE, FALSE),
+#          explicit.no = ifelse(clean.id %in% not.used.tip.ids, TRUE, FALSE)) %>%
+#   select(clean.id, Q1.2, Q3.21_1, Q3.21_2, Q3.21_3, Q3.21_4, no.response, explicit.no) %>%
+#   group_by(clean.id) %>%
+#   summarize(no.response = ifelse(sum(no.response) > 0, TRUE, FALSE),
+#             explicit.no = ifelse(sum(explicit.no) > 0, TRUE, FALSE))
 
-# Does opinion of the US vary by:
-# * Tier rating (average) or improvement in Cho score?
-# * Whether an NGO has received US funding (or where the COUNTRY has received more TIP grants?)
-# * Whether an NGO has interacted with the US
-# * Whether a country is rich or poor (or some other quality)
-# * Whether an NGO focuses on certain types of work?
-# * In which countries does the US seem to have had more collaboration with NGOs?
-
+# not.used.tip$explicit.no %>% table

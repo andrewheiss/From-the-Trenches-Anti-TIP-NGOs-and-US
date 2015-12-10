@@ -92,7 +92,7 @@ improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
 tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
   group_by(countryname) %>%
   summarise(avg_tier = mean(tier, na.rm=TRUE),
-            change_tip = -(last(na.omit(tier), default=NA) - 
+            improve_tip = (last(na.omit(tier), default=NA) - 
                              first(na.omit(tier), default=NA)),
             change_policy = last(na.omit(p), default=NA) - 
               first(na.omit(p), default=NA)) %>%
@@ -451,7 +451,7 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 
 #' ## Are opinions of the US's importance associated with…?
 df.importance <- responses.full %>% 
-  select(Q3.19, work.country, change_policy, avg_tier, change_tip, change_policy, 
+  select(Q3.19, work.country, change_policy, avg_tier, improve_tip, change_policy, 
          importance, received.funding, us.involvement, total.funding, 
          total.freedom, time.spent=Q2.1) %>% 
   filter(!is.na(Q3.19)) %>%
@@ -569,20 +569,20 @@ ggplot(pred.plot.data, aes(x=avg_tier, y=importance_prob)) +
   # scale_colour_manual(values=importance.colors, name=NULL) +
   theme_clean()
 
-#' ### Change in TIP scores
+#' ### Improvement in TIP scores
 #' Opinions of importance are not related to changes in TIP score. The average
-#' change in TIP rating is the same for each possible answer of importance.
-ggplot(df.importance, aes(x=Q3.19, y=change_tip)) + 
+#' Improvement in TIP rating is the same for each possible answer of importance.
+ggplot(df.importance, aes(x=Q3.19, y=improve_tip)) + 
   geom_violin(fill="grey90") + 
   geom_point(stat="summary", fun.y="mean", size=5) + 
-  labs(x="Opinion of US", y="Change in TIP tier rating") + 
+  labs(x="Opinion of US", y="Improvement in TIP tier rating") + 
   coord_flip() + theme_clean()
 
 #' Variance is equal in all groups:
-kruskal.test(change_tip ~ importance_factor, data=df.importance)
+kruskal.test(improve_tip ~ importance_factor, data=df.importance)
 
 #' ANOVA shows no differences:
-change.anova <- aov(change_tip ~ importance_factor, data=df.importance) 
+change.anova <- aov(improve_tip ~ importance_factor, data=df.importance) 
 summary(change.anova)
 TukeyHSD(change.anova)
 
@@ -765,7 +765,7 @@ mosaic(involvement.table,
 #' actor or the most important actor (Q3.19)
 df.positivity<- responses.full %>% 
   select(Q3.25=Q3.25_collapsed, work.country, change_policy, avg_tier, 
-         change_tip, change_policy, importance, received.funding, us.involvement, 
+         improve_tip, change_policy, importance, received.funding, us.involvement, 
          total.funding, total.freedom, time.spent=Q2.1) %>% 
   filter(!is.na(Q3.25)) %>%
   mutate(positivity_factor = factor(Q3.25, ordered=FALSE),
@@ -795,41 +795,48 @@ tier.anova.pos <- aov(avg_tier ~ positivity_factor, data=df.positivity)
 summary(tier.anova.pos)
 (tier.pairs.pos <- TukeyHSD(tier.anova.pos))
 
-#' ### Change in TIP scores
-#' 
-ggplot(df.positivity, aes(x=Q3.25, y=change_tip)) + 
+#' ### Improvement in TIP scores
+#' NGOs who have positive opinions of the US are more likely to work in
+#' countries where the TIP rating has (slightly) decreased on average between
+#' 2000 and 2015. This may be because assigning a worse TIP rating to a country
+#' represents increased US diplomatic and economic pressure—it is a possible
+#' sign that NGOs like scorecard diplomacy.
+ggplot(df.positivity, aes(x=Q3.25, y=improve_tip)) + 
   geom_violin(fill="grey90") + 
   geom_point(stat="summary", fun.y="mean", size=5) + 
-  labs(x="Opinion of US", y="Change in TIP tier rating") + 
+  labs(x="Opinion of US", y="Improvement in TIP tier rating") + 
   coord_flip() + theme_clean()
 
 #' Variance is not equal, but the ratio is small
-kruskal.test(change_tip ~ positivity_factor, data=df.positivity)
+kruskal.test(improve_tip ~ positivity_factor, data=df.positivity)
 df.positivity %>% group_by(positivity_factor) %>%
-  summarise(variance = var(change_tip, na.rm=TRUE)) %>%
+  summarise(variance = var(improve_tip, na.rm=TRUE)) %>%
   do(data_frame(ratio = max(.$variance) / min(.$variance)))
 
 #' ANOVA shows overall significant difference. The difference between positive
 #' and mixed is very significant
-change.anova.pos <- aov(change_tip ~ positivity_factor, data=df.positivity) 
-summary(change.anova.pos)
-(change.pairs.pos <- TukeyHSD(change.anova.pos))
+improve.anova.pos <- aov(improve_tip ~ positivity_factor, data=df.positivity) 
+summary(improve.anova.pos)
+(improve.pairs.pos <- TukeyHSD(improve.anova.pos))
 
-change.pairs.plot <- data.frame(change.pairs.pos$positivity_factor) %>%
+improve.pairs.plot <- data.frame(improve.pairs.pos$positivity_factor) %>%
   mutate(pair = row.names(.),
          pair = factor(pair, levels=pair, ordered=TRUE),
          stars = add.stars(p.adj))
 
-fig.change.pairs.pos <- ggplot(change.pairs.plot, 
+fig.improve.pairs.pos <- ggplot(improve.pairs.plot, 
                                aes(x=pair, y=diff, ymax=upr, ymin=lwr)) + 
   geom_hline(yintercept=0) + 
   geom_text(aes(label=stars), nudge_x=0.25) +
   geom_pointrange() + 
   theme_clean() + coord_flip()
-fig.change.pairs.pos
+fig.improve.pairs.pos
 
 #' ### Change in Cho scores
-#' 
+#' In contrast to the changes in actual TIP scores, NGOs that work in countries
+#' that show greater improvement in overall TIP policies are more likely to
+#' have a positive opinion of the US, perhaps because they are happy about the
+#' actual on-the-ground improvements.
 ggplot(df.positivity, aes(x=Q3.25, y=change_policy)) + 
   geom_violin(fill="grey90") + 
   geom_point(stat="summary", fun.y="mean", size=5) + 
@@ -977,6 +984,13 @@ mosaic(involvement.table.pos,
 #' In which countries does the US seem to have had more collaboration with NGOs?
 #' 
 #' CHECK: Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out?
+#' 
+#' Drop "don't know"s - that leads to a t test for positivity
+#' 
+#' Check the effect of HQ in US or not  
+#' If there's an effect, maybe drop the US-based ones from some other analyses
+#' 
+#' Create a nice simple summary table (like the one from Mike Ward's paper) with graphs
 
 
 # # Type of work

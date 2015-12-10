@@ -176,6 +176,7 @@ responses.full <- responses.all %>%
   left_join(improvement, by = "Q3.26") %>%
   mutate(received.funding = ifelse(Q3.18_3 != 1 | is.na(Q3.18_3), FALSE, TRUE),
          us.involvement = ifelse(Q3.18_5 != 1 | is.na(Q3.18_5), TRUE, FALSE),
+         us.hq = ifelse(home.country == "United States", TRUE, FALSE),
          Q3.19 = factor(Q3.19, levels=c("Most important actor", 
                                         "Somewhat important actor", 
                                         "Not an important actor", 
@@ -453,7 +454,7 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 df.importance <- responses.full %>% 
   select(Q3.19, work.country, change_policy, avg_tier, improve_tip, change_policy, 
          importance, received.funding, us.involvement, total.funding, 
-         total.freedom, time.spent=Q2.1) %>% 
+         total.freedom, us.hq, time.spent=Q2.1) %>% 
   filter(!is.na(Q3.19)) %>%
   mutate(importance_factor = factor(Q3.19, ordered=FALSE),
          log.total.funding = log1p(total.funding),
@@ -758,6 +759,28 @@ mosaic(involvement.table,
                           gp_labels=(gpar(fontsize=8))), 
        gp_varnames=gpar(fontsize=10, fontface=2))
 
+#' ### Headquarters in the US
+#' NGOs with headquarters in the US are not significantly different from their
+#' foreign counterparts in their opinions of the importance of the US.
+hq.table <- df.importance %>%
+  xtabs(~ Q3.19 + us.hq, .) %>% print
+
+#' There's no overall significant difference
+(hq.chi <- chisq.test(hq.table))
+
+# Cramer's V is really low
+assocstats(hq.table)
+
+# Components of chi-squared
+(components <- hq.chi$residuals^2)
+1-pchisq(components, hq.chi$parameter)
+
+# Visualize differences
+mosaic(hq.table,
+       labeling_args=list(set_varnames=c(us.involvement="US involvement", 
+                                         Q3.19="Opinion of US"),
+                          gp_labels=(gpar(fontsize=8))), 
+       gp_varnames=gpar(fontsize=10, fontface=2))
 
 #' ## Are opinions of the US's positivity associated with…?
 #' **Important caveat**: Respondents were only asked about their opinions of
@@ -766,7 +789,7 @@ mosaic(involvement.table,
 df.positivity<- responses.full %>% 
   select(Q3.25=Q3.25_collapsed, work.country, change_policy, avg_tier, 
          improve_tip, change_policy, importance, received.funding, us.involvement, 
-         total.funding, total.freedom, time.spent=Q2.1) %>% 
+         total.funding, total.freedom, us.hq, time.spent=Q2.1) %>% 
   filter(!is.na(Q3.25)) %>%
   mutate(positivity_factor = factor(Q3.25, ordered=FALSE),
          log.total.funding = log1p(total.funding),
@@ -973,6 +996,28 @@ mosaic(involvement.table.pos,
                           gp_labels=(gpar(fontsize=8))), 
        gp_varnames=gpar(fontsize=10, fontface=2))
 
+#' ### Headquarters in the US
+#' NGOs with headquarters in the US are not significantly different from their
+#' foreign counterparts in their opinions of the US in general.
+hq.table.pos <- df.positivity %>%
+  xtabs(~ Q3.25 + us.hq, .) %>% print
+
+#' There's no overall significant difference, but some of the cells are too small
+(hq.chi.pos <- chisq.test(hq.table.pos))
+
+# Cramer's V is really, really low
+assocstats(hq.table.pos)
+
+# Components of chi-squared
+(components <- hq.chi.pos$residuals^2)
+1-pchisq(components, hq.chi.pos$parameter)
+
+# Visualize differences
+mosaic(hq.table.pos,
+       labeling_args=list(set_varnames=c(us.involvement="US involvement", 
+                                         Q3.25="Opinion of US"),
+                          gp_labels=(gpar(fontsize=8))), 
+       gp_varnames=gpar(fontsize=10, fontface=2))
 
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
@@ -986,9 +1031,6 @@ mosaic(involvement.table.pos,
 #' CHECK: Opinions are not driven by cooptation - look at chapter 1 for boomerang type stuff - cooptation by donors - so in this case, the NGOs aren't just being bought out?
 #' 
 #' Drop "don't know"s - that leads to a t test for positivity
-#' 
-#' Check the effect of HQ in US or not  
-#' If there's an effect, maybe drop the US-based ones from some other analyses
 #' 
 #' Create a nice simple summary table (like the one from Mike Ward's paper) with graphs
 

@@ -257,6 +257,23 @@ add.stars <- function(x) {
 }
 
 
+#-----------------------------------------
+#' # General information from the survey
+#-----------------------------------------
+#' How many respondents answered at least one free response question?
+responses.all %>%
+  select(Q3.10:Q3.17, Q3.24.Text, Q3.30, Q4.1) %T>%
+  {cat("Number of free response questions:", ncol(.), "\n")} %>%
+  rowwise() %>% do(wrote.something = !all(is.na(.))) %>%
+  ungroup() %>% mutate(wrote.something = unlist(wrote.something)) %>%
+  bind_cols(select(responses.all, survey.id)) %>%
+  group_by(survey.id) %>%
+  summarise(wrote.something = ifelse(sum(wrote.something) > 0, TRUE, FALSE)) %T>%
+  {cat("Number responses:", nrow(.), "\n")} %>%
+  do(as.data.frame(table(.$wrote.something, dnn="Wrote something"))) %>%
+  mutate(Percent = Freq / sum(Freq))
+
+
 # --------------------------------
 #' # NGO opinions of US activity
 # --------------------------------

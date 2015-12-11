@@ -10,7 +10,7 @@
 
 <meta name="author" content="Andrew Heiss" />
 
-<meta name="date" content="2015-12-10" />
+<meta name="date" content="2015-12-11" />
 
 <title>Anti-TIP NGO survey analysis</title>
 
@@ -76,12 +76,13 @@ img {
 <div id="header">
 <h1 class="title">Anti-TIP NGO survey analysis</h1>
 <h4 class="author"><em>Andrew Heiss</em></h4>
-<h4 class="date"><em>December 10, 2015</em></h4>
+<h4 class="date"><em>December 11, 2015</em></h4>
 </div>
 
 <div id="TOC">
 <ul>
 <li><a href="#munge-data">Munge data</a></li>
+<li><a href="#general-information-from-the-survey">General information from the survey</a></li>
 <li><a href="#ngo-opinions-of-us-activity">NGO opinions of US activity</a></li>
 <li><a href="#ngo-opinions-of-us-importance">NGO opinions of US importance</a><ul>
 <li><a href="#general-importance">General importance</a></li>
@@ -343,6 +344,26 @@ add.stars &lt;-<span class="st"> </span>function(x) {
                       <span class="dt">cutpoints =</span> <span class="kw">c</span>(<span class="dv">0</span>,  .<span class="dv">001</span>,.<span class="dv">01</span>,.<span class="dv">05</span>, .<span class="dv">1</span>, <span class="dv">1</span>),
                       <span class="dt">symbols =</span> <span class="kw">c</span>(<span class="st">&quot;***&quot;</span>,<span class="st">&quot;**&quot;</span>,<span class="st">&quot;*&quot;</span>,<span class="st">&quot;.&quot;</span>,<span class="st">&quot; &quot;</span>)))
 }</code></pre>
+</div>
+<div id="general-information-from-the-survey" class="section level1">
+<h1>General information from the survey</h1>
+<p>How many respondents answered at least one free response question?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.all %&gt;%
+<span class="st">  </span><span class="kw">select</span>(Q3<span class="fl">.10</span>:Q3<span class="fl">.17</span>, Q3<span class="fl">.24</span>.Text, Q3<span class="fl">.30</span>, Q4<span class="fl">.1</span>) %T&gt;%
+<span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number of free response questions:&quot;</span>, <span class="kw">ncol</span>(.), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)} %&gt;%
+<span class="st">  </span><span class="kw">rowwise</span>() %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="dt">wrote.something =</span> !<span class="kw">all</span>(<span class="kw">is.na</span>(.))) %&gt;%
+<span class="st">  </span><span class="kw">ungroup</span>() %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">wrote.something =</span> <span class="kw">unlist</span>(wrote.something)) %&gt;%
+<span class="st">  </span><span class="kw">bind_cols</span>(<span class="kw">select</span>(responses.all, survey.id)) %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(survey.id) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">wrote.something =</span> <span class="kw">ifelse</span>(<span class="kw">sum</span>(wrote.something) &gt;<span class="st"> </span><span class="dv">0</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) %T&gt;%
+<span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number responses:&quot;</span>, <span class="kw">nrow</span>(.), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)} %&gt;%
+<span class="st">  </span><span class="kw">do</span>(<span class="kw">as.data.frame</span>(<span class="kw">table</span>(.$wrote.something, <span class="dt">dnn=</span><span class="st">&quot;Wrote something&quot;</span>))) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Percent =</span> Freq /<span class="st"> </span><span class="kw">sum</span>(Freq))</code></pre>
+<pre><code>## Number of free response questions: 12 
+## Number responses: 522</code></pre>
+<pre><code>##   Wrote.something Freq   Percent
+## 1           FALSE   92 0.1762452
+## 2            TRUE  430 0.8237548</code></pre>
 </div>
 <div id="ngo-opinions-of-us-activity" class="section level1">
 <h1>NGO opinions of US activity</h1>

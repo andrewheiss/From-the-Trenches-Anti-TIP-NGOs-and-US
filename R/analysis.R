@@ -199,6 +199,13 @@ country.indexes <- responses.full %>%
   arrange(desc(num.responses))
 
 
+# Save data
+# TODO: Make responses.full more anonymous before making it public
+# TODO: Save as CSV and Stata too instead of just R
+saveRDS(responses.full, file.path(PROJHOME, "data", "responses_full.rds"))
+saveRDS(country.indexes, file.path(PROJHOME, "data", "country_indexes.rds"))
+
+
 # Useful functions
 theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
   ret <- theme_bw(base_size, base_family) + 
@@ -386,6 +393,9 @@ ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf
        width=5, height=2, units="in", device=cairo_pdf, scale=2.5)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png"),
        width=5, height=2, units="in", scale=2.5)
+
+saveRDS(active.embassies, file.path(PROJHOME, "data", "active_embassies.rds"))
+saveRDS(most.active.clean, file.path(PROJHOME, "data", "most_active_embassies.rds"))
 
 
 #' Actual US activities

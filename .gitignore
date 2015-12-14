@@ -3,6 +3,8 @@ sandbox/*
 data_raw/*
 data/id_lookup*
 *WILL_BE_OVERWRITTEN*
+# Temporary
+data/*.rds
 
 # Manuscript output
 manuscript/*.html

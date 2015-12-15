@@ -369,8 +369,19 @@ hq.countries <- responses.full %>%
   summarize(num.ngos = n()) %>%
   ungroup() %>%
   right_join(possible.countries, by="id") %>%
-  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos)) %>%
+  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos),
+         prop = num.ngos / sum(num.ngos, na.rm=TRUE)) %>%
   arrange(desc(num.ngos)) %T>%
+  {print(head(.))}
+
+hq.regions <- hq.countries %>%
+  filter(num.ngos > 0) %>%
+  mutate(region = countrycode(id, "iso3c", "continent"),
+         region = ifelse(id == "TWN", "Asia", region)) %>%
+  filter(!is.na(region)) %>%
+  group_by(region) %>%
+  summarise(num = sum(num.ngos)) %>% ungroup() %>%
+  mutate(prop = num / sum(num)) %T>%
   {print(head(.))}
 
 hq.map <- ggplot(hq.countries, aes(fill=num.ceiling, map_id=id)) +
@@ -384,7 +395,6 @@ hq.map <- ggplot(hq.countries, aes(fill=num.ceiling, map_id=id)) +
   theme_blank_map() +
   theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
         strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
-hq.map
 
 #' Where do these NGOs work?
 work.countries <- responses.full %>%
@@ -394,8 +404,19 @@ work.countries <- responses.full %>%
   summarize(num.ngos = n()) %>%
   ungroup() %>%
   right_join(possible.countries, by="id") %>%
-  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos)) %>%
+  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos),
+         prop = num.ngos / sum(num.ngos, na.rm=TRUE)) %>%
   arrange(desc(num.ngos)) %T>%
+  {print(head(.))}
+
+work.regions <- work.countries %>%
+  filter(num.ngos > 0) %>%
+  mutate(region = countrycode(id, "iso3c", "continent"),
+         region = ifelse(id == "TWN", "Asia", region)) %>%
+  filter(!is.na(region)) %>%
+  group_by(region) %>%
+  summarise(num = sum(num.ngos)) %>% ungroup() %>%
+  mutate(prop = num / sum(num)) %T>%
   {print(head(.))}
 
 work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
@@ -409,7 +430,6 @@ work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
   theme_blank_map() +
   theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
         strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
-work.map
 
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
@@ -417,6 +437,49 @@ ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
        width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
        width=6, height=3, units="in", scale=1.5)
+
+#' Side-by-side graph of home vs. work regions
+plot.hq <- hq.regions %>%
+  arrange(num) %>%
+  mutate(region = factor(region, levels=region, ordered=TRUE),
+         prop.nice = sprintf("%.1f%%", prop * 100))
+
+plot.work <- work.regions %>%
+  mutate(region = factor(region, levels=levels(plot.hq$region), ordered=TRUE),
+         prop.nice = sprintf("%.1f%%", prop * 100))
+
+fig.hq <- ggplot(plot.hq, aes(x=region, y=num)) + 
+  geom_bar(stat="identity") + 
+  geom_text(aes(label = prop.nice), size=2.5, hjust=1.3, 
+            family="Source Sans Pro Light") + 
+  labs(x=NULL, y="NGOs based in region") + 
+  scale_y_continuous(breaks=seq(0, max(plot.hq$num), by=25), 
+                     trans="reverse", expand = c(.1, .1)) + 
+  coord_flip() + 
+  theme_clean() + 
+  theme(axis.text.y = element_blank(), 
+        axis.line.y = element_blank(),
+        plot.margin = unit(c(1,0.5,1,1), "lines"))
+
+fig.work <- ggplot(plot.work, aes(x=region, y=num)) + 
+  geom_bar(stat="identity") + 
+  geom_text(aes(label = prop.nice), size=2.5, hjust=-0.3, 
+            family="Source Sans Pro Light") + 
+  labs(x=NULL, y="NGOs working in region") + 
+  scale_y_continuous(expand = c(.15, .15)) + 
+  coord_flip() + 
+  theme_clean() + 
+  theme(axis.text.y = element_text(hjust=0.5), 
+        axis.line.y = element_blank(),
+        plot.margin = unit(c(1,1,1,0), "lines"))
+
+fig.locations <- arrangeGrob(fig.hq, fig.work, nrow=1)
+grid.draw(fig.locations)
+ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.pdf"),
+       width=5, height=1.5, units="in", device=cairo_pdf, scale=2.5)
+ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.png"),
+       width=5, height=1.5, units="in", scale=2.5)
+
 
 #' ## Government restrictions and oversight
 #' Do members of the government or ruling party sit on the NGO's board?

@@ -42,42 +42,84 @@ What can we learn from the boomerang model - other actors using NGOs + cooptatio
 
 # Data and methods
 
-To analyze the opinions of non-American anti-TIP NGOs, from July–December 2014 we surveyed over 500 organizations engaged in anti-trafficking initiatives in 133 countries worldwide. To maximize out reach, we searched the State Department's annual TIP reports and Wikileaks cables for mentions of TIP NGOS. We also conducted hundreds of internet searches and partnered with a US-based organization.^[See the Global Modern Slavery Directory, [http://globalmodernslavery.org](http://globalmodernslavery.org), maintained by the Polaris Project.] This produced a database of 1,100 anti-TIP NGOs. We invited each organization to participate in the study. Of the 1,100 organizations, we found valid contact information for X and received responses from X unique organizations, yielding a response rate of XX%—a rate that is comparable to or exceeds that of other NGO surveys [see @citeme; @citeme2]. Because NGOs often work in multiple countries, we allowed respondents to answer a series of country-specific questions for up to five different countries, resulting in X country-organization responses. 
+To analyze the opinions of non-American anti-TIP NGOs, from July–December 2014 we surveyed over 500 organizations engaged in anti-trafficking initiatives in 133 countries worldwide. To maximize out reach, we searched the State Department's annual TIP reports and Wikileaks cables for mentions of TIP NGOS. We also conducted hundreds of internet searches and partnered with a US-based organization.^[See the Global Modern Slavery Directory, [http://globalmodernslavery.org](http://globalmodernslavery.org), maintained by the Polaris Project.] This produced a database of 1,100 anti-TIP NGOs. We invited each organization to participate in the study. Of the 1,100 organizations, we found valid contact information for X and received responses from X unique organizations, yielding a response rate of XX%—a rate that is comparable to or exceeds that of other NGO surveys [see @citeme; @citeme2]. Because NGOs often work in multiple countries, we allowed respondents to answer a series of country-specific questions for up to five different countries, resulting in X country-organization responses. The majority of respondents (415, or 86.5%) chose to answer for only one country, while 65 respondents reported on TIP work in two or more countries. 
 
 Our choice to conduct an online survey poses several methodological issues. Collecting data solely through the internet introduces technology and language bias. Collecting data solely through the internet introduces technology and language bias. Small grassroots organizations without an online presence are completely missing from our database. Some NGOs mentioned in Wikileaks cables or State Department reports were absent online, perhaps because they no longer operate. Additionally, NGOs without easy internet access faced barriers to participation. As a result, the survey does not represent the entire sector. Finally, all surveys have response bias—willingness to participate is rarely random.
 
-We took several additional steps to address these biases and threats to validity, based on the methods used by @Buthe:2011. To encourage participation, we sent each NGO a set of three personalized e-mail invitations, re-sent approximately every two weeks. Organizations without a working e-mail address were contacted by phone. Each invitation included a link to the survey and an offer to complete the survey via phone, and respondents were allowed to remain anonymous. To reduce language barriers, we translated the survey into Spanish and Russian and encouraged respondents to answer all free-response questions in their native language. We provided additional reminders and assistance to respondents who began the survey but did not complete it (often due to technological issues). 
+We took several additional steps to address these biases and threats to validity, based on the methods used by @Buthe:2011. To encourage participation, we sent each NGO a set of three personalized e-mail invitations, re-sent approximately every two weeks. Organizations without a working e-mail address were contacted by phone. Finally, we posted an invitation to participate in the survey in a LinkedIn discussion group used by anti-trafficking NGOs. Each invitation included a link to the survey and an offer to complete the survey via phone, and respondents were allowed to remain anonymous. To reduce language barriers, we translated the survey into Spanish and Russian and encouraged respondents to answer all free-response questions in their native language. We provided additional reminders and assistance to respondents who began the survey but did not complete it (often due to technological issues). The vast majority of respondents (463, or 96.5%) completed the survey online; 14 were completed over the phone and 3 were collected via the LinkedIn invitation.
 
-Finally, to avoid response-bias and cueing respondents who might have particular views of the US, we  framed the survey as an effort to better understand the anti-TIP advocacy sector in general. To reinforce this emphasis, we first asked respondents about their organizations in general and their knowledge of TIP issues in the countries they work in, and then asked which actors (embassies, NGOs, international organizations, etc.) had been active in those countries, allowing them to unpromptedly volunteer information about the US embassy.  Only *after this* did we ask questions specifically about the presence and quality of the United States' anti-TIP work. In {x} instances, respondents did not initially list the US as an active anti-TIP player in the free response question, but later indicated US support and advocacy, which suggests that the NGOs did not decide to participate in the survey based on their prior opinions of the United States. Additionally, {X} percent of respondents completed the survey after beginning it, revealing that NGOs generally did not change their decision to participate once the survey turned to US-focused questions. The statement in our invitations that the principal investigator was a professor at an American university was the only indication that the survey could contain questions related specifically to the United States. However, the invitation emphasized that the purpose of the survey was to help build a complete database of anti-TIP NGOs and to understand their efforts. The language of the invitation and the entire survey can be found at {URL HERE}. Thus, opinions of the US and its anti-TIP efforts are unlikely to have influenced decisions to participate in the survey, reducing response-bias.
+Finally, to avoid response-bias and cueing respondents who might have particular views of the US, we  framed the survey as an effort to better understand the anti-TIP advocacy sector in general. To reinforce this emphasis, we first asked respondents about their organizations in general and their knowledge of TIP issues in the countries they work in, and then asked which actors (embassies, NGOs, international organizations, etc.) had been active in those countries, allowing them to volunteer information about the US embassy without prompting.  Only *after this* did we ask questions specifically about the presence and quality of the United States' anti-TIP work. In {x} instances, respondents did not initially list the US as an active anti-TIP player in the free response question, but later indicated US support and advocacy, which suggests that the NGOs did not decide to participate in the survey based on their prior opinions of the United States. Additionally, {X} percent of respondents completed the survey after beginning it, revealing that NGOs generally did not change their decision to participate once the survey turned to US-focused questions. The statement in our invitations that the principal investigator was a professor at an American university was the only indication that the survey could contain questions related specifically to the United States. However, the invitation emphasized that the purpose of the survey was to help build a complete database of anti-TIP NGOs and to understand their efforts. The language of the invitation and the entire survey can be found at {URL HERE}. Thus, opinions of the US and its anti-TIP efforts are unlikely to have influenced decisions to participate in the survey, reducing response-bias.
 
-In our analysis, we merge survey responses with several supplementary data sources in order to compare NGO experiences with more quantitative country-level characteristics. We calculate each country's average TIP rating between 2000–2015, as well as the absolute change in rating from the first year to the most recent year each country was included in the TIP report.^[Coded as 1, 2, and 3 for each tier level and 2.5 for countries on the Watchlist.] We use data from the 3P Anti-trafficking Policy Index to measure each country's visible progress in improving human anti-trafficking prosecution, protection, and prevention [@Cho:2015]. This index is based exclusively on independent assessments of the annual TIP report and measures progress in a host of specific sub-indicators, ultimately yielding a score between 3–15, with higher numbers indicating better progress.^[See [http://www.economics-human-trafficking.net/data-and-reports.html](http://www.economics-human-trafficking.net/data-and-reports.html).]  As with the raw tier ratings, we calculate each country's average TIP policy index and the absolute change between the first and most recent year. Finally, we use the sum of political rights and civil liberties from Freedom House's *Freedom in the World* index as a proxy for a country's level of democratization.^[See [https://freedomhouse.org/report-types/freedom-world](https://freedomhouse.org/report-types/freedom-world).]
+In our analysis, we merge survey responses with several supplementary data sources in order to compare NGO experiences with more quantitative country-level characteristics. We calculate each country's average TIP rating between 2000–2015, as well as the absolute change in rating from the first year to the most recent year each country was included in the TIP report.^[Coded as 1, 2, and 3 for each tier level and 2.5 for countries on the Watchlist.] We use data from the 3P Anti-trafficking Policy Index to measure each country's visible progress in improving human anti-trafficking prosecution, protection, and prevention [@Cho:2015]. This index is based exclusively on independent assessments of the annual TIP report and measures progress in a host of specific sub-indicators, ultimately yielding a score between 3–15, with higher numbers indicating better progress.^[See [http://www.economics-human-trafficking.net/data-and-reports.html](http://www.economics-human-trafficking.net/data-and-reports.html).] We look at both the official TIP ratings and the 3P index because the two indicators measure different phenomena. TIP ratings reflect formal US diplomatic pressure and act as a form of scorecard diplomacy [@KelleySimmons:2014], while the 3P index reflects the progress that governments have made in improving the legal environment for managing TIP issues. As with the raw tier ratings, we calculate each country's average TIP policy index and the absolute change between the first and most recent year. Finally, we use the sum of political rights and civil liberties from Freedom House's *Freedom in the World* index as a proxy for a country's level of democratization.^[See [https://freedomhouse.org/report-types/freedom-world](https://freedomhouse.org/report-types/freedom-world).]
 
 For the sake of simplicity, we do not use advanced statistical methods or models, turning instead to basic summaries and simple descriptive statistics, including cross-tabulations, t-tests, and chi-square tests to check for differences in means and associations between responses. In addition to statistical analysis, we rely heavily on interpretive qualitative analysis of NGOs' free response answers—82% of respondents chose to answer at least one of the 12 open-ended questions. One of this study's primary contributions is to allow NGOs themselves to speak about their experiences, and as such, we extensively quote their responses. To maintain anonymity (even when NGOs expressed willingness to be identified), we removed all potentially identifiable information from any quotes used in this paper, indicating the source of each quote with a randomly-assigned four-digit ID number. 
 
 
 # Findings
 
-## General profile of the anti-TIP sector
+As described previously, the motivations, effectiveness, and positivity of the United States' anti-trafficking efforts have been hotly contested. In the midst of these debates, the NGOs  that implement and support anti-TIP policies—organizations that advocate and lobby for local legislative changes, run shelters and safe houses, or assist with victims' legal, social, and financial needs—have generally been ignored. What do *they* think of the US's intense focus on trafficking and how are they affected by these efforts? We analyzed the results of our survey to answer three general questions about the anti-TIP NGO sector and its relationship to the United States government: 
+
+1. What does the anti-TIP NGO sector look like and what kind of work do they do?
+2. In what ways do anti-TIP NGOs interact with the United States?
+3. What do anti-TIP NGOs think of the United States and what influences that opinion?
+
+`TODO: Summary table for each section`
+
+## What does the anti-TIP NGO sector look like?
+
+The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly global reach ([@fig:maps]). As seen in [@fig:locations], 60% of NGOs have their headquarters in either Asia or Europe,  a quarter are based in North or South America, and less than 20% work out of Africa. NGOs are hardly limited to advocacy within their own countries—the majority of these organizations work in Asia (especially in trafficking hotspots like India, Nepal, Thailand, and the Philippines), with less work in Europe and the Americas. Though there are fewer NGOs *based* in Africa, a larger proportion of NGOs *work* there than in the Americas. Organizations based in the Americas, in particular, are more likely to work outside their home regions: only 50% of American NGOs work in the Americas, with 30% working in Asia and 12% in Africa. In contrast, NGOs based elsewhere are much more likely to stay close to home, as 98%, 97%, and 83% of NGOs headquartered in Asia, Africa, and Africa work in their respective regions. 
+
+![Countries where anti-TIP NGOs are based and work](figures/fig_maps.pdf) {#fig:maps}
+
+![NGO headquarters and target countries, by region](figures/fig_locations.pdf) {#fig:locations}
+
+### Actions and efforts
 
 
 
-1–2 ¶s on this, plus a summary chart or plot
+What they do - time spent + type of work + stuff like that
 
-* Global makeup
-* Actions and efforts
-* Government oversight
+### NGO work and partnerships with other actors
 
-
-## NGO work and partnerships with other actors
-
-1–2 ¶s on this
+Work with other organizations
 
 * Other NGOs and CSOs
 * National governments
 * International organizations
 * Embassies or foreign governments that aren't the US(?)
 
-## NGO opinions of US activity and importance
+### Government oversight and restrictions
+
+{Connect this with the previous section, working with the government - look at link between working with national government and restrictions}
+
+In general, anti-TIP NGOs are relatively unencumbered by government regulations, with more than a third of respondents reporting that they feel unrestricted in the countries they work in. 
+
+One hundred twenty-four NGOs (23.8%) reported feeling either somewhat or very restricted by the governments of 66 of those countries.
+
+Limits on advocacy because of charity status + informal, de facto restrictions like corruption, bad bureaucracy
+
+Burden of complying with regulations detracts from our work. At the same time we are not given support from government to properly prosecute offenders.Bureacracy and lack of commitment to social justice issues and civil society in all areas..
+
+The nature of these restrictions varied, ranging from strict legal requirements to general government antagonism or apathy toward NGO programming. One organization reported "[a]ll work must be approved and done in direct concert with government counterparts. [Our] presence in country [is] controlled and evaluated by government officials, even those who are not familiar with our work,"^[@NGO_1] while another stated that "we had to be certified and continue to submit to monthly reporting, mandatory financial audits, site visits, social welfare approval, government regulations regarding our aftercare property, work permits for all foreign volunteers, annual reporting and additional certifications."^[@NGO_2] Some NGOs responded that informal restrictions, such as corruption and inefficiency in the police and government bureaucracy, also limit the programming these organizations can do in-country.^[@NGO_3] Finally, organizations working in democracies like Canada, Australia, or France, reported feeling restricted because of tax code limitations on charitable advocacy, similar to the political advocacy limitations the US imposes on 501(c)(3) charities.^[@NGO_4]
+
+One interesting theme in the responses of these human trafficking NGOs is that many noted that government restrictions are calibrated to help the regime. This is best summarized by the previously cited Southeast Asian INGO, which expressed that "[a]ll of our work is seen through the lens of … party priorities."^[@NGO_5]
+
+
+## In what ways do anti-TIP NGOs interact with the United States?
+
+### Different things the US does with them
+
+
+## What do anti-TIP NGOs think of the United States and what influences that opinion?
+
+### Activity / TIP report
+
+### Importance
+
+### Positivity
+
+---
+
 
 While the fight against human trafficking is global in scope and involves the efforts of dozens of foreign governments, NGOs note that the United States is by far one of the most active and influential actors. We asked respondents to indicate which embassies they knew to be active in anti-TIP work in each of the countries they work in, and which of those governments were most active. NGOs identified 64 different foreign or regional governments as active, and 78% of respondents included the US embassy or government in their list (see [@fig:embassies]). In fact, the United States was mentioned six times more often (260 mentions) than the next most common country, the United Kingdom (43 mentions). Respondents identified 39 countries or regions as the *most* active, and 71% named the US. Again, the United States was overwhelmingly the most cited foreign actor, mentioned 14 times more often (187 mentions) than the next most common government, the European Union (14 mentions). When asked directly about US activities, only 39 NGOs (7.3%) explicitly reported that the US had *not* been involved in any of the countries they work in. NGOs have clearly seen the effects of US funding and involvement in anti-TIP work.
 
@@ -158,6 +200,19 @@ So, opinions are not driven by cooptation - NGOs are not being bought out
 # Policy implications and conclusion
 
 Stuff here.
+
+# Software
+
+All the figures, tables, and other results can be replicated using code available at [https://github.com/andrewheiss/Anti-TIP-NGOs-and-the-US](https://github.com/andrewheiss/Anti-TIP-NGOs-and-the-US) and the following open source software:
+
+`TODO: Make sure this matches the style guide`
+
+R Development Core Team. (2013). R: A language and environment for statistical computing. Vienna, Austria. http://www.R-project.org. Version 3.0.2.
+
+Wickham, H. (2009). ggplot2: Elegant graphics for data analysis. Springer New York. http://had.co.nz/ggplot2/book. Version 0.9.3.1.
+
+'TODO: Add link just to the huge analysis notebook?`
+
 
 # References
 \setlength{\parindent}{-0.2in}

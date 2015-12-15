@@ -277,6 +277,8 @@ add.stars <- function(x) {
 #-----------------------------------------
 #' # General information from the survey
 #-----------------------------------------
+#' TODO: Response rate
+
 #' How many times did respondents loop through the country questions?
 responses.full %>%
   group_by(survey.id) %>%
@@ -304,6 +306,42 @@ responses.full %>%
   {cat("Number responses:", nrow(.), "\n")} %>%
   do(as.data.frame(table(.$wrote.something, dnn="Wrote something"))) %>%
   mutate(Percent = Freq / sum(Freq))
+
+
+# --------------------
+#' # Sector overview
+# --------------------
+#' ## Government restrictions and oversight
+#' Do members of the government or ruling party sit on the NGO's board?
+responses.full %>%
+  group_by(Q3.27) %>%
+  summarise(num = n()) %>%
+  filter(!is.na(Q3.27)) %>%
+  mutate(prop = num / sum(num))
+
+#' For those that said yes, is the NGO required to have a government official
+#' sit on the board?
+responses.full %>%
+  group_by(Q3.28) %>%
+  summarise(num = n()) %>%
+  filter(!is.na(Q3.28)) %>%
+  mutate(prop = num / sum(num))
+
+#' How restricted does the NGO feel by the host government?
+responses.full %>%
+  group_by(Q3.29) %>%
+  summarise(num = n()) %>%
+  filter(!is.na(Q3.29)) %>%
+  mutate(prop = num / sum(num)) %T>%
+  {cat("Number of responses:", sum(.$num), "\n")}
+
+#' Which countries do NGOs say are restrictive?
+responses.full %>%
+  filter(Q3.29 %in% c("Somewhat restricted", "Very restricted")) %>%
+  group_by(work.country) %>%
+  summarise(num = n()) %>%
+  arrange(desc(num)) %T>%
+  {cat("Number of countries:", nrow(.), "\n")}
 
 
 # --------------------------------

@@ -438,6 +438,7 @@ work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
 
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
+grid.draw(fig.maps)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
        width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
@@ -542,6 +543,14 @@ ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.pdf"),
        width=6.5, height=5, units="in", device=cairo_pdf)
 ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.png"),
        width=6.5, height=5, units="in")
+
+#' How many NGOs deal with both sex and labor trafficking?
+orgs.only %>% 
+  mutate(sex = ifelse(is.na(Q2.2_2), 0, 1),
+         labor = ifelse(is.na(Q2.2_3), 0, 1),
+         both = sex == 1 & labor == 1) %>% 
+  summarise(sex = sum(sex), labor = sum(labor), 
+            num.both = sum(both), prop.both = num.both / issues$denominator)
 
 #' Which kinds of victims do NGOs help?
 cols <- c("Q2.3_1", "Q2.3_2", "Q2.3_3")

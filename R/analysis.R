@@ -202,7 +202,21 @@ responses.full <- responses.all %>%
                                         "Not an important actor", 
                                         "Don't know"),
                         ordered=TRUE),
-         Q3.25_collapsed = ifelse(Q3.25 == "Negative", NA, Q3.25))
+         Q3.25_collapsed = ifelse(Q3.25 == "Negative", NA, Q3.25)) %>%
+  mutate(home.region = countrycode(home.country, "country.name", "continent"),
+         home.region = ifelse(home.country == "Kosovo", "Europe", home.region),
+         home.region = ifelse(home.country == "TWN", "Asia", home.region),
+         home.region = ifelse(home.region == "Oceania", "Asia", home.region),
+         home.region = ifelse(home.region == "Asia", "Asia and Oceania", home.region),
+         work.region = countrycode(work.country, "country.name", "continent"),
+         work.region = ifelse(work.country == "Kosovo", "Europe", work.region),
+         work.region = ifelse(work.country == "TWN", "Asia", work.region),
+         work.region = ifelse(work.region == "Oceania", "Asia", work.region),
+         work.region = ifelse(work.region == "Asia", "Asia and Oceania", work.region)) %>%
+  mutate(home.iso3 = countrycode(home.country, "country.name", "iso3c"),
+         home.iso3 = ifelse(home.country == "Kosovo", "KOS", home.iso3)) %>%
+  mutate(work.iso3 = countrycode(work.country, "country.name", "iso3c"),
+         work.iso3 = ifelse(work.country == "Kosovo", "KOS", work.iso3))
 
 country.indexes <- responses.full %>%
   filter(!is.na(work.country)) %>%
@@ -360,11 +374,8 @@ responses.full %>%
 #' ## Location
 #' Where are these NGOs based?
 hq.countries <- responses.full %>%
-  group_by(survey.id) %>%
-  slice(1) %>%
-  ungroup() %>%
-  mutate(id = countrycode(home.country, "country.name", "iso3c"),
-         id = ifelse(home.country == "Kosovo", "KOS", id)) %>%
+  group_by(survey.id) %>% slice(1) %>% ungroup() %>%
+  rename(id = home.iso3) %>%
   group_by(id) %>%
   summarize(num.ngos = n()) %>%
   ungroup() %>%
@@ -374,15 +385,11 @@ hq.countries <- responses.full %>%
   arrange(desc(num.ngos)) %T>%
   {print(head(.))}
 
-hq.regions <- hq.countries %>%
-  filter(num.ngos > 0) %>%
-  mutate(region = countrycode(id, "iso3c", "continent"),
-         region = ifelse(id == "TWN", "Asia", region),
-         region = ifelse(region == "Oceania", "Asia", region),
-         region = ifelse(region == "Asia", "Asia and Oceania", region)) %>%
-  filter(!is.na(region)) %>%
-  group_by(region) %>%
-  summarise(num = sum(num.ngos)) %>% ungroup() %>%
+hq.regions <- responses.full %>%
+  group_by(survey.id) %>% slice(1) %>% ungroup() %>%
+  filter(!is.na(home.region)) %>%
+  group_by(home.region) %>%
+  summarise(num = n()) %>% ungroup() %>%
   mutate(prop = num / sum(num)) %T>%
   {print(head(.))}
 
@@ -400,8 +407,7 @@ hq.map <- ggplot(hq.countries, aes(fill=num.ceiling, map_id=id)) +
 
 #' Where do these NGOs work?
 work.countries <- responses.full %>%
-  mutate(id = countrycode(work.country, "country.name", "iso3c"),
-         id = ifelse(work.country == "Kosovo", "KOS", id)) %>%
+  rename(id = work.iso3) %>%
   group_by(id) %>%
   summarize(num.ngos = n()) %>%
   ungroup() %>%
@@ -411,15 +417,10 @@ work.countries <- responses.full %>%
   arrange(desc(num.ngos)) %T>%
   {print(head(.))}
 
-work.regions <- work.countries %>%
-  filter(num.ngos > 0) %>%
-  mutate(region = countrycode(id, "iso3c", "continent"),
-         region = ifelse(id == "TWN", "Asia", region),
-         region = ifelse(region == "Oceania", "Asia", region),
-         region = ifelse(region == "Asia", "Asia and Oceania", region)) %>%
-  filter(!is.na(region)) %>%
-  group_by(region) %>%
-  summarise(num = sum(num.ngos)) %>% ungroup() %>%
+work.regions <- responses.full %>%
+  filter(!is.na(work.region)) %>%
+  group_by(work.region) %>%
+  summarise(num = n()) %>% ungroup() %>%
   mutate(prop = num / sum(num)) %T>%
   {print(head(.))}
 
@@ -445,11 +446,11 @@ ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
 #' Side-by-side graph of home vs. work regions
 plot.hq <- hq.regions %>%
   arrange(num) %>%
-  mutate(region = factor(region, levels=region, ordered=TRUE),
+  mutate(region = factor(home.region, levels=home.region, ordered=TRUE),
          prop.nice = sprintf("%.1f%%", prop * 100))
 
 plot.work <- work.regions %>%
-  mutate(region = factor(region, levels=levels(plot.hq$region), ordered=TRUE),
+  mutate(region = factor(work.region, levels=levels(plot.hq$region), ordered=TRUE),
          prop.nice = sprintf("%.1f%%", prop * 100))
 
 fig.hq <- ggplot(plot.hq, aes(x=region, y=num)) + 
@@ -485,14 +486,6 @@ ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.png
 
 #' Where do different regional NGOs work?
 responses.full %>%
-  mutate(home.region = countrycode(home.country, "country.name", "continent"),
-         home.region = ifelse(home.country == "Kosovo", "Europe", home.region),
-         home.region = ifelse(home.region == "Oceania", "Asia", home.region),
-         home.region = ifelse(home.region == "Asia", "Asia and Oceania", home.region),
-         work.region = countrycode(work.country, "country.name", "continent"),
-         work.region = ifelse(work.country == "Kosovo", "Europe", work.region),
-         work.region = ifelse(work.region == "Oceania", "Asia", work.region),
-         work.region = ifelse(work.region == "Asia", "Asia and Oceania", work.region)) %>%
   filter(!is.na(work.region)) %>%
   group_by(home.region, work.region) %>%
   summarise(num = n()) %>%
@@ -518,6 +511,13 @@ ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
        width=5, height=2, units="in", device=cairo_pdf)
 ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
        width=5, height=2, units="in")
+
+#' Summary stats of time spent
+orgs.only %>%
+  summarise(avg.time = mean(Q2.1, na.rm=TRUE),
+            med.time = median(Q2.1, na.rm=TRUE),
+            min.time = min(Q2.1, na.rm=TRUE),
+            max.time = max(Q2.1, na.rm=TRUE))
 
 #' What trafficking issues is the organization involved with?
 cols <- c("Q2.2_1", "Q2.2_2", "Q2.2_3", "Q2.2_4")

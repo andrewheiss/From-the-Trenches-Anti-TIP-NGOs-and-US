@@ -377,7 +377,9 @@ hq.countries <- responses.full %>%
 hq.regions <- hq.countries %>%
   filter(num.ngos > 0) %>%
   mutate(region = countrycode(id, "iso3c", "continent"),
-         region = ifelse(id == "TWN", "Asia", region)) %>%
+         region = ifelse(id == "TWN", "Asia", region),
+         region = ifelse(region == "Oceania", "Asia", region),
+         region = ifelse(region == "Asia", "Asia and Oceania", region)) %>%
   filter(!is.na(region)) %>%
   group_by(region) %>%
   summarise(num = sum(num.ngos)) %>% ungroup() %>%
@@ -412,7 +414,9 @@ work.countries <- responses.full %>%
 work.regions <- work.countries %>%
   filter(num.ngos > 0) %>%
   mutate(region = countrycode(id, "iso3c", "continent"),
-         region = ifelse(id == "TWN", "Asia", region)) %>%
+         region = ifelse(id == "TWN", "Asia", region),
+         region = ifelse(region == "Oceania", "Asia", region),
+         region = ifelse(region == "Asia", "Asia and Oceania", region)) %>%
   filter(!is.na(region)) %>%
   group_by(region) %>%
   summarise(num = sum(num.ngos)) %>% ungroup() %>%
@@ -453,9 +457,8 @@ fig.hq <- ggplot(plot.hq, aes(x=region, y=num)) +
   geom_text(aes(label = prop.nice), size=2.5, hjust=1.3, 
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="NGOs based in region") + 
-  scale_y_continuous(breaks=seq(0, max(plot.hq$num), by=25), 
-                     trans="reverse", expand = c(.1, .1)) + 
-  coord_flip() + 
+  scale_y_continuous(trans="reverse", expand = c(.1, .1)) + 
+  coord_flip(ylim=c(0, 200)) + 
   theme_clean() + 
   theme(axis.text.y = element_blank(), 
         axis.line.y = element_blank(),
@@ -479,6 +482,23 @@ ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.pdf
        width=5, height=1.5, units="in", device=cairo_pdf, scale=2.5)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.png"),
        width=5, height=1.5, units="in", scale=2.5)
+
+#' Where do different regional NGOs work?
+responses.full %>%
+  mutate(home.region = countrycode(home.country, "country.name", "continent"),
+         home.region = ifelse(home.country == "Kosovo", "Europe", home.region),
+         home.region = ifelse(home.region == "Oceania", "Asia", home.region),
+         home.region = ifelse(home.region == "Asia", "Asia and Oceania", home.region),
+         work.region = countrycode(work.country, "country.name", "continent"),
+         work.region = ifelse(work.country == "Kosovo", "Europe", work.region),
+         work.region = ifelse(work.region == "Oceania", "Asia", work.region),
+         work.region = ifelse(work.region == "Asia", "Asia and Oceania", work.region)) %>%
+  filter(!is.na(work.region)) %>%
+  group_by(home.region, work.region) %>%
+  summarise(num = n()) %>%
+  group_by(home.region) %>%
+  mutate(prop.home.region = num / sum(num)) %>%
+  print
 
 
 #' ## Government restrictions and oversight

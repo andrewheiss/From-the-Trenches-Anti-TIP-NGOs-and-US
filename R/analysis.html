@@ -10,7 +10,7 @@
 
 <meta name="author" content="Andrew Heiss" />
 
-<meta name="date" content="2015-12-14" />
+<meta name="date" content="2015-12-15" />
 
 <title>Anti-TIP NGO survey analysis</title>
 
@@ -76,13 +76,16 @@ img {
 <div id="header">
 <h1 class="title">Anti-TIP NGO survey analysis</h1>
 <h4 class="author"><em>Andrew Heiss</em></h4>
-<h4 class="date"><em>December 14, 2015</em></h4>
+<h4 class="date"><em>December 15, 2015</em></h4>
 </div>
 
 <div id="TOC">
 <ul>
 <li><a href="#munge-data">Munge data</a></li>
 <li><a href="#general-information-from-the-survey">General information from the survey</a></li>
+<li><a href="#sector-overview">Sector overview</a><ul>
+<li><a href="#government-restrictions-and-oversight">Government restrictions and oversight</a></li>
+</ul></li>
 <li><a href="#ngo-opinions-of-us-activity">NGO opinions of US activity</a></li>
 <li><a href="#ngo-opinions-of-us-importance">NGO opinions of US importance</a><ul>
 <li><a href="#general-importance">General importance</a></li>
@@ -364,7 +367,7 @@ add.stars &lt;-<span class="st"> </span>function(x) {
 </div>
 <div id="general-information-from-the-survey" class="section level1">
 <h1>General information from the survey</h1>
-<p>How many times did respondents loop through the country questions?</p>
+<p>TODO: Response rate How many times did respondents loop through the country questions?</p>
 <pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
 <span class="st">  </span><span class="kw">group_by</span>(survey.id) %&gt;%
 <span class="st">  </span><span class="kw">summarise</span>(<span class="dt">loops =</span> <span class="kw">n</span>()) %&gt;%
@@ -406,6 +409,79 @@ add.stars &lt;-<span class="st"> </span>function(x) {
 <pre><code>##   Wrote.something Freq Percent
 ## 1           FALSE   69 0.14375
 ## 2            TRUE  411 0.85625</code></pre>
+</div>
+<div id="sector-overview" class="section level1">
+<h1>Sector overview</h1>
+<div id="government-restrictions-and-oversight" class="section level2">
+<h2>Government restrictions and oversight</h2>
+<p>Do members of the government or ruling party sit on the NGO’s board?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(Q3<span class="fl">.27</span>) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">num =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(Q3<span class="fl">.27</span>)) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> num /<span class="st"> </span><span class="kw">sum</span>(num))</code></pre>
+<pre><code>## Source: local data frame [3 x 3]
+## 
+##        Q3.27   num       prop
+##       (fctr) (int)      (dbl)
+## 1         No   475 0.86837294
+## 2        Yes    41 0.07495430
+## 3 Don't know    31 0.05667276</code></pre>
+<p>For those that said yes, is the NGO required to have a government official sit on the board?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(Q3<span class="fl">.28</span>) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">num =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(Q3<span class="fl">.28</span>)) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> num /<span class="st"> </span><span class="kw">sum</span>(num))</code></pre>
+<pre><code>## Source: local data frame [3 x 3]
+## 
+##        Q3.28   num  prop
+##       (fctr) (int) (dbl)
+## 1         No    25 0.625
+## 2        Yes    13 0.325
+## 3 Don't know     2 0.050</code></pre>
+<p>How restricted does the NGO feel by the host government?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(Q3<span class="fl">.29</span>) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">num =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(!<span class="kw">is.na</span>(Q3<span class="fl">.29</span>)) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> num /<span class="st"> </span><span class="kw">sum</span>(num)) %T&gt;%
+<span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number of responses:&quot;</span>, <span class="kw">sum</span>(.$num), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)}</code></pre>
+<pre><code>## Number of responses: 547</code></pre>
+<pre><code>## Source: local data frame [6 x 3]
+## 
+##                    Q3.29   num       prop
+##                   (fctr) (int)      (dbl)
+## 1         Not restricted   201 0.36745887
+## 2 Very little restricted   118 0.21572212
+## 3    A little restricted    51 0.09323583
+## 4    Somewhat restricted    93 0.17001828
+## 5        Very restricted    41 0.07495430
+## 6             Don't know    43 0.07861060</code></pre>
+<p>Which countries do NGOs say are restrictive?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">filter</span>(Q3<span class="fl">.29</span> %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Somewhat restricted&quot;</span>, <span class="st">&quot;Very restricted&quot;</span>)) %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(work.country) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">num =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num)) %T&gt;%
+<span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number of countries:&quot;</span>, <span class="kw">nrow</span>(.), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)}</code></pre>
+<pre><code>## Number of countries: 66</code></pre>
+<pre><code>## Source: local data frame [66 x 2]
+## 
+##                             work.country   num
+##                                    (chr) (int)
+## 1                                  India    11
+## 2                                Nigeria     7
+## 3                                  Nepal     6
+## 4                               Thailand     6
+## 5                               Cambodia     5
+## 6  Congo, the Democratic Republic of the     4
+## 7                         United Kingdom     4
+## 8                              Australia     3
+## 9                                   Iraq     3
+## 10                                 Italy     3
+## ..                                   ...   ...</code></pre>
+</div>
 </div>
 <div id="ngo-opinions-of-us-activity" class="section level1">
 <h1>NGO opinions of US activity</h1>

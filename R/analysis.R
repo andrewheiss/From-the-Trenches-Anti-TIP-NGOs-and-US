@@ -500,6 +500,96 @@ responses.full %>%
   mutate(prop.home.region = num / sum(num)) %>%
   print
 
+#' ## Amount and type of TIP work
+orgs.only <- responses.full %>%
+  group_by(survey.id) %>% slice(1) %>% ungroup()
+
+#' How much time and resources do these NGOs spend on trafficking?
+fig.time <- ggplot(data=orgs.only,
+                   aes(x=as.numeric(Q2.1)/100, y=(..count.. / sum(..count..)))) + 
+  geom_histogram(binwidth=0.1) + 
+  labs(x="Proportion of time spent on trafficking", y="Proportion of responses") + 
+  scale_x_continuous(labels=percent, limits=c(0, 1), breaks=seq(0, 1, 0.2)) +
+  scale_y_continuous(labels=percent, breaks=seq(0, 0.12, 0.02)) + 
+  coord_cartesian(ylim=c(0, 0.125)) + 
+  theme_clean() + theme(panel.grid.major.y = element_line(size=0.25, colour="grey90"))
+fig.time
+ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
+       width=5, height=2, units="in", device=cairo_pdf)
+ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
+       width=5, height=2, units="in")
+
+#' What trafficking issues is the organization involved with?
+cols <- c("Q2.2_1", "Q2.2_2", "Q2.2_3", "Q2.2_4")
+labels <- c("Organ trafficking", "Sex trafficking",
+            "Labor trafficking", "Other")
+
+issues <- separate.answers.summary(orgs.only, cols, labels)
+issues$denominator  # Number of responses
+issues$df
+
+plot.data <- issues$df %>% 
+  mutate(Answer=factor(Answer, levels=rev(labels), ordered=TRUE))
+
+fig.issues <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.issues
+ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.png"),
+       width=6.5, height=5, units="in")
+
+#' Which kinds of victims do NGOs help?
+cols <- c("Q2.3_1", "Q2.3_2", "Q2.3_3")
+labels <- c("Children", "Adults", "Other")
+
+victims <- separate.answers.summary(orgs.only, cols, labels)
+victims$denominator  # Number of responses
+victims$df
+
+plot.data <- victims$df %>% 
+  mutate(Answer=factor(Answer, levels=rev(labels), ordered=TRUE))
+
+fig.victims <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.victims
+ggsave(fig.victims, filename=file.path(PROJHOME, "figures", "fig_victims.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.victims, filename=file.path(PROJHOME, "figures", "fig_victims.png"),
+       width=6.5, height=5, units="in")
+
+#' Which efforts do NGOs focus on?
+cols <- c("Q2.4_1", "Q2.4_2", "Q2.4_3", "Q2.4_4", "Q2.4_5")
+labels <- c("Prevention and education", "Prosecutions and legal issues",
+            "Victim protection", "Victim assistance", "Other")
+
+efforts <- separate.answers.summary(orgs.only, cols, labels)
+efforts$denominator  # Number of responses
+efforts$df
+
+plot.data <- efforts$df %>% 
+  mutate(Answer=factor(Answer, levels=rev(labels), ordered=TRUE))
+
+fig.efforts <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.efforts
+ggsave(fig.efforts, filename=file.path(PROJHOME, "figures", "fig_efforts.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.efforts, filename=file.path(PROJHOME, "figures", "fig_efforts.png"),
+       width=6.5, height=5, units="in")
+
 
 #' ## Government restrictions and oversight
 #' Do members of the government or ruling party sit on the NGO's board?

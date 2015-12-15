@@ -10,7 +10,7 @@
 
 <meta name="author" content="Andrew Heiss" />
 
-<meta name="date" content="2015-12-11" />
+<meta name="date" content="2015-12-14" />
 
 <title>Anti-TIP NGO survey analysis</title>
 
@@ -76,7 +76,7 @@ img {
 <div id="header">
 <h1 class="title">Anti-TIP NGO survey analysis</h1>
 <h4 class="author"><em>Andrew Heiss</em></h4>
-<h4 class="date"><em>December 11, 2015</em></h4>
+<h4 class="date"><em>December 14, 2015</em></h4>
 </div>
 
 <div id="TOC">
@@ -118,6 +118,7 @@ img {
 <div id="munge-data" class="section level1">
 <h1>Munge data</h1>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load libraries</span>
+<span class="kw">library</span>(magrittr)
 <span class="kw">library</span>(readr)
 <span class="kw">library</span>(dplyr)
 <span class="kw">library</span>(tidyr)
@@ -140,6 +141,15 @@ responses.countries.labs &lt;-<span class="st"> </span><span class="kw">read_csv
 
 Hmisc::<span class="kw">label</span>(responses.orgs, <span class="dt">self=</span><span class="ot">FALSE</span>) &lt;-<span class="st"> </span>responses.orgs.labs$varlabel
 Hmisc::<span class="kw">label</span>(responses.countries, <span class="dt">self=</span><span class="ot">FALSE</span>) &lt;-<span class="st"> </span>responses.countries.labs$varlabel
+
+<span class="co"># Add surevy sources</span>
+phone &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;phone.rds&quot;</span>))
+linkedin &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;linkedin.rds&quot;</span>))
+
+responses.orgs %&lt;&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">survey.method =</span> <span class="kw">ifelse</span>(survey.id %in%<span class="st"> </span>phone, <span class="st">&quot;Phone&quot;</span>, 
+                                <span class="kw">ifelse</span>(survey.id %in%<span class="st"> </span>linkedin, <span class="st">&quot;LinkedIn&quot;</span>, 
+                                       <span class="st">&quot;Online&quot;</span>)))
 
 <span class="co"># Add a nicer short ID to each response to reference in the article</span>
 <span class="kw">set.seed</span>(<span class="dv">1234</span>)
@@ -288,6 +298,13 @@ country.indexes &lt;-<span class="st"> </span>responses.full %&gt;%
 <span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(num.responses))
 
 
+<span class="co"># Save data</span>
+<span class="co"># TODO: Make responses.full more anonymous before making it public</span>
+<span class="co"># TODO: Save as CSV and Stata too instead of just R</span>
+<span class="kw">saveRDS</span>(responses.full, <span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data&quot;</span>, <span class="st">&quot;responses_full.rds&quot;</span>))
+<span class="kw">saveRDS</span>(country.indexes, <span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data&quot;</span>, <span class="st">&quot;country_indexes.rds&quot;</span>))
+
+
 <span class="co"># Useful functions</span>
 theme_clean &lt;-<span class="st"> </span>function(<span class="dt">base_size=</span><span class="dv">9</span>, <span class="dt">base_family=</span><span class="st">&quot;Source Sans Pro Light&quot;</span>) {
   ret &lt;-<span class="st"> </span><span class="kw">theme_bw</span>(base_size, base_family) +<span class="st"> </span>
@@ -347,23 +364,48 @@ add.stars &lt;-<span class="st"> </span>function(x) {
 </div>
 <div id="general-information-from-the-survey" class="section level1">
 <h1>General information from the survey</h1>
+<p>How many times did respondents loop through the country questions?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(survey.id) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">loops =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">do</span>(<span class="kw">data.frame</span>(<span class="kw">table</span>(.$loops, <span class="dt">dnn=</span><span class="st">&quot;Countries&quot;</span>))) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> Freq /<span class="st"> </span><span class="kw">sum</span>(Freq))</code></pre>
+<pre><code>##   Countries Freq       prop
+## 1         1  415 0.86458333
+## 2         2   52 0.10833333
+## 3         3   10 0.02083333
+## 4         4    3 0.00625000</code></pre>
+<p>How did respondents take the survey?</p>
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(survey.id) %&gt;%
+<span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span>) %&gt;%<span class="st">  </span><span class="co"># Select each organization's first country</span>
+<span class="st">  </span><span class="kw">group_by</span>(survey.method) %&gt;%
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">num =</span> <span class="kw">n</span>()) %&gt;%
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> num /<span class="st"> </span><span class="kw">sum</span>(num))</code></pre>
+<pre><code>## Source: local data frame [3 x 3]
+## 
+##   survey.method   num       prop
+##           (chr) (int)      (dbl)
+## 1      LinkedIn     3 0.00625000
+## 2        Online   463 0.96458333
+## 3         Phone    14 0.02916667</code></pre>
 <p>How many respondents answered at least one free response question?</p>
-<pre class="sourceCode r"><code class="sourceCode r">responses.all %&gt;%
+<pre class="sourceCode r"><code class="sourceCode r">responses.full %&gt;%
 <span class="st">  </span><span class="kw">select</span>(Q3<span class="fl">.10</span>:Q3<span class="fl">.17</span>, Q3<span class="fl">.24</span>.Text, Q3<span class="fl">.30</span>, Q4<span class="fl">.1</span>) %T&gt;%
 <span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number of free response questions:&quot;</span>, <span class="kw">ncol</span>(.), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)} %&gt;%
 <span class="st">  </span><span class="kw">rowwise</span>() %&gt;%<span class="st"> </span><span class="kw">do</span>(<span class="dt">wrote.something =</span> !<span class="kw">all</span>(<span class="kw">is.na</span>(.))) %&gt;%
 <span class="st">  </span><span class="kw">ungroup</span>() %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">wrote.something =</span> <span class="kw">unlist</span>(wrote.something)) %&gt;%
-<span class="st">  </span><span class="kw">bind_cols</span>(<span class="kw">select</span>(responses.all, survey.id)) %&gt;%
+<span class="st">  </span><span class="kw">bind_cols</span>(<span class="kw">select</span>(responses.full, survey.id)) %&gt;%
 <span class="st">  </span><span class="kw">group_by</span>(survey.id) %&gt;%
 <span class="st">  </span><span class="kw">summarise</span>(<span class="dt">wrote.something =</span> <span class="kw">ifelse</span>(<span class="kw">sum</span>(wrote.something) &gt;<span class="st"> </span><span class="dv">0</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)) %T&gt;%
 <span class="st">  </span>{<span class="kw">cat</span>(<span class="st">&quot;Number responses:&quot;</span>, <span class="kw">nrow</span>(.), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)} %&gt;%
 <span class="st">  </span><span class="kw">do</span>(<span class="kw">as.data.frame</span>(<span class="kw">table</span>(.$wrote.something, <span class="dt">dnn=</span><span class="st">&quot;Wrote something&quot;</span>))) %&gt;%
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Percent =</span> Freq /<span class="st"> </span><span class="kw">sum</span>(Freq))</code></pre>
 <pre><code>## Number of free response questions: 12 
-## Number responses: 522</code></pre>
-<pre><code>##   Wrote.something Freq   Percent
-## 1           FALSE   92 0.1762452
-## 2            TRUE  430 0.8237548</code></pre>
+## Number responses: 480</code></pre>
+<pre><code>##   Wrote.something Freq Percent
+## 1           FALSE   69 0.14375
+## 2            TRUE  411 0.85625</code></pre>
 </div>
 <div id="ngo-opinions-of-us-activity" class="section level1">
 <h1>NGO opinions of US activity</h1>
@@ -510,7 +552,10 @@ fig.embassies &lt;-<span class="st"> </span><span class="kw">arrangeGrob</span>(
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggsave</span>(fig.embassies, <span class="dt">filename=</span><span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;figures&quot;</span>, <span class="st">&quot;fig_embassies.pdf&quot;</span>),
        <span class="dt">width=</span><span class="dv">5</span>, <span class="dt">height=</span><span class="dv">2</span>, <span class="dt">units=</span><span class="st">&quot;in&quot;</span>, <span class="dt">device=</span>cairo_pdf, <span class="dt">scale=</span><span class="fl">2.5</span>)
 <span class="kw">ggsave</span>(fig.embassies, <span class="dt">filename=</span><span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;figures&quot;</span>, <span class="st">&quot;fig_embassies.png&quot;</span>),
-       <span class="dt">width=</span><span class="dv">5</span>, <span class="dt">height=</span><span class="dv">2</span>, <span class="dt">units=</span><span class="st">&quot;in&quot;</span>, <span class="dt">scale=</span><span class="fl">2.5</span>)</code></pre>
+       <span class="dt">width=</span><span class="dv">5</span>, <span class="dt">height=</span><span class="dv">2</span>, <span class="dt">units=</span><span class="st">&quot;in&quot;</span>, <span class="dt">scale=</span><span class="fl">2.5</span>)
+
+<span class="kw">saveRDS</span>(active.embassies, <span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data&quot;</span>, <span class="st">&quot;active_embassies.rds&quot;</span>))
+<span class="kw">saveRDS</span>(most.active.clean, <span class="kw">file.path</span>(PROJHOME, <span class="st">&quot;data&quot;</span>, <span class="st">&quot;most_active_embassies.rds&quot;</span>))</code></pre>
 <p>Actual US activities</p>
 <pre class="sourceCode r"><code class="sourceCode r">cols &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Q3.9_1&quot;</span>, <span class="st">&quot;Q3.9_2&quot;</span>, <span class="st">&quot;Q3.9_3&quot;</span>, <span class="st">&quot;Q3.9_4&quot;</span>, <span class="st">&quot;Q3.9_5&quot;</span>,
           <span class="st">&quot;Q3.9_6&quot;</span>, <span class="st">&quot;Q3.9_7&quot;</span>, <span class="st">&quot;Q3.9_8&quot;</span>, <span class="st">&quot;Q3.9_9&quot;</span>, <span class="st">&quot;Q3.9_10&quot;</span>)

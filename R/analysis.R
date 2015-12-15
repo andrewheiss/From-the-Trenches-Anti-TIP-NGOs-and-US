@@ -23,6 +23,7 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE,
 #' # Munge data
 # ---------------
 # Load libraries
+library(magrittr)
 library(readr)
 library(dplyr)
 library(tidyr)
@@ -45,6 +46,15 @@ responses.countries.labs <- read_csv(file.path(PROJHOME, "data_raw", "response_c
 
 Hmisc::label(responses.orgs, self=FALSE) <- responses.orgs.labs$varlabel
 Hmisc::label(responses.countries, self=FALSE) <- responses.countries.labs$varlabel
+
+# Add surevy sources
+phone <- readRDS(file.path(PROJHOME, "data_raw", "phone.rds"))
+linkedin <- readRDS(file.path(PROJHOME, "data_raw", "linkedin.rds"))
+
+responses.orgs %<>% 
+  mutate(survey.method = ifelse(survey.id %in% phone, "Phone", 
+                                ifelse(survey.id %in% linkedin, "LinkedIn", 
+                                       "Online")))
 
 # Add a nicer short ID to each response to reference in the article
 set.seed(1234)
@@ -267,13 +277,28 @@ add.stars <- function(x) {
 #-----------------------------------------
 #' # General information from the survey
 #-----------------------------------------
+#' How many times did respondents loop through the country questions?
+responses.full %>%
+  group_by(survey.id) %>%
+  summarise(loops = n()) %>%
+  do(data.frame(table(.$loops, dnn="Countries"))) %>%
+  mutate(prop = Freq / sum(Freq))
+
+#' How did respondents take the survey?
+responses.full %>%
+  group_by(survey.id) %>%
+  slice(1) %>%  # Select each organization's first country
+  group_by(survey.method) %>%
+  summarise(num = n()) %>%
+  mutate(prop = num / sum(num))
+
 #' How many respondents answered at least one free response question?
-responses.all %>%
+responses.full %>%
   select(Q3.10:Q3.17, Q3.24.Text, Q3.30, Q4.1) %T>%
   {cat("Number of free response questions:", ncol(.), "\n")} %>%
   rowwise() %>% do(wrote.something = !all(is.na(.))) %>%
   ungroup() %>% mutate(wrote.something = unlist(wrote.something)) %>%
-  bind_cols(select(responses.all, survey.id)) %>%
+  bind_cols(select(responses.full, survey.id)) %>%
   group_by(survey.id) %>%
   summarise(wrote.something = ifelse(sum(wrote.something) > 0, TRUE, FALSE)) %T>%
   {cat("Number responses:", nrow(.), "\n")} %>%

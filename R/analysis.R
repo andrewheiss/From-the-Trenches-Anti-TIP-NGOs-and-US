@@ -36,6 +36,8 @@ library(Cairo)
 library(grid)
 library(vcd)
 library(countrycode)
+library(maptools)
+library(rgdal)
 
 # Load data and add labels
 # TODO: Use non-unicode-mangled data
@@ -208,6 +210,28 @@ country.indexes <- responses.full %>%
   ungroup() %>%
   arrange(desc(num.responses))
 
+# Load map data
+if (!file.exists(file.path(PROJHOME, "data_external", "map_data", 
+                           "ne_110m_admin_0_countries.VERSION.txt"))) {
+  map.url <- paste0("http://www.naturalearthdata.com/", 
+                    "http//www.naturalearthdata.com/download/110m/cultural/", 
+                    "ne_110m_admin_0_countries.zip")
+  map.tmp <- file.path(PROJHOME, "data_external", basename(map.url))
+  download.file(map.url, map.tmp)
+  unzip(map.tmp, exdir=file.path(PROJHOME, "data_external", "map_data"))
+  unlink(map.tmp)
+}
+
+countries.map <- readOGR(file.path(PROJHOME, "data_external", "map_data"), 
+                         "ne_110m_admin_0_countries")
+countries.robinson <- spTransform(countries.map, CRS("+proj=robin"))
+countries.ggmap <- fortify(countries.robinson, region="iso_a3") %>%
+  filter(!(id %in% c("ATA", -99))) %>%  # Get rid of Antarctica and NAs
+  mutate(id = ifelse(id == "GRL", "DNK", id))  # Greenland is part of Denmark
+
+# All possible countries (to fix the South Sudan issue)
+possible.countries <- data_frame(id = unique(as.character(countries.ggmap$id)))
+
 
 # Save data
 # TODO: Make responses.full more anonymous before making it public
@@ -234,6 +258,20 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
           panel.margin=unit(1, "lines"), legend.key.size=unit(.7, "line"),
           legend.key=element_blank())
   
+  ret
+}
+
+# For maps
+theme_blank_map <- function(base_size=12, base_family="Source Sans Pro Light") {
+  ret <- theme_bw(base_size, base_family) + 
+    theme(panel.background = element_rect(fill="#ffffff", colour=NA),
+          title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
+          panel.border=element_blank(), axis.line=element_blank(),
+          panel.grid=element_blank(), axis.ticks=element_blank(),
+          axis.title=element_blank(), axis.text=element_blank(),
+          legend.text=element_text(size=rel(0.7), family="Source Sans Pro Light"),
+          legend.title=element_text(size=rel(0.7), family="Source Sans Pro Semibold"),
+          strip.text=element_text(size=rel(1), family="Source Sans Pro Semibold"))
   ret
 }
 
@@ -311,6 +349,67 @@ responses.full %>%
 # --------------------
 #' # Sector overview
 # --------------------
+#' ## Location
+#' Where are these NGOs based?
+hq.countries <- responses.full %>%
+  group_by(survey.id) %>%
+  slice(1) %>%
+  ungroup() %>%
+  mutate(id = countrycode(home.country, "country.name", "iso3c"),
+         id = ifelse(home.country == "Kosovo", "KOS", id)) %>%
+  group_by(id) %>%
+  summarize(num.ngos = n()) %>%
+  ungroup() %>%
+  right_join(possible.countries, by="id") %>%
+  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos)) %>%
+  arrange(desc(num.ngos)) %T>%
+  {print(head(.))}
+
+hq.map <- ggplot(hq.countries, aes(fill=num.ceiling, map_id=id)) +
+  geom_map(map=countries.ggmap, size=0.15, colour="black") + 
+  expand_limits(x=countries.ggmap$long, y=countries.ggmap$lat) + 
+  coord_equal() +
+  scale_fill_gradient(low="grey95", high="grey20", breaks=seq(2, 10, 2), 
+                      labels=c(paste(seq(2, 8, 2), "  "), "10+"),
+                      na.value="#FFFFFF", name="NGOs based in country",
+                      guide=guide_colourbar(ticks=FALSE, barwidth=6)) + 
+  theme_blank_map() +
+  theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
+        strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
+hq.map
+
+#' Where do these NGOs work?
+work.countries <- responses.full %>%
+  mutate(id = countrycode(work.country, "country.name", "iso3c"),
+         id = ifelse(work.country == "Kosovo", "KOS", id)) %>%
+  group_by(id) %>%
+  summarize(num.ngos = n()) %>%
+  ungroup() %>%
+  right_join(possible.countries, by="id") %>%
+  mutate(num.ceiling = ifelse(num.ngos >= 10, 10, num.ngos)) %>%
+  arrange(desc(num.ngos)) %T>%
+  {print(head(.))}
+
+work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
+  geom_map(map=countries.ggmap, size=0.15, colour="black") + 
+  expand_limits(x=countries.ggmap$long, y=countries.ggmap$lat) + 
+  coord_equal() +
+  scale_fill_gradient(low="grey95", high="grey20", breaks=seq(2, 10, 2), 
+                      labels=c(paste(seq(2, 8, 2), "  "), "10+"),
+                      na.value="#FFFFFF", name="NGOs working in country",
+                      guide=guide_colourbar(ticks=FALSE, barwidth=6)) + 
+  theme_blank_map() +
+  theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
+        strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
+work.map
+
+#' Combined maps
+fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
+ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
+       width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
+ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
+       width=6, height=3, units="in", scale=1.5)
+
 #' ## Government restrictions and oversight
 #' Do members of the government or ruling party sit on the NGO's board?
 responses.full %>%

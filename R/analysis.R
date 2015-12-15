@@ -100,7 +100,9 @@ improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
 
 # Cho data
 # TODO: Someday get this directly from the internet, like Freedom House data
-# http://www.economics-human-trafficking.org/data-and-reports.html
+#   * http://www.economics-human-trafficking.org/data-and-reports.html
+# Except that data doesn't include tier scores, so that would need to come 
+# from somewhere else...
 tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
   group_by(countryname) %>%
   summarise(avg_tier = mean(tier, na.rm=TRUE),
@@ -111,11 +113,17 @@ tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
   mutate(countryname = countrycode(countryname, "country.name", "country.name"))
 
 # Democracy (Freedom House)
-fh.url <- "https://freedomhouse.org/sites/default/files/Individual%20Country%20Ratings%20and%20Status%2C%201973-2015%20%28FINAL%29.xls"
-fh.tmp <- paste0(tempdir(), basename(fh.url))
-download.file(fh.url, fh.tmp)
+if (!file.exists(file.path(PROJHOME, "data_external", "freedom_house.xls"))) {
+  fh.url <- paste0("https://freedomhouse.org/sites/default/files/", 
+                   "Individual%20Country%20Ratings%20and%20Status%2C%20",
+                   "1973-2015%20%28FINAL%29.xls")
+  fh.tmp <- file.path(PROJHOME, "data_external", "freedom_house.xls")
+  download.file(fh.url, fh.tmp)
+}
 
-fh.raw <- read_excel(fh.tmp, skip=6)
+fh.raw <- read_excel(file.path(PROJHOME, "data_external", "freedom_house.xls"), 
+                     skip=6)
+
 # Calculate the number of years covered in the data (each year has three columns)
 num.years <- (ncol(fh.raw) - 1)/3
 

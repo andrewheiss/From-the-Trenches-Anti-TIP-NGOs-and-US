@@ -520,6 +520,14 @@ orgs.only %>%
             min.time = min(Q2.1, na.rm=TRUE),
             max.time = max(Q2.1, na.rm=TRUE))
 
+#' How much do organizations know about trafficking in the countries they work in?
+responses.full %>%
+  group_by(Q3.3) %>%
+  summarise(num = n()) %>%
+  filter(!is.na(Q3.3)) %>%
+  mutate(prop = num / sum(num)) %T>%
+  {print(sum(.$num))}
+
 #' What trafficking issues is the organization involved with?
 cols <- c("Q2.2_1", "Q2.2_2", "Q2.2_3", "Q2.2_4")
 labels <- c("Organ trafficking", "Sex trafficking",
@@ -539,10 +547,6 @@ fig.issues <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
                      breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
   coord_flip() + theme_clean()
 fig.issues
-ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
-ggsave(fig.issues, filename=file.path(PROJHOME, "figures", "fig_issues.png"),
-       width=6.5, height=5, units="in")
 
 #' How many NGOs deal with both sex and labor trafficking?
 orgs.only %>% 
@@ -551,6 +555,10 @@ orgs.only %>%
          both = sex == 1 & labor == 1) %>% 
   summarise(sex = sum(sex), labor = sum(labor), 
             num.both = sum(both), prop.both = num.both / issues$denominator)
+
+#' Other responses about issues NGOs deal with
+# orgs.only %>% filter(!is.na(Q2.2_4_TEXT)) %>% 
+#   select(clean.id, Q2.2_4_TEXT) %>% View
 
 #' Which kinds of victims do NGOs help?
 cols <- c("Q2.3_1", "Q2.3_2", "Q2.3_3")
@@ -570,10 +578,28 @@ fig.victims <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
                      breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
   coord_flip() + theme_clean()
 fig.victims
-ggsave(fig.victims, filename=file.path(PROJHOME, "figures", "fig_victims.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
-ggsave(fig.victims, filename=file.path(PROJHOME, "figures", "fig_victims.png"),
-       width=6.5, height=5, units="in")
+
+#' Other responses about victims NGOs deal with
+# orgs.only %>% filter(!is.na(Q2.3_3_TEXT)) %>% 
+#   select(clean.id, Q2.3_3_TEXT) %>% View
+
+#' How are the types of victims distributed between the main trafficking issues?
+victims.issues <- orgs.only %>% 
+  select(organs=Q2.2_1, sex=Q2.2_2, labor=Q2.2_3, other.issue=Q2.2_4, 
+         children=Q2.3_1, adults=Q2.3_2, other.victims=Q2.3_3) %>%
+  mutate_each(funs(!is.na(.)))
+
+victims.issues %>%
+  filter(children) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
+
+victims.issues %>%
+  filter(adults) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
 
 #' Which efforts do NGOs focus on?
 cols <- c("Q2.4_1", "Q2.4_2", "Q2.4_3", "Q2.4_4", "Q2.4_5")
@@ -585,7 +611,8 @@ efforts$denominator  # Number of responses
 efforts$df
 
 plot.data <- efforts$df %>% 
-  mutate(Answer=factor(Answer, levels=rev(labels), ordered=TRUE))
+  arrange(plot.pct) %>%
+  mutate(Answer=factor(Answer, levels=Answer, ordered=TRUE))
 
 fig.efforts <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
   geom_bar(aes(y=plot.pct), stat="identity") + 
@@ -594,10 +621,40 @@ fig.efforts <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
                      breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
   coord_flip() + theme_clean()
 fig.efforts
-ggsave(fig.efforts, filename=file.path(PROJHOME, "figures", "fig_efforts.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
-ggsave(fig.efforts, filename=file.path(PROJHOME, "figures", "fig_efforts.png"),
-       width=6.5, height=5, units="in")
+
+#' Other responses about efforts NGOs engage in
+# orgs.only %>% filter(!is.na(Q2.4_5_TEXT)) %>%
+#   select(clean.id, Q2.4_5_TEXT) %>% View
+
+#' How are the types of efforts distributed between the main trafficking issues?
+efforts.issues <- orgs.only %>% 
+  select(prevention=Q2.4_1, legal=Q2.4_2, protection=Q2.4_3, assistance=Q2.4_4, 
+         sex=Q2.2_2, labor=Q2.2_3) %>%
+  mutate_each(funs(!is.na(.)))
+
+efforts.issues %>%
+  filter(prevention) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
+
+efforts.issues %>%
+  filter(legal) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
+
+efforts.issues %>%
+  filter(protection) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
+
+efforts.issues %>%
+  filter(assistance) %>%
+  summarise(num = n(),
+            sex = sum(sex), sex.prop = sex / n(),
+            labor = sum(labor), labor.prop = labor / n())
 
 
 #' ## Government restrictions and oversight
@@ -631,6 +688,10 @@ responses.full %>%
   summarise(num = n()) %>%
   arrange(desc(num)) %T>%
   {cat("Number of countries:", nrow(.), "\n")}
+
+#' Explanations of restrictions
+# responses.full %>% filter(!is.na(Q3.30)) %>%
+#   select(clean.id, Q3.30) %>% View
 
 
 # --------------------------------

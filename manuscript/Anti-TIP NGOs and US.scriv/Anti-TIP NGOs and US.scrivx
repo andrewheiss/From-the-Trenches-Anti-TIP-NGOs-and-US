@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-15 23:02:43 -0500" ModID="D5A5AE16-9E57-4715-9864-F3492DE10273">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-15 23:22:02 -0500" ModID="87E6BAAA-40BF-4E4C-85B6-296D8443CEC0">
     <Binder>
         <BinderItem ID="0" UUID="3071AABA-3A75-4D2D-A41C-D36D468CB0A5" Type="DraftFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Draft</Title>
@@ -57,7 +57,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>3505,0</TextSelection>
+                        <TextSelection>1805,0</TextSelection>
                         <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>

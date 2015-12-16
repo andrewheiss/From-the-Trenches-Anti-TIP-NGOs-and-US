@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-15 16:19:14 -0500" ModID="229CE883-8CAF-4C7B-9042-9C7FD529E14B">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.7-26106" Device="Andrews-MacBook-Pro" Modified="2015-12-15 23:02:43 -0500" ModID="D5A5AE16-9E57-4715-9864-F3492DE10273">
     <Binder>
         <BinderItem ID="0" UUID="3071AABA-3A75-4D2D-A41C-D36D468CB0A5" Type="DraftFolder" Created="2015-10-27 12:11:22 -0400" Modified="2015-10-27 12:11:22 -0400">
             <Title>Draft</Title>
@@ -49,7 +49,7 @@
                         <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="6" UUID="C01DD2AC-3220-4597-8B1B-C0AF5D553C4E" Type="Text" Created="2015-10-27 12:12:32 -0400" Modified="2015-12-14 23:24:03 -0500">
+                <BinderItem ID="6" UUID="C01DD2AC-3220-4597-8B1B-C0AF5D553C4E" Type="Text" Created="2015-10-27 12:12:32 -0400" Modified="2015-12-15 23:02:42 -0500">
                     <Title>Data and methods</Title>
                     <MetaData>
                         <StatusID>1</StatusID>
@@ -57,11 +57,11 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>1115,150</TextSelection>
+                        <TextSelection>3505,0</TextSelection>
                         <Target Type="Words" Notify="No">750</Target>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem ID="7" UUID="3DB0A2CC-76D4-453B-BB93-30C0E839770D" Type="Text" Created="2015-10-27 12:12:36 -0400" Modified="2015-12-15 16:18:53 -0500">
+                <BinderItem ID="7" UUID="3DB0A2CC-76D4-453B-BB93-30C0E839770D" Type="Text" Created="2015-10-27 12:12:36 -0400" Modified="2015-12-15 22:57:06 -0500">
                     <Title>Findings</Title>
                     <MetaData>
                         <StatusID>1</StatusID>
@@ -69,7 +69,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>2014,0</TextSelection>
+                        <TextSelection>26456,0</TextSelection>
                         <Target Type="Words" Notify="No">3500</Target>
                     </TextSettings>
                 </BinderItem>
@@ -136,7 +136,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <MediaSettings>
-                        <CurrentPDFPage>30</CurrentPDFPage>
+                        <CurrentPDFPage>119</CurrentPDFPage>
                     </MediaSettings>
                 </BinderItem>
                 <BinderItem ID="13" UUID="D8815AD8-804D-41BB-B90E-A50EFC5CEC0D" Type="PDF" Created="2015-05-19 10:08:50 -0400" Modified="2015-05-19 10:08:50 -0400">
@@ -147,7 +147,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <MediaSettings>
-                        <CurrentPDFPage>4</CurrentPDFPage>
+                        <CurrentPDFPage>5</CurrentPDFPage>
                     </MediaSettings>
                 </BinderItem>
             </Children>
@@ -199,7 +199,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2015-10-27 12:11:21 -0400" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="217" Characters="1397" Date="2015-12-15 00:01:14 -0500"></PreviousSession>
+        <PreviousSession Words="427" Characters="2854" Date="2015-12-15 21:07:52 -0500"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

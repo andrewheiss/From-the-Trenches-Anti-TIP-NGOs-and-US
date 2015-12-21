@@ -1,4 +1,4 @@
-source(file.path(PROJHOME, "R", "summary_table.R"))
+source(file.path(PROJHOME, "R", "table_functions.R"))
 
 # --------------------------------------
 # Table for "What do anti-TIP NGOs do?

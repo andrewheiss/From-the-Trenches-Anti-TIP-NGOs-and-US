@@ -656,6 +656,78 @@ efforts.issues %>%
             sex = sum(sex), sex.prop = sex / n(),
             labor = sum(labor), labor.prop = labor / n())
 
+#' ## Work with other actors
+#' Which institutions have been active in anti-TIP work?
+cols <- c("Q3.5_1", "Q3.5_2", "Q3.5_3", "Q3.5_4", "Q3.5_5")
+labels <- c("The national government", "NGOs and civil society",
+            "Foreign governments", "International organizations", "Other")
+
+other.actors <- separate.answers.summary(responses.full, cols, labels)
+other.actors$denominator  # Number of responses
+other.actors$df
+
+plot.data <- other.actors$df %>% 
+  arrange(plot.pct) %>%
+  mutate(Answer=factor(Answer, levels=Answer, ordered=TRUE))
+
+fig.other.actors <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.other.actors
+
+#' Other responses
+others <- responses.full %>% select(survey.id, starts_with("Q3.5_5_")) %>%
+  filter(!is.na(Q3.5_5_TEXT)) %>%
+  # Convert values to numeric
+  mutate_each(funs(as.numeric(levels(.))[.]), -c(survey.id, Q3.5_5_TEXT))
+
+cols <- c(c("Q3.5_5_LawEnforcement", "Q3.5_5_Education", 
+            "Q3.5_5_DomesticGovernment", "Q3.5_5_ReligiousGroups", 
+            "Q3.5_5_Embassies", "Q3.5_5_InternationalGroups", 
+            "Q3.5_5_NGOs", "Q3.5_5_Other", "Q3.5_5_Media", 
+            "Q3.5_5_ExperienceofSurviviors", 
+            "Q3.5_5_PrivateSector", "Q3.5_5_Unions"))
+
+labels <- c("Law Enforcement", "Education", 
+            "Domestic Government", "Religious Groups", 
+            "Embassies", "International Groups", 
+            "NGOs", "Other", "Media", 
+            "Experience of Surviviors", 
+            "Private Sector", "Unions")
+
+(others.summary <- separate.answers.summary(others, cols, labels))
+
+#' How hard is the government working?
+responses.full %>%
+  group_by(Q3.20) %>%
+  summarise(num = n()) %>%
+  filter(!is.na(Q3.20)) %>%
+  mutate(prop = num / sum(num))
+
+#' Have NGOs used the TIP report to talk with any of these groups?
+cols <- c("Q3.21_1", "Q3.21_2", "Q3.21_3", "Q3.21_4")
+labels <- c("National government", "Another government",
+            "Other NGOs", "Other")
+
+tip.discuss <- separate.answers.summary(responses.full, cols, labels)
+tip.discuss$denominator  # Number of responses
+tip.discuss$df
+
+plot.data <- tip.discuss$df %>% 
+  arrange(plot.pct) %>%
+  mutate(Answer=factor(Answer, levels=Answer, ordered=TRUE))
+
+fig.tip.discuss <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
+  geom_bar(aes(y=plot.pct), stat="identity") + 
+  labs(x=NULL, y=NULL) + 
+  scale_y_continuous(labels = percent, 
+                     breaks = seq(0, max(round(plot.data$plot.pct, 1)), by=0.1)) + 
+  coord_flip() + theme_clean()
+fig.tip.discuss
+
 
 #' ## Government restrictions and oversight
 #' Do members of the government or ruling party sit on the NGO's board?
@@ -692,7 +764,6 @@ responses.full %>%
 #' Explanations of restrictions
 # responses.full %>% filter(!is.na(Q3.30)) %>%
 #   select(clean.id, Q3.30) %>% View
-
 
 # --------------------------------
 #' # NGO opinions of US activity

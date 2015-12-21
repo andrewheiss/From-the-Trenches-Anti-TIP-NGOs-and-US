@@ -1,4 +1,4 @@
-source(file.path(PROJHOME, "R", "summary_table.R"))
+source(file.path(PROJHOME, "R", "table_functions.R"))
 
 # Initial dataframe
 # The first row will be ignored when writing the file with cat(). This is just

@@ -7,10 +7,9 @@ author:
 - name: Judith Kelley
   affiliation: Duke University
   email: judith.kelley&#x40;duke.edu
-date: October 14, 2015
+date: December 17, 2015
 published: Incomplete Draft. Please do not cite without permission.
 ...
-
 
 The United States has also long been criticized for … {conflating anti-human trafficking advocacy and support with US foreign policy goals and diplomatic self-interest + anti-TIP efforts just another tool of American foreign policy + more on the negative backlash against US involvement in TIP + we didn't even start monitoring ourselves until 20XX} {reference Reuters article about playing with rankings of 14 different countries to keep diplomatic relations happy: http://www.reuters.com/article/2015/08/04/us-usa-humantrafficking-disputes-special-idUSKCN0Q821Y20150804}
 
@@ -39,6 +38,7 @@ What can we learn from the boomerang model - other actors using NGOs + cooptatio
 	* Economic tools
 	* Funding, sanctions
 
+Should the US be the global policeman - what do NGOs think of that role? Are they concerned that the US is so involved?
 
 # Data and methods
 
@@ -56,7 +56,6 @@ For the sake of simplicity, we do not use advanced statistical methods or models
 
 In addition to statistical analysis, we rely heavily on interpretive qualitative analysis of NGOs' free response answers—82% of respondents chose to answer at least one of the 12 open-ended questions. One of this study's primary contributions is to allow NGOs themselves to speak about their experiences, and as such, we extensively quote their responses. To maintain anonymity (even when NGOs expressed willingness to be identified), we removed all potentially identifiable information from any quotes used in this paper, indicating the source of each quote with a randomly-assigned four-digit ID number. 
 
-
 # Findings
 
 As described previously, the motivations, effectiveness, and positivity of the United States' anti-trafficking efforts have been hotly contested. In the midst of these debates, the NGOs that implement and support anti-TIP policies—organizations that advocate and lobby for local legislative changes, run shelters and safe houses, or assist with victims' legal, social, and financial needs—have generally been ignored. What do *they* think of the US's intense focus on trafficking and how are they affected by these efforts? We analyzed the results of our survey to answer three general questions about the anti-TIP NGO sector and its relationship to the United States government: 
@@ -72,7 +71,7 @@ As described previously, the motivations, effectiveness, and positivity of the U
 
 ### Where do anti-TIP NGOs work?
 
-The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly global reach ([@fig:maps]). As seen in [@fig:locations], 60% of NGOs have their headquarters in either Asia or Europe, roughly a quarter are based in North or South America, and less than 20% work out of Africa. NGOs are hardly limited to advocacy within their own countries—the majority of these organizations work in Asia (especially in trafficking hotspots like India, Nepal, Thailand, and the Philippines), with less work in Europe and the Americas. Though there are fewer NGOs *based* in Africa, a larger proportion of NGOs *work* there than in the Americas. Organizations based in the Americas, in particular, are more likely to work outside their home regions: only 50% of American NGOs work in the Americas, with 30% working in Asia and 12% in Africa. In contrast, NGOs based elsewhere are much more likely to stay close to home, as 98%, 97%, and 83% of NGOs headquartered in Asia, Africa, and Africa work in their respective regions. 
+The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly global reach ([@fig:maps]). As seen in [@fig:locations], 60% of NGOs have their headquarters in either Asia or Europe, roughly a quarter are based in North or South America, and fewer than 20% work out of Africa. NGOs are hardly limited to advocacy within their own countries—the majority of these organizations work in Asia (especially in trafficking hotspots like India, Nepal, Thailand, and the Philippines), with less work in Europe and the Americas. Though there are fewer NGOs *based* in Africa, a larger proportion of NGOs *work* there than in the Americas. Organizations based in the Americas, in particular, are more likely to work outside their home regions: only 50% of American NGOs work in the Americas, with 30% working in Asia and 12% in Africa. In contrast, NGOs based elsewhere are much more likely to stay close to home, as 98%, 97%, and 83% of NGOs headquartered in Asia, Africa, and Africa work in their respective regions. 
 
 ![Countries where anti-TIP NGOs are based and work](figures/fig_maps.pdf) {#fig:maps}
 
@@ -80,28 +79,23 @@ The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly 
 
 ### What do anti-TIP NGOs do?
 
+!INCLUDE "tables/summary_what_do.md"
+
+
 On average, anti-TIP NGOs spend a little over half of their time and resources focused specifically on fighting trafficking and assisting victims and an overwhelming majority (93%) have at least some knowledge about TIP issues in the countries they work in. Most organizations concentrate specifically on sex (85%) and labor (61%) trafficking issues, and 50% focus on both simultaneously. A handful of organizations (30, or 6%) work with human organ trafficking, and dozens of others deal with other issues such as brokered marriages, domestic servitude, illegal adoptions, and forced begging.
 
 Approximately two-thirds of NGOs serve and advocate for either children or adult trafficking victims, and many of those who work with adults specified working especially with women and young girls. No type of trafficking issue is more pronounced among different categories of victims—that is, NGOs are generally equally as likely to help both children and adults with either sex or labor trafficking. NGOs differ in their strategies and efforts in addressing trafficking. The majority of organizations (83%) advocate for prevention and improved education about TIP issues, and nearly three-fourths assist trafficking victims by engaging in direct interventions, running safe houses and shelters, operating special hotlines, helping start businesses, and providing physical and emotional health care. NGOs are also involved with less direct forms of advocacy, with 50% working with victim protection—including lobbying and legislative support—and 40% prosecuting traffickers and researching related legal issues. As with the types of victims, NGO strategies do not differ by the type of trafficking organizations address—organizations that address either sex or labor trafficking appear to offer roughly the same mix of programming.
 
-### How do anti-TIP NGOs collaborate with other actors?
+### How do anti-TIP NGOs work with other actors?
 
-No anti-TIP NGO works in isolation. Every respondent reported collaborating, partnering, or interacting with other NGOs or civil society organizations, international organizations, foreign embassies, and the national governments of the countries they work in. 
+!INCLUDE "tables/summary_how_work_others.md"
 
-* Other NGOs and CSOs
 
-* International organizations
+No anti-TIP NGO works in isolation. Every respondent reported collaborating, partnering, or interacting with other NGOs or civil society organizations, international organizations, foreign embassies, and the national governments of the countries they work in. Nearly every organization (95%) noted that other NGOs and civil society organizations actively deal with trafficking work and often partner with responding NGOs, including religious groups, charities, universities, and community organizations, and a majority of organizations (78%) report discussing the results of the annual TIP report with other NGOs, indicating further collaboration. Around two-thirds of NGOs indicated that international organizations such as the International Organization for Migration (IOM), the International Labour Organization (ILO), and the United Nations Office on Drugs and Crime (UNODC) are also active participants in anti-TIP advocacy. Less than half of respondents reported that non-American governments are involved in their countries.
 
-* Embassies or foreign governments that aren't the US(?)
+We were particularly interested in the relationship between NGOs and the national governments of the countries they work in. Two-thirds of respondents (68%) state that local and national governments have been active in combatting trafficking, and more than half  (53%) report discussing TIP issues directly with the government. In general, governments appear to be helpful overall in addressing TIP policies—61% of NGOs report that the governments in their target countries work at least "somewhat hard" in working against TIP, while 20% feel that those governments have worked "very" or "extremely" hard.
 
-* National governments
-
-### Government oversight and restrictions
-
-{Connect this with the previous section, working with the government - look at link between working with national government and restrictions}
-
-In general, anti-TIP NGOs are relatively unencumbered by government regulations, with more than a third of respondents reporting that they feel unrestricted in the countries they work in. However, roughly a quarter of NGOs reported feeling either somewhat or very restricted in 66 different countries. The nature of these restrictions varied, ranging from strict legal requirements to general government antagonism or apathy toward NGO programming. In several instances, organizations reported feeling restricted because of tax code limitations on charitable advocacy, similar to the political advocacy limitations the US imposes on 501(c)(3) charities.^[Responses 1228 and 1265.] Other organizations responded that informal restrictions, such as corruption or inefficiency in the police and government bureaucracy, impose barriers to advocacy. For example, one NGO reported that "we [have] to be certified and continue to submit to monthly reporting, mandatory financial audits, site visits, social welfare approval, government regulations regarding our aftercare property, work permits for all foreign volunteers, annual reporting and additional certifications,"^[Response 1280.] while another noted that "[a]ll work must be approved and done in direct concert with government counterparts. [Our] presence in country [is] controlled and evaluated by government officials, even those who are not familiar with our work."^[Response 1157.] The burden of complying with uncertain regulations can have a direct effect on NGO effectiveness and detract from their work, limiting their ability to protect victims and prosecute offenders.^[Responses 1016, 1049, 1061, 1118, 1336, 1388, and 1389, among others.]
-
+Overall, anti-TIP NGOs are relatively unencumbered by government regulations, with more than a third of respondents reporting that they feel unrestricted in the countries they work in. However, roughly a quarter of NGOs reported feeling either somewhat or very restricted in 66 different countries. The nature of these restrictions varied, ranging from strict legal requirements to general government antagonism or apathy toward NGO programming. In several instances, organizations reported feeling restricted because of tax code limitations on charitable advocacy, similar to the political advocacy limitations the US imposes on 501(c)(3) charities.^[Responses 1228 and 1265.] Other organizations responded that informal restrictions, such as corruption or inefficiency in the police and government bureaucracy, impose barriers to advocacy. For example, one NGO reported that "we [have] to be certified and continue to submit to monthly reporting, mandatory financial audits, site visits, social welfare approval, government regulations regarding our aftercare property, work permits for all foreign volunteers, annual reporting and additional certifications,"^[Response 1280.] while another noted that "[a]ll work must be approved and done in direct concert with government counterparts. [Our] presence in country [is] controlled and evaluated by government officials, even those who are not familiar with our work."^[Response 1157.] The burden of complying with uncertain regulations can have a direct effect on NGO effectiveness and detract from their work, limiting their ability to protect victims and prosecute offenders.^[Responses 1016, 1049, 1061, 1118, 1336, 1388, and 1389, among others.]
 
 ## How do anti-TIP NGOs see and interpret the United States' anti-trafficking efforts?
 
@@ -145,10 +139,7 @@ Many NGOs do report that the US does provide much of this help and training, how
 
 US financial support to NGOs, however, appears to be uneven. Many respondents noted that US agencies tend to fund large national NGOs while ignoring smaller organizations that work more closely with trafficking victims or with local advocacy. Some noted that the funding process has become too politicized and that "unless there is someone… that influences [the funding decision]… the neediest entities rarely receive [any money]."^[Response 1238.] Others note that other countries such as Japan, Germany, and the Netherlands have given more direct and effective funding to these frontline NGOs, and some have said that they "don't even bother applying" anymore.^[Responses 1115, 1227, 1378, and 1474.] 
 
-
 ## What do anti-TIP NGOs think of the United States' efforts and what influences that opinion?
-
-
 
 With few exceptions, the experiences of the NGOs we surveyed reflect the rankings and progress in trafficking policy noted in the TIP report. … ANECDOTES FROM INDIA - India because NGOs are insular, hyper focused on local issues - country is so big
 
@@ -167,7 +158,6 @@ The majority of NGOs ascribe some importance to the US government's substantial 
 
 Check different determinants of positive/negative relationship + opinions of importance - do any of these things make NGOs like the US more or less or make them think that the US is more/less important?
 
-
 # Policy implications and conclusion
 
 Stuff here.
@@ -182,8 +172,13 @@ R Development Core Team. (2013). R: A language and environment for statistical c
 
 Wickham, H. (2009). ggplot2: Elegant graphics for data analysis. Springer New York. http://had.co.nz/ggplot2/book. Version 0.9.3.1.
 
-'TODO: Add link just to the huge analysis notebook?`
+`TODO: Add link just to the huge analysis notebook?`
 
+\newpage
+
+# Appendix: Summary of results
+
+!INCLUDE "tables/summary.md"
 
 # References
 \setlength{\parindent}{-0.2in}

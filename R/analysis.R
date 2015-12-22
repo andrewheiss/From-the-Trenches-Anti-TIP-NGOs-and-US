@@ -337,8 +337,34 @@ add.stars <- function(x) {
 #-----------------------------------------
 #' # General information from the survey
 #-----------------------------------------
-#' TODO: Response rate
+#' ## Response rate
+#' Calculating the response rate is a little tricky because of all the
+#' different ways we sent out invitations for and conducted the survey
+#' (LinkedIn, e-mail, phone). 
+#' 
+#' ### Denominator calculations
+entries.in.list <- 1421  # Organizations in the master NGO list
+no.details <- 98  # Organizations that we never tried to make any contact with ever
+bounced.invitations <- 132  # Contact information was dead; never saw the survey
+not.ngos <- 69  # Organizations that weren't NGOs
+duplicates <- 19  # Duplicate entries
 
+orgs.saw.survey <- entries.in.list - no.details - bounced.invitations
+viable.entries <- orgs.saw.survey - not.ngos - duplicates
+
+#' We assume that there were `r orgs.saw.survey` organizations that saw the link to the survey at least three times. Of those, `r not.ngos` entries were clearly not NGOs or do not work on human trafficking issues (some were government offices, others only do fundraising, etc.), and most of these organizations responded to the e-mail explaining their situation. `r duplicates` entires were duplicates of other entries (generally one entry used the foreign name and one used the English translation).
+#' 
+#' Given all this, the denominator for our survey's response rate is `r viable.entries`.
+#' 
+#' ### Numerator calculations
+num.total.responses <- nrow(responses.full %>% group_by(survey.id) %>% slice(1))
+num.us.only <- responses.full %>% group_by(work.only.us) %>%
+  summarise(num = n())
+
+#' ### Final response rate
+num.total.responses / viable.entries
+
+#' ## Other survey metadata
 #' How many times did respondents loop through the country questions?
 responses.full %>%
   group_by(survey.id) %>%

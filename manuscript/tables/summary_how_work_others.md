@@ -34,3 +34,5 @@ your country?                                                       restricted (
                                                                     Don't know (7.86%; 43)                              
 ------------------------------------------------------------------------------------------------------------------------
 
+Table: Summary of survey responses related to how anti-TIP NGOs work with other actors {#tbl:work_others}
+

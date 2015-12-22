@@ -208,3 +208,5 @@ Q4.1: Do you have any                           —                   Free respo
 additional comments?                                                                                                    
 ------------------------------------------------------------------------------------------------------------------------
 
+Table: Summary of survey responses {#tbl:full_summary}
+

@@ -48,7 +48,7 @@ generate.row.mult.responses <- function(df, question.id, question,
   # md.img <- paste0("![](", file.pdf, ")")
 
   ggsave(fig, filename=file.pdf, width=1, height=0.2)
-  ggsave(fig, filename=file.png, width=1, height=0.2)
+  ggsave(fig, filename=file.png, width=1, height=0.2, type="cairo", bg="transparent")
   
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
@@ -84,7 +84,7 @@ generate.row.single <- function(df, question.id, question, x) {
   # md.img <- paste0("![](", file.pdf, ")")
 
   ggsave(fig, filename=file.pdf, width=1, height=0.2)
-  ggsave(fig, filename=file.png, width=1, height=0.2)
+  ggsave(fig, filename=file.png, width=1, height=0.2, type="cairo", bg="transparent")
 
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
@@ -126,7 +126,7 @@ generate.row.single.num <- function(df, question.id, question, x, binwidth) {
   # md.img <- paste0("![](", file.pdf, ")")
   
   ggsave(fig, filename=file.pdf, width=1, height=0.2)
-  ggsave(fig, filename=file.png, width=1, height=0.2)
+  ggsave(fig, filename=file.png, width=1, height=0.2, type="cairo", bg="transparent")
   
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,

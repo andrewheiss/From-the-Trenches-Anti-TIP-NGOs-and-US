@@ -442,7 +442,7 @@ grid.draw(fig.maps)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
        width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
-       width=6, height=3, units="in", scale=1.5)
+       width=6, height=3, units="in", type="cairo", scale=1.5)
 
 #' Side-by-side graph of home vs. work regions
 plot.hq <- hq.regions %>%
@@ -483,7 +483,7 @@ grid.draw(fig.locations)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.pdf"),
        width=5, height=1.5, units="in", device=cairo_pdf, scale=2.5)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.png"),
-       width=5, height=1.5, units="in", scale=2.5)
+       width=5, height=1.5, units="in", type="cairo", scale=2.5)
 
 #' Where do different regional NGOs work?
 responses.full %>%
@@ -511,7 +511,7 @@ fig.time
 ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
        width=5, height=2, units="in", device=cairo_pdf)
 ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
-       width=5, height=2, units="in")
+       width=5, height=2, units="in", type="cairo")
 
 #' Summary stats of time spent
 orgs.only %>%
@@ -876,7 +876,7 @@ grid.draw(fig.embassies)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf"),
        width=5, height=2, units="in", device=cairo_pdf, scale=2.5)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png"),
-       width=5, height=2, units="in", scale=2.5)
+       width=5, height=2, units="in", type="cairo", scale=2.5)
 
 saveRDS(active.embassies, file.path(PROJHOME, "data", "active_embassies.rds"))
 saveRDS(most.active.clean, file.path(PROJHOME, "data", "most_active_embassies.rds"))
@@ -908,7 +908,7 @@ fig.activities
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.pdf"),
        width=6.5, height=5, units="in", device=cairo_pdf)
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.png"),
-       width=6.5, height=5, units="in")
+       width=6.5, height=5, units="in", type="cairo")
 
 
 # ----------------------------------
@@ -934,7 +934,7 @@ fig.us_importance
 ggsave(fig.us_importance, filename=file.path(PROJHOME, "figures", "fig_us_importance.pdf"),
        width=6.5, height=5, units="in", device=cairo_pdf)
 ggsave(fig.us_importance, filename=file.path(PROJHOME, "figures", "fig_us_importance.png"),
-       width=6.5, height=5, units="in")
+       width=6.5, height=5, units="in", type="cairo")
 
 #' Average importance by country
 importance.plot <- country.indexes %>%
@@ -958,7 +958,7 @@ fig.avg_importance
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
        width=6.5, height=5, units="in", device=cairo_pdf)
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
-       width=6.5, height=5, units="in")
+       width=6.5, height=5, units="in", type="cairo")
 
 
 #' ## Are opinions of the US's importance associated with…?

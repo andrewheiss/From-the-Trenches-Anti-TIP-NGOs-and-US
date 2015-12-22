@@ -291,5 +291,6 @@ df <- bind_rows(df, generate.row.text(responses.full, question.id,
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left", "center"), 
-                        style="multiline"), 
+                        style="multiline",
+                        caption="Summary of survey responses {#tbl:full_summary}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary.md"))

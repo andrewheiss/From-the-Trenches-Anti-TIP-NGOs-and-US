@@ -357,15 +357,15 @@ viable.entries <- orgs.saw.survey - not.ngos - duplicates
 #' Given all this, the denominator for our survey's response rate is `r viable.entries`.
 #' 
 #' ### Numerator calculations
-num.total.responses <- nrow(responses.full %>% group_by(survey.id) %>% slice(1))
-num.us.only <- responses.full %>% group_by(work.only.us) %>%
-  summarise(num = n())
+(num.total.responses <- nrow(responses.full %>% group_by(survey.id) %>% slice(1)))
 
 #' ### Final response rate
 num.total.responses / viable.entries
 
 #' ## Other survey metadata
 #' How many times did respondents loop through the country questions?
+(num.country.orgs <- nrow(responses.full))
+
 responses.full %>%
   group_by(survey.id) %>%
   summarise(loops = n()) %>%
@@ -392,6 +392,67 @@ responses.full %>%
   {cat("Number responses:", nrow(.), "\n")} %>%
   do(as.data.frame(table(.$wrote.something, dnn="Wrote something"))) %>%
   mutate(Percent = Freq / sum(Freq))
+
+#' How many organizations did not list the US as an anti-TIP actor but later
+#' indicated US support?
+no.mention.us <- responses.countries %>% 
+  select(survey.id, Q3.6_c2) %>% filter(Q3.6_c2 == 0)# filter(!is.na(Q3.6_c2))
+
+inndicated.us.activity <- responses.full %>%
+  select(survey.id, Q3.8) %>% filter(Q3.8 == "Yes")
+
+sum(no.mention.us$survey.id %in% inndicated.us.activity$survey.id)
+
+#' How many organizations completed the survey after it turned to US-related questions? That's hard to tell because the US questions were in the loop, and Qualtrics does not keep completion statistics for questions potenitally hidden by display logic.
+final.qualtrics.count <- 511
+
+survey.duration.completed <- responses.full %>%
+  select(survey.id, start.time, end.time) %>%
+  group_by(survey.id) %>% slice(1) %>% ungroup() %>%
+  mutate(time.spent = end.time - start.time,
+         mins.spent = time.spent / 60)
+
+median(as.numeric(survey.duration.completed$mins.spent))
+
+survey.duration <- read_csv(file.path(PROJHOME, "data_raw", "response_times.csv")) %>%
+  mutate(pct = num / sum(num),
+         cum.num = cumsum(num),
+         validish.num = sum(num) - cum.num) %T>%
+  {print(head(.))}
+
+longer.than.five <- filter(survey.duration, minutes_spent==6)$validish.num
+
+#' We attempted to estimate the post-US completion rate in two ways. First, we 
+#' counted the number of respondents that spent more than 5 minutes taking the 
+#' survey (assuming that is sufficient time to make it to the US-focused 
+#' questions), yielding `r longer.than.five` respondents, which is `r 
+#' longer.than.five - final.qualtrics.count` more than the final number of 
+#' organizations (`r final.qualtrics.count`). (Sidenote:
+#' `r final.qualtrics.count` is bigger than the final official count of `r 
+#' num.total.responses` because we filtered out US-only responses completed
+#' prior to adding internal validation logic and we removed duplicate or
+#' invalid responses prior to analysis) However, because the survey filtered
+#' out organizations that only work in the US, most respondents were let out of
+#' the survey early. Assuming those who took more than 5 minutes completed the 
+#' survey, we had a completion rate of 
+#' `r round(final.qualtrics.count / longer.than.five, 3) * 100`%.
+
+pct.completed <- read_csv(file.path(PROJHOME, "data_raw", "pct_completed.csv")) %>%
+  mutate(pct = num / sum(num))
+
+more.than.20 <- sum(filter(pct.completed, pct_complete >= 0.2)$num)
+
+#' Second, we looked at overall completion rates, which again are not entirely 
+#' accurate because of Qualtrics' internal question looping logic—i.e., 
+#' organizations that completed the full survey are only internally marked as 
+#' completing 20-30% of it. `r more.than.20` organizations completed at least 
+#' 20% of the survey. Assuming at least 20% represents approximate survey 
+#' completion, we had a completion rate of `r round(final.qualtrics.count / 
+#' more.than.20, 3) * 100`%.
+#' 
+#' Thus, given that we filtered out all US-only NGOs in our response rate
+#' calculations, and given that we cannot precisely know the true number of
+#' survey dropouts, we upwardly bias our completion rate estimate to 90ish%.
 
 
 # --------------------

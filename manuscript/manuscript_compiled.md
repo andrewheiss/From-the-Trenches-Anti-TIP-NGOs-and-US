@@ -58,7 +58,7 @@ In addition to statistical analysis, we rely heavily on interpretive qualitative
 
 # Findings
 
-As described previously, the motivations, effectiveness, and positivity of the United States' anti-trafficking efforts have been hotly contested. In the midst of these debates, the NGOs that implement and support anti-TIP policies—organizations that advocate and lobby for local legislative changes, run shelters and safe houses, or assist with victims' legal, social, and financial needs—have generally been ignored. What do *they* think of the US's intense focus on trafficking and how are they affected by these efforts? We analyzed the results of our survey to answer three general questions about the anti-TIP NGO sector and its relationship to the United States government: 
+As described previously, the motivations, effectiveness, and positivity of the United States' anti-trafficking efforts have been hotly contested. In the midst of these debates, the NGOs that implement and support anti-TIP policies—organizations that advocate and lobby for local legislative changes, run shelters and safe houses, or assist with victims' legal, social, and financial needs—have generally been ignored. What do *they* think of the US's intense focus on trafficking and how are *they* affected by these efforts? We analyzed the results of our survey to answer three general questions about the anti-TIP NGO sector and its relationship to the United States government: 
 
 1. What does the anti-TIP NGO sector look like and what kind of work do they do?
 2. How do anti-TIP NGOs see and interpret the United States' anti-trafficking efforts?
@@ -138,22 +138,40 @@ US financial support to NGOs, however, appears to be uneven. Many respondents no
 
 ## What do anti-TIP NGOs think of the United States' efforts and what influences that opinion?
 
-With few exceptions, the experiences of the NGOs we surveyed reflect the rankings and progress in trafficking policy noted in the TIP report. … ANECDOTES FROM INDIA - India because NGOs are insular, hyper focused on local issues - country is so big
+!INCLUDE "tables/summary_us_opinions.md"
 
 ### Importance
 
-The majority of NGOs ascribe some importance to the US government's substantial global anti-TIP work (see [@fig:us_importance]). More than half of respondents (61%) report that the US is at least a somewhat important actor in the countries they work in, with over a quarter of all NGOs saying that the US is the *most* important. Many organizations emphasize the US's crucial role in their work, and some go so far as to say that "none of our success would have been possible without the TIP report" and other American support.^[Response 1509.] Only 13% of respondents claim that the US does not play an important role—some organizations noted that US involvement in human trafficking has "very little to [no impact]" and that it "doesn't make much difference,"^[Response 1254.] and that the US embassy often seems "at least ambivalent, [and] at worst disinterested" and shows "little real interest other than meaningless talk and unsubstantiated promises."^[Response 1221.] Opinions of American importance vary by country as well. [@fig:avg_importance] displays the average level of reported US importance from NGOs in countries with at least 10 responses. NGOs in most developing countries report average US importance, while more developed countries like Canada and the United Kingdom ascribe less importance to the US, perhaps indicative of a diminished demand for American anti-TIP assistance in these countries. 
+The majority of NGOs ascribe some importance to the US government's substantial global anti-TIP work (see [@tbl:us_opinions]). More than half of respondents (61%) report that the US is at least a somewhat important actor in the countries they work in, with over a quarter of all NGOs saying that the US is the *most* important. Many organizations emphasize the US's crucial role in their work, and some go so far as to say that "none of our success would have been possible without the TIP report" and other American support.^[Response 1509.] Only 13% of respondents claim that the US does not play an important role—some organizations noted that US involvement in human trafficking has "very little to [no impact]" and that it "doesn't make much difference,"^[Response 1254.] and that the US embassy often seems "at least ambivalent, [and] at worst disinterested" and shows "little real interest other than meaningless talk and unsubstantiated promises."^[Response 1221.] 
 
-`TODO: Explain Nepal, possibly lower threshold down from 10 responses`
+!INCLUDE "tables/summary_importance_stats.md"
 
-![Responses to "Overall, how important a role would you say that the United States or its embassy have played in fighting trafficking in (country X) over the last 10–15 years?"](figures/fig_us_importance.pdf) {#fig:us_importance}
+Despite its preeminence in anti-TIP advocacy, opinions of American importance are clearly varied. We offer a collection of statistical associations to attempt to explain some of the variation in opinions (see [@tbl:importance_stats]). As we warned earlier, in the absence of experimental data, these findings are merely correlations and as such, we do not assert causality. However, we can see some inklings of the determinants of NGO opinions of US importance. We observe associations between both country- and organization-level characteristics and NGO opinions of US-led anti-TIP advocacy.
+
+Opinions of American importance vary by the country NGOs work in. [@fig:avg_importance] displays the average level of reported US importance from NGOs in countries with at least 10 responses. On average, NGOs in most developing countries tend to attribute some importance to the US, while more developed countries like Canada and the United Kingdom ascribe the least importance, perhaps indicative of a diminished demand for American anti-TIP assistance in these countries. This association holds up when looking at the level of democratic development in these countries. On average, NGOs working in countries with worse civil rights and political liberties are more likely to see the US as the most important anti-TIP actor in that country, and the overall differences between average total freedom across the possible responses are statistically significant. 
 
 ![Average importance of US anti-TIP efforts (error bars indicate standard deviations)](figures/fig_avg_importance.pdf) {#fig:avg_importance}
+
+The severity of human trafficking in these countries is also associated with NGO opinions of importance. NGOs that think the US is the most important anti-TIP actor tend to work in countries with worse average TIP report tier ratings, while organizations that see the US as less important tend to work in countries with better average ratings. These country averages only capture the US State Department's opinion of the country's status and do not show any changes over time or reflect improvements in the actual TIP policy environment. Improvements in tier ratings (that is, the difference between a country's first recorded rating and its most recent rating) are not associated with differences in opinion—there is no statistically significant difference in average improvement in tier ratings across the range of opinions of US importance. Improvements in TIP policies (as measured by the 3P index), on the other hand, are tentatively associated with opinions of American importance, with NGOs reporting greater importance in countries with larger improvements in observed policies. Finally, the amount of TIP funding granted to the countries NGOs work in is strongly associated with opinions of importance—organizations are significantly more likely to thing that the US is an important actor if they work in countries receiving more anti-TIP funding.
+
+Money also influences opinions at an organizational level. The majority of NGOs that report receiving funding directly from the US feel that it is the most important anti-TIP actor, and the association between funding and opinion of importance is strongly significant. Having any kind of encounter or involvement with the US embassy, including direct contact, meetings, or other types of cooperation, is associated with higher opinions of US importance. NGOs that reported that the US was not an important actor were more likely to have not been involved with the US. Importantly, direct experience with the US appears to be more strongly associated with opinions than simple connections to the US—NGOs that are headquartered in the US are not significantly different from their foreign counterparts in their opinions of American importance.
 
 
 ### Positivity
 
-Check different determinants of positive/negative relationship + opinions of importance - do any of these things make NGOs like the US more or less or make them think that the US is more/less important?
+¶ Anecdotes about positivity
+
+![Average opinions of US positivity in anti-TIP efforts (error bars indicate standard deviations)](figures/fig_avg_positivity.pdf) {#fig:avg_positivity}
+
+¶ Parallel analysis of associations of positivity - limited this time because of question censoring
+
+!INCLUDE "tables/summary_positivity_stats.md"
+
+¶ Country, democracy
+
+¶ Tier, improvement, Cho, funding
+
+¶ Organization funding, interaction, HQ
 
 # Policy implications and conclusion
 

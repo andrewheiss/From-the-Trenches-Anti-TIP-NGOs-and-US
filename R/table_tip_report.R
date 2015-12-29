@@ -1,8 +1,8 @@
 source(file.path(PROJHOME, "R", "table_functions.R"))
 
-# --------------------------------------
-# Table for "What do anti-TIP NGOs do?
-# --------------------------------------
+# ---------------------------------------
+# Table for "What do anti-TIP NGOs do?"
+# ---------------------------------------
 # Initial dataframe
 df <- data_frame(Question = NA, ` ` = NA,
                  Summary = NA, `Number of responses` = NA)

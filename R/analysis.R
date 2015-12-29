@@ -397,6 +397,12 @@ responses.full %>%
   do(as.data.frame(table(.$wrote.something, dnn="Wrote something"))) %>%
   mutate(Percent = Freq / sum(Freq))
 
+#' Export free response questions for manual analysis
+responses.full %>% 
+  select(survey.id, clean.id, home.country, work.country, 
+         Q3.10:Q3.13, Q3.14:Q3.17, Q3.24.Text, Q3.30, Q4.1) %>%
+  write_csv(path=file.path(PROJHOME, "data", "free_responses.csv"))
+
 #' How many organizations did not list the US as an anti-TIP actor but later
 #' indicated US support?
 no.mention.us <- responses.countries %>% 

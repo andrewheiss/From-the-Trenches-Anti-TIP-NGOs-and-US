@@ -29,7 +29,9 @@ responses.countries <- responses.countries.bad %>%
   select(-c(Q3.5_5_TEXT, Q3.10:Q3.13, Q3.14:Q3.17, Q3.18_4_TEXT, 
             Q3.21_4_TEXT, Q3.24.Text, Q3.30)) %>%  # Get rid of bad columns
   left_join(responses.countries.good, by="survey.id") %>%  # Add clean columns
-  select_(.dots=colnames(responses.countries.bad))  # Maintain original column order
+  select_(.dots=colnames(responses.countries.bad)) %>%  # Maintain original column order
+  group_by(survey.id, loop.number) %>% 
+  slice(1) %>% ungroup()  # left_join() duplicates some rows inexplicably
 
 
 # Write files

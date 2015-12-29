@@ -5,6 +5,7 @@ data/id_lookup*
 *WILL_BE_OVERWRITTEN*
 # Temporary
 data/*.rds
+data/free_responses.csv
 
 # Manuscript output
 manuscript/*.html

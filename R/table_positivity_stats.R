@@ -71,7 +71,7 @@ fig.positivity.fund.country <- ggplot(df.positivity, aes(x=positivity.factor, y=
 
 fund.country.ttest <- t.test(log.total.funding ~ positivity.factor, data=df.positivity)
 
-df <- bind_rows(df, generate.stats.row("Change in TIP policy index", 
+df <- bind_rows(df, generate.stats.row("Country received US funding for TIP issues", 
                                        fig.positivity.fund.country, 
                                        fund.country.ttest, "positivity_fund_country"))
 
@@ -96,7 +96,7 @@ funding.chi <- df.positivity %>%
   xtabs(~ positivity.factor + received.funding, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization received US funding", 
+df <- bind_rows(df, generate.stats.row("Organization received US funding (dark bars = yes)", 
                                        fig.positivity.funding, 
                                        funding.chi, "positivity_funding"))
 
@@ -121,7 +121,7 @@ interaction.chi <- df.positivity %>%
   xtabs(~ positivity.factor + us.involvement, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization interacted with the US", 
+df <- bind_rows(df, generate.stats.row("Organization interacted with the US (dark bars = yes)", 
                                        fig.positivity.interaction, 
                                        interaction.chi, "positivity_interaction"))
 
@@ -146,7 +146,7 @@ hq.chi <- df.positivity %>%
   xtabs(~ positivity.factor + us.hq, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization is based in the US", 
+df <- bind_rows(df, generate.stats.row("Organization is based in the US (dark bars = yes)", 
                                        fig.positivity.hq, 
                                        hq.chi, "positivity_funding"))
 

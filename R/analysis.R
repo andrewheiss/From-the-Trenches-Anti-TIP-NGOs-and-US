@@ -91,14 +91,10 @@ responses.all <- responses.orgs %>%
 #'     Slowed down = -1; Don't know = NA
 importance <- data_frame(Q3.19 = levels(responses.countries$Q3.19),
                          importance = c(2, 1, 0, NA))
-importance.levels <- data_frame(start=c(0, 1, 2),
-                                end=c(1, 2, 3),
-                                level=c("Not important", "Somewhat important", 
-                                        "Most important"),
-                                level.ordered=factor(level, levels=level, ordered=TRUE))
 
 positivity <- data_frame(Q3.25 = levels(responses.countries$Q3.25),
                          positivity = c(-1, 1, 0, NA))
+
 improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
                           improvement = c(1, 0, -1, NA))
 
@@ -1038,20 +1034,18 @@ importance.plot <- country.indexes %>%
                                 ordered=TRUE)) 
 
 fig.avg_importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
-  geom_rect(data=importance.levels, aes(x=NULL, y=NULL, ymin=start, ymax=end, 
-                                        xmin=0, xmax=Inf, fill=level.ordered), alpha=0.5) + 
   geom_pointrange(aes(ymax=importance_score + importance_stdev,
                       ymin=importance_score - importance_stdev)) + 
   labs(x="Country (number of responses)", 
        y="Importance of the US in anti-TIP efforts (mean)") + 
-  scale_fill_manual(values=c("grey90", "grey60", "grey30"), name=NULL) + 
-  coord_flip() + 
+  scale_y_discrete(breaks=c(0, 1, 2), labels=c("Not important", "Somewhat important", "Most important")) + 
+  coord_flip(ylim=c(0, 2)) + 
   theme_clean() + theme(legend.position="bottom")
 fig.avg_importance
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
+       width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
-       width=6.5, height=5, units="in", type="cairo")
+       width=6.5, height=3, units="in", type="cairo")
 
 
 #' ## Are opinions of the US's importance associated with…?
@@ -1423,7 +1417,8 @@ fig.us_positivity
 
 #' Average positivity by country
 positivity.plot <- country.indexes %>%
-  filter(num.responses >= 10) %>%
+  filter(num.responses >= 10,
+         positivity_score > 0) %>%
   arrange(positivity_score) %>%
   mutate(country_label = factor(work.country, levels=unique(work.country), 
                                 labels=paste0(work.country, " (", num.responses, ")"),
@@ -1434,13 +1429,14 @@ fig.avg_positivity <- ggplot(positivity.plot, aes(x=country_label, y=positivity_
                       ymin=positivity_score - positivity_stdev)) + 
   labs(x="Country (number of responses)", 
        y="Positivity of the US in anti-TIP efforts (mean)") + 
-  coord_flip(ylim=c(0, 1)) + 
+  scale_y_discrete(breaks=c(-1, 0, 1), labels=c("Negative", "Mixed", "Positive")) + 
+  coord_flip(ylim=c(-1, 1)) + 
   theme_clean() + theme(legend.position="bottom")
 fig.avg_positivity
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
+       width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),
-       width=6.5, height=5, units="in", type="cairo")
+       width=6.5, height=3, units="in", type="cairo")
 
 #' ## Are opinions of the US's positivity associated with…?
 #' ### Average tier rating 

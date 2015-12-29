@@ -40,16 +40,20 @@ library(maptools)
 library(rgdal)
 
 # Load data and add labels
-# TODO: Use non-unicode-mangled data
-load(file.path(PROJHOME, "data_raw", "responses_orgs.RData"))
-load(file.path(PROJHOME, "data_raw", "responses_countries.RData"))
-responses.orgs.labs <- read_csv(file.path(PROJHOME, "data_raw", "response_orgs_labels.csv"))
-responses.countries.labs <- read_csv(file.path(PROJHOME, "data_raw", "response_countries_labels.csv"))
+responses.orgs <- readRDS(file.path(PROJHOME, "data_raw", 
+                                    "responses_orgs_clean.rds"))
+responses.countries <- readRDS(file.path(PROJHOME, "data_raw", 
+                                         "responses_countries_clean.rds"))
+
+responses.orgs.labs <- read_csv(file.path(PROJHOME, "data_raw", 
+                                          "response_orgs_labels.csv"))
+responses.countries.labs <- read_csv(file.path(PROJHOME, "data_raw", 
+                                               "response_countries_labels.csv"))
 
 Hmisc::label(responses.orgs, self=FALSE) <- responses.orgs.labs$varlabel
 Hmisc::label(responses.countries, self=FALSE) <- responses.countries.labs$varlabel
 
-# Add surevy sources
+# Add survey sources
 phone <- readRDS(file.path(PROJHOME, "data_raw", "phone.rds"))
 linkedin <- readRDS(file.path(PROJHOME, "data_raw", "linkedin.rds"))
 

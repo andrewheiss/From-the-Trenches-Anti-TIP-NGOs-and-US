@@ -71,7 +71,7 @@ fig.importance.fund.country <- ggplot(df.importance, aes(x=importance.factor, y=
 
 fund.country.anova <- aov(log.total.funding ~ importance.factor, data=df.importance)
 
-df <- bind_rows(df, generate.stats.row("Change in TIP policy index", 
+df <- bind_rows(df, generate.stats.row("Country received US funding for TIP issues", 
                                        fig.importance.fund.country, 
                                        fund.country.anova, "importance_fund_country"))
 
@@ -96,7 +96,7 @@ funding.chi <- df.importance %>%
   xtabs(~ importance.factor + received.funding, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization received US funding", 
+df <- bind_rows(df, generate.stats.row("Organization received US funding (dark bars = yes)", 
                                        fig.importance.funding, 
                                        funding.chi, "importance_funding"))
 
@@ -121,7 +121,7 @@ interaction.chi <- df.importance %>%
   xtabs(~ importance.factor + us.involvement, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization interacted with the US", 
+df <- bind_rows(df, generate.stats.row("Organization interacted with the US (dark bars = yes)", 
                                        fig.importance.interaction, 
                                        interaction.chi, "importance_interaction"))
 
@@ -146,7 +146,7 @@ hq.chi <- df.importance %>%
   xtabs(~ importance.factor + us.hq, .) %>%
   chisq.test(.)
 
-df <- bind_rows(df, generate.stats.row("Organization is based in the US", 
+df <- bind_rows(df, generate.stats.row("Organization is based in the US (dark bars = yes)", 
                                        fig.importance.hq, 
                                        hq.chi, "importance_funding"))
 

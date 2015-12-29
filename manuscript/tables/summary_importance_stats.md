@@ -15,17 +15,17 @@ Improvement in TIP tier rating ![](figures/summary_table/importance_tier_change.
 Change in TIP policy index         ![](figures/summary_table/importance_cho.pdf)      *F* (2, 385) = 2.38, *p* =  
                                                                                       0.094                       
 
-Change in TIP policy index     ![](figures/summary_table/importance_fund_country.pdf) *F* (2, 377) = 14.17, *p* < 
-                                                                                      0.001                       
+Country received US funding    ![](figures/summary_table/importance_fund_country.pdf) *F* (2, 377) = 14.17, *p* < 
+for TIP issues                                                                        0.001                       
 
 Organization received US         ![](figures/summary_table/importance_funding.pdf)    χ^2^ (2, *N* = 389) = 41.49,
-funding                                                                               *p* < 0.001, ϕ~c~ = 0.33    
+funding (dark bars = yes)                                                             *p* < 0.001, ϕ~c~ = 0.33    
 
 Organization interacted with   ![](figures/summary_table/importance_interaction.pdf)  χ^2^ (2, *N* = 389) = 35.49,
-the US                                                                                *p* < 0.001, ϕ~c~ = 0.30    
+the US (dark bars = yes)                                                              *p* < 0.001, ϕ~c~ = 0.30    
 
 Organization is based in the     ![](figures/summary_table/importance_funding.pdf)    χ^2^ (2, *N* = 389) = 3.68, 
-US                                                                                    *p* = 0.159, ϕ~c~ = 0.10    
+US (dark bars = yes)                                                                  *p* = 0.159, ϕ~c~ = 0.10    
 ------------------------------------------------------------------------------------------------------------------
 
 Table: CAPTION HERE {#tbl:importance_stats}

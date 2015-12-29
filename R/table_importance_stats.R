@@ -155,5 +155,5 @@ df <- bind_rows(df, generate.stats.row("Organization is based in the US",
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="CAPTION HERE {#tbl:positivity_stats}"), 
-    file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats.md"))
+                        caption="CAPTION HERE {#tbl:importance_stats}"), 
+    file=file.path(PROJHOME, "manuscript", "tables", "summary_importance_stats.md"))

@@ -1,12 +1,36 @@
 library(magrittr)
 library(dplyr)
+library(broom)
 library(ggplot2)
+library(scales)
+library(vcd)
+library(Cairo)
 library(pander)
 
 # Load data
 responses.full <- readRDS(file.path(PROJHOME, "data", "responses_full.rds"))
 orgs.only <- responses.full %>%
   group_by(survey.id) %>% slice(1) %>% ungroup()
+
+df.importance <- responses.full %>% 
+  select(Q3.19, work.country, change_policy, avg_tier, improve_tip, change_policy, 
+         importance, received.funding, us.involvement, total.funding, 
+         total.freedom, us.hq, time.spent=Q2.1) %>% 
+  filter(!is.na(Q3.19)) %>%
+  filter(Q3.19 != "Don't know") %>%
+  mutate(importance.factor = factor(Q3.19, ordered=FALSE),
+         log.total.funding = log1p(total.funding),
+         time.spent = as.numeric(time.spent))
+
+df.positivity <- responses.full %>% 
+  select(Q3.25=Q3.25_collapsed, work.country, change_policy, avg_tier, 
+         improve_tip, change_policy, importance, received.funding, us.involvement, 
+         total.funding, total.freedom, us.hq, time.spent=Q2.1) %>% 
+  filter(!is.na(Q3.25)) %>%
+  filter(Q3.25 != "Don't know") %>%
+  mutate(positivity.factor = factor(Q3.25, ordered=FALSE),
+         log.total.funding = log1p(total.funding),
+         time.spent = as.numeric(time.spent))
 
 # Helpful functions
 theme_spark <- function() {
@@ -15,6 +39,26 @@ theme_spark <- function() {
         panel.background = element_rect(fill="transparent", colour=NA),
         plot.background = element_rect(fill="transparent", colour=NA),
         plot.margin = unit(c(0, 0, -0.25, -0.25), "lines"), complete=TRUE)
+}
+
+theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
+  ret <- theme_bw(base_size, base_family) + 
+    theme(panel.background = element_rect(fill="#ffffff", colour=NA),
+          axis.title.x=element_text(vjust=-0.2), axis.title.y=element_text(vjust=1.5),
+          title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
+          panel.border = element_blank(), axis.line=element_blank(),
+          panel.grid.minor=element_blank(),
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(size=0.25, colour="grey90"),
+          axis.ticks=element_blank(),
+          legend.position="bottom", 
+          axis.title=element_text(size=rel(0.8), family="Source Sans Pro Semibold"),
+          strip.text=element_text(size=rel(0.9), family="Source Sans Pro Semibold"),
+          strip.background=element_rect(fill="#ffffff", colour=NA),
+          panel.margin=unit(1, "lines"), legend.key.size=unit(.7, "line"),
+          legend.key=element_blank())
+  
+  ret
 }
 
 generate.row.mult.responses <- function(df, question.id, question, 
@@ -145,5 +189,62 @@ generate.row.text <- function(df, question.id, question, x) {
                           ` ` = "—",
                           Summary = "Free response answer",
                           `Number of responses` = nrow(df.summary))
+  row.final
+}
+
+generate.stats.row <- function(var.name, fig, stats, file.name) {
+  # Pretty format test statistics
+  if ("aov" %in% class(stats)) {
+    df <- tidy(stats) %>%
+      slice(1)
+    
+    if (df$p.value > 0.001) {
+      out <- sprintf("*F* (%d, %d) = %.2f, *p* = %.3f", 
+                     df$df, df.residual(stats), df$statistic, df$p.value)
+    } else {
+      out <- sprintf("*F* (%d, %d) = %.2f, *p* < 0.001", 
+                     df$df, df.residual(stats), df$statistic)
+    }
+  } else if (labels(stats$statistic) == "X-squared") {
+    df <- tidy(stats)
+    n <- sum(stats$observed)
+    cramer <- assocstats(stats$observed)$cramer
+    
+    if (df$p.value > 0.001) {
+      out <- sprintf("χ^2^ (%d, *N* = %d) = %.2f, *p* = %.3f, ϕ~c~ = %.2f",
+                     df$parameter, n, df$statistic, df$p.value, cramer)
+    } else {
+      out <- sprintf("χ^2^ (%d, *N* = %d) = %.2f, *p* < 0.001, ϕ~c~ = %.2f",
+                     df$parameter, n, df$statistic, cramer)
+    }
+  } else if (labels(stats$statistic) == "t") {
+    df <- tidy(stats)
+    
+    if (df$p.value > 0.001) {
+      out <- sprintf("*t* (%.2f) = %.2f, *p* = %.3f",
+                     df$parameter, df$statistic, df$p.value)
+    } else {
+      out <- sprintf("*t* (%.2f) = %.2f, *p* < 0.001",
+                     df$parameter, df$statistic, df$p.value)
+    }
+  }
+  
+  # Save image
+  file.pdf <- file.path(PROJHOME, 
+                        "figures", "summary_table", 
+                        paste0(file.name, ".pdf"))
+  file.png <- file.path(PROJHOME, 
+                        "figures", "summary_table", 
+                        paste0(file.name, ".png"))
+  md.img <- paste0("![](figures/summary_table/", file.name, ".pdf)")
+  # md.img <- paste0("![](", file.pdf, ")")
+  
+  ggsave(fig, filename=file.pdf, width=3, height=0.5, device=cairo_pdf)
+  ggsave(fig, filename=file.png, width=3, height=0.5, type="cairo", bg="transparent")
+  
+  # Save as row
+  row.final <- data_frame(Variable = var.name,
+                          ` ` = md.img,
+                          `Test statistics` = out)
   row.final
 }

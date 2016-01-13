@@ -76,6 +76,17 @@ df <- bind_rows(df, generate.stats.row("Country received US funding for TIP issu
                                        fund.country.ttest, "positivity_fund_country"))
 
 
+# Save as Markdown table
+cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
+                        justify=c("left", "center", "left"), 
+                        style="multiline", 
+                        caption="Associations between country-level factors and opinions of US positivity {#tbl:positivity_stats_country}"), 
+    file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats_country.md"))
+
+
+# Initial dataframe
+df <- data_frame(Variable = NA, ` ` = NA, `Test statistics` = NA)
+
 # Organization received funding
 plot.data <- df.positivity %>%
   group_by(received.funding, positivity.factor) %>%
@@ -148,12 +159,12 @@ hq.chi <- df.positivity %>%
 
 df <- bind_rows(df, generate.stats.row("Organization is based in the US (dark bars = yes)", 
                                        fig.positivity.hq, 
-                                       hq.chi, "positivity_funding"))
+                                       hq.chi, "positivity_hq"))
 
 
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="CAPTION HERE {#tbl:positivity_stats}"), 
-    file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats.md"))
+                        caption="Associations between organization-level factors and opinions of US positivity {#tbl:positivity_stats_org}"), 
+    file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats_org.md"))

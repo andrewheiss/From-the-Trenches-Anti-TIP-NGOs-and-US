@@ -22,8 +22,6 @@
 #   document's images, etc. as dependencies, which means it might be easier
 #   to just clean and delete everything every time you rebuild.
 
-# Add directories to path for RStudio's build tools
-export PATH := /Users/andrew/.cabal/bin:/Users/andrew/bin:$(PATH)
 
 # ----------------------
 # Modifiable variables
@@ -49,6 +47,14 @@ BIB_FILE = /Users/andrew/Dropbox/Readings/Papers.bib
 #   * apa
 #   * apsa-no-bib
 CSL = american-political-science-association
+
+# LaTeX doesn't use pandoc-citeproc + CSL and instead lets biblatex handle the
+# heavy lifting. There are three possible styles built in to the template:
+#   * bibstyle-chicago-notes
+#   * bibstyle-chicago-authordate
+#   * bibstyle-apa
+TEX_REF = bibstyle-chicago-notes
+TEX_DIR = tex_out
 
 # Cross reference options
 CROSSREF = --filter pandoc-crossref -M figPrefix:"Figure" -M eqnPrefix:"Equation" -M tblPrefix:"Table"
@@ -87,7 +93,7 @@ MS_ODT=$(SRC:.md=-manuscript.odt)
 MS_DOCX=$(SRC:.md=-manuscript.docx)
 BIB=$(SRC:.md=.bib)
 
-all:	clean $(PDF) $(HTML) $(ODT) $(DOCX) $(MS_ODT) $(MS_DOCX) $(BIB)
+all:	clean $(PDF) $(HTML) $(ODT) $(DOCX) $(MS_ODT) $(MS_DOCX) $(TEX) $(BIB)
 
 pdf:	clean $(PDF)
 html:	clean $(HTML)
@@ -95,11 +101,12 @@ odt:	clean $(ODT)
 docx:	clean $(DOCX)
 ms: 	clean $(MS_ODT)
 msdocx:	clean $(MS_DOCX)
+tex:	clean $(TEX)
 bib:	$(BIB)
 
 %.html:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to HTML using standard template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs --no-convert | \
+	replace_includes $< | replace_pdfs | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S \
 		$(CROSSREF) \
 		--default-image-extension=png \
@@ -113,7 +120,7 @@ bib:	$(BIB)
 
 %.pdf:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to PDF using hikma-article template...$(NO_COLOR)"
-	replace_includes $< | \
+	replace_includes $< | replace_reference_title | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S \
 		$(CROSSREF) \
 		--default-image-extension=pdf \
@@ -124,12 +131,32 @@ bib:	$(BIB)
 		--bibliography=$(BIB_FILE) \
 		-V chapterstyle=hikma-article \
 		-V pagestyle=ath \
+		--base-header-level=2 \
 	-o $@
+	@echo "$(OK_COLOR)All done!$(NO_COLOR)"
+
+%.tex:	%.md
+	@echo "$(WARN_COLOR)Converting Markdown to TeX using hikma-article template...$(NO_COLOR)"
+	replace_includes $< | \
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S \
+		$(CROSSREF) \
+		--default-image-extension=pdf \
+		--latex-engine=xelatex \
+		--template=$(PREFIX)/templates/xelatex.template \
+		--biblatex \
+		-V $(TEX_REF) \
+		--bibliography=$(BIB_FILE) \
+		-V chapterstyle=hikma-article \
+		-V pagestyle=ath \
+		--base-header-level=2 \
+	-o $@
+	@echo "$(WARN_COLOR)...converting TeX to PDF with latexmk (prepare for lots of output)...$(NO_COLOR)"
+	latexmk -outdir=$(MS_DIR)/$(TEX_DIR) -xelatex -quiet $@
 	@echo "$(OK_COLOR)All done!$(NO_COLOR)"
 
 %.odt:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to .odt using standard template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs --no-convert | \
+	replace_includes $< | replace_pdfs | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w odt -S \
 		$(CROSSREF) \
 		--default-image-extension=png \
@@ -150,7 +177,7 @@ bib:	$(BIB)
 
 %-manuscript.odt: %.md
 	@echo "$(WARN_COLOR)Converting Markdown to .odt using manuscript template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs --no-convert | \
+	replace_includes $< | replace_pdfs | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w odt -S \
 		$(CROSSREF) \
 		--default-image-extension=png \
@@ -170,4 +197,4 @@ clean:
 	rm -f $(addsuffix .html, $(BASE)) $(addsuffix .pdf, $(BASE)) \
 		$(addsuffix .odt, $(BASE)) $(addsuffix .docx, $(BASE)) \
 		$(addsuffix -manuscript.odt, $(BASE)) $(addsuffix -manuscript.docx, $(BASE)) \
-		$(addsuffix .bib, $(BASE))
+		$(addsuffix .tex, $(BASE)) $(addsuffix .bib, $(BASE))

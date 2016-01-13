@@ -76,6 +76,17 @@ df <- bind_rows(df, generate.stats.row("Country received US funding for TIP issu
                                        fund.country.anova, "importance_fund_country"))
 
 
+# Save as Markdown table
+cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
+                        justify=c("left", "center", "left"), 
+                        style="multiline", 
+                        caption="Associations between country-level factors and opinions of US importance {#tbl:importance_stats_country}"), 
+    file=file.path(PROJHOME, "manuscript", "tables", "summary_importance_stats_country.md"))
+
+
+# Initial dataframe
+df <- data_frame(Variable = NA, ` ` = NA, `Test statistics` = NA)
+
 # Organization received funding
 plot.data <- df.importance %>%
   group_by(received.funding, importance.factor) %>%
@@ -148,12 +159,12 @@ hq.chi <- df.importance %>%
 
 df <- bind_rows(df, generate.stats.row("Organization is based in the US (dark bars = yes)", 
                                        fig.importance.hq, 
-                                       hq.chi, "importance_funding"))
+                                       hq.chi, "importance_hq"))
 
 
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="CAPTION HERE {#tbl:importance_stats}"), 
-    file=file.path(PROJHOME, "manuscript", "tables", "summary_importance_stats.md"))
+                        caption="Associations between organization-level factors and opinions of US importance {#tbl:importance_stats_org}"), 
+    file=file.path(PROJHOME, "manuscript", "tables", "summary_importance_stats_org.md"))

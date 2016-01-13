@@ -12,6 +12,7 @@ manuscript/*.html
 manuscript/*.docx
 manuscript/*.pdf
 manuscript/*.bib
+manuscript/tex_out/*
 
 # Scrivener
 manuscript/**/*.pdf

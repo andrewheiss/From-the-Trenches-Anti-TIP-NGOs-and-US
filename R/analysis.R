@@ -1599,6 +1599,57 @@ mosaic(hq.table.pos,
                           gp_labels=(gpar(fontsize=8))), 
        gp_varnames=gpar(fontsize=10, fontface=2))
 
+
+#' # Miscellaneous questions
+#' 
+#' What is the correlation between answering yes to funding and yes to direct
+#' cooperation in Q3.18? Are the same organizations answering the question and
+#' are the questions capturing the same thing?
+
+# Convert all Q3.18 responses to 0/1 if they answered at least one of the options
+contact.with.us <- responses.full %>% select(contains("Q3.18")) %>%
+  rowwise() %>% do(answered.something = !all(is.na(.))) %>%
+  ungroup() %>% mutate(answered.something = unlist(answered.something)) %>%
+  bind_cols(select(responses.full, clean.id, contains("Q3.18"))) %>%
+  mutate(direct.contact = ifelse(answered.something & is.na(Q3.18_1), 0, Q3.18_1),
+         direct.cooperation = ifelse(answered.something & is.na(Q3.18_2), 0, Q3.18_2),
+         received.funding = ifelse(answered.something & is.na(Q3.18_3), 0, Q3.18_3),
+         other = ifelse(answered.something & is.na(Q3.18_4), 0, Q3.18_4),
+         nothing = ifelse(answered.something & is.na(Q3.18_5), 0, Q3.18_5),
+         dont.know = ifelse(answered.something & is.na(Q3.18_6), 0, Q3.18_6)) %>%
+  filter(answered.something) %>% select(-c(answered.something, contains("Q3.18")))
+
+#' None of the responses are that corrleated. Contact, cooperation, and funding
+#' are all positively correlated at around 0.32-0.46, and having no contact is
+#' negatively correlated with those three (as would be expected). They're not
+#' really measuring the same thing, though.
+#' 
+#' This is also evident with the Chronbach's α for contact, cooperation, and
+#' funding, which is 0.66. A hypothetical index varaible combining those three
+#' variables would not be very internally consistent.
+cor.matrix <- as.data.frame(cor(select(contact.with.us, -clean.id))) %>%
+  mutate(variable = row.names(.),
+         variable = factor(variable, levels=rev(variable), ordered=TRUE))
+
+cor.plot <- cor.matrix %>% gather(variable2, value, -variable) %>%
+  mutate(clean.value = round(value, 2))
+
+ggplot(cor.plot, aes(x=variable2, variable, fill=value)) + 
+  geom_tile() + 
+  geom_text(aes(label=clean.value), size=3, hjust=0.5, color="black",
+            family="Source Sans Pro Semibold") + 
+  labs(x=NULL, y=NULL, fill="Correlation") + 
+  scale_fill_gradient2(midpoint=0, low="#91bfdb", mid="#ffffbf", high="#fc8d59") +
+  coord_fixed() +
+  theme_clean(12) + theme(axis.text.x=element_text(angle=45, vjust=1, hjust=1),
+                          panel.grid=element_blank())
+
+contact.with.us %>% 
+  select(direct.contact, direct.cooperation, received.funding) %>% 
+  as.data.frame %>%  # Because psych::alpha chokes on data_frames
+  psych::alpha()
+
+
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 #' # TODOs and other questions

@@ -261,6 +261,13 @@ possible.countries <- data_frame(id = unique(as.character(countries.ggmap$id)))
 saveRDS(responses.full, file.path(PROJHOME, "data", "responses_full.rds"))
 saveRDS(country.indexes, file.path(PROJHOME, "data", "country_indexes.rds"))
 
+# CSV for book plots
+df.book.plots <- responses.full %>% 
+  select(clean.id, starts_with("Q3.18"), 
+         starts_with("Q3.21"), -contains("TEXT"))
+write_csv(df.book.plots, 
+          file.path(PROJHOME, "data", "data_q3_18_21.csv"))
+
 
 # Useful functions
 theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
@@ -973,6 +980,12 @@ ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png
 
 saveRDS(active.embassies, file.path(PROJHOME, "data", "active_embassies.rds"))
 saveRDS(most.active.clean, file.path(PROJHOME, "data", "most_active_embassies.rds"))
+write_csv(plot.data, 
+          file.path(PROJHOME, "data", 
+                    "data_figure2_x_active_embassies_plot.csv"))
+write_csv(plot.data.active, 
+          file.path(PROJHOME, "data", 
+                    "data_figure2_x_most_active_embassies_plot.csv"))
 
 
 #' Actual US activities

@@ -544,6 +544,10 @@ ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
        width=6, height=3, units="in", type="cairo", scale=1.5)
 
+#' Save map count data for use in other stuff (like Judith's book)
+write_csv(work.countries, path="~/Desktop/data_figureA_work_map.csv")
+write_csv(hq.countries, path="~/Desktop/data_figureA_hq_map.csv")
+
 #' Side-by-side graph of home vs. work regions
 plot.hq <- hq.regions %>%
   arrange(num) %>%

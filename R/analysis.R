@@ -1602,6 +1602,8 @@ mosaic(hq.table.pos,
 
 #' # Miscellaneous questions
 #' 
+#' ## Correlation between US funding and US cooperation
+#' 
 #' What is the correlation between answering yes to funding and yes to direct
 #' cooperation in Q3.18? Are the same organizations answering the question and
 #' are the questions capturing the same thing?
@@ -1648,6 +1650,38 @@ contact.with.us %>%
   select(direct.contact, direct.cooperation, received.funding) %>% 
   as.data.frame %>%  # Because psych::alpha chokes on data_frames
   psych::alpha()
+
+
+#' ## Maps of countries where the US has been active
+countries.where.active <- responses.full %>%
+  select(survey.id, work.country, work.iso3) %>%
+  left_join(select(responses.countries, survey.id, Q3.6_c2), by="survey.id") %>%
+  filter(Q3.6_c2 == 1) %>%
+  group_by(work.iso3) %>%
+  summarise(num = n()) %>%
+  ungroup() %>%
+  right_join(possible.countries, by=c("work.iso3"="id")) %>%
+  mutate(presence = ifelse(is.na(num) | num < 1, FALSE, TRUE))
+
+#' Gradient scale
+ggplot(countries.where.active, aes(fill=num, map_id=work.iso3)) +
+  geom_map(map=countries.ggmap, size=0.15, colour="black") + 
+  expand_limits(x=countries.ggmap$long, y=countries.ggmap$lat) + 
+  coord_equal() +
+  scale_fill_gradient(low="grey95", high="grey20", breaks=seq(2, 16, 4), 
+                      na.value="#FFFFFF", name="NGOs reporting US activity",
+                      guide=guide_colourbar(ticks=FALSE, barwidth=6)) + 
+  theme_blank_map() +
+  theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
+        strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
+
+#' Binary
+ggplot(countries.where.active, aes(fill=presence, map_id=work.iso3)) +
+  geom_map(map=countries.ggmap, size=0.15, colour="black") + 
+  expand_limits(x=countries.ggmap$long, y=countries.ggmap$lat) + 
+  coord_equal() +
+  scale_fill_manual(values=c("#FFFFFF", "grey50"), na.value="#FFFFFF", guide=FALSE) +
+  theme_blank_map()
 
 
 # -----------------------------------------------------------------------------

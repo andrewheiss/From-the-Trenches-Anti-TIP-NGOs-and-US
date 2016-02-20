@@ -4,8 +4,7 @@ source(file.path(PROJHOME, "R", "table_functions.R"))
 # Table for "What do anti-TIP NGOs do?
 # --------------------------------------
 # Initial dataframe
-df <- data_frame(Question = NA, ` ` = NA,
-                 Summary = NA, `Number of responses` = NA)
+df <- data_frame(Question = NA, ` ` = NA, Summary = NA)
 
 # Q2.1
 question.id <- "Q2.1"
@@ -55,7 +54,7 @@ df <- bind_rows(df, generate.row.mult.responses(orgs.only, question.id,
 
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
-                        justify=c("left", "center", "left", "center"), 
+                        justify=c("left", "center", "left"), 
                         style="multiline", 
                         caption="Summary of survey responses related to what anti-TIP NGOs do {#tbl:what_do}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_what_do.md"))

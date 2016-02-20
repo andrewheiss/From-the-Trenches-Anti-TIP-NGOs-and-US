@@ -18,6 +18,10 @@ manuscript/tex_out/*
 manuscript/**/*.pdf
 manuscript/Anti-TIP\ NGOs\ and\ US.scriv/*
 
+# Figures
+figures/*.pdf
+figures/*.png
+
 # R stuff
 .Rproj.user
 .Rhistory

@@ -46,7 +46,7 @@ BIB_FILE = /Users/andrew/Dropbox/Readings/Papers.bib
 #   * chicago-syllabus-no-bib
 #   * apa
 #   * apsa-no-bib
-CSL = american-political-science-association
+CSL = apa
 
 # LaTeX doesn't use pandoc-citeproc + CSL and instead lets biblatex handle the
 # heavy lifting. There are three possible styles built in to the template:

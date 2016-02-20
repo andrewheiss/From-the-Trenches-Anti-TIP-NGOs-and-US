@@ -4,8 +4,7 @@ source(file.path(PROJHOME, "R", "table_functions.R"))
 # Table for opinions of US
 # --------------------------
 # Initial dataframe
-df <- data_frame(Question = NA, ` ` = NA,
-                 Summary = NA, `Number of responses` = NA)
+df <- data_frame(Question = NA, ` ` = NA, Summary = NA)
 
 # Q3.19
 question.id <- "Q3.19"
@@ -25,7 +24,7 @@ df <- bind_rows(df, generate.row.single(responses.full, question.id,
 
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
-                        justify=c("left", "center", "left", "center"), 
+                        justify=c("left", "center", "left"), 
                         style="multiline", 
                         caption="Summary of responses related to opinions of the US {#tbl:us_opinions}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_us_opinions.md"))

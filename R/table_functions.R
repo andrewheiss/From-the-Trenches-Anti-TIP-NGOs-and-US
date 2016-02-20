@@ -96,8 +96,8 @@ generate.row.mult.responses <- function(df, question.id, question,
   
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
-                          Summary = paste(df.summary$text.summary, collapse="; "),
-                          `Number of responses` = answer.summary$denominator)
+                          Summary = paste0(paste(df.summary$text.summary, collapse="; "),
+                                           "; N=", sum(df.summary$num)))
   row.final
 }
 
@@ -132,8 +132,8 @@ generate.row.single <- function(df, question.id, question, x) {
 
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
-                          Summary = paste(df.summary$text.summary, collapse="; "),
-                          `Number of responses` = sum(df.summary$num))
+                          Summary = paste0(paste(df.summary$text.summary, collapse="; "),
+                                           "; N=", sum(df.summary$num)))
   row.final
 }
 
@@ -174,8 +174,8 @@ generate.row.single.num <- function(df, question.id, question, x, binwidth) {
   
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
-                          Summary = paste(df.summary$text.summary, collapse="; "),
-                          `Number of responses` = sum(df.summary$num))
+                          Summary = paste0(paste(df.summary$text.summary, collapse="; "),
+                                           "; N=", sum(df.summary$num)))
   row.final
 }
 

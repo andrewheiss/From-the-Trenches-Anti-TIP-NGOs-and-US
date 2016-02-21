@@ -290,6 +290,28 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
   ret
 }
 
+theme_clean_book <- function(base_size=12, base_family="Source Sans Pro Light") {
+  update_geom_defaults("bar", list(fill = "grey30"))
+  update_geom_defaults("line", list(colour = "grey30"))
+  ret <- theme_bw(base_size, base_family) + 
+    theme(panel.background = element_rect(fill="#ffffff", colour=NA),
+          axis.title.y = element_text(margin = margin(r = 10)),
+          axis.title.x = element_text(margin = margin(t = 10)),
+          title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
+          panel.border = element_blank(), 
+          axis.line=element_line(colour="grey50", size=0.2),
+          #panel.grid=element_blank(), 
+          axis.ticks=element_blank(),
+          legend.position="bottom", 
+          legend.title=element_text(size=rel(0.8)),
+          axis.title=element_text(size=rel(0.8), family="Source Sans Pro Semibold"),
+          strip.text=element_text(size=rel(1), family="Source Sans Pro Semibold"),
+          strip.background=element_rect(fill="#ffffff", colour=NA),
+          panel.margin.y=unit(1.5, "lines"))
+  
+  ret
+}
+
 # For maps
 theme_blank_map <- function(base_size=12, base_family="Source Sans Pro Light") {
   ret <- theme_bw(base_size, base_family) + 
@@ -1043,26 +1065,49 @@ fig.us_importance <- ggplot(plot.data, aes(x=Q3.19, y=prop)) +
 fig.us_importance
 
 #' Average importance by country
-importance.plot <- country.indexes %>%
-  filter(num.responses >= 10) %>%
-  arrange(importance_score) %>%
-  mutate(country_label = factor(work.country, levels=unique(work.country), 
-                                labels=paste0(work.country, " (", num.responses, ")"),
-                                ordered=TRUE)) 
+cases <- c("ARM", "IDN", "ECU", "MOZ", "KAZ", "ARG", "ISR",
+           "ARE", "NGA", "OMN", "HND", "JPN", "TCD", "ZWE", "MYS")
+case.countries <- countrycode(cases, "iso3c", "country.name")
 
-fig.avg_importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
+importance.plot <- country.indexes %>%
+  # filter(num.responses >= 10) %>%
+  filter(work.country %in% case.countries) %>%
+  arrange(importance_score) %>%
+  mutate(importance_stdev = ifelse(is.na(importance_stdev), 0, importance_stdev),
+         importance_sort = ifelse(is.na(importance_score), 0, importance_score))
+
+empty.countries <- data_frame(work.country = 
+                                case.countries[!case.countries %in% 
+                                                 importance.plot$work.country],
+                              importance_score = NA, importance_stdev = 0, 
+                              importance_n = 0, importance_sort = 0)
+
+importance.plot.small <- importance.plot %>%
+  select(work.country, importance_score, importance_stdev, importance_n, importance_sort) %>%
+  bind_rows(empty.countries) %>%
+  arrange(importance_sort, desc(work.country)) %>%
+  mutate(country_label = factor(work.country, levels=unique(work.country), 
+                                labels=paste0(work.country, " (", importance_n, ")"),
+                                ordered=TRUE))
+
+fig.avg_importance <- ggplot(importance.plot.small, 
+                             aes(x=country_label, y=importance_score)) + 
   geom_pointrange(aes(ymax=importance_score + importance_stdev,
                       ymin=importance_score - importance_stdev)) + 
   labs(x="Country (number of responses)", 
        y="Importance of the US in anti-TIP efforts (mean)") + 
   scale_y_discrete(breaks=c(0, 1, 2), labels=c("Not important", "Somewhat important", "Most important")) + 
   coord_flip(ylim=c(0, 2)) + 
-  theme_clean() + theme(legend.position="bottom")
+  theme_clean_book(10) + theme(legend.position="bottom")
 fig.avg_importance
-ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
+ggsave(fig.avg_importance, filename="~/Desktop/figure5_6_avg_importance_cases.pdf",
        width=6.5, height=3, units="in", device=cairo_pdf)
-ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
+ggsave(fig.avg_importance, filename="~/Desktop/figure5_6_avg_importance_cases.png",
        width=6.5, height=3, units="in", type="cairo")
+# ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
+#        width=6.5, height=3, units="in", device=cairo_pdf)
+# ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
+#        width=6.5, height=3, units="in", type="cairo")
 
 
 #' ## Are opinions of the US's importance associated with…?
@@ -1434,12 +1479,14 @@ fig.us_positivity
 
 #' Average positivity by country
 positivity.plot <- country.indexes %>%
-  filter(num.responses >= 10,
-         positivity_score > 0) %>%
+  # filter(num.responses >= 10,
+  #        positivity_score > 0) %>%
+  filter(work.country %in% case.countries) %>%
   arrange(positivity_score) %>%
   mutate(country_label = factor(work.country, levels=unique(work.country), 
-                                labels=paste0(work.country, " (", num.responses, ")"),
-                                ordered=TRUE)) 
+                                labels=paste0(work.country, " (", positivity_n, ")"),
+                                ordered=TRUE)) %>%
+  mutate(positivity_stdev = ifelse(is.na(positivity_stdev), 0, positivity_stdev))
 
 fig.avg_positivity <- ggplot(positivity.plot, aes(x=country_label, y=positivity_score)) + 
   geom_pointrange(aes(ymax=positivity_score + positivity_stdev,
@@ -1450,6 +1497,8 @@ fig.avg_positivity <- ggplot(positivity.plot, aes(x=country_label, y=positivity_
   coord_flip(ylim=c(-1, 1)) + 
   theme_clean() + theme(legend.position="bottom")
 fig.avg_positivity
+ggsave(fig.avg_positivity, filename="~/Desktop/fig_avg_positivity_cases.pdf",
+       width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
        width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),

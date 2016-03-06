@@ -19,8 +19,8 @@ manuscript/**/*.pdf
 manuscript/Anti-TIP\ NGOs\ and\ US.scriv/*
 
 # Figures
-figures/*.pdf
-figures/*.png
+figures/**.pdf
+figures/**.png
 
 # R stuff
 .Rproj.user

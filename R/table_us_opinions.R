@@ -26,5 +26,5 @@ df <- bind_rows(df, generate.row.single(responses.full, question.id,
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="Summary of responses related to opinions of the US {#tbl:us_opinions}"), 
+                        caption="Summary of responses related to opinions of the US {#tbl:us-opinions}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_us_opinions.md"))

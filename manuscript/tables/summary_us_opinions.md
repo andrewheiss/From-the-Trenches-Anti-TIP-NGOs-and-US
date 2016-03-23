@@ -15,5 +15,5 @@ policy in your country been                                         2); Positive
 positive or negative?                                               N=316                         
 --------------------------------------------------------------------------------------------------
 
-Table: Summary of responses related to opinions of the US {#tbl:us_opinions}
+Table: Summary of responses related to opinions of the US {#tbl:us-opinions}
 

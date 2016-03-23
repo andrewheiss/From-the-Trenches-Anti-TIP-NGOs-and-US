@@ -12,5 +12,5 @@ Organization is based in the     ![](figures/summary_table/positivity_hq.pdf)   
 US (dark bars = yes)                                                               *p* = 0.837, ϕ~c~ = 0.03   
 --------------------------------------------------------------------------------------------------------------
 
-Table: Associations between organization-level factors and opinions of US positivity {#tbl:positivity_stats_org}
+Table: Associations between organization-level factors and opinions of US positivity {#tbl:positivity-stats-org}
 

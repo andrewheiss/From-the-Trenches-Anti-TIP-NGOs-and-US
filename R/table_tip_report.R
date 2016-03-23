@@ -43,5 +43,5 @@ df <- bind_rows(df, generate.row.single(responses.full, question.id,
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="Summary of survey responses related to how anti-TIP NGOs use the State Department's annual TIP report {#tbl:tip_report}"), 
+                        caption="Summary of survey responses related to how anti-TIP NGOs use the State Department's annual TIP report {#tbl:tip-report}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_tip_report.md"))

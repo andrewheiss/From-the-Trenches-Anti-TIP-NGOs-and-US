@@ -19,5 +19,5 @@ Country received US funding    ![](figures/summary_table/positivity_fund_country
 for TIP issues                                                                        0.015                      
 -----------------------------------------------------------------------------------------------------------------
 
-Table: Associations between country-level factors and opinions of US positivity {#tbl:positivity_stats_country}
+Table: Associations between country-level factors and opinions of US positivity {#tbl:positivity-stats-country}
 

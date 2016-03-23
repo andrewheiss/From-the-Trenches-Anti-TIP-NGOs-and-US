@@ -27,5 +27,5 @@ your country mention the TIP
 tier rating?                                                                                      
 --------------------------------------------------------------------------------------------------
 
-Table: Summary of survey responses related to how anti-TIP NGOs use the State Department's annual TIP report {#tbl:tip_report}
+Table: Summary of survey responses related to how anti-TIP NGOs use the State Department's annual TIP report {#tbl:tip-report}
 

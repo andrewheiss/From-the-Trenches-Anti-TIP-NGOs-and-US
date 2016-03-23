@@ -19,5 +19,5 @@ Country received US funding    ![](figures/summary_table/importance_fund_country
 for TIP issues                                                                        0.001                      
 -----------------------------------------------------------------------------------------------------------------
 
-Table: Associations between country-level factors and opinions of US importance {#tbl:importance_stats_country}
+Table: Associations between country-level factors and opinions of US importance {#tbl:importance-stats-country}
 

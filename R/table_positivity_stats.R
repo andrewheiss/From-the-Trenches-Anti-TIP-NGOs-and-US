@@ -80,7 +80,7 @@ df <- bind_rows(df, generate.stats.row("Country received US funding for TIP issu
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="Associations between country-level factors and opinions of US positivity {#tbl:positivity_stats_country}"), 
+                        caption="Associations between country-level factors and opinions of US positivity {#tbl:positivity-stats-country}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats_country.md"))
 
 
@@ -166,5 +166,5 @@ df <- bind_rows(df, generate.stats.row("Organization is based in the US (dark ba
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="Associations between organization-level factors and opinions of US positivity {#tbl:positivity_stats_org}"), 
+                        caption="Associations between organization-level factors and opinions of US positivity {#tbl:positivity-stats-org}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_positivity_stats_org.md"))

@@ -12,5 +12,5 @@ Organization is based in the     ![](figures/summary_table/importance_hq.pdf)   
 US (dark bars = yes)                                                               *p* = 0.159, ϕ~c~ = 0.10    
 ---------------------------------------------------------------------------------------------------------------
 
-Table: Associations between organization-level factors and opinions of US importance {#tbl:importance_stats_org}
+Table: Associations between organization-level factors and opinions of US importance {#tbl:importance-stats-org}
 

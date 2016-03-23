@@ -28,5 +28,5 @@ df <- bind_rows(df, generate.row.single(responses.full, question.id,
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,
                         justify=c("left", "center", "left"), 
                         style="multiline", 
-                        caption="Summary of survey responses related to how anti-TIP NGOs work with other actors {#tbl:work_others}"), 
+                        caption="Summary of survey responses related to how anti-TIP NGOs work with other actors {#tbl:work-others}"), 
     file=file.path(PROJHOME, "manuscript", "tables", "summary_how_work_others.md"))

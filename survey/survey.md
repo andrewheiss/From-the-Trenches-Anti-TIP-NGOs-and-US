@@ -1,6 +1,6 @@
-# Anti-TIP NGO Survey
+# Anti-TIP NGO survey
 
-{IMG}
+![](tip_banner.png)
 
 We would like to ask you some questions about your organization and its work with human trafficking issues over the past 10 years. This survey is part of a study by Prof. Judith Kelley from Duke University, USA. The study is about the global fight against human trafficking. Your participation is entirely voluntary. Results from the survey will only be used in aggregate so that it will not be possible to identify any individual organization. You may choose to keep your answers anonymous if you wish. As part of the research effort we have compiled a database of NGOs all over the world working on human trafficking. In exchange for your participation, we will update your organization's data and share the link to the database with you.
 

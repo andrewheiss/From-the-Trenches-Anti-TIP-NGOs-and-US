@@ -536,6 +536,11 @@ work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
   theme(legend.position="bottom", legend.key.size=unit(0.65, "lines"),
         strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
 
+ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.pdf"),
+       width=4, height=2, units="in", device=cairo_pdf, scale=1.5)
+ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.png"),
+       width=4, height=2, units="in", type="cairo", scale=1.5)
+
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
 grid.draw(fig.maps)

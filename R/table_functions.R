@@ -192,17 +192,17 @@ generate.row.text <- function(df, question.id, question, x) {
   row.final
 }
 
-generate.stats.row <- function(var.name, fig, stats, file.name) {
+pretty.stats <- function(stats) {
   # Pretty format test statistics
   if ("aov" %in% class(stats)) {
     df <- tidy(stats) %>%
       slice(1)
     
     if (df$p.value > 0.001) {
-      out <- sprintf("*F* (%d, %d) = %.2f, *p* = %.3f", 
+      out <- sprintf("F (%d, %d) = %.2f, p = %.3f", 
                      df$df, df.residual(stats), df$statistic, df$p.value)
     } else {
-      out <- sprintf("*F* (%d, %d) = %.2f, *p* < 0.001", 
+      out <- sprintf("F (%d, %d) = %.2f, p < 0.001", 
                      df$df, df.residual(stats), df$statistic)
     }
   } else if (labels(stats$statistic) == "X-squared") {
@@ -211,24 +211,28 @@ generate.stats.row <- function(var.name, fig, stats, file.name) {
     cramer <- assocstats(stats$observed)$cramer
     
     if (df$p.value > 0.001) {
-      out <- sprintf("χ^2^ (%d, *N* = %d) = %.2f, *p* = %.3f, ϕ~c~ = %.2f",
+      out <- sprintf("χ^2^ (%d, N = %d) = %.2f, p = %.3f, ϕ~c~ = %.2f",
                      df$parameter, n, df$statistic, df$p.value, cramer)
     } else {
-      out <- sprintf("χ^2^ (%d, *N* = %d) = %.2f, *p* < 0.001, ϕ~c~ = %.2f",
+      out <- sprintf("χ^2^ (%d, N = %d) = %.2f, p < 0.001, ϕ~c~ = %.2f",
                      df$parameter, n, df$statistic, cramer)
     }
   } else if (labels(stats$statistic) == "t") {
     df <- tidy(stats)
     
     if (df$p.value > 0.001) {
-      out <- sprintf("*t* (%.2f) = %.2f, *p* = %.3f",
+      out <- sprintf("t (%.2f) = %.2f, p = %.3f",
                      df$parameter, df$statistic, df$p.value)
     } else {
-      out <- sprintf("*t* (%.2f) = %.2f, *p* < 0.001",
+      out <- sprintf("t (%.2f) = %.2f, p < 0.001",
                      df$parameter, df$statistic, df$p.value)
     }
   }
   
+  return(out)
+}
+
+generate.stats.row <- function(var.name, fig, stats, file.name) {
   # Save image
   file.pdf <- file.path(PROJHOME, 
                         "figures", "summary_table", 
@@ -245,6 +249,6 @@ generate.stats.row <- function(var.name, fig, stats, file.name) {
   # Save as row
   row.final <- data_frame(Variable = var.name,
                           ` ` = md.img,
-                          `Test statistics` = out)
+                          `Test statistics` = pretty.stats(stats))
   row.final
 }

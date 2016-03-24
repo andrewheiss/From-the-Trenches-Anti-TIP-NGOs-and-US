@@ -33,5 +33,5 @@ organization focus on most?                                       (83.09%; 398);
                                                                   Other (26.72%; 128); N=0      
 ------------------------------------------------------------------------------------------------
 
-Table: Summary of survey responses related to what anti-TIP NGOs do {#tbl:what-do}
+Table: Summary of survey responses related to anti-TIP NGO activities {#tbl:what-do}
 

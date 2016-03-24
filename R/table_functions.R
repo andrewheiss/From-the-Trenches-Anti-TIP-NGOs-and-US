@@ -97,7 +97,7 @@ generate.row.mult.responses <- function(df, question.id, question,
   row.final <- data_frame(Question = paste0(question.id, ": ", question),
                           ` ` = md.img,
                           Summary = paste0(paste(df.summary$text.summary, collapse="; "),
-                                           "; N=", sum(df.summary$num)))
+                                           "; N=", answer.summary$denominator))
   row.final
 }
 

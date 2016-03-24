@@ -53,7 +53,7 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
           axis.ticks=element_blank(),
           legend.position="bottom", 
           axis.title=element_text(size=rel(0.8), family="Source Sans Pro Semibold"),
-          strip.text=element_text(size=rel(0.9), family="Source Sans Pro Semibold"),
+          strip.text=element_text(size=rel(1), family="Source Sans Pro Semibold"),
           strip.background=element_rect(fill="#ffffff", colour=NA),
           panel.margin=unit(1, "lines"), legend.key.size=unit(.7, "line"),
           legend.key=element_blank())

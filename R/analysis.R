@@ -224,8 +224,10 @@ country.indexes <- responses.full %>%
   # Needs mutate + mutate_each + select + unique because you can't mix 
   # summarise + summarise_each. See http://stackoverflow.com/a/31815540/120898
   mutate(num.responses = n()) %>%
-  mutate_each(funs(score = mean(., na.rm=TRUE), stdev = sd(., na.rm=TRUE), 
-                   n = sum(!is.na(.))),
+  mutate_each(funs(score = mean(., na.rm=TRUE), 
+                   stdev = sd(., na.rm=TRUE), 
+                   n = sum(!is.na(.)),
+                   std.err = sd(., na.rm=TRUE) / sqrt(sum(!is.na(.)))),
               c(positivity, importance, improvement)) %>%
   select(work.country, num.responses, matches("positivity_|importance_|improvement_")) %>%
   unique %>%
@@ -1021,9 +1023,9 @@ fig.activities <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
   coord_flip() + theme_clean()
 fig.activities
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.pdf"),
-       width=6.5, height=5, units="in", device=cairo_pdf)
+       width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.png"),
-       width=6.5, height=5, units="in", type="cairo")
+       width=6.5, height=3, units="in", type="cairo")
 
 
 # ----------------------------------
@@ -1055,14 +1057,15 @@ importance.plot <- country.indexes %>%
                                 labels=paste0(work.country, " (", num.responses, ")"),
                                 ordered=TRUE)) 
 
-fig.avg_importance <- ggplot(importance.plot, aes(x=country_label, y=importance_score)) + 
-  geom_pointrange(aes(ymax=importance_score + importance_stdev,
-                      ymin=importance_score - importance_stdev)) + 
-  labs(x="Country (number of responses)", 
-       y="Importance of the US in anti-TIP efforts (mean)") + 
-  scale_y_discrete(breaks=c(0, 1, 2), labels=c("Not important", "Somewhat important", "Most important")) + 
-  coord_flip(ylim=c(0, 2)) + 
-  theme_clean() + theme(legend.position="bottom")
+fig.avg_importance <- ggplot(importance.plot, aes(y=country_label, x=importance_score)) + 
+  geom_pointrangeh(aes(xmax=importance_score + (qnorm(0.975) * importance_std.err),
+                       xmin=importance_score + (qnorm(0.025) * importance_std.err))) + 
+  labs(y="Country (number of responses)", x=NULL,
+       title="Importance of the US in anti-TIP efforts") +
+  scale_x_continuous(breaks=c(0, 1, 2), 
+                     labels=c("Not important", "Somewhat important", "Most important")) +
+  coord_cartesian(xlim=c(0, 2.1)) +
+  theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
 fig.avg_importance
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
        width=6.5, height=3, units="in", device=cairo_pdf)
@@ -1231,6 +1234,15 @@ TukeyHSD(cho.change.anova)
 #' consider the US to play an important role in the countries they work in.
 funding.table <- df.importance %>%
   xtabs(~ importance_factor + received.funding, .) %>% print
+
+#' Organizations that received funding:
+df.importance %>%
+  xtabs(~ received.funding, .) %T>% print %>% prop.table
+
+#' When removing all funded NGOs from the sample, what percent think the US is important?
+df.importance %>%
+  filter(received.funding == FALSE) %>%
+  xtabs(~ importance_factor, .) %T>% print %>% prop.table
 
 #' There's an overall significant difference (though two of the cells are
 #' really small here)
@@ -1446,19 +1458,32 @@ positivity.plot <- country.indexes %>%
                                 labels=paste0(work.country, " (", num.responses, ")"),
                                 ordered=TRUE)) 
 
-fig.avg_positivity <- ggplot(positivity.plot, aes(x=country_label, y=positivity_score)) + 
-  geom_pointrange(aes(ymax=positivity_score + positivity_stdev,
-                      ymin=positivity_score - positivity_stdev)) + 
-  labs(x="Country (number of responses)", 
-       y="Positivity of the US in anti-TIP efforts (mean)") + 
-  scale_y_discrete(breaks=c(-1, 0, 1), labels=c("Negative", "Mixed", "Positive")) + 
-  coord_flip(ylim=c(-1, 1)) + 
-  theme_clean() + theme(legend.position="bottom")
+fig.avg_positivity <- ggplot(positivity.plot, aes(y=country_label, x=positivity_score)) + 
+  geom_pointrangeh(aes(xmax=positivity_score + (qnorm(0.975) * positivity_std.err),
+                       xmin=positivity_score + (qnorm(0.025) * positivity_std.err))) + 
+  labs(y="Country (number of responses)", x=NULL,
+       title="Positivity of the US in anti-TIP efforts") + 
+  scale_x_continuous(breaks=c(-1, 0, 1), labels=c("Negative", "Mixed", "Positive")) + 
+  coord_cartesian(xlim=c(-1, 1.05)) +
+  theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
 fig.avg_positivity
+
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
        width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),
        width=6.5, height=3, units="in", type="cairo")
+
+
+#' Both importance and positivity
+blank <- rectGrob(gp=gpar(col="white"))
+fig.avg_countries <- arrangeGrob(fig.avg_importance, blank, fig.avg_positivity,
+                                 ncol=1, heights=c(0.48, 0.04, 0.48))
+grid::grid.draw(fig.avg_countries)
+
+ggsave(fig.avg_countries, filename=file.path(PROJHOME, "figures", "fig_avg_countries.pdf"),
+       width=6.5, height=5, units="in", device=cairo_pdf)
+ggsave(fig.avg_countries, filename=file.path(PROJHOME, "figures", "fig_avg_countries.png"),
+       width=6.5, height=5, units="in", type="cairo", dpi=300)
 
 #' ## Are opinions of the US's positivity associated with…?
 #' ### Average tier rating 

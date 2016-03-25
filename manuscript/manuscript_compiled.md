@@ -7,25 +7,24 @@ author:
 - name: Judith Kelley
   affiliation: Duke University
   email: judith.kelley&#x40;duke.edu
-date: March 22, 2016
+date: March 24, 2016
 published: Incomplete Draft. Please do not cite without permission.
 reference-section-title: References
 acknowledgments: "We also used SSRI - acknowledge the post doc guy"
 ...
 
-Since the United Staters launched its global campaign against trafficking in persons (TIP) in 2000, sharp criticism has abounded as critics invoke the old standby label for US overreach: "global sheriff" [@Chacon:2006; @Nathan:2005; @Wooditch:2011; @HorningThomasHenninger:2014]. Critics argue that by conditioning its non-humanitarian non-trade related assistance on governments' efforts to fight trafficking, the US has created a "unilateral" "sanctions regime" that is at odds with international law, ineffective, and that imposes US norms under the guise of international law [@Chuang:2006]. Others accuse the US of furthering disagreements about the relationship between prostitution and trafficking [@LerumMcCurtisSaunders:2012], [^1] while some assert that US-led anti-TIP efforts were created to "promote restrictive policies on reproductive rights and sexuality throughout the world" [@Foerster:2009, 153].[^2] Yet others have accused the report's use of the term "modern day slavery" as too expansive a label that has been used to enable "exploitation creep" to broaden the US sphere of influence.[^3] Others argue that all anti-TIP policies—including both US-based legislation and the internationally ratified Palermo Trafficking Protocol—cause "collateral damage" and unintentionally harm victims [@Gallagher:2015]. Finally, critics allege that the ratings assigned by the US State Department in its annual Trafficking in Persons Report are politically biased [@Garcia:2006; @Wooditch:2011]. For instance, after Congress prohibited the US from negotiating with countries with a Tier 3 rating (the lowest score in the TIP Report) during negotiations for the Trans-Pacific Partnership (TPP) in 2015, the State Department upgraded Malaysia to the Tier 2 Watchlist, the second-lowest score [@RosenbergCochrane:2015; @SzepSpetalnick:2015]. The US Government Accountability Office (GAO) has acknowledged some weaknesses, as has the Inspector General's Office [@gao-06-825:2006; @dos-oig:2012]. 
+Since the United States launched its global campaign against trafficking in persons (TIP) in 2000, sharp criticism has abounded as critics invoke the old standby label for US overreach: "global sheriff" [@Chacon:2006; @Nathan:2005; @Wooditch:2011; @HorningThomasHenninger:2014]. Critics argue that by conditioning its non-humanitarian non-trade related assistance on governments' efforts to fight trafficking, the US has created a "unilateral" "sanctions regime" that is at odds with international law, ineffective, and that imposes US norms under the guise of international law [@Chuang:2006]. Others accuse the US of furthering disagreements about the relationship between prostitution and trafficking [@LerumMcCurtisSaunders:2012],[^1] while some assert that US-led anti-TIP efforts were created to "promote restrictive policies on reproductive rights and sexuality throughout the world" [@Foerster:2009, 153].[^2] Yet others have accused the report's use of the term "modern day slavery" as too expansive a label that has been used to enable "exploitation creep" to broaden the US sphere of influence.[^3] Others argue that all anti-TIP policies—including both US-based legislation and the internationally ratified Palermo Trafficking Protocol—cause "collateral damage" and unintentionally harm victims [@Gallagher:2015]. Finally, critics allege that the ratings assigned by the US State Department in its annual Trafficking in Persons Report are politically biased [@Garcia:2006; @Wooditch:2011]. For instance, after Congress prohibited the US from negotiating with countries with a Tier 3 rating (the lowest score in the TIP Report) during negotiations for the Trans-Pacific Partnership (TPP) in 2015, the State Department upgraded Malaysia to the Tier 2 Watchlist, the second-lowest score [@RosenbergCochrane:2015; @SzepSpetalnick:2015]. The US Government Accountability Office (GAO) has acknowledged some weaknesses, as has the Inspector General's Office [@gao-06-825:2006; @dos-oig:2012]. 
 
 Despite all this criticism, many have recognized the State Department's TIP Report as "the most influential and the most trusted indicator of states' performance vis-à-vis human trafficking," [@ZaloznayaHagan:2012, 18] and credit US policy with reinforcing the core provisions of the Palermo Protocol [@Gallagher:2015]. Research has found that the policy has contributed to criminalization of human trafficking worldwide [@KelleySimmons:2015; @Kelley:2016].
 
-The close scrutiny of the United States' campaign against human trafficking is warranted, but amid all these academic and policy debates, one key perspective has not been heard: nongovernmental organizations (NGOs) that provide anti-TIP advocacy and programming and work with this issues on the ground. What do anti-TIP NGOs think of the United States' 15-year push to eliminate trafficking? What do these NGOs think of their relationship with the US?
+The close scrutiny of the United States' campaign against human trafficking is warranted, but amid all these academic and policy debates, one key perspective has not been heard: nongovernmental organizations (NGOs) that provide anti-TIP advocacy and programming and work with this issue on the ground. What do anti-TIP NGOs think of the United States' 15-year push to eliminate trafficking? What do these NGOs think of their relationship with the US?
 
 Collaboration with civil society organizations and NGOs has long been part of the United States' core strategy for battling human trafficking around the world. The US State Department's TIP report is perhaps the most visible symbol of the relationship between the US and anti-TIP NGOs. Since the report's inception, the State Department has collaborated with NGOs, using published reports and expert testimony from the organizations working directly with human trafficking victims. Early reports regularly acknowledged NGOs for their advocacy and assistance with information gathering. In 2004 the the State Department added a new regular "TIP Heroes" section to the report to highlight the work of prominent activists. These individuals have since been honored at the annual TIP report releases and invited to give speeches about their work, providing these activists with a very public platform to highlight their advocacy. In 2015, the State Department gave even more prominence to these activists, partnering with the National Underground Railroad Freedom Center to publish a website dedicated to its 100 TIP heroes.[^4] In addition to providing information and expertise for the TIP reports, NGOs furnish invaluable practical support for anti-TIP efforts as they interact with the victims firsthand, raise awareness in the media, observe weaknesses in domestic anti-TIP policies, and work closely with local authorities. Secretary John Kerry noted in 2015 that close and sustained partnership with anti-TIP NGOs is "the only way we're going to succeed in this battle" [@Kerry:2015]. Given their centrality in the global fight against human trafficking and their close connection to the United States, anti-TIP NGOs are well positioned to assess US trafficking policy.
 
 This article presents the results of a global survey of nearly 500 anti-TIP NGOs in working in 133 countries. To our knowledge, this is the first survey of its kind. Not only does the survey cast light on NGO views of the US efforts, it also provides a snapshot of global NGO efforts on the ground. The results show that the global NGO community is remarkably supportive of US efforts despite its acknowledged flaws. Through our analysis, we find that these positive views are not correlated with the reception of US funding—that is, NGOs independently find the United States' anti-TIP policies, programs, and reports useful and encouraging. Our findings ultimately suggest that the United States' anti-TIP policies are worth keeping and improving.
 
-This article starts by (MAP)
+We begin with a brief overview of the history of the United States' 15-year international fight against human trafficking, with special emphasis on the importance of the State Department's annual TIP Report, foundational to US anti-TIP strategy. After describing the methods we used to survey the global anti-TIP NGO sector, we present our findings by (1) providing a broad overview of the sector as a whole, (2) detailing the relationship between anti-TIP NGOs and the US, and (3) accounting for some of the variation in NGO opinions of US efforts. We conclude with a brief set of possible implications of our findings for American anti-TIP policy.
 
-The purpose of this article is two-fold: (1) to gain a better overview of the NGO anti-trafficking in persons (TIP) sector and (2) to learn what these NGOs think of one of the largest anti-TIP programs there is, namely that run by the US government.
 
 # The United States and anti-TIP efforts
 
@@ -34,6 +33,7 @@ On October 18, 2000, the United States Congress passed the Trafficking Victims P
 Since 2001, the State Department's TIP Office has grown from a few staff to over 50 people in 2015, and is headed by a special ambassador-at-large to monitor and combat trafficking in persons. The Office works closely with US embassies around the world, which in turn work with governments and NGOs. The Office also works with other US agencies that work abroad such as the Department of Justice (DOJ) and USAID.
 
 US embassy officials discuss the annual TIP Report with legislators, executives, and policymakers at various levels in each country they work in. Immediately following the release of the report, embassy staff meet with officials to discuss the report's findings and recommendations, and throughout the year, the embassy discusses these issues with local officials, NGOs, and other stakeholders. The frequency of such meetings varies across countries. The embassy also may arrange workshops or training for government officials. Embassies are not alone in their lobbying and advocacy—the TIP Office also regularly sends emissaries from the US, and the ambassador-at-large usually makes several trips a year to multiple countries to reiterate the Office's recommendations.
+
 
 # Data and methods
 
@@ -53,6 +53,7 @@ We report basic summary statistics and cross-tabulations of survey responses. Th
 
 In addition to statistical analysis, we rely on interpretive qualitative analysis of NGOs' free response answers—82% of respondents chose to answer at least one of the 12 open-ended questions. One of this study's primary contributions is to allow NGOs themselves to speak about their experiences, and as such, we extensively quote their responses. To maintain anonymity we removed all potentially identifiable information from any quotes used in this paper—we reference the source of each quote with a randomly-assigned four-digit ID number. 
 
+
 # Questions
 
 We analyzed the results of our survey to answer three general questions about the anti-TIP NGO sector and its relationship to the United States' anti-TIP efforts: 
@@ -61,13 +62,16 @@ We analyzed the results of our survey to answer three general questions about th
 - **Experiences with the US**: How do anti-TIP NGOs experience the extent and character of the United States' anti-trafficking efforts? How do they interact with the US, if at all?
 - **Views of US policy**: How do anti-TIP NGOs assess the United States' efforts and what factors correlate with their opinion?
 
+
 # Findings
 
 ## An overview of the TIP sector
 
 ### Where do anti-TIP NGOs work?
 
-The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly global reach. As seen in [@fig:locations], 60% of NGOs have their headquarters in either Asia or Europe, roughly a quarter are based in North or South America, and fewer than 20% work out of Africa. NGOs are not limited to advocacy within their own countries—the majority of these organizations work in Asia (especially in trafficking hotspots like India, Nepal, Thailand, and the Philippines), with less work in Europe and the Americas. Though fewer NGOs are *based* in Africa, a larger proportion of NGOs *work* there than in the Americas. Organizations based in the Americas, in particular, are more likely to work outside their home regions, although this may be because we tried to exclude US NGOs who worked only in the United States: only 50% of American NGOs work in the Americas, with 30% working in Asia and 12% in Africa. In contrast, NGOs based elsewhere are much more likely to stay close to home, as 98%, 97%, and 83% of NGOs headquartered in Asia, Africa, and Africa work in their respective regions. 
+The anti-TIP NGOs we surveyed are spread throughout the world and have a nearly global reach (see [@fig:work-map]). As seen in [@fig:locations], 60% of NGOs have their headquarters in either Asia or Europe, roughly a quarter are based in North or South America, and fewer than 20% work out of Africa. NGOs are not limited to advocacy within their own countries—the majority of these organizations work in Asia (especially in trafficking hotspots like India, Nepal, Thailand, and the Philippines), with less work in Europe and the Americas. Though fewer NGOs are *based* in Africa, a larger proportion of NGOs *work* there than in the Americas. Organizations based in the Americas, in particular, are more likely to work outside their home regions, although this may be because we tried to exclude US NGOs who worked only in the United States: only 50% of American NGOs work in the Americas, with 30% working in Asia and 12% in Africa. In contrast, NGOs based elsewhere are much more likely to stay close to home, as 98%, 97%, and 83% of NGOs headquartered in Asia, Africa, and Africa work in their respective regions. 
+
+![Countries where NGOs work](figures/fig_work_map.pdf){#fig:work-map}
 
 ![NGO headquarters and target countries, by region](figures/fig_locations.pdf){#fig:locations}
 
@@ -87,13 +91,11 @@ NGOs differ in their strategies and efforts in addressing trafficking. Most orga
 
 Human trafficking is a complex issue and, accordingly, the anti-TIP NGO sector is quite collaborative. Every respondent reported collaborating, partnering, or interacting with other NGOs or civil society organizations, international organizations, foreign embassies, and the national governments of the countries they work in. Nearly every organization (95%) sees NGOs and civil society organizations as active in dealing with trafficking issues in their countries, and NGOs regularly form partnerships with religious groups, charities, universities, community organizations. Around two-thirds of NGOs indicated that international organizations such as the International Organization for Migration (IOM), the International Labour Organization (ILO), and the United Nations Office on Drugs and Crime (UNODC) are also active participants in anti-TIP advocacy. Less than half of respondents reported that non-American governments are involved in their countries.
 
-Many NGOs also collaborate with the national governments of the countries they work in, as more than half (53%) have discussed TIP issues directly with the government. NGOs also see their governments as active—about two-thirds of respondents (68%) say that their local and national governments help combatting trafficking, with 61% reporting that the governments in their target countries work at least "somewhat hard" in working against TIP, and 20% feel that those governments have worked "very" or "extremely" hard.
-
-{Has your government improved?}
+Many NGOs also collaborate with the national governments of the countries they work in, as more than half (53%) have discussed TIP issues directly with the government. NGOs also see their governments as active—about two-thirds of respondents (68%) say that their local and national governments help combatting trafficking, with 61% reporting that the governments in their target countries work at least "somewhat hard" in working against TIP, and 20% feel that those governments have worked "very" or "extremely" hard. NGOs largely feel that these efforts have paid off, as more than 60% of respondents report that their host countries' anti-TIP efforts have improved, and less than 15% perceive a slowdown in their governments' efforts.
 
 In recent years, NGOs around the world have faced government crackdowns, increased monitoring, and harsher restrictions [@DupuyRonPrakash:2014a; @DupuyRonPrakash:2015; @Heiss:2016; @Heiss:2016a]. However, overall, anti-TIP NGOs are relatively unencumbered by government regulations, with more than a third of respondents reporting that they feel unrestricted in the countries they work in. Roughly a quarter of NGOs reported feeling either somewhat or very restricted. Those reporting restrictions represent 66 different countries, which is still a significant share. The restrictions range from strict legal requirements to general government antagonism or apathy toward NGO programming. Several NGOs feel restricted because of tax code limitations on charitable advocacy, similar to the political advocacy limitations the US imposes on 501(c)(3) charities.[^10] Other organizations experience informal restrictions that hinder advocacy, such as corruption or inefficiency in the police and government bureaucracy. For example, one NGO reported that "we [have] to be certified and continue to submit to monthly reporting, mandatory financial audits, site visits, social welfare approval, government regulations regarding our aftercare property, work permits for all foreign volunteers, annual reporting and additional certifications,"[^11] while another noted that "[a]ll work must be approved and done in direct concert with government counterparts. [Our] presence in country [is] controlled and evaluated by government officials, even those who are not familiar with our work."[^12] The burden of complying with uncertain regulations can hamper NGOs and detract from their work, limiting their ability to protect victims and prosecute offenders.[^13]
 
-## Experiences with the US
+## Experiences with the United States
 
 As central actors in the fight against human trafficking, NGOs have observed the United States' intense anti-TIP efforts (see [@fig:activities]) throughout the world over the past 15 years. Accordingly, NGOs have a unique perspective of the implementation, effectiveness, and effects of American efforts. The organizations that responded to our survey were quite forthcoming about their experiences with the United States' anti-TIP work. NGOs almost universally identify the US as a central driving force for TIP advocacy in the countries they work in. Respondents report that the US State Department's annual TIP report empowers them as they confront and collaborate with national politicians and bureaucrats. NGOs also note that the United States has been particularly effective in its work with local governments, using its TIP reports to pressure governments to implement reforms and then assisting with the practical implementation of new anti-TIP legislation. Finally, NGOs describe the mixed results of the United States' public advocacy. We detail each of these topics in turn.
 
@@ -107,13 +109,13 @@ While the fight against human trafficking is global in scope and involves the ef
 
 ### How NGOs use the TIP report
 
-From the perspective of anti-TIP NGOs, the TIP report is perhaps the US government's most potent tool for confronting or working with foreign governments. As discussed previously, the TIP report has been criticized for {XXX and for YYY}. However, for many anti-TIP NGOs the report is an important resource for their advocacy and policy work. The overwhelming majority (87%) of the NGOs surveyed were aware of the report, and of those organizations that had heard of it, three-quarters (76%) said they knew the rating assigned to the country or countries they worked in. About half of the NGOs (52%) use the TIP report to discuss trafficking issues with the governments of the countries they work, including individual members of parliament, courts, national and local police forces, and community leaders.[^14] Notably, the majority of respondents (78%) use the TIP report in their work with other NGOs, indicating its importance within the NGO community. Many organizations reference the report when working with local church groups, schools, trade unions, community centers, youth organizations, and other domestic civil society organizations.[^15] Others cite the report in their own advocacy literature and annual reports.[^16]
+From the perspective of anti-TIP NGOs, the TIP report is perhaps the US government's most potent tool for confronting or working with foreign governments. As discussed previously, the TIP report has been criticized for being ineffective and politically motivated. However, for many anti-TIP NGOs the report is an important resource for advocacy and policy work. The overwhelming majority (87%) of the NGOs surveyed were aware of the report, and of those organizations that had heard of it, three-quarters (76%) said they knew the rating assigned to the country or countries they worked in. About half of the NGOs (52%) use the TIP report to discuss trafficking issues with the governments of the countries they work, including individual members of parliament, courts, national and local police forces, and community leaders.[^14] Notably, the majority of respondents (78%) use the TIP report in their work with other NGOs, indicating its importance within the NGO community. Many organizations reference the report when working with local church groups, schools, trade unions, community centers, youth organizations, and other domestic civil society organizations.[^15] Others cite the report in their own advocacy literature and annual reports.[^16]
 
 !INCLUDE "tables/summary_tip_report.md"
 
 A minority of respondents was critical, however. Some organizations found it unhelpful and superficial,[^17] that it does not reflect the reality of trafficking issues,[^18] or that it "is so far removed from the truth [that] it appears propagandistic."[^19] Another NGO found that using the TIP report in their advocacy posed a significant political risk due to anti-American sentiment in the country they work in.[^20] Fourteen NGOs explicitly reported that they do not use the TIP report in any of their work with governments or other NGOs.
 
-### NGO views of their governments' attitude toward the US TIP rankings
+### NGO views of their governments' attitude toward TIP rankings
 
 As these NGOs advocate and work with governments to improve TIP policy, many have witnessed the effect of the TIP rating on behind-the-scenes politics and policy discussions—a little less than half of respondents (43%) indicated that they had heard officials in the countries they work in mention the TIP tier rating. NGOs report that the governments of the countries they work in tend to mention tier ratings in several contexts. Many government officials publicly tout their rating to demonstrate or showcase their achievements[^21] and promote their countries as models for fighting and preventing human trafficking.[^22] Some officials even tout their rating "[at] every possible chance."[^23] NGOs report that officials used the TIP ranking to convey shame about their countries' progress. Officials often redirect this shame to help "initiate, justify and strengthen the activities of the government"[^24] and provide additional motivation to pursue anti-TIP policies. Thus, NGOs provided several examples of ways that the TIP report and US support helped improve anti-TIP efforts in the countries they work in. 
 
@@ -121,118 +123,125 @@ That said, some NGOs also reported pushback against the report. They note that s
 
 More than 40% of NGOs indicated that the US has increased government attention to TIP issues in the countries they work in, and the majority of these organizations specifically noted that the US embassy had used the TIP report to do so. Many see the report as the United States' primary means for working directly with foreign governments, noting that the report has been an "extremely important,"[^31] "very effective,"[^32] and "quite useful"[^33] tool that allows the US government to "[suggest] changes to anti-trafficking laws and policy, [raise] awareness about trafficking, and [increase] [foreign government] attention to trafficking."[^34] NGOs also observe that US officials use the report to threaten, pressure, and embarrass offending governments,[^35] and state that the report "force[s] an official response from the government … every year when it is released."[^36] Several NGOs are aware that embassies invite high-ranking government officials and party leaders for formal discussions about the report's recommendations and future steps.[^37] 
 
-### Effects of US efforts on national governments
+### Effects of the United States' efforts on national governments
 
 Anti-TIP NGOs also observe that the US pushes for policy changes in their countries. Approximately a third of respondents (31%) report that State Department or embassy staff have explicitly asked or lobbied for anti-TIP legislation. One organization observed that each time the US ambassador meets with government officials, he reminds them of the need to finalize national legislation and adhere to UN Security Council resolutions related to trafficking and women's rights.[^38] In several countries, NGOs state that the US encouraged and lobbied presidents, prime ministers, and legislators to adopt a wide range of laws mandating increased monitoring through regular data collection and inspections, improved prosecutions under stricter criminal statutes, tighter border controls and travel restrictions.[^39] Two NGOs made special note of formal visits between their countries' respective presidents and then-Secretary Clinton where she explicitly encouraged and lobbied for anti-TIP regulations.[^40]
 
-Beyond lobbying for the passage of legislation, NGOs report that the US also has helped governments develop practical TIP action plans (27%) and provided training to officials who oversee those policies (21%). After legislation is passed, NGOs observe American involvement and support in the implementation of new TIP-related policies. In many cases, the US meets with government officials to show examples of action plans implemented in peer countries and provide other technical assistance and policy guidance.[^41] Additionally, NGOs note that embassy officials help form intergovernmental task forces and inter-ministerial steering groups to coordinate anti-TIP efforts among various branches of government, as well as organize national trafficking coalitions to integrate government and civil society strategies and programs.[^42] In at least one country, embassy staff are formal members of the secretariat for the national TIP commission.[^43]
+Beyond lobbying for the passage of legislation, NGOs report that the US also has helped governments develop practical TIP action plans (27%) and provided training to officials who oversee those policies (21%). After legislation is passed, NGOs observe American involvement and support in the implementation of new TIP-related policies. In many cases, the US meets with government officials to show examples of action plans implemented in peer countries and provide other technical assistance and policy guidance.[^41] Additionally, NGOs note that embassy officials help form intergovernmental task forces and inter-ministerial steering groups to coordinate anti-TIP efforts among various branches of government, as well as organize national trafficking coalitions to integrate government and civil society strategies and programs.[^42] In at least one country, American staff from the US Department of Justice and USAID are formal members of the secretariat for the national TIP commission.[^43]
 
-NGOs also report considerable US efforts to train those who oversee and implement these national policies. The State Department works with the Federal Bureau of Investigations and the Department of Homeland Security to provide specialized trainings both in-country and in the United States for foreign law enforcement officers, military personnel, intelligence agents, and counter-trafficking unit staff.[^44] Embassies also partner with the US Department of Justice to organize trainings to orient judges and prosecutors about the new national legislation and assist with its practical legal implementation.[^45] However, one NGO notes that "the US government has pulled in huge resources for training … government officials[,] but no concrete results [can] be found," in part because "[those] officials have no interest in such training."[^46]
+NGOs also report considerable US efforts to train those who oversee and implement these national policies. The State Department works with the Federal Bureau of Investigations and the Department of Homeland Security to provide specialized trainings both in-country and in the United States for foreign law enforcement officers, military personnel, intelligence agents, and counter-trafficking unit staff.[^44] Embassies also partner with the Department of Justice to organize trainings to orient judges and prosecutors about the new national legislation and assist with its practical legal implementation.[^45] 
 
 ### Views of the United States' public advocacy
 
-The State Department's J/TIP office funds dozens of public awareness programs around the world. It is difficult to assess the effectiveness of these programs, but one indicator is whether NGOs know about them. Based on our survey results, many NGOs are aware of these on-the-ground efforts. Approximately 40% report that the US has run public awareness programs in their countries. In several countries, NGOs observe that US embassies hold special press conferences and other events following the release of the annual TIP report and publicly acknowledge any TIP Heroes or other recipients of special US awards.[^47] For example, Ghanaian NGOs explain how the embassy celebrated a local activist who won the US Department of Labor's Iqbal Masih award for the elimination of child labor, while Ukrainian NGOs describe annual human trafficking awards ceremonies for local anti-TIP activists at the US embassy. In addition to such events, NGOs say that embassies hold town hall meetings, film nights, and other events and discussions with featured speakers and experts and use social media platforms (including embassy Facebook and Twitter accounts) to directly engage with the broader public.[^48] Embassies also often work directly with national and local media, producing public service announcements and partnering with community leaders, religious figures, and prominent television and movie actors as part of public information campaigns.[^49]
+The State Department's TIP Office (J/TIP) funds dozens of public awareness programs around the world. It is difficult to assess the effectiveness of these programs, but one indicator is whether NGOs know about them. Based on our survey results, many NGOs are aware of these on-the-ground efforts. Approximately 40% report that the US has run public awareness programs in their countries. In several countries, NGOs observe that US embassies hold special press conferences and other events following the release of the annual TIP report and publicly acknowledge any TIP Heroes or other recipients of special US awards.[^46] For example, Ghanaian NGOs explain how the embassy celebrated a local activist who won the US Department of Labor's Iqbal Masih award for the elimination of child labor, while Ukrainian NGOs describe annual human trafficking awards ceremonies for local anti-TIP activists at the US embassy. In addition to such events, NGOs say that embassies hold town hall meetings, film nights, and other events and discussions with featured speakers and experts and use social media platforms (including embassy Facebook and Twitter accounts) to directly engage with the broader public.[^47] Embassies also often work directly with national and local media, producing public service announcements and partnering with community leaders, religious figures, and prominent television and movie actors as part of public information campaigns.[^48]
 
-In addition to promoting awareness, NGOs report that the US engages directly in many other public-facing anti-TIP activities. Nearly 40% of respondents indicated that the US had convened special workshops and conferences focused on TIP issues in the countries they work in. These workshops tend to be structured as one-day training sessions focused on "trying to get everybody to work together."[^50] Embassy officials bring together American federal agencies such as the FBI and the Department of Homeland Security, domestic law enforcement agencies, local and national government officials, civil society leaders, and all other relevant stakeholders to discuss trafficking issues and formulate policies. Many NGOs applaud these efforts, claiming that they are especially good at bringing government and civil society together and providing space to "express their opinions [and] share their experiences" with policymakers.[^51] Workshops aimed specifically at linking NGO and government policy efforts are seen as especially effective.[^52] NGOs also note that embassies hold specialized workshops aimed at training and increasing awareness and sensitization for specific industries and firms that tend to be more vulnerable and prone to trafficking, including orphanages, military bases, and the construction and transportation sectors.[^53]
+In addition to promoting awareness, NGOs report that the US engages directly in many other public-facing anti-TIP activities. Nearly 40% of respondents indicated that the US had convened special workshops and conferences focused on TIP issues in the countries they work in. These workshops tend to be structured as one-day training sessions focused on "trying to get everybody to work together."[^49] Embassy officials bring together American federal agencies such as the FBI and the Department of Homeland Security, domestic law enforcement agencies, local and national government officials, civil society leaders, and all other relevant stakeholders to discuss trafficking issues and formulate policies. Many NGOs applaud these efforts, claiming that they are especially good at bringing government and civil society together and providing space to "express their opinions [and] share their experiences" with policymakers.[^50] Workshops aimed specifically at linking NGO and government policy efforts are seen as especially effective.[^51] NGOs also note that embassies hold specialized workshops aimed at training and increasing awareness and sensitization for specific industries and firms that tend to be more vulnerable and prone to trafficking, including orphanages, military bases, and the construction and transportation sectors.[^52]
 
-Not all NGOs feel that these workshops and trainings are useful, however. While most claim that the workshops are good, many noted that the embassy "didn't invite as many people" as they would have liked to see,[^54] "discussion time is too [short],"[^55] and that there is rarely any follow-up on the discussions, decisions, or promised actions.[^56] Some also criticized the embassy for being too insular and limiting participation to only a few prominent NGOs, and several expressed a desire to be invited to future conferences.[^57] In short, though NGOs generally see US-run workshops and conferences as useful venues for promoting anti-TIP policy and advocacy, these events are often insufficient. "Why stop there?," asked one respondent—"If this is a country flagged by the US, why stop there? We need to provide more help and training."[^58]
+Not all NGOs feel that these workshops and trainings are useful, however. While most claim that the workshops are good, many noted that the embassy "didn't invite as many people" as they would have liked to see,[^53] "discussion time is too [short],"[^54] and that there is rarely any follow-up on the discussions, decisions, or promised actions.[^55] Some also criticized the embassy for being too insular and limiting participation to only a few prominent NGOs, and several expressed a desire to be invited to future conferences.[^56] In short, though NGOs generally see US-run workshops and conferences as useful venues for promoting anti-TIP policy and advocacy, these events are often insufficient. "Why stop there?," asked one respondent—"If this is a country flagged by the US, why stop there? We need to provide more help and training."[^57]
 
-Sometimes bilateral aid is not very visible to civil society. However, many NGOs *do* report that the US does provide much help and training by funding NGO-led initiatives for improving awareness of trafficking and for providing legal and social services for trafficking victims. Nearly 40% of respondents indicated that the US had provided resources or funding for these local organizations and initiatives in the countries they work in. Most organizations note that this support is funneled from the State Department through J/TIP, USAID, and other US-backed foundations or local funding agencies. NGOs report receiving small grant awards to prepare television segments, produce fliers and other print materials, direct street dramas, offer school programs, organize rallies, and conduct other awareness-raising activities, including holding local workshops and conferences for the general public.[^59] In conjunction with funding for awareness, NGOs also report receiving substantial support for service provision. Organizations used USAID and J/TIP grants to build safe houses, dormitories, treatment centers, and schools for women and underage victims, offering free medical care, psychological counseling, vocational training, and education in addition to providing shelter and safety.[^60] NGOs have also used this support to launch and maintain hotlines for raising issues with migration, pay for legal assistance and consultation in trafficking-related crimes, and form formal coalitions of local anti-TIP NGOs to lobby for improved legislation throughout the region.[^61] 
+Sometimes bilateral aid is not very visible to civil society. However, many NGOs *do* report that the US does provide much help and training by funding NGO-led initiatives for improving awareness of trafficking and for providing legal and social services for trafficking victims. Nearly 40% of respondents indicated that the US had provided resources or funding for these local organizations and initiatives in the countries they work in. Most organizations note that this support is funneled from the State Department through J/TIP, USAID, and other US-backed foundations or local funding agencies. NGOs report receiving small grant awards to prepare television segments, produce fliers and other print materials, direct street dramas, offer school programs, organize rallies, and conduct other awareness-raising activities, including holding local workshops and conferences for the general public.[^58] In conjunction with funding for awareness, NGOs also report receiving substantial support for service provision. Organizations used USAID and J/TIP grants to build safe houses, dormitories, treatment centers, and schools for women and underage victims, offering free medical care, psychological counseling, vocational training, and education in addition to providing shelter and safety.[^59] NGOs have also used this support to launch and maintain hotlines for raising issues with migration, pay for legal assistance and consultation in trafficking-related crimes, and form formal coalitions of local anti-TIP NGOs to lobby for improved legislation throughout the region.[^60] 
 
-US financial support to NGOs, however, appears to be uneven. Many respondents noted that US agencies tend to fund large national NGOs while ignoring smaller organizations that work more closely with trafficking victims or with local advocacy. Some noted that the funding process has become too politicized and that "unless there is someone… that influences [the funding decision]… the neediest entities rarely receive [any money]."[^62] Others note that other countries such as Japan, Germany, and the Netherlands have given more direct and effective funding to these frontline NGOs, and some have said that they "don't even bother applying" anymore.[^63] 
+US financial support to NGOs, however, appears to be uneven. Many respondents noted that US agencies tend to fund large national NGOs while ignoring smaller organizations that work more closely with trafficking victims or with local advocacy. Some noted that the funding process has become too politicized and that "unless there is someone… that influences [the funding decision]… the neediest entities rarely receive [any money]."[^61] Others note that other countries such as Japan, Germany, and the Netherlands have given more direct and effective funding to these frontline NGOs, and some have said that they "don't even bother applying" anymore.[^62] 
 
-## Views of US policy
+## Views of the United States' anti-TIP efforts
 
-
+By and large, NGOs have a strikingly positive view of the US efforts, and the majority of NGOs ascribe some importance to the US government's substantial global anti-TIP work (see [@tbl:us-opinions]). Six of ten respondents (61%) think that the US is at least a somewhat important actor in the countries where they work, with over a quarter of all NGOs saying that the US is *the most* important actor. Many organizations emphasize the US's crucial role in their work. NGOs have found that the TIP report works "in [their] favour" when training volunteers and confronting government officials,[^63] and have appreciated embassy involvement in domestic legal cases against traffickers.[^64] In one instance, direct assistance from the embassy helped an NGO and its host country identify and provide support to dozens of victims.[^65] Some NGOs go so far as to say that "none of our success would have been possible without the TIP report" and other American support.[^66] 
 
 !INCLUDE "tables/summary_us_opinions.md"
 
-### Importance of the US in the country
+Only 13% of respondents think that the US is unimportant in their countries' anti-TIP fights because it is absent, because it "doesn't make much difference,"[^67] or because the US embassy often seems "at least ambivalent, [and] at worst disinterested."[^68] One NGO notes that "the US government has pulled in huge resources for training … government officials[,] but no concrete results [can] be found," in part because "[those] officials have no interest in such training."[^69]
 
-By and large, NGOs have a strikingly positive view of the US efforts. The majority of NGOs ascribe some importance to the US government's substantial global anti-TIP work (see [@tbl:us-opinions]). Six of ten respondents (61%) think that the US is at least a somewhat important actor in the countries where they work, with over a quarter of all NGOs saying that the US is *the most* important. Many organizations emphasize the US's crucial role in their work, and some go so far as to say that "none of our success would have been possible without the TIP report" and other American support.[^64] Only 13% of respondents think that the US is unimportant in their countries' anti-TIP fights because it is absent, because it "doesn't make much difference,"[^65] or because the US embassy often seems "at least ambivalent, [and] at worst disinterested."[^66] 
+We asked NGOs that the United States was either an important or somewhat important anti-TIP actor whether they felt that the US had played a positive, mixed, or negative role in their countries. Two-thirds agreed that US involvement in the countries they work in had been positive, while roughly 20% stated that US influence had either been mixed or negative. Only two NGOs said that US involvement had been outright negative, so we combine these two categories in our analysis. 
 
+Opinions of American importance and positivity clearly vary, and much of this variation stems from both country- and organization-level factors that reflect the the different experiences and needs of the NGO sector. We explore the associations and relationships between a variety of these factors below. Note that these associations are merely descriptive, and should not be interpreted as causal statements. However, the analysis is instructive as it shows how NGO opinions of the United States vary across sub-groups and thus whether they are likely to be artifacts of certain attributes. 
 
+### Country-level explanations
 
-!INCLUDE "tables/summary_importance_stats_country.md"
+[@fig:avg-countries] displays the average level of reported US importance and positivity from NGOs in countries with at least 10 responses. In general, NGOs in most developing countries tend to attribute some importance to the US, while more developed countries like Canada and the United Kingdom ascribe the least importance, perhaps indicative of a diminished demand for American anti-TIP assistance in these countries. Opinions of American positivity vary by the country NGOs work in, but there appears to be less of a split between non-European and North American countries; for instance, NGOs in both Ghana and Canada were unanimous in reporting US positivity. Organizations in countries with the highest average importance—Cambodia and Thailand—were generally more pessimistic and varied their opinions of positivity. These are countries facing enormous human trafficking problems, and while help from the US is needed, the severity and scope of the problem complicates the efforts to fight it. 
 
-Opinions of American importance clearly vary, and a great deal of this variation stems from the different experiences and needs of NGOs across countries. [@fig:avg-importance] displays the average level of reported US importance from NGOs in countries with at least 10 responses. On average, NGOs in most developing countries tend to attribute some importance to the US, while more developed countries like Canada and the United Kingdom ascribe the least importance, perhaps indicative of a diminished demand for American anti-TIP assistance in these countries. 
+![Average importance and positivity of US anti-TIP efforts (error bars indicate 95% confidence intervals)](figures/fig_avg_countries.pdf){#fig:avg-countries}
 
-![Average importance of US anti-TIP efforts (error bars indicate standard deviations)](figures/fig_avg_importance.pdf){#fig:avg-importance}
+As shown in [@fig:avg-country-level], The association between opinions of the US and domestic politics holds up when looking at the level of democratic development in the countries NGOs target. On average, NGOs working in countries with worse civil rights and political liberties are more likely to see the US as the most important anti-TIP actor in that country, and the overall differences between average total freedom across the possible responses are statistically significant. Conversely, NGOs in countries with greater democracy tend to have a more positive view of the US, while organizations with more mixed opinions work in less democratic countries.
 
-This association holds up when looking at the level of democratic development in these countries. On average, NGOs working in countries with worse civil rights and political liberties are more likely to see the US as the most important anti-TIP actor in that country, and the overall differences between average total freedom across the possible responses are statistically significant (see [@tbl:importance-stats-country]).
+![Associations between country-level factors and opinions of US importance and positivity](figures/fig_means_country.pdf){#fig:avg-country-level}
 
-The severity of human trafficking in these countries is also associated with NGO opinions of importance. [@tbl:importance-stats-country] analyzes several statistical associations with country-level characteristics to explore some of the variation in these opinions. These findings are merely descriptive, and should not be interpreted as causal statements. However, the analysis in instructive in that it shows how NGO opinions of US importance vary across sub-groups and thus whether they are likely to be artifacts of certain attributes.  
+[@fig:avg-country-level] also shows that the severity of trafficking in the countries NGOs target might influence their opinions of the US. Attitudes towards US importance are strongly correlated with the TIP rating of the countries NGOs work in. On average, organizations that feel that the US is the most important anti-TIP actor work in countries with worse TIP ratings, while those that ascribe no importance to the US work in countries with higher ratings. As with total freedom, the relationship between TIP ratings and opinions of the US's positivity is reversed—organizations that feel the US plays a positive role tend to work in countries with better TIP ratings. 
 
-[@tbl:importance-stats-country] shows that perhaps the opinions of NGOs that work in countries with worse than average TIP report ratings attribute more importance relate less to the US than those in countries with better average ratings. Improvements in tier ratings[^67] do not seem to change NGO views. NGOs in countries that have made greater improvements in TIP policies (as measured by the 3P index), on the other hand, do attribute more importance to the US. Finally, organizations are significantly more likely to think that the US is an important actor if they work in countries receiving more anti-TIP funding, which correlates with countries with worse tiers.
+Improvements in tier ratings—that is, when a country's most recent rating is better than its initial ranking—do not seem to change NGO views of importance. NGOs in countries that have made greater improvements in TIP policies (as measured by the 3P index), on the other hand, do tend to attribute more importance to the US. Opinions of US positivity are more clearly (and significantly) associated with improvements in trafficking—NGOs that ascribe a positive role to the US work in countries that have seen the greatest changes in the severity of trafficking, reflected both in the change in tier ratings and in the 3P policy index. 
 
-NGO opinions of the US may be less related to *country* characteristics and more a function of their *individual* relationships and experiences with the US. NGOs that interact more with the US, receive more funding from the US, or have their headquarters there may be positively biased towards the US and rate it more favorably. To explore this, [@tbl:importance-stats-org] analyzes how organization-level characteristics relate to opinions of the US.
+Finally, organizations are significantly more likely to think that the US is an important actor if they work in countries receiving more anti-TIP funding—NGOs that responded that the US is unimportant work overwhelmingly in countries that receive little financial assistance for TIP efforts. Anti-TIP funding is also associated with opinions of positivity, though inversely from those of importance—organizations working in countries that receive *more* American funding are more likely to have mixed opinions of the US. 
 
-!INCLUDE "tables/summary_importance_stats_org.md"
+### Organization-level explanations
 
-[@tbl:importance-stats-org] shows that funding does influence opinions at an organizational level. The majority of NGOs that report receiving funding directly from the US feel that it is the most important anti-TIP actor. However, only XX% of organizations have received funding, so it is not the case that the US is simply buying endorsements from NGOs. Even when removing all funded NGOs from the sample, XX% still think that the US is an important actor. , having any kind of encounter or involvement with the US embassy, including direct contact, meetings, or other types of cooperation, is associated with higher opinions of US importance. NGOs that reported that the US was an important actor were more likely to have been involved with the US. Importantly, direct experience with the US appears to be more strongly associated with opinions than simple connections to the US—NGOs that are headquartered in the US are not significantly different from their foreign counterparts in their opinions of American importance.
+NGO opinions of the US may be less related to *country* characteristics and more a function of their *individual* relationships and experiences with the US. NGOs that interact more with the US, receive more funding from the US, or have their headquarters there could be positively biased towards the US and rate it more favorably. However, as shown in the statistical associations in [@fig:avg-org-level] contact with the United States is not necessarily related to NGO opinions of the country's importance and positivity.
 
+![Associations between country-level factors and opinions of US importance and positivity](figures/fig_means_org.pdf){#fig:avg-org-level}
 
-### Positivity
+The majority of NGOs that report receiving funding directly from the US feel that it is the most important anti-TIP actor. However, only 24% of responding organizations received funding, so this association does not necessarily mean that the US is simply buying endorsements from NGOs. Even when removing all funded NGOs from the sample, nearly 80% think that the US is important. 
 
-Of the organizations that reported that the US was an important anti-TIP actor, two-thirds agreed that US involvement in the countries they work in had been positive, while roughly 20% stated that US influence had either been mixed or negative. Only two NGOs said that US involvement had been outright negative, so we combine these two categories in our analysis. As with opinions of American importance, NGO opinions of the positivity of US involvement vary (see [@tbl:positivity-stats]). Note that organizations were only asked about US positivity if they responded that the US was either an important or somewhat important actor.
+Similar to funding, having any kind of encounter or involvement with the US embassy—including direct contact, meetings, or other types of cooperation—is associated with higher opinions of US importance. NGOs that reported that the US was an important actor were more likely to have been involved with the US. Importantly, direct experience with the US appears to be more strongly associated with opinions than simple connections to the US—NGOs that are headquartered in the US are not significantly different from their foreign counterparts in their opinions of American importance.
 
-
-
-!INCLUDE "tables/summary_positivity_stats_country.md"
-
-Opinions of American positivity vary by the country NGOs work in, but there appears to be less of a split between non-European and North American countries; for instance, NGOs in both Ghana and Canada were unanimous in reporting US positivity. Organizations in countries with the highest average importance—Cambodia and Thailand—were generally more pessimistic and varied their opinions of positivity. These are countries facing enormous human trafficking problems. Help from the US is needed, but the severity and scope of the problem complicates the efforts to fight it. While NGOs working in more democratic countries were more likely to agree that the US was important, their opinions of those efforts are not that different from those of NGOs working in less democratic countries. As with importance, the severity of human trafficking is associated with opinions of US positivity. NGOs that ascribe a clear positive role to the US tend to work in countries with lower TIP tier ratings *and* in countries where those ratings have worsened since 2000. The efforts of the US are more needed in these countries. Similarly, NGOs report that the US plays a more positive role in countries that have seen more improvements in TIP policies. Anti-TIP funding is also associated with opinions of positivity, though inversely from those of importance—organizations working in countries that receive *more* American funding are more likely to have mixed opinions of the US. 
-
-![Average opinions of US positivity in anti-TIP efforts (error bars indicate standard deviations)](figures/fig_avg_positivity.pdf){#fig:avg_positivity}
-
-!INCLUDE "tables/summary_positivity_stats_org.md"
+While direct NGO experiences with the US are loosely associated with opinions of the United States' anti-TIP *importance*, no organizational factors are significantly associated with NGO attitudes of the *positivity* of American efforts, suggesting that NGOs are not being coopted by the US.
 
 
+# Conclusion
 
-While most country-level factors influence opinions of US positivity, no organizational factors—including whether the NGO received funding from the US, interacted with the US, or is based in the US—are significantly associated with NGO opinions of the positivity of American anti-TIP efforts, suggesting that NGOs are not being coopted by the US.
+Despite longstanding and ongoing debate in academic, political, and policy circles about the effectiveness of the United States' 15-year fight against human trafficking, along with severe criticism over the underlying political motivations behind its self-appointment as the global leader against TIP issues, NGOs that are directly involved in the trenches of anti-TIP advocacy are surprisingly sanguine about American efforts. As shown in the results of our sector-wide survey, NGOs are by and large quite satisfied with US-led efforts and find them to be effective and powerful allies in NGOs' own anti-trafficking work. NGOs are not unanimous in their praise for the US, and their opinions are varied and nuanced, but in the difficult context of addressing an issue as complex as human trafficking, NGOs generally appreciate US assistance and support.
 
-# Policy implications and conclusion
+These results highlight a relationship between civil society and international diplomacy that has not yet been explored, raising several interesting questions worthy of future research. As seen in the case of American-led anti-TIP advocacy, states can gain diplomatic prominence and soft power by championing social issues *through* an existing network of civil society organizations already involved in those issues. How do states decide which issues to champion, and what role does civil society play in that decision? Did the existence of an active anti-TIP NGO sector influence the United States' decision to become the global leader in trafficking advocacy, or did its vast array of financial and material support for NGOs lead to an expansion of the sector? What determines when a state will successfully harness a global crisis or issue? Is a connection to on-the-ground activists necessary for a state to become a global leader in that issue? Does such a close connection between foreign governments and domestic NGOs affect local perceptions of civil society?
 
-{Stuff here.}
+Finally, the results of our survey provide warning for the future of the United States' anti-TIP advocacy. Linking foreign policy with advocacy is fraught with risk. As noted earlier, the State Department has been under considerable political pressure to rank countries in ways that promote American diplomacy—in 2015 alone, senior J/TIP officials overruled local embassy tier recommendations in 17 different countries, and ultimately inflated the tier assignments for 14 countries because of their importance in US foreign policy [@SzepSpetalnick:2015]. The outright politicization of the TIP report has the potential to undermine a heretofore invaluable tool for anti-TIP advocacy. Though they have been one of the State Department's staunchest allies, NGOs have begun to question the validity of the TIP report, noting the inherent tension between advocacy and politics and finding that "tier decisions are politically motivated rather than honestly evaluated."^[Response 1136.] The US should therefore exercise caution in how they rank and rate countries, taking care to not let political concerns undercut and diminish the power of its diplomacy.
+
 
 # Software
 
 All the figures, tables, and other results can be replicated using code available at [https://github.com/andrewheiss/Anti-TIP-NGOs-and-the-US](https://github.com/andrewheiss/Anti-TIP-NGOs-and-the-US) and the following open source software:
 
-`TODO: Make sure this matches the style guide`
+\ 
 
-R Development Core Team. (2013). R: A language and environment for statistical computing. Vienna, Austria. http://www.R-project.org. Version 3.0.2.
+\begingroup \hangstart
 
-Wickham, H. (2009). ggplot2: Elegant graphics for data analysis. Springer New York. http://had.co.nz/ggplot2/book. Version 0.9.3.1.
+R Development Core Team. (2013). R: A language and environment for statistical computing. Vienna, Austria. [https://www.R-project.org](https://www.R-project.org). Version 3.2.4.
 
-`TODO: Add link just to the huge analysis notebook?`
+Wickham, H. (2009). ggplot2: Elegant graphics for data analysis. Springer New York. [http://ggplot2.org/book/](http://ggplot2.org/book/). Version 2.1.0.
+
+\endgroup
+
 
 # Appendix
 
-Most of the organizations we found came from the Polaris Project's Global Modern Slavery Directory (http://www.globalmodernslavery.org, accessed March 22, 2016). We supplemented this list of NGOs using these other directories and databases:
+Most of the organizations in our list came from the Polaris Project's Global Modern Slavery Directory ([http://www.globalmodernslavery.org](http://www.globalmodernslavery.org)). We supplemented this list of NGOs using these other directories and databases:
 
-Academy for Educational Development. *HumanTrafficking.org*. Accessed March 22, 2016. http://humantrafficking.org/.
+\ 
 
-"Directory of Development Organizations." Accessed April 1, 2013. http://www.devdir.org/.
+\begingroup \hangstart
 
-Duke University Libraries. "NGO Research Guide." Accessed March 22, 2016. http://guides.library.duke.edu/ngo\_guide.
+Academy for Educational Development. *HumanTrafficking.org*. Retrieved from [http://humantrafficking.org/](http://humantrafficking.org/)
 
-ECPAT International. "Where We Are." Accessed March 22, 2016. http://ecpat.net/where-we-are.
+*Directory of Development Organizations*. Retrieved from [http://www.devdir.org/](http://www.devdir.org/)
 
-Gale. "Associations Unlimited." Accessed November 1, 2012. http://associationsunlimited.com.
+Duke University Libraries. *NGO research guide*. Retrieved from [http://guides.library.duke.edu/ngo\_guide](http://guides.library.duke.edu/ngo_guide)
 
-Global Alliance Against Traffic in Women. "GAATW Members." Accessed March 22, 2016. http://www.gaatw.org/#members.
+ECPAT International. *Where we are*. Retrieved from [http://ecpat.net/where-we-are](http://ecpat.net/where-we-are)
 
-Kristof, Nicholas D. "Anti-Trafficking Groups." *New York Times: On The Ground Blog*, January 23, 2006. http://kristof.blogs.nytimes.com/2006/01/23/anti-trafficking-groups/.
+Gale. *Associations Unlimited*. Retrieved from [http://associationsunlimited.com](http://associationsunlimited.com)
 
-"List of Organizations That Combat Human Trafficking." *Wikipedia*. Accessed May 7, 2013. https://en.wikipedia.org/w/index.php?title=List\_of\_organizations\_that\_combat\_human\_trafficking&oldid=553998390.
+Global Alliance Against Traffic in Women. *GAATW members*. Retrieved from [http://www.gaatw.org/#members](http://www.gaatw.org/#members)
 
-Union of International Associations. "Yearbook of International Organizations." Accessed March 22, 2016. http://www.uia.org/yearbook.
+Kristof, N. D. (2006). Anti-trafficking groups. *New York Times: On The Ground Blog*. Retrieved from [http://kristof.blogs.nytimes.com/2006/01/23/anti-trafficking-groups/](http://kristof.blogs.nytimes.com/2006/01/23/anti-trafficking-groups/)
 
-United Nations Office on Drugs and Crime. "Electronic NGO Database." Accessed March 22, 2016. http://www.unodc.org/ngo/list.jsp.
+List of organizations that combat human trafficking. *Wikipedia*. Retrieved from [https://en.wikipedia.org/w/index.php?title=List\_of\_organizations\_that\_combat\_human\_trafficking&oldid=553998390](https://en.wikipedia.org/w/index.php?title=List_of_organizations_that_combat_human_trafficking&oldid=553998390)
 
-United States Department of State. "Trafficking in Persons Report," 2001–2015.
+Union of International Associations. *Yearbook of International Organizations*. Retrieved from [http://www.uia.org/yearbook](http://www.uia.org/yearbook)
 
-WiserEarth. "Search for Organizations." Accessed April 1, 2013. https://web.archive.org/web/20130701035555/http://wiser.org.
+United Nations Office on Drugs and Crime. *Electronic NGO database*. Retrieved from [http://www.unodc.org/ngo/list.jsp](http://www.unodc.org/ngo/list.jsp)
+
+United States Department of State. (2001–2015). *Trafficking in Persons Report*.
+
+WiserEarth. Retrieved from [https://web.archive.org/web/20130701035555/http://wiser.org](https://web.archive.org/web/20130701035555/http://wiser.org)
+
+\endgroup
+
 
 
 [^1]:	The creators of the Trafficking Victims Protection Act (TVPA) were motivated by efforts to eliminate prostitution and used the legislation to prohibit funding any activity related to prostitution and to exclude organizations that did not renounce prostitution from receiving any assistance. This became part of the Bush administration's global anti-prostitution agenda, prohibited many organizations from receiving anti-TIP funding because of their connections to prostitution. These policies were eventually successfully challenged in the 2013 Supreme Court ruling Agency for International Development v. Alliance for Open Society International, Inc.
@@ -329,46 +338,50 @@ WiserEarth. "Search for Organizations." Accessed April 1, 2013. https://web.arch
 
 [^45]:	Responses 1162, 1381, and 1494.
 
-[^46]:	Response 1298.
+[^46]:	Responses 1037, 1179, 1208, 1274, 1311, 1336, and 1353.
 
-[^47]:	Responses 1037, 1179, 1208, 1274, 1311, 1336, and 1353.
+[^47]:	Responses 1011, 1019, 1369, and 1503.
 
-[^48]:	Responses 1011, 1019, 1369, and 1503.
+[^48]:	Responses 1019, 1035, 1084, and 1288.
 
-[^49]:	Responses 1019, 1035, 1084, and 1288.
+[^49]:	Response 1254.
 
-[^50]:	Response 1254.
+[^50]:	Response 1104.
 
-[^51]:	Response 1104.
+[^51]:	Response 1351.
 
-[^52]:	Response 1351.
+[^52]:	Responses 1072, 1235, 1382 and 1479.
 
-[^53]:	Responses 1072, 1235, 1382 and 1479.
+[^53]:	Response 1254.
 
-[^54]:	Response 1254.
+[^54]:	Response 1457.
 
-[^55]:	Response 1457.
+[^55]:	Responses 1227 and 1457.
 
-[^56]:	Responses 1227 and 1457.
+[^56]:	Responses 1372 and 1378.
 
-[^57]:	Responses 1372 and 1378.
+[^57]:	Response 1254.
 
-[^58]:	Response 1254.
+[^58]:	Responses 1131, 1196, 1251, 1377, and 1475.
 
-[^59]:	Responses 1131, 1196, 1251, 1377, and 1475.
+[^59]:	Responses 1301, 1307, 1353, and 1404.
 
-[^60]:	Responses 1301, 1307, 1353, and 1404.
+[^60]:	Responses 1007, 1072, 1203, 1353, and 1485.
 
-[^61]:	Responses 1007, 1072, 1203, 1353, and 1485.
+[^61]:	Response 1238.
 
-[^62]:	Response 1238.
+[^62]:	Responses 1115, 1227, 1378, and 1474.
 
-[^63]:	Responses 1115, 1227, 1378, and 1474.
+[^63]:	Responses 1158 and 1325.
 
-[^64]:	Response 1509.
+[^64]:	Response 1393.
 
-[^65]:	Response 1254.
+[^65]:	Response 1311.
 
-[^66]:	Response 1221.
+[^66]:	Response 1509.
 
-[^67]:	That is, the country's most recent rating is better than its first.
+[^67]:	Response 1254.
+
+[^68]:	Response 1221.
+
+[^69]:	Response 1298.

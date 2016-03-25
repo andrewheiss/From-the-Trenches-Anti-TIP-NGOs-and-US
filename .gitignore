@@ -11,6 +11,7 @@ data/free_responses.csv
 manuscript/*.html
 manuscript/*.docx
 manuscript/*.pdf
+manuscript/*.tex
 manuscript/*.bib
 manuscript/tex_out/*
 

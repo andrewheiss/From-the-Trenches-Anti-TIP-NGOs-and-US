@@ -46,6 +46,8 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
     theme(panel.background = element_rect(fill="#ffffff", colour=NA),
           axis.title.x=element_text(vjust=-0.2), axis.title.y=element_text(vjust=1.5),
           title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
+          plot.subtitle=element_text(vjust=1.2, family="Source Sans Pro Light", 
+                                     size=rel(0.8), hjust=0.5),
           panel.border = element_blank(), axis.line=element_blank(),
           panel.grid.minor=element_blank(),
           panel.grid.major.y = element_blank(),

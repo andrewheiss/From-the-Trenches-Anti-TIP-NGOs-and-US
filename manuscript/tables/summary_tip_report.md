@@ -12,7 +12,7 @@ Q3.21: Has your organization   ![](figures/summary_table/q3_21.pdf) National gov
 used the US State Department’s                                      212); Another government      
 Trafficking in Persons (TIP)                                        (16.67%; 67); Other NGOs      
 report to discuss trafficking                                       (77.86%; 313); Other (21.14%; 
-issues with any of these                                            85); N=0                      
+issues with any of these                                            85); N=402                    
 groups?                                                                                           
 
 Q3.22: Which TIP tier rating   ![](figures/summary_table/q3_22.pdf) Tier 1 (18.79%; 87); Tier 2   

@@ -209,12 +209,16 @@ pretty.stats <- function(stats) {
     df <- tidy(stats)
     n <- sum(stats$observed)
     cramer <- assocstats(stats$observed)$cramer
-    
+
     if (df$p.value > 0.001) {
-      out <- sprintf("χ^2^ (%d, N = %d) = %.2f, p = %.3f, ϕ~c~ = %.2f",
-                     df$parameter, n, df$statistic, df$p.value, cramer)
+      # out <- sprintf("χ^2 (%d, N = %d) = %.2f, p = %.3f, ϕ~c~ = %.2f",
+      #                df$parameter, n, df$statistic, df$p.value, cramer)
+      out <- sprintf("chi^2*' '(%d, ~N == %d) == %.2f~~p == %.3f~~phi[c] == '%.2f'",
+                                df$parameter, n, df$statistic, df$p.value, cramer)
     } else {
-      out <- sprintf("χ^2^ (%d, N = %d) = %.2f, p < 0.001, ϕ~c~ = %.2f",
+      # out <- sprintf("χ^2 (%d, N = %d) = %.2f, p < 0.001, ϕ~c~ = %.2f",
+      #                df$parameter, n, df$statistic, cramer)
+      out <- sprintf("chi^2*' '(%d, ~N == %d) == %.2f~~p < 0.001~~phi[c] =='%.2f'",
                      df$parameter, n, df$statistic, cramer)
     }
   } else if (labels(stats$statistic) == "t") {

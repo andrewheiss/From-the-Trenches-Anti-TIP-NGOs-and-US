@@ -294,7 +294,7 @@ theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {
 }
 
 # For maps
-theme_blank_map <- function(base_size=12, base_family="Source Sans Pro Light") {
+theme_blank_map <- function(base_size=9, base_family="Source Sans Pro Light") {
   ret <- theme_bw(base_size, base_family) + 
     theme(panel.background = element_rect(fill="#ffffff", colour=NA),
           title=element_text(vjust=1.2, family="Source Sans Pro Semibold"),
@@ -540,9 +540,9 @@ work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
         strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
 
 ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.pdf"),
-       width=5, height=2, units="in", device=cairo_pdf, scale=1.5)
+       width=5, height=2.5, units="in", device=cairo_pdf)
 ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.png"),
-       width=5, height=2, units="in", type="cairo", scale=1.5, dpi=300)
+       width=5, height=2.5, units="in", type="cairo", dpi=300)
 
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)

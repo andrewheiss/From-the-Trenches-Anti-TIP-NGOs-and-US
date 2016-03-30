@@ -1,10 +1,25 @@
 source(file.path(PROJHOME, "R", "table_functions.R"))
 library(ggstance)
+library(stringr)
 library(lazyeval)
 library(gridExtra)
 
 # Blank plot for spacing things in arrangeGrob()
 blank <- rectGrob(gp=gpar(col="white"))
+
+df.importance <- df.importance %>%
+  mutate(importance.factor = factor(importance.factor, 
+                                    levels=levels(importance.factor),
+                                    labels=str_replace_all(levels(importance.factor),
+                                                           c(" actor" = "", " an" = "")),
+                                    ordered=TRUE))
+
+df.positivity <- df.positivity %>%
+  mutate(positivity.factor = factor(positivity.factor, 
+                                    levels=levels(positivity.factor),
+                                    labels=str_replace_all(levels(positivity.factor),
+                                                           c(" actor" = "", " an" = "")),
+                                    ordered=TRUE))
 
 plot.group.means <- function(var.name, title=NULL, subtitle=NULL, 
                              xlab=NULL, xlim=NULL, log.x=FALSE) {
@@ -43,7 +58,7 @@ plot.group.means <- function(var.name, title=NULL, subtitle=NULL,
                              ordered=TRUE))
   
   final <- ggplot(plot.data, aes(x=avg, y=response, xmin=lower, xmax=upper)) +
-    geom_pointrangeh() +
+    geom_pointrangeh(size=0.25) +
     labs(x=xlab, y=NULL, title=title, subtitle=subtitle) +
     geom_text(aes(label=stats, x=Inf, y=-Inf-3), hjust="right", vjust="bottom", size=1.5,
               family="Source Sans Pro Light") +
@@ -102,7 +117,7 @@ plot.group.props <- function(var.name, title=NULL, xlab=NULL) {
            var.name = factor(var.name, labels=c("No    ", "Yes"), ordered=TRUE))
   
   ggplot(plot.data, aes(y=response, x=prop, colour=var.name)) +
-    geom_pointrangeh(aes(xmin=0, xmax=prop), position=position_dodge(width=0.5), size=0.5) +
+    geom_pointrangeh(aes(xmin=0, xmax=prop), position=position_dodge(width=0.25), size=0.25) +
     # geom_barh(stat="identity", position="dodge") + 
     geom_text(aes(label=stats, x=Inf, y=-Inf-3), hjust="right", vjust="bottom", size=1.5,
               family="Source Sans Pro Light", parse=TRUE) +
@@ -146,15 +161,13 @@ plot.funding <- plot.group.means("log.total.funding", xlim=c(8, 16.1),
 # Combine everything
 plot.country <- arrangeGrob(plot.democracy, plot.tiers, 
                             blank, blank,
-                            plot.improve.tip, plot.cho.change, 
-                            blank, blank,
-                            plot.funding, blank,
-                            ncol=2, heights=c(0.3, 0.05, 0.3, 0.05, 0.3))
+                            plot.cho.change, plot.funding,
+                            ncol=2, heights=c(0.475, 0.05, 0.475))
 
 ggsave(plot.country, filename=file.path(PROJHOME, "figures", "fig_means_country.pdf"),
-       width=6, height=4.5, units="in", device=cairo_pdf)
+       width=5, height=3.5, units="in", device=cairo_pdf)
 ggsave(plot.country, filename=file.path(PROJHOME, "figures", "fig_means_country.png"),
-       width=6, height=4.5, units="in", type="cairo", dpi=300)
+       width=5, height=3.5, units="in", type="cairo", dpi=300)
 
 
 # Organization-level factors
@@ -167,12 +180,12 @@ plot.involvement <- plot.group.props("us.involvement",
 plot.us.hq <- plot.group.props("us.hq", 
                                title="Organization is based in the US")
 
-plot.org <- arrangeGrob(plot.org.funding, plot.involvement, 
-                        blank, blank, 
-                        plot.us.hq, blank, ncol=2,
-                        heights=c(0.475, 0.05, 0.475))
+plot.org <- arrangeGrob(plot.org.funding, blank, 
+                        plot.involvement, blank, 
+                        plot.us.hq, ncol=1,
+                        heights=c(0.31666, 0.025, 0.31666, 0.025, 0.31666))
 
 ggsave(plot.org, filename=file.path(PROJHOME, "figures", "fig_means_org.pdf"),
-       width=6, height=3.65, units="in", device=cairo_pdf)
+       width=2.5, height=5, units="in", device=cairo_pdf)
 ggsave(plot.org, filename=file.path(PROJHOME, "figures", "fig_means_org.png"),
-       width=6, height=3.65, units="in", type="cairo", dpi=300)
+       width=2.5, height=5, units="in", type="cairo", dpi=300)

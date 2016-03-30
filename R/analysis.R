@@ -31,6 +31,7 @@ library(readxl)
 library(stringr)
 library(ggplot2)
 library(gridExtra)
+library(ggstance)
 library(scales)
 library(Cairo)
 library(grid)
@@ -539,9 +540,9 @@ work.map <- ggplot(work.countries, aes(fill=num.ceiling, map_id=id)) +
         strip.background=element_rect(colour="#FFFFFF", fill="#FFFFFF"))
 
 ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.pdf"),
-       width=4, height=2, units="in", device=cairo_pdf, scale=1.5)
+       width=5, height=2, units="in", device=cairo_pdf, scale=1.5)
 ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.png"),
-       width=4, height=2, units="in", type="cairo", scale=1.5)
+       width=5, height=2, units="in", type="cairo", scale=1.5, dpi=300)
 
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
@@ -549,7 +550,7 @@ grid.draw(fig.maps)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
        width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
 ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
-       width=6, height=3, units="in", type="cairo", scale=1.5)
+       width=6, height=3, units="in", type="cairo", scale=1.5, dpi=300)
 
 #' Save map count data for use in other stuff (like Judith's book)
 write_csv(work.countries, path="~/Desktop/data_figureA_work_map.csv")
@@ -571,11 +572,11 @@ fig.hq <- ggplot(plot.hq, aes(x=region, y=num)) +
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="NGOs based in region") + 
   scale_y_continuous(trans="reverse", expand = c(.1, .1)) + 
-  coord_flip(ylim=c(0, 200)) + 
+  coord_flip(ylim=c(0, 175)) + 
   theme_clean() + 
   theme(axis.text.y = element_blank(), 
         axis.line.y = element_blank(),
-        plot.margin = unit(c(1,0.5,1,1), "lines"))
+        plot.margin = unit(c(1,-0.25,1,1), "lines"))
 
 fig.work <- ggplot(plot.work, aes(x=region, y=num)) + 
   geom_bar(stat="identity") + 
@@ -583,7 +584,7 @@ fig.work <- ggplot(plot.work, aes(x=region, y=num)) +
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="NGOs working in region") + 
   scale_y_continuous(expand = c(.15, .15)) + 
-  coord_flip() + 
+  coord_flip(ylim=c(0, 275)) + 
   theme_clean() + 
   theme(axis.text.y = element_text(hjust=0.5), 
         axis.line.y = element_blank(),
@@ -592,9 +593,9 @@ fig.work <- ggplot(plot.work, aes(x=region, y=num)) +
 fig.locations <- arrangeGrob(fig.hq, fig.work, nrow=1)
 grid.draw(fig.locations)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.pdf"),
-       width=5, height=1.5, units="in", device=cairo_pdf, scale=2.5)
+       width=5, height=1.5, units="in", device=cairo_pdf)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.png"),
-       width=5, height=1.5, units="in", type="cairo", scale=2.5)
+       width=5, height=1.5, units="in", type="cairo", dpi=300)
 
 #' Where do different regional NGOs work?
 responses.full %>%
@@ -622,7 +623,7 @@ fig.time
 ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
        width=5, height=2, units="in", device=cairo_pdf)
 ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
-       width=5, height=2, units="in", type="cairo")
+       width=5, height=2, units="in", type="cairo", dpi=300)
 
 #' Summary stats of time spent
 orgs.only %>%
@@ -959,24 +960,25 @@ plot.data.active <- most.active.clean %>%
 
 fig.active <- ggplot(plot.data, aes(x=country, y=num)) + 
   geom_bar(stat="identity") + 
-  geom_text(aes(label = prop.nice), size=3.5, hjust=1.3, 
+  geom_text(aes(label = prop.nice), size=2.5, hjust=1.3, 
             family="Source Sans Pro Light") + 
-  labs(x=NULL, y="Number of times country was mentioned as a partner in anti-TIP work") + 
-  scale_y_continuous(breaks=seq(0, max(active.embassies$num), by=25), 
+  labs(x=NULL, y="Number of times country was mentioned\nas a partner in anti-TIP work") + 
+  scale_y_continuous(breaks=seq(0, 275, by=50), 
                      trans="reverse", expand = c(.1, .1)) + 
-  coord_flip() + 
+  coord_flip(ylim=c(0, 280)) + 
   theme_clean() + 
   theme(axis.text.y = element_blank(), 
         axis.line.y = element_blank(),
-        plot.margin = unit(c(1,0.5,1,1), "lines"))
+        plot.margin = unit(c(1,-0.25,1,1), "lines"))
 
 fig.most.active <- ggplot(plot.data.active, aes(x=country, y=total)) + 
   geom_bar(stat="identity") + 
-  geom_text(aes(label = prop.nice), size=3.5, hjust=-0.3, 
+  geom_text(aes(label = prop.nice), size=2.5, hjust=-0.3, 
             family="Source Sans Pro Light") + 
-  labs(x=NULL, y="Number of times country was mentioned as the most active partner in anti-TIP work") + 
-  scale_y_continuous(expand = c(.15, .15)) + 
-  coord_flip() + 
+  labs(x=NULL, y="Number of times country was mentioned\nas the most active partner in anti-TIP work") + 
+  scale_y_continuous(breaks=seq(0, 200, by=50),
+                     expand = c(.15, .15)) + 
+  coord_flip(ylim=c(0, 225)) + 
   theme_clean() + 
   theme(axis.text.y = element_text(hjust=0.5), 
         axis.line.y = element_blank(),
@@ -985,9 +987,9 @@ fig.most.active <- ggplot(plot.data.active, aes(x=country, y=total)) +
 fig.embassies <- arrangeGrob(fig.active, fig.most.active, nrow=1)
 grid.draw(fig.embassies)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf"),
-       width=5, height=2, units="in", device=cairo_pdf, scale=2.5)
+       width=5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.png"),
-       width=5, height=2, units="in", type="cairo", scale=2.5)
+       width=5, height=3, units="in", type="cairo", dpi=300)
 
 saveRDS(active.embassies, file.path(PROJHOME, "data", "active_embassies.rds"))
 saveRDS(most.active.clean, file.path(PROJHOME, "data", "most_active_embassies.rds"))
@@ -1002,11 +1004,11 @@ write_csv(plot.data.active,
 #' Actual US activities
 cols <- c("Q3.9_1", "Q3.9_2", "Q3.9_3", "Q3.9_4", "Q3.9_5",
           "Q3.9_6", "Q3.9_7", "Q3.9_8", "Q3.9_9", "Q3.9_10")
-labels <- c("Asking for legislation", "Convening conferences or workshops",
-            "Raising awareness", "Providing resources or funding",
-            "Increasing government attention", "Training government officials",
-            "Contributing to a government action plan", "Other", "Don't know",
-            "The US has not been involved in trafficking issues")
+labels <- c("Asking for legislation", "Convening conferences\nor workshops",
+            "Raising awareness", "Providing resources\nor funding",
+            "Increasing government\nattention", "Training government\nofficials",
+            "Contributing to a\ngovernment action plan", "Other", "Don't know",
+            "The US has not been\ninvolved in trafficking issues")
 
 activities <- separate.answers.summary(responses.countries, cols, labels)
 activities$denominator  # Number of responses
@@ -1023,9 +1025,9 @@ fig.activities <- ggplot(plot.data, aes(x=Answer, y=Responses)) +
   coord_flip() + theme_clean()
 fig.activities
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.pdf"),
-       width=6.5, height=3, units="in", device=cairo_pdf)
+       width=5.25, height=3, units="in", device=cairo_pdf)
 ggsave(fig.activities, filename=file.path(PROJHOME, "figures", "fig_activities.png"),
-       width=6.5, height=3, units="in", type="cairo")
+       width=5.25, height=3, units="in", type="cairo", dpi=300)
 
 
 # ----------------------------------
@@ -1070,7 +1072,7 @@ fig.avg_importance
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
        width=6.5, height=3, units="in", device=cairo_pdf)
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
-       width=6.5, height=3, units="in", type="cairo")
+       width=6.5, height=3, units="in", type="cairo", dpi=300)
 
 
 #' ## Are opinions of the US's importance associated with…?
@@ -1469,9 +1471,9 @@ fig.avg_positivity <- ggplot(positivity.plot, aes(y=country_label, x=positivity_
 fig.avg_positivity
 
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
-       width=6.5, height=3, units="in", device=cairo_pdf)
+       width=5, height=2.5, units="in", device=cairo_pdf)
 ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),
-       width=6.5, height=3, units="in", type="cairo")
+       width=5, height=2.5, units="in", type="cairo", dpi=300)
 
 
 #' Both importance and positivity

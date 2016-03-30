@@ -106,7 +106,7 @@ bib:	$(BIB)
 
 %.html:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to HTML using standard template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs | \
+	replace_includes $< | replace_pdfs --no-convert | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w html -S \
 		$(CROSSREF) \
 		--default-image-extension=png \
@@ -156,7 +156,7 @@ bib:	$(BIB)
 
 %.odt:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to .odt using standard template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs | \
+	replace_includes $< | replace_pdfs --no-convert | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w odt -S \
 		$(CROSSREF) \
 		--default-image-extension=png \
@@ -177,7 +177,7 @@ bib:	$(BIB)
 
 %-manuscript.odt: %.md
 	@echo "$(WARN_COLOR)Converting Markdown to .odt using manuscript template...$(NO_COLOR)"
-	replace_includes $< | replace_pdfs | \
+	replace_includes $< | replace_pdfs --no-convert | move_figs_tables_to_end | \
 	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w odt -S \
 		$(CROSSREF) \
 		--default-image-extension=png \

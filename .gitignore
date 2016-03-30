@@ -14,6 +14,7 @@ manuscript/*.pdf
 manuscript/*.tex
 manuscript/*.bib
 manuscript/tex_out/*
+submissions/*
 
 # Scrivener
 manuscript/**/*.pdf

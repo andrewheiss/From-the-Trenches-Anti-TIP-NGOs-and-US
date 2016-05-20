@@ -1644,6 +1644,13 @@ mosaic(hq.table.pos,
 
 #' # Miscellaneous questions
 #' 
+#' ## Anonymity 
+#' 
+#' How many organizations requested anonymity?
+responses.orgs %>% group_by(Q1.3) %>% 
+  summarise(Freq = n()) %>% ungroup() %>%
+  mutate(Percent = Freq / sum(Freq))
+
 #' ## Correlation between US funding and US cooperation
 #' 
 #' What is the correlation between answering yes to funding and yes to direct

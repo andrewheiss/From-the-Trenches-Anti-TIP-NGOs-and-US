@@ -983,15 +983,16 @@ fig.most.active <- ggplot(plot.data.active, aes(x=country, y=total)) +
   geom_text(aes(label = prop.nice), size=2.5, hjust=-0.3, 
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="Number of times country was mentioned\nas the most active partner in anti-TIP work") + 
-  scale_y_continuous(breaks=seq(0, 200, by=50),
-                     expand = c(.15, .15)) + 
-  coord_flip(ylim=c(0, 225)) + 
+  scale_y_continuous(breaks=seq(0, 250, by=50),
+                     expand = c(.1, .1)) + 
+  coord_flip(ylim=c(0, 250)) + 
   theme_clean() + 
   theme(axis.text.y = element_text(hjust=0.5), 
         axis.line.y = element_blank(),
         plot.margin = unit(c(1,1,1,0), "lines"))
   
-fig.embassies <- arrangeGrob(fig.active, fig.most.active, nrow=1)
+fig.embassies <- arrangeGrob(fig.active, fig.most.active, nrow=1,
+                             widths=c(0.47, 0.53))
 grid.draw(fig.embassies)
 ggsave(fig.embassies, filename=file.path(PROJHOME, "figures", "fig_embassies.pdf"),
        width=5, height=3, units="in", device=cairo_pdf)

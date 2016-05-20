@@ -575,8 +575,9 @@ fig.hq <- ggplot(plot.hq, aes(x=region, y=num)) +
   geom_text(aes(label = prop.nice), size=2.5, hjust=1.3, 
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="NGOs based in region") + 
-  scale_y_continuous(trans="reverse", expand = c(.1, .1)) + 
-  coord_flip(ylim=c(0, 175)) + 
+  scale_y_continuous(trans="reverse", expand = c(.1, .1),
+                     breaks = seq(0, 250, by=50)) + 
+  coord_flip(ylim=c(0, 250)) + 
   theme_clean() + 
   theme(axis.text.y = element_blank(), 
         axis.line.y = element_blank(),
@@ -587,14 +588,16 @@ fig.work <- ggplot(plot.work, aes(x=region, y=num)) +
   geom_text(aes(label = prop.nice), size=2.5, hjust=-0.3, 
             family="Source Sans Pro Light") + 
   labs(x=NULL, y="NGOs working in region") + 
-  scale_y_continuous(expand = c(.15, .15)) + 
-  coord_flip(ylim=c(0, 275)) + 
+  scale_y_continuous(expand = c(.1, .1),
+                     breaks = seq(0, 250, by=50)) + 
+  coord_flip(ylim=c(0, 250)) + 
   theme_clean() + 
   theme(axis.text.y = element_text(hjust=0.5), 
         axis.line.y = element_blank(),
         plot.margin = unit(c(1,1,1,0), "lines"))
 
-fig.locations <- arrangeGrob(fig.hq, fig.work, nrow=1)
+fig.locations <- arrangeGrob(fig.hq, fig.work, nrow=1,
+                             widths=c(0.45, 0.55))
 grid.draw(fig.locations)
 ggsave(fig.locations, filename=file.path(PROJHOME, "figures", "fig_locations.pdf"),
        width=5, height=1.5, units="in", device=cairo_pdf)

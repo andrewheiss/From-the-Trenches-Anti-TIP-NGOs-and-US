@@ -271,6 +271,10 @@ df.book.plots <- responses.full %>%
 write_csv(df.book.plots, 
           file.path(PROJHOME, "data", "data_q3_18_21.csv"))
 
+df.book.importance.positivity <- responses.full %>%
+  select(clean.id, Q3.19, Q3.25, Q3.25_collapsed)
+write_csv(df.book.importance.positivity,
+          file.path(PROJHOME, "data", "data_q3_19_25.csv"))
 
 # Useful functions
 theme_clean <- function(base_size=9, base_family="Source Sans Pro Light") {

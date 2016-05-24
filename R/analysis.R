@@ -235,6 +235,22 @@ country.indexes <- responses.full %>%
   ungroup() %>%
   arrange(desc(num.responses))
 
+region.indexes <- responses.full %>%
+  filter(!is.na(work.region)) %>%
+  group_by(work.region) %>%
+  # Needs mutate + mutate_each + select + unique because you can't mix 
+  # summarise + summarise_each. See http://stackoverflow.com/a/31815540/120898
+  mutate(num.responses = n()) %>%
+  mutate_each(funs(score = mean(., na.rm=TRUE), 
+                   stdev = sd(., na.rm=TRUE), 
+                   n = sum(!is.na(.)),
+                   std.err = sd(., na.rm=TRUE) / sqrt(sum(!is.na(.)))),
+              c(positivity, importance, improvement)) %>%
+  select(work.region, num.responses, matches("positivity_|importance_|improvement_")) %>%
+  unique %>%
+  ungroup() %>%
+  arrange(desc(num.responses))
+
 # Load map data
 if (!file.exists(file.path(PROJHOME, "data_external", "map_data", 
                            "ne_110m_admin_0_countries.VERSION.txt"))) {
@@ -1083,6 +1099,26 @@ ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_impo
 ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
        width=6.5, height=3, units="in", type="cairo", dpi=300)
 
+#' ## Importance by region
+importance.plot.region <- region.indexes %>%
+  arrange(importance_score) %>%
+  mutate(region_label = factor(work.region, levels=unique(work.region), 
+                               labels=paste0(work.region, " (", num.responses, ")"),
+                               ordered=TRUE)) 
+
+fig.avg_importance.region <- ggplot(importance.plot.region, 
+                                    aes(y=region_label, x=importance_score)) + 
+  geom_pointrangeh(aes(xmax=importance_score + (qnorm(0.975) * importance_std.err),
+                       xmin=importance_score + (qnorm(0.025) * importance_std.err)),
+                   size=0.25) + 
+  labs(y="Region\n(number of responses)", x=NULL,
+       title="Importance of the US in anti-TIP efforts") +
+  scale_x_continuous(breaks=c(0, 1, 2), 
+                     labels=c("Not important", "Somewhat important", "Most important")) +
+  coord_cartesian(xlim=c(0, 2.1)) +
+  theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
+fig.avg_importance.region
+
 
 #' ## Are opinions of the US's importance associated with…?
 df.importance <- responses.full %>% 
@@ -1496,6 +1532,38 @@ ggsave(fig.avg_countries, filename=file.path(PROJHOME, "figures", "fig_avg_count
        width=5, height=3.75, units="in", device=cairo_pdf)
 ggsave(fig.avg_countries, filename=file.path(PROJHOME, "figures", "fig_avg_countries.png"),
        width=5, height=3.75, units="in", type="cairo", dpi=300)
+
+#' ## Positivity by region
+positivity.plot.region <- region.indexes %>%
+  arrange(desc(positivity_score)) %>%
+  mutate(region_label = factor(work.region, levels=unique(work.region), 
+                               labels=paste0(work.region, " (", num.responses, ")"),
+                               ordered=TRUE)) 
+
+fig.avg_positivity.region <- ggplot(positivity.plot.region, 
+                                    aes(y=region_label, x=positivity_score)) + 
+  geom_pointrangeh(aes(xmax=positivity_score + (qnorm(0.975) * positivity_std.err),
+                       xmin=positivity_score + (qnorm(0.025) * positivity_std.err)),
+                   size=0.25) + 
+  labs(y="Region\n(number of responses)", x=NULL,
+       title="Positivity of the US in anti-TIP efforts") + 
+  scale_x_continuous(breaks=c(-1, 0, 1), labels=c("Negative", "Mixed", "Positive")) + 
+  coord_cartesian(xlim=c(-1, 1.05)) +
+  theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
+fig.avg_positivity.region
+
+#' Both importance and positivity, regional
+blank <- rectGrob(gp=gpar(col="white"))
+fig.avg_region <- arrangeGrob(fig.avg_importance.region, blank,
+                              fig.avg_positivity.region,
+                              ncol=1, heights=c(0.48, 0.04, 0.48))
+grid::grid.draw(fig.avg_region)
+
+ggsave(fig.avg_region, filename=file.path(PROJHOME, "figures", "fig_avg_region.pdf"),
+       width=5, height=2.5, units="in", device=cairo_pdf)
+ggsave(fig.avg_region, filename=file.path(PROJHOME, "figures", "fig_avg_region.png"),
+       width=5, height=2.5, units="in", type="cairo", dpi=300)
+
 
 #' ## Are opinions of the US's positivity associated with…?
 #' ### Average tier rating 

@@ -3,6 +3,7 @@ library(ggstance)
 library(stringr)
 library(lazyeval)
 library(gridExtra)
+library(scales)
 
 # Blank plot for spacing things in arrangeGrob()
 blank <- rectGrob(gp=gpar(col="white"))
@@ -68,8 +69,7 @@ plot.group.means <- function(var.name, title=NULL, subtitle=NULL,
   
   if (log.x) {
     final <- final +
-      scale_x_continuous(limits=xlim, 
-                         labels=trans_format("exp", dollar_format()))
+      scale_x_continuous(labels=dollar, breaks=xlim, trans="log1p")
   } else {
     final <- final + scale_x_continuous(limits=xlim)
   }
@@ -153,7 +153,7 @@ plot.cho.change <- plot.group.means("change_policy",
                                     title="Change in TIP policy index",
                                     subtitle="Most recent 3P score − initial 3P score; higher values are better")
 
-plot.funding <- plot.group.means("log.total.funding", xlim=c(8, 16.1),
+plot.funding <- plot.group.means("total.funding", xlim=(seq(3, 15, by=2) * 1000000),
                                  xlab="TIP funding (logged)", log.x=TRUE,
                                  title="TIP funding received by country",
                                  subtitle="Logged")

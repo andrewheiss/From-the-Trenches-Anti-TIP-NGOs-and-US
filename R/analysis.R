@@ -1773,6 +1773,33 @@ contact.with.us %>%
   psych::alpha()
 
 
+#' ## US funding by region
+#' 
+#' Does US funding to NGOs vary by region?
+received.funding <- responses.full %>%
+  group_by(survey.id) %>% slice(1) %>% ungroup() %>%
+  filter(!is.na(work.region))
+
+received.funding.table <- received.funding %>%
+  xtabs(~ work.region + received.funding, .) %>% print
+
+received.funding.table %>% prop.table(margin=1)
+
+#' There's no significant difference
+(received.funding.chi <- chisq.test(received.funding.table))
+
+# Tiny Cramer's V
+assocstats(received.funding.table)
+
+# Visualize
+plot.data <- received.funding %>%
+  group_by(work.region, received.funding) %>%
+  summarise(num = n())
+
+ggplot(plot.data, aes(x=num, y=work.region, fill=received.funding)) + 
+  geom_barh(stat="identity", position="dodge")
+
+
 #' ## Maps of countries where the US has been active
 countries.where.active <- responses.full %>%
   select(survey.id, work.country, work.iso3) %>%

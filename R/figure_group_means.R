@@ -153,10 +153,11 @@ plot.cho.change <- plot.group.means("change_policy",
                                     title="Change in TIP policy index",
                                     subtitle="Most recent 3P score − initial 3P score; higher values are better")
 
-plot.funding <- plot.group.means("total.funding", xlim=(seq(3, 15, by=2) * 1000000),
+plot.funding <- plot.group.means("total.funding", xlim=(c(5, 7, 11, 15) * 1000000),
                                  xlab="TIP funding (logged)", log.x=TRUE,
                                  title="TIP funding received by country",
-                                 subtitle="Logged")
+                                 subtitle="Logged") + 
+  coord_cartesian(xlim=(c(4, 16) * 1000000))
 
 # Combine everything
 plot.country <- arrangeGrob(plot.democracy, plot.tiers, 

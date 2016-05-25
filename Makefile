@@ -104,6 +104,19 @@ msdocx:	clean $(MS_DOCX)
 tex:	clean $(TEX)
 bib:	$(BIB)
 
+analyze:
+	@echo "$(WARN_COLOR)Creating all figures and tables with R...$(NO_COLOR)"
+	@-mkdir -p figures/summary_table 2>/dev/null || true
+	@-mkdir -p manuscript/tables 2>/dev/null || true
+	Rscript -e "rmarkdown::render('R/analysis.R')"
+	Rscript R/figure_group_means.R
+	Rscript R/table_how_NGOs_work_with_others.R
+	Rscript R/table_tip_report.R
+	Rscript R/table_us_opinions.R
+	Rscript R/table_what_do_NGOs_do.R
+	@-rm Rplots.pdf 2>/dev/null || true
+	@echo "$(OK_COLOR)All done!$(NO_COLOR)"
+
 %.html:	%.md
 	@echo "$(WARN_COLOR)Converting Markdown to HTML using standard template...$(NO_COLOR)"
 	replace_includes $< | replace_pdfs --no-convert | \
@@ -198,3 +211,9 @@ clean:
 		$(addsuffix .odt, $(BASE)) $(addsuffix .docx, $(BASE)) \
 		$(addsuffix -manuscript.odt, $(BASE)) $(addsuffix -manuscript.docx, $(BASE)) \
 		$(addsuffix .tex, $(BASE)) $(addsuffix .bib, $(BASE))
+
+clean_analysis:
+	@echo "$(WARN_COLOR)Deleting all figures and tables...$(NO_COLOR)"
+	rm -Rf figures manuscript/tables/
+	mkdir figures
+	touch figures/.gitignore

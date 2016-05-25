@@ -27,6 +27,7 @@ figures/**.png
 .Rproj.user
 .Rhistory
 .RData
+R/analysis.html
 
 # Miscellaneous
 *.~lock.*

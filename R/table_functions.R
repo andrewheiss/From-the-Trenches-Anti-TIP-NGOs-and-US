@@ -1,5 +1,6 @@
 library(magrittr)
 library(dplyr)
+library(tidyr)
 library(broom)
 library(ggplot2)
 library(scales)

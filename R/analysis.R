@@ -40,6 +40,8 @@ library(countrycode)
 library(maptools)
 library(rgdal)
 
+source(file.path(PROJHOME, "R", "shared.R"))
+
 # Load data and add labels
 responses.orgs <- readRDS(file.path(PROJHOME, "data_raw", 
                                     "responses_orgs_clean.rds"))
@@ -327,35 +329,6 @@ theme_blank_map <- function(base_size=9, base_family="Source Sans Pro Light") {
   ret
 }
 
-# Return a data frame of counts and proportions for multiple responses
-separate.answers.summary <- function(df, cols, labels, total=FALSE) {
-  cols.to.select <- which(colnames(df) %in% cols)
-  
-  denominator <- df %>%
-    select(cols.to.select) %>%
-    mutate(num.answered = rowSums(., na.rm=TRUE)) %>%
-    filter(num.answered > 0) %>%
-    nrow()
-  
-  df <- df %>%
-    select(survey.id, cols.to.select) %>%
-    gather(question, value, -survey.id) %>%
-    mutate(question = factor(question, labels=labels, ordered=TRUE)) %>%
-    group_by(question) %>%
-    summarize(response = sum(value, na.rm=TRUE), 
-              pct = round(response / denominator * 100, 2),
-              plot.pct = response / denominator)
-  
-  colnames(df) <- c("Answer", "Responses", "%", "plot.pct")
-  
-  if (total) {
-    df <- df %>% select(1:3)
-    df <- rbind(as.matrix(df), c("Total responses", denominator, "—"))
-  }
-  
-  return(list(df=df, denominator=denominator))
-}
-
 # Create a character vector of significance stars
 add.stars <- function(x) {
   as.character(symnum(x, corr = FALSE,
@@ -567,10 +540,10 @@ ggsave(work.map, filename=file.path(PROJHOME, "figures", "fig_work_map.png"),
 #' Combined maps
 fig.maps <- arrangeGrob(hq.map, work.map, nrow=1)
 grid.draw(fig.maps)
-ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
-       width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
-ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
-       width=6, height=3, units="in", type="cairo", scale=1.5, dpi=300)
+# ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.pdf"),
+#        width=6, height=3, units="in", device=cairo_pdf, scale=1.5)
+# ggsave(fig.maps, filename=file.path(PROJHOME, "figures", "fig_maps.png"),
+#        width=6, height=3, units="in", type="cairo", scale=1.5, dpi=300)
 
 #' Save map count data for use in other stuff (like Judith's book)
 write_csv(work.countries, path="~/Desktop/data_figureA_work_map.csv")
@@ -643,10 +616,10 @@ fig.time <- ggplot(data=orgs.only,
   coord_cartesian(ylim=c(0, 0.125)) + 
   theme_clean() + theme(panel.grid.major.y = element_line(size=0.25, colour="grey90"))
 fig.time
-ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
-       width=5, height=2, units="in", device=cairo_pdf)
-ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
-       width=5, height=2, units="in", type="cairo", dpi=300)
+# ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.pdf"),
+#        width=5, height=2, units="in", device=cairo_pdf)
+# ggsave(fig.time, filename=file.path(PROJHOME, "figures", "fig_time.png"),
+#        width=5, height=2, units="in", type="cairo", dpi=300)
 
 #' Summary stats of time spent
 orgs.only %>%
@@ -1094,10 +1067,10 @@ fig.avg_importance <- ggplot(importance.plot, aes(y=country_label, x=importance_
   coord_cartesian(xlim=c(0, 2.1)) +
   theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
 fig.avg_importance
-ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
-       width=6.5, height=3, units="in", device=cairo_pdf)
-ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
-       width=6.5, height=3, units="in", type="cairo", dpi=300)
+# ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.pdf"),
+#        width=6.5, height=3, units="in", device=cairo_pdf)
+# ggsave(fig.avg_importance, filename=file.path(PROJHOME, "figures", "fig_avg_importance.png"),
+#        width=6.5, height=3, units="in", type="cairo", dpi=300)
 
 #' ## Importance by region
 importance.plot.region <- region.indexes %>%
@@ -1516,10 +1489,10 @@ fig.avg_positivity <- ggplot(positivity.plot, aes(y=country_label, x=positivity_
   theme_clean() + theme(legend.position="bottom", plot.title=element_text(hjust=0.5))
 fig.avg_positivity
 
-ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
-       width=5, height=2.75, units="in", device=cairo_pdf)
-ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),
-       width=5, height=2.75, units="in", type="cairo", dpi=300)
+# ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.pdf"),
+#        width=5, height=2.75, units="in", device=cairo_pdf)
+# ggsave(fig.avg_positivity, filename=file.path(PROJHOME, "figures", "fig_avg_positivity.png"),
+#        width=5, height=2.75, units="in", type="cairo", dpi=300)
 
 
 #' Both importance and positivity

@@ -1,4 +1,5 @@
 source(file.path(PROJHOME, "R", "table_functions.R"))
+source(file.path(PROJHOME, "R", "shared.R"))
 
 # ---------------------------------------
 # Table for "What do anti-TIP NGOs do?"

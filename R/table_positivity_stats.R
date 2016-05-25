@@ -1,4 +1,5 @@
 source(file.path(PROJHOME, "R", "table_functions.R"))
+source(file.path(PROJHOME, "R", "shared.R"))
 
 # Initial dataframe
 df <- data_frame(Variable = NA, ` ` = NA, `Test statistics` = NA)

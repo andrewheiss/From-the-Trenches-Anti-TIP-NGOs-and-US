@@ -109,10 +109,10 @@ improvement <- data_frame(Q3.26 = levels(responses.countries$Q3.26),
 tip.change <- read_csv(file.path(PROJHOME, "data", "policy_index.csv")) %>%
   group_by(countryname) %>%
   summarise(avg_tier = mean(tier, na.rm=TRUE),
-            improve_tip = (last(na.omit(tier), default=NA) - 
-                             first(na.omit(tier), default=NA)),
-            change_policy = last(na.omit(p), default=NA) - 
-              first(na.omit(p), default=NA)) %>%
+            improve_tip = (dplyr::last(na.omit(tier), default=NA) - 
+                             dplyr::first(na.omit(tier), default=NA)),
+            change_policy = dplyr::last(na.omit(p), default=NA) - 
+              dplyr::first(na.omit(p), default=NA)) %>%
   mutate(countryname = countrycode(countryname, "country.name", "country.name"))
 
 # Democracy (Freedom House)

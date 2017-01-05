@@ -219,7 +219,17 @@ responses.full <- responses.all %>%
   mutate(home.iso3 = countrycode(home.country, "country.name", "iso3c"),
          home.iso3 = ifelse(home.country == "Kosovo", "KOS", home.iso3)) %>%
   mutate(work.iso3 = countrycode(work.country, "country.name", "iso3c"),
-         work.iso3 = ifelse(work.country == "Kosovo", "KOS", work.iso3))
+         work.iso3 = ifelse(work.country == "Kosovo", "KOS", work.iso3)) %>%
+  mutate_at(vars(clean.id, improve_tip, total.freedom, positivity, importance, improvement),
+            funs(as.integer(.)))
+
+responses.full.anonymized <- responses.full %>%
+  mutate(Q1.2 = ifelse(Q1.3 == "Yes", paste("Organization", clean.id), Q1.2)) %>%
+  mutate_at(vars(contains("_TEXT"), Q3.10, Q3.11, Q3.12, Q3.13, Q3.14, 
+                 Q3.15, Q3.16, Q3.17, Q3.24.Text, Q3.30, Q4.1), 
+            funs(ifelse(Q1.3 == "Yes" & !is.na(.), "REDACTED", .))) %>%
+  select(-c(survey.id, Flag, Q4.2, Q4.3, Q4.4, Q4.5, 
+            LocationLatitude, LocationLongitude, ip.address))
 
 country.indexes <- responses.full %>%
   filter(!is.na(work.country)) %>%
@@ -277,8 +287,11 @@ possible.countries <- data_frame(id = unique(as.character(countries.ggmap$id)))
 
 
 # Save data
-# TODO: Make responses.full more anonymous before making it public
-# TODO: Save as CSV and Stata too instead of just R
+saveRDS(responses.full.anonymized,
+        file.path(PROJHOME, "data","responses_full_anonymized.rds"))
+write_csv(responses.full.anonymized,
+          file.path(PROJHOME, "data", "responses_full_anonymized.csv"))
+
 saveRDS(responses.full, file.path(PROJHOME, "data", "responses_full.rds"))
 saveRDS(country.indexes, file.path(PROJHOME, "data", "country_indexes.rds"))
 

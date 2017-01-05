@@ -913,7 +913,7 @@ num.responses$total  # Total responses
 # Save for analysis in book
 write_csv(active.embassies, 
           file.path(PROJHOME, "data", 
-                    "data_figure2_x_active_embassies.csv"))
+                    "data_figure3_8_active_embassies.csv"))
 
 # Most active embassies
 # Save Q3.7 to a CSV for hand coding
@@ -942,7 +942,7 @@ most.active.clean <- most.active %>%
          prop.nice = sprintf("%.1f%%", prop * 100))
 write_csv(most.active.clean, 
           file.path(PROJHOME, "data", 
-                    "data_figure2_x_most_active_embassies.csv"))
+                    "data_figure3_8_most_active_embassies.csv"))
 
 #' Which countries or embassies have been the *most* active?
 most.active.clean %>% arrange(desc(total))

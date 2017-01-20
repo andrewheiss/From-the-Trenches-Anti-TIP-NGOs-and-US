@@ -21,7 +21,7 @@ var.name <- "Q3.25"
 question <- "Overall, has the US influence on human trafficking policy in your country been positive or negative?"
 
 df <- bind_rows(df, generate.row.single(responses.full, question.id, 
-                                        question, var.name))
+                                        question, var.name, add.fake.data=TRUE))
 
 # Save as Markdown table
 cat(pandoc.table.return(slice(df, 2:n()), split.tables=Inf,

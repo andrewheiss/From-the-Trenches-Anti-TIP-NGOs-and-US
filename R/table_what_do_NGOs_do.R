@@ -22,7 +22,7 @@ var.name <- "Q3.3"
 question <- "How much does your organization know about human trafficking policy in your country?"
 
 df <- bind_rows(df, generate.row.single(responses.full, question.id, 
-                                        question, var.name))
+                                        question, var.name, add.fake.data=TRUE))
 
 # Q2.2
 question.id <- "Q2.2"

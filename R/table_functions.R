@@ -104,7 +104,7 @@ generate.row.mult.responses <- function(df, question.id, question,
   row.final
 }
 
-generate.row.single <- function(df, question.id, question, x) {
+generate.row.single <- function(df, question.id, question, x, add.fake.data=FALSE) {
   df.summary <- df %>%
     # Wonky way to filter with NSE
     filter_(lazyeval::interp(~ !is.na(x), x=as.name(x))) %>%
@@ -115,6 +115,13 @@ generate.row.single <- function(df, question.id, question, x) {
     select(var.to.plot = 1, everything()) %>%
     mutate(text.summary = paste0(var.to.plot, " (", pct, "%; ", num, ")"))
   df.summary
+  
+  # Sometimes the percentages are so tiny that they're unplottable. Increase
+  # any proportion lower than 0.015 to 0.015
+  if (add.fake.data) {
+    df.summary <- df.summary %>%
+      mutate(plot.pct = ifelse(plot.pct < 0.015, 0.015, plot.pct))
+  }
 
   fig <- ggplot(df.summary, aes(x=var.to.plot, y=plot.pct)) +
     geom_bar(stat="identity") +
